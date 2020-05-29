@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">  
+    <link rel="stylesheet" href="css/libs.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Новый проект</title>
+</head>
+
+<body class="relative">
+<div class="flex flex-nowrap h-screen">
+    <div class="left-panel inline-flex h-full overflow-hidden">
+        <div class="flex flex-wrap w-full h-full content-between">
+            <div class="inline-flex">
+                <div class="flex flex-wrap w-full h-full">
+                    <div class="top-panel__logo inline-flex bg-white w-full">
+                        <div class="flex items-center justify-start w-full h-full">
+                            <div class="inline-flex items-start flex-shrink-0" style="padding-left: 0.75rem">
+                                <img src="img/top-panel/small-logo.svg" alt="InSpector">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-panel__logo-full hidden inline-flex bg-white w-full">
+                        <div class="flex items-center justify-start w-full h-full">
+                            <div class="inline-flex items-start flex-shrink-0 px-4" style="padding-left: 0.75em">
+                                <img src="img/top-panel/logo-full.svg" alt="InSpector">
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="left-panel__item inline-flex w-full cursor-pointer hover:text-white transition duration-300">
+                        <div class="flex">
+                            <div class="left-panel__open inline-flex p-4 flex-shrink-0 items-start">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M3.00002 8V6H21V8H3.00002ZM3.00002 13H21V11H3.00002V13ZM3.00002 18H21V16H3.00002V18Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </div>
+                            <div class="left-panel__close hidden inline-flex p-4 flex-shrink-0 items-start">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M19 6.41L17.59 5L12 10.59L6.41002 5L5.00002 6.41L10.59 12L5.00002 17.59L6.41002 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"
+                                        fill="currentColor" fill-opacity="0.54" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="left-panel__item active inline-flex w-full cursor-pointer">
+                        <a href="#" class="flex items-center">
+                            <div class="inline-flex p-4 flex-shrink-0 items-start">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M8.46 5.54L10.23 7.3L12 5.54L13.77 7.3L15.54 5.54L12 2L8.46 5.54ZM5.54 8.46L2 12L5.54 15.54L7.3 13.77L5.54 12L7.3 10.23L5.54 8.46ZM18.46 8.46L16.7 10.23L18.46 12L16.7 13.77L18.46 15.54L22 12L18.46 8.46ZM10.23 16.7L12 18.46L13.77 16.7L15.54 18.46L12 22L8.46 18.46L10.23 16.7ZM15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </div>
+                            <div class="inline-flex text-xs font-medium whitespace-no-wrap">
+                                Исследования
+                            </div>
+                        </a>
+                    </div>
+                    <div class="left-panel__item inline-flex w-full cursor-pointer hover:text-white">
+                        <a href="#" class="flex items-center">
+                            <div class="inline-flex p-4 flex-shrink-0 items-start">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M12 2C6.48002 2 2.00002 6.48 2.00002 12C2.00002 17.52 6.48002 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM11 7V9H13V7H11ZM11 11V17H13V11H11ZM4.00002 12C4.00002 16.41 7.59002 20 12 20C16.41 20 20 16.41 20 12C20 7.59 16.41 4 12 4C7.59002 4 4.00002 7.59 4.00002 12Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </div>
+                            <div class="inline-flex text-xs font-medium whitespace-no-wrap">
+                                Бизнес-справка
+                            </div>
+                        </a>
+                    </div>
+                    <div class="left-panel__item inline-flex w-full cursor-pointer hover:text-white">
+                        <a href="#" class="flex items-center">
+                            <div class="inline-flex p-4 flex-shrink-0 items-start">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M14.81 9.12L22 9.74L16.55 14.47L18.18 21.5L12 17.77L5.82002 21.5L7.46002 14.47L2.00002 9.74L9.19002 9.13L12 2.5L14.81 9.12ZM8.24002 18.17L12 15.9L15.77 18.18L14.77 13.9L18.09 11.02L13.71 10.64L12 6.6L10.3 10.63L5.92002 11.01L9.24002 13.89L8.24002 18.17Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </div>
+                            <div class="inline-flex text-xs font-medium whitespace-no-wrap">
+                                Сохранённые
+                            </div>
+                        </a>
+                    </div>
+                    <div class="left-panel__item inline-flex w-full cursor-pointer hover:text-white">
+                        <a href="#" class="flex items-center">
+                            <div class="inline-flex p-4 flex-shrink-0 items-start">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5.00002 9.5L7.50002 14H2.50002L5.00002 9.5ZM3.00002 4H7.00002V8H3.00002V4ZM5.00002 20C5.53045 20 6.03916 19.7893 6.41423 19.4142C6.7893 19.0391 7.00002 18.5304 7.00002 18C7.00002 17.4696 6.7893 16.9609 6.41423 16.5858C6.03916 16.2107 5.53045 16 5.00002 16C4.46958 16 3.96087 16.2107 3.5858 16.5858C3.21073 16.9609 3.00002 17.4696 3.00002 18C3.00002 18.5304 3.21073 19.0391 3.5858 19.4142C3.96087 19.7893 4.46958 20 5.00002 20ZM9.00002 5V7H21V5H9.00002ZM9.00002 19H21V17H9.00002V19ZM9.00002 13H21V11H9.00002V13Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </div>
+                            <div class="inline-flex text-xs font-medium whitespace-no-wrap">
+                                Мои списки
+                            </div>
+                        </a>
+                    </div>
+                    <div class="left-panel__item inline-flex w-full cursor-pointer hover:text-white">
+                        <a href="#" class="flex items-center">
+                            <div class="inline-flex p-4 flex-shrink-0 items-start">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M12 2C8.13002 2 5.00002 5.13 5.00002 9C5.00002 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM7.00002 9C7.00002 6.24 9.24002 4 12 4C14.76 4 17 6.24 17 9C17 11.88 14.12 16.19 12 18.88C9.92002 16.21 7.00002 11.85 7.00002 9ZM9.50002 9C9.50002 7.61929 10.6193 6.5 12 6.5C12.8932 6.5 13.7185 6.9765 14.1651 7.75C14.6117 8.5235 14.6117 9.4765 14.1651 10.25C13.7185 11.0235 12.8932 11.5 12 11.5C10.6193 11.5 9.50002 10.3807 9.50002 9Z"
+                                        fill="currentColor" />
+                                </svg>
+    
+                            </div>
+                            <div class="inline-flex text-xs font-medium whitespace-no-wrap">
+                                Контакты
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="left-panel__item inline-flex w-full cursor-pointer hover:text-white">
+                <a href="#" class="flex items-center">
+                    <div class="inline-flex p-4 flex-shrink-0 items-start">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4ZM14 8C14 6.9 13.1 6 12 6C10.9 6 10 6.9 10 8C10 9.1 10.9 10 12 10C13.1 10 14 9.1 14 8ZM18 18C17.8 17.29 14.7 16 12 16C9.31 16 6.23 17.28 6 18H18ZM4 18C4 15.34 9.33 14 12 14C14.67 14 20 15.34 20 18V20H4V18Z"
+                                fill="currentColor" />
+                        </svg>
+                    </div>
+                    <div class="inline-flex text-xs font-medium whitespace-no-wrap">
+                        Виктор разработчик
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="center-sector items-start inline-flex flex-wrap flex-grow min-w-0 overflow-hidden">
+        <div class="flex w-full self-start">
+            <div class="top-panel top-panel_big w-full bg-white inline-flex">
+                <div class="flex h-full w-full flex-stretch items-center">
+                    <div class="top-panel-titles flex mx-auto text-4xl font-bold px-6 overflow-hidden">
+                        <span class="text-overflow whitespace-no-wrap overflow-hidden min-w-0">Мои списки</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="area area_under-big-panel bg-f2 flex w-full flex-grow">
+            <div class="area__inner inline-flex flex-grow whitespace-no-wrap relative overflow-auto">
+                <!-- основная контентная часть  -->
+                <div class="area__container px-6 py-8 mx-auto relative overflow-auto">
+                    <ul class="area-pagination z-20 flex justify-start fixed shadow-md bg-white text-b9 text-xxs font-semibold h-10 px-2">
+                        <li>
+                            <a href="#">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g>
+                                        <path
+                                            d="M11.2949 12L17.2949 6L18.7049 7.41L14.1249 12L18.7049 16.59L17.2949 18L11.2949 12Z"
+                                            fill="#B9BDC7" />
+                                        <path
+                                            d="M5.29492 12L11.2949 6L12.7049 7.41L8.12492 12L12.7049 16.59L11.2949 18L5.29492 12Z"
+                                            fill="#B9BDC7" />
+                                    </g>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g>
+                                        <path
+                                            d="M8.29492 12L14.2949 6L15.7049 7.41L11.1249 12L15.7049 16.59L14.2949 18L8.29492 12Z"
+                                            fill="#B9BDC7" />
+                                    </g>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="#">
+                                <span>1</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>2</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>3</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>4</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>5</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>6</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g>
+                                        <path
+                                            d="M8.29492 7.41L12.8749 12L8.29492 16.59L9.70492 18L15.7049 12L9.70492 6L8.29492 7.41Z"
+                                            fill="currentColor" />
+                                    </g>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.7051 12L6.70508 6L5.29508 7.41L9.87508 12L5.29508 16.59L6.70508 18L12.7051 12Z"
+                                        fill="currentColor" />
+                                    <path
+                                        d="M18.7051 12L12.7051 6L11.2951 7.41L15.8751 12L11.2951 16.59L12.7051 18L18.7051 12Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <form class="top-panel-input inline-flex px-3 w-full flex-grow">
+                        <div class="flex items-center w-full border-b border-b9 h-full py-1 relative">
+                            <input type="search" class="w-full outline-none text-24021 font-semibold text-sm cursor-text bg-transparent"
+                                   placeholder="Поиск" />
+                            <div class="top-panel-input__clear inline-flex absolute flex-shrink-0 items-start bg-f2 flex-shrink-0 cursor-pointer z-20" onclick="this.previousElementSibling.value = ''">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/content/clear_24px" opacity="0.5">
+                                        <path id="icon/content/clear_24px_2" d="M12.6667 4.27325L11.7267 3.33325L8.00001 7.05992L4.27334 3.33325L3.33334 4.27325L7.06001 7.99992L3.33334 11.7266L4.27334 12.6666L8.00001 8.93992L11.7267 12.6666L12.6667 11.7266L8.94001 7.99992L12.6667 4.27325Z" fill="black" fill-opacity="0.54"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <button type="submit" class="inline-flex items-start flex-shrink-0 focus:outline-none hover:opacity-75">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M14.9649 14.2549H15.7549L20.7449 19.2549L19.2549 20.7449L14.2549 15.7549V14.9649L13.9849 14.6849C12.8449 15.6649 11.3649 16.2549 9.75488 16.2549C6.16488 16.2549 3.25488 13.3449 3.25488 9.75488C3.25488 6.16488 6.16488 3.25488 9.75488 3.25488C13.3449 3.25488 16.2549 6.16488 16.2549 9.75488C16.2549 11.3649 15.6649 12.8449 14.6849 13.9849L14.9649 14.2549ZM5.25488 9.75488C5.25488 12.2449 7.26488 14.2549 9.75488 14.2549C12.2449 14.2549 14.2549 12.2449 14.2549 9.75488C14.2549 7.26488 12.2449 5.25488 9.75488 5.25488C7.26488 5.25488 5.25488 7.26488 5.25488 9.75488Z"
+                                          fill="#656565" />
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                    <div class="flex items-end py-6 px-4 text-xxs text-b9 leading-3">
+                        <div class="inline-flex items-end font-semibold text-xs w-4 mr-8">
+                            #
+                        </div>
+                        <div class="inline-flex pr-4 flex-shrink-0" style="width: 3.25rem;">
+
+                        </div>
+                        <div class="inline-flex items-end pr-4 min-w-0">
+                            <div class="min-w-0 w-64">
+                                Название
+                            </div>
+                        </div>
+                        <div class="inline-flex pr-4">
+                            <div class="flex items-end min-w-0 w-48">
+                                <select name="status" id="status" class="bg-transparent outline-none">
+                                    <option value="Статус">Статус</option>
+                                    <option value="действующие">Действующие</option>
+                                    <option value="недействующие">Недействующие</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="inline-flex items-end w-24 leading-3 pr-4">
+                            ИНН
+                        </div>
+                        <div class="inline-flex items-end w-24 leading-3 pr-4">
+                            ОГРН
+                        </div>
+                        <div class="inline-flex items-end w-40 leading-3 min-w-0 pr-4">
+                            <div class="min-w-0 w-48 text-overflow overflow-hidden">Регион</div>
+                        </div>
+                        <div class="inline-flex items-end w-16 leading-3 pr-4">
+                            ОКВЭД
+                        </div>
+                        <div class="inline-flex w-10 ">
+                        </div>
+                    </div>
+                    <div class="flex items-center py-6 px-4 text-xxs text-65 leading-3 border-t border-b9">
+                        <div class="inline-flex items-end font-semibold text-65 text-xs w-4 mr-8">
+                            1
+                        </div>
+                        <div class="inline-flex pr-4 flex-shrink-0">
+                            <div class="flex items-center justify-center bg-eb5 rounded-full" style="width: 2.25rem; height: 2.25rem">
+                                <svg width="24" height="24" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 4H14V12H2V4ZM8 6C8.53043 6 9.03914 6.21071 9.41421 6.58579C9.78929 6.96086 10 7.46957 10 8C10 8.53043 9.78929 9.03914 9.41421 9.41421C9.03914 9.78929 8.53043 10 8 10C7.46957 10 6.96086 9.78929 6.58579 9.41421C6.21071 9.03914 6 8.53043 6 8C6 7.46957 6.21071 6.96086 6.58579 6.58579C6.96086 6.21071 7.46957 6 8 6ZM4.66667 5.33333C4.66667 5.68696 4.52619 6.02609 4.27614 6.27614C4.02609 6.52619 3.68696 6.66667 3.33333 6.66667V9.33333C3.68696 9.33333 4.02609 9.47381 4.27614 9.72386C4.52619 9.97391 4.66667 10.313 4.66667 10.6667H11.3333C11.3333 10.313 11.4738 9.97391 11.7239 9.72386C11.9739 9.47381 12.313 9.33333 12.6667 9.33333V6.66667C12.313 6.66667 11.9739 6.52619 11.7239 6.27614C11.4738 6.02609 11.3333 5.68696 11.3333 5.33333H4.66667Z" fill="white"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="inline-flex pr-4 min-w-0">
+                            <div class="flex flex-wrap min-w-0">
+                                <a href="#"
+                                   class="one-result__name inline-flex items-end w-full font-semibold text-sm text-blue leading-none hover:opacity-75 min-w-0">
+                                        <span
+                                                class="tooltip min-w-0 w-64 whitespace-no-wrap  text-overflow overflow-hidden"
+                                                title="ПРОМОБОТ Иван иванович">
+                                            ООО «ПРОМОБОТ Иван иванович»
+                                        </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="inline-flex pr-4">
+                            <div class="flex items-center min-w-0 w-48">
+                                <svg class="inline-flex flex-shrink-0 mr-2" width="16" height="16"
+                                     viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M8.00004 4.66667H14.6667V14H1.33337V2H8.00004V4.66667ZM2.66671 12.6667H4.00004V11.3333H2.66671V12.6667ZM4.00004 10H2.66671V8.66667H4.00004V10ZM2.66671 7.33333H4.00004V6H2.66671V7.33333ZM4.00004 4.66667H2.66671V3.33333H4.00004V4.66667ZM5.33337 12.6667H6.66671V11.3333H5.33337V12.6667ZM6.66671 10H5.33337V8.66667H6.66671V10ZM5.33337 7.33333H6.66671V6H5.33337V7.33333ZM6.66671 4.66667H5.33337V3.33333H6.66671V4.66667ZM8.00004 12.6667H13.3334V6H8.00004V7.33333H9.33337V8.66667H8.00004V10H9.33337V11.3333H8.00004V12.6667ZM12 7.33333H10.6667V8.66667H12V7.33333ZM10.6667 10H12V11.3333H10.6667V10Z"
+                                          fill="#B9BDC7" />
+                                </svg>
+                                <div class="whitespace-no-wrap text-overflow overflow-hidden min-w-0">
+                                    Недействующая организация
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inline-flex items-end w-24 pr-4">
+                            5903113639
+                        </div>
+                        <div class="inline-flex items-end w-24 pr-4">
+                            1155958016411
+                        </div>
+                        <div class="inline-flex items-end w-40 min-w-0 pr-4">
+                            <div class="min-w-0 w-48 text-overflow overflow-hidden">Свердловская область</div>
+                        </div>
+                        <div class="inline-flex items-end w-16 pr-4">
+                            62.01
+                        </div>
+                        <div class="delete-info inline-flex flex-shrink-0 justify-center w-10 hover:opacity-75 cursor-pointer tooltip" title="Удалить объект">
+                            <svg class="flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5 4H19V6H5V4H8.5L9.5 3H14.5L15.5 4ZM8 21C6.9 21 6 20.1 6 19V7H18V19C18 20.1 17.1 21 16 21H8Z" fill="#B9BDC7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="flex items-center py-6 px-4 text-xxs text-65 leading-3 border-t border-b9">
+                        <div class="inline-flex items-end font-semibold text-65 text-xs w-4 mr-8">
+                            1
+                        </div>
+                        <div class="inline-flex pr-4 flex-shrink-0">
+                            <div class="flex items-center justify-center bg-eb5 rounded-full" style="width: 2.25rem; height: 2.25rem">
+                                <svg width="24" height="24" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 4H14V12H2V4ZM8 6C8.53043 6 9.03914 6.21071 9.41421 6.58579C9.78929 6.96086 10 7.46957 10 8C10 8.53043 9.78929 9.03914 9.41421 9.41421C9.03914 9.78929 8.53043 10 8 10C7.46957 10 6.96086 9.78929 6.58579 9.41421C6.21071 9.03914 6 8.53043 6 8C6 7.46957 6.21071 6.96086 6.58579 6.58579C6.96086 6.21071 7.46957 6 8 6ZM4.66667 5.33333C4.66667 5.68696 4.52619 6.02609 4.27614 6.27614C4.02609 6.52619 3.68696 6.66667 3.33333 6.66667V9.33333C3.68696 9.33333 4.02609 9.47381 4.27614 9.72386C4.52619 9.97391 4.66667 10.313 4.66667 10.6667H11.3333C11.3333 10.313 11.4738 9.97391 11.7239 9.72386C11.9739 9.47381 12.313 9.33333 12.6667 9.33333V6.66667C12.313 6.66667 11.9739 6.52619 11.7239 6.27614C11.4738 6.02609 11.3333 5.68696 11.3333 5.33333H4.66667Z" fill="white"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="inline-flex pr-4 min-w-0">
+                            <div class="flex flex-wrap min-w-0">
+                                <a href="#"
+                                   class="one-result__name inline-flex items-end w-full font-semibold text-sm text-blue leading-none hover:opacity-75 min-w-0">
+                                        <span
+                                                class="tooltip min-w-0 w-64 whitespace-no-wrap  text-overflow overflow-hidden"
+                                                title="ООО «ПРОМОБОТ»">
+                                            ООО «ПРОМОБОТ»
+                                        </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="inline-flex pr-4">
+                            <div class="flex items-center min-w-0 w-48">
+                                <svg class="inline-flex flex-shrink-0 mr-2" width="16" height="16"
+                                     viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M8.00004 4.66667H14.6667V14H1.33337V2H8.00004V4.66667ZM2.66671 12.6667H4.00004V11.3333H2.66671V12.6667ZM4.00004 10H2.66671V8.66667H4.00004V10ZM2.66671 7.33333H4.00004V6H2.66671V7.33333ZM4.00004 4.66667H2.66671V3.33333H4.00004V4.66667ZM5.33337 12.6667H6.66671V11.3333H5.33337V12.6667ZM6.66671 10H5.33337V8.66667H6.66671V10ZM5.33337 7.33333H6.66671V6H5.33337V7.33333ZM6.66671 4.66667H5.33337V3.33333H6.66671V4.66667ZM8.00004 12.6667H13.3334V6H8.00004V7.33333H9.33337V8.66667H8.00004V10H9.33337V11.3333H8.00004V12.6667ZM12 7.33333H10.6667V8.66667H12V7.33333ZM10.6667 10H12V11.3333H10.6667V10Z"
+                                          fill="#B9BDC7" />
+                                </svg>
+                                <div class="whitespace-no-wrap text-overflow overflow-hidden min-w-0">
+                                    Недействующая организация
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inline-flex items-end w-24 pr-4">
+                            5903113639
+                        </div>
+                        <div class="inline-flex items-end w-24 pr-4">
+                            1155958016411
+                        </div>
+                        <div class="inline-flex items-end w-40 min-w-0 pr-4">
+                            <div class="min-w-0 w-48 text-overflow overflow-hidden">Свердловская область</div>
+                        </div>
+                        <div class="inline-flex items-end w-16 pr-4">
+                            62.01
+                        </div>
+                        <div class="delete-info inline-flex flex-shrink-0 justify-center w-10 hover:opacity-75 cursor-pointer tooltip" title="Удалить объект">
+                            <svg class="flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5 4H19V6H5V4H8.5L9.5 3H14.5L15.5 4ZM8 21C6.9 21 6 20.1 6 19V7H18V19C18 20.1 17.1 21 16 21H8Z" fill="#B9BDC7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div  class="lists-block inline-flex bg-white flex-wrap text-24021 content-start items-start text-xxs overflow-auto max-h-full">
+        <div class="flex w-full items-center text-b9 text-xs font-medium px-6 h-16">
+            <span>Настройки</span>
+        </div>
+        <div class="filter-drop flex flex-wrap w-full border-t border-ed py-5 px-6">
+            <div class="filter-drop__title inline-flex flex-wrap w-full font-medium cursor-pointer">
+                <div class="flex w-full items-center justify-between">
+                    <div class="inline-flex">
+                        Cписки
+                    </div>
+                </div>
+            </div>
+            <div class="filter-drop__content inline-flex flex-wrap w-full mt-4">
+                <div class="my-list-item flex items-center">
+                    <label class="flex check-controls items-center w-full py-2 cursor-pointer">
+                        <input type="checkbox" class="check-controls__checkbox hidden"/>
+                        <span class="check-controls__check-custom flex-shrink-0 inline-flex border border-b9 mr-2"></span>
+                        <span class="inline-flex w-6 h-6 flex-shrink-0 rounded-full items-center justify-center bg-orange">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                    d="M2 4H14V12H2V4ZM8 6C8.53043 6 9.03914 6.21071 9.41421 6.58579C9.78929 6.96086 10 7.46957 10 8C10 8.53043 9.78929 9.03914 9.41421 9.41421C9.03914 9.78929 8.53043 10 8 10C7.46957 10 6.96086 9.78929 6.58579 9.41421C6.21071 9.03914 6 8.53043 6 8C6 7.46957 6.21071 6.96086 6.58579 6.58579C6.96086 6.21071 7.46957 6 8 6ZM4.66667 5.33333C4.66667 5.68696 4.52619 6.02609 4.27614 6.27614C4.02609 6.52619 3.68696 6.66667 3.33333 6.66667V9.33333C3.68696 9.33333 4.02609 9.47381 4.27614 9.72386C4.52619 9.97391 4.66667 10.313 4.66667 10.6667H11.3333C11.3333 10.313 11.4738 9.97391 11.7239 9.72386C11.9739 9.47381 12.313 9.33333 12.6667 9.33333V6.66667C12.313 6.66667 11.9739 6.52619 11.7239 6.27614C11.4738 6.02609 11.3333 5.68696 11.3333 5.33333H4.66667Z"
+                                    fill="white"/>
+                        </svg>
+                    </span>
+                        <span class="select-none inline-flex ml-3 min-w-0">
+                            <span class="whitespace-no-wrap w-48 min-w-0 text-overflow overflow-hidden">Дебеторская задолженность</span>
+                        </span>
+                    </label>
+                    <div class="pencil flex flex-shrink-0 mx-2 tooltip cursor-pointer" title="Редактировать">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.5325 5.28188C15.825 4.98938 15.825 4.50188 15.5325 4.22438L13.7775 2.46938C13.5 2.17687 13.0125 2.17687 12.72 2.46938L11.34 3.84188L14.1525 6.65438L15.5325 5.28188ZM2.25 12.9394V15.7519H5.0625L13.3575 7.44938L10.545 4.63688L2.25 12.9394Z"
+                                  fill="#B9BDC7"/>
+                        </svg>
+                    </div>
+                    <div class="delete flex-shrink-0 tooltip cursor-pointer" title="Удалить">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M11.625 3H14.25V4.5H3.75V3H6.375L7.125 2.25H10.875L11.625 3ZM6 15.75C5.175 15.75 4.5 15.075 4.5 14.25V5.25H13.5V14.25C13.5 15.075 12.825 15.75 12 15.75H6Z"
+                                  fill="#B9BDC7"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="my-list-item flex items-center">
+                    <label class="flex check-controls items-center w-full py-2 cursor-pointer">
+                        <input type="checkbox" class="check-controls__checkbox hidden"/>
+                        <span class="check-controls__check-custom flex-shrink-0 inline-flex border border-b9 mr-2"></span>
+                        <span class="inline-flex w-6 h-6 flex-shrink-0 rounded-full items-center justify-center bg-green-3">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                        d="M2 4H14V12H2V4ZM8 6C8.53043 6 9.03914 6.21071 9.41421 6.58579C9.78929 6.96086 10 7.46957 10 8C10 8.53043 9.78929 9.03914 9.41421 9.41421C9.03914 9.78929 8.53043 10 8 10C7.46957 10 6.96086 9.78929 6.58579 9.41421C6.21071 9.03914 6 8.53043 6 8C6 7.46957 6.21071 6.96086 6.58579 6.58579C6.96086 6.21071 7.46957 6 8 6ZM4.66667 5.33333C4.66667 5.68696 4.52619 6.02609 4.27614 6.27614C4.02609 6.52619 3.68696 6.66667 3.33333 6.66667V9.33333C3.68696 9.33333 4.02609 9.47381 4.27614 9.72386C4.52619 9.97391 4.66667 10.313 4.66667 10.6667H11.3333C11.3333 10.313 11.4738 9.97391 11.7239 9.72386C11.9739 9.47381 12.313 9.33333 12.6667 9.33333V6.66667C12.313 6.66667 11.9739 6.52619 11.7239 6.27614C11.4738 6.02609 11.3333 5.68696 11.3333 5.33333H4.66667Z"
+                                        fill="white"/>
+                            </svg>
+                        </span>
+                        <span class="select-none inline-flex ml-3 min-w-0">
+                            <span class="whitespace-no-wrap w-48 min-w-0 text-overflow overflow-hidden">Кредиторская задолженность</span>
+                        </span>
+                    </label>
+                    <div class="pencil flex flex-shrink-0 mx-2 tooltip cursor-pointer" title="Редактировать">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.5325 5.28188C15.825 4.98938 15.825 4.50188 15.5325 4.22438L13.7775 2.46938C13.5 2.17687 13.0125 2.17687 12.72 2.46938L11.34 3.84188L14.1525 6.65438L15.5325 5.28188ZM2.25 12.9394V15.7519H5.0625L13.3575 7.44938L10.545 4.63688L2.25 12.9394Z"
+                                  fill="#B9BDC7"/>
+                        </svg>
+                    </div>
+                    <div class="delete flex-shrink-0 tooltip cursor-pointer" title="Удалить">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M11.625 3H14.25V4.5H3.75V3H6.375L7.125 2.25H10.875L11.625 3ZM6 15.75C5.175 15.75 4.5 15.075 4.5 14.25V5.25H13.5V14.25C13.5 15.075 12.825 15.75 12 15.75H6Z"
+                                  fill="#B9BDC7"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="my-list-item flex items-center">
+                    <label class="flex check-controls items-center w-full py-2 cursor-pointer">
+                        <input type="checkbox" class="check-controls__checkbox hidden"/>
+                        <span class="check-controls__check-custom flex-shrink-0 inline-flex border border-b9 mr-2"></span>
+                        <span class="inline-flex w-6 h-6 flex-shrink-0 rounded-full items-center justify-center bg-blue">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                        d="M12 12.3332C11.7347 12.3332 11.4804 12.2278 11.2929 12.0403C11.1053 11.8527 11 11.5984 11 11.3332C11 11.068 11.1053 10.8136 11.2929 10.6261C11.4804 10.4385 11.7347 10.3332 12 10.3332C12.2652 10.3332 12.5195 10.4385 12.7071 10.6261C12.8946 10.8136 13 11.068 13 11.3332C13 11.5984 12.8946 11.8527 12.7071 12.0403C12.5195 12.2278 12.2652 12.3332 12 12.3332ZM13 6.33317L14.3066 7.99984H11.3333V6.33317H13ZM3.99996 12.3332C3.73474 12.3332 3.48039 12.2278 3.29285 12.0403C3.10532 11.8527 2.99996 11.5984 2.99996 11.3332C2.99996 11.068 3.10532 10.8136 3.29285 10.6261C3.48039 10.4385 3.73474 10.3332 3.99996 10.3332C4.26518 10.3332 4.51953 10.4385 4.70707 10.6261C4.8946 10.8136 4.99996 11.068 4.99996 11.3332C4.99996 11.5984 4.8946 11.8527 4.70707 12.0403C4.51953 12.2278 4.26518 12.3332 3.99996 12.3332ZM13.3333 5.33317H11.3333V2.6665H1.99996C1.25996 2.6665 0.666626 3.25984 0.666626 3.99984V11.3332H1.99996C1.99996 11.8636 2.21067 12.3723 2.58575 12.7474C2.96082 13.1225 3.46953 13.3332 3.99996 13.3332C4.53039 13.3332 5.0391 13.1225 5.41417 12.7474C5.78925 12.3723 5.99996 11.8636 5.99996 11.3332H9.99996C9.99996 11.8636 10.2107 12.3723 10.5857 12.7474C10.9608 13.1225 11.4695 13.3332 12 13.3332C12.5304 13.3332 13.0391 13.1225 13.4142 12.7474C13.7892 12.3723 14 11.8636 14 11.3332H15.3333V7.99984L13.3333 5.33317Z"
+                                        fill="white"/>
+                            </svg>
+                        </span>
+                        <span class="select-none inline-flex ml-3 min-w-0">
+                            <span class="whitespace-no-wrap w-48 min-w-0 text-overflow overflow-hidden">Поставщики</span>
+                        </span>
+                    </label>
+                    <div class="pencil flex flex-shrink-0 mx-2 tooltip cursor-pointer" title="Редактировать">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.5325 5.28188C15.825 4.98938 15.825 4.50188 15.5325 4.22438L13.7775 2.46938C13.5 2.17687 13.0125 2.17687 12.72 2.46938L11.34 3.84188L14.1525 6.65438L15.5325 5.28188ZM2.25 12.9394V15.7519H5.0625L13.3575 7.44938L10.545 4.63688L2.25 12.9394Z"
+                                  fill="#B9BDC7"/>
+                        </svg>
+                    </div>
+                    <div class="delete flex-shrink-0 tooltip cursor-pointer" title="Удалить">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M11.625 3H14.25V4.5H3.75V3H6.375L7.125 2.25H10.875L11.625 3ZM6 15.75C5.175 15.75 4.5 15.075 4.5 14.25V5.25H13.5V14.25C13.5 15.075 12.825 15.75 12 15.75H6Z"
+                                  fill="#B9BDC7"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="my-list-item flex items-center">
+                    <label class="flex check-controls items-center w-full py-2 cursor-pointer">
+                        <input type="checkbox" class="check-controls__checkbox hidden"/>
+                        <span class="check-controls__check-custom flex-shrink-0 inline-flex border border-b9 mr-2"></span>
+                        <span class="inline-flex w-6 h-6 flex-shrink-0 rounded-full items-center justify-center bg-blue-3">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                        d="M7.98004 13.2535C7.28671 13.5068 6.52004 13.1468 6.26671 12.4602C6.00004 11.7668 6.36671 11.0002 7.06004 10.7535C7.75337 10.5002 8.52004 10.8535 8.77337 11.5402C9.02671 12.2335 8.66671 13.0002 7.98004 13.2535ZM6.60004 9.50016C5.22004 10.0002 4.50671 11.5335 5.00004 12.9202C5.52004 14.3002 7.05337 15.0002 8.44004 14.5002C9.82004 14.0002 10.5267 12.4668 10.0267 11.0868C9.52004 9.70016 7.98004 9.00016 6.60004 9.50016ZM10.6267 3.0535L6.24671 4.66683L7.16671 7.16016L11.5467 5.5535L10.6267 3.0535ZM13.5467 9.08016L10.36 10.2468C10.4734 10.4402 10.5667 10.6402 10.6467 10.8535C10.7267 11.0668 10.78 11.2868 10.8134 11.5002L14 10.3335L13.5467 9.08016ZM13.0267 5.72016L7.39337 7.78683L7.72004 8.66683C8.55337 8.72683 9.33337 9.0935 9.92671 9.70016L13.9467 8.22683L13.0267 5.72016ZM1.33337 1.3335V2.66683H3.39337L5.77337 9.16683C5.96004 9.04683 6.16004 8.9535 6.37337 8.8735C6.58671 8.7935 6.80671 8.74016 7.02004 8.70683L4.33337 1.3335"
+                                        fill="white"/>
+                            </svg>
+                        </span>
+                        <span class="select-none inline-flex ml-3 min-w-0">
+                            <span class="whitespace-no-wrap w-48 min-w-0 text-overflow overflow-hidden">Доставка</span>
+                        </span>
+                    </label>
+                    <div class="pencil flex flex-shrink-0 mx-2 tooltip cursor-pointer" title="Редактировать">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.5325 5.28188C15.825 4.98938 15.825 4.50188 15.5325 4.22438L13.7775 2.46938C13.5 2.17687 13.0125 2.17687 12.72 2.46938L11.34 3.84188L14.1525 6.65438L15.5325 5.28188ZM2.25 12.9394V15.7519H5.0625L13.3575 7.44938L10.545 4.63688L2.25 12.9394Z"
+                                  fill="#B9BDC7"/>
+                        </svg>
+                    </div>
+                    <div class="delete flex-shrink-0 tooltip cursor-pointer" title="Удалить">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M11.625 3H14.25V4.5H3.75V3H6.375L7.125 2.25H10.875L11.625 3ZM6 15.75C5.175 15.75 4.5 15.075 4.5 14.25V5.25H13.5V14.25C13.5 15.075 12.825 15.75 12 15.75H6Z"
+                                  fill="#B9BDC7"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="my-list-item flex items-center">
+                    <label class="flex check-controls items-center w-full py-2 cursor-pointer">
+                        <input type="checkbox" class="check-controls__checkbox hidden"/>
+                        <span class="check-controls__check-custom flex-shrink-0 inline-flex border border-b9 mr-2"></span>
+                        <span class="inline-flex w-6 h-6 flex-shrink-0 rounded-full items-center justify-center bg-orange">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                        d="M4.41333 7.1935C5.37333 9.08016 6.92 10.6268 8.80667 11.5868L10.2733 10.1202C10.46 9.9335 10.72 9.88016 10.9533 9.9535C11.7 10.2002 12.5 10.3335 13.3333 10.3335C13.5101 10.3335 13.6797 10.4037 13.8047 10.5288C13.9298 10.6538 14 10.8234 14 11.0002V13.3335C14 13.5103 13.9298 13.6799 13.8047 13.8049C13.6797 13.9299 13.5101 14.0002 13.3333 14.0002C10.3275 14.0002 7.44487 12.8061 5.31946 10.6807C3.19404 8.55529 2 5.67262 2 2.66683C2 2.2935 2.3 2.00016 2.66667 2.00016H5C5.17681 2.00016 5.34638 2.0704 5.4714 2.19542C5.59643 2.32045 5.66667 2.49002 5.66667 2.66683C5.66667 3.4935 5.8 4.30016 6.04667 5.04683C6.12 5.28016 6.06667 5.54016 5.88 5.72016L4.41333 7.1935ZM11.3333 8.00016V6.66683H12.6667V8.00016H11.3333ZM11.3333 5.3335V1.3335H12.6667V5.3335H11.3333Z"
+                                        fill="white"/>
+                            </svg>
+                        </span>
+                        <span class="select-none inline-flex ml-3 min-w-0">
+                            <span class="whitespace-no-wrap w-48 min-w-0 text-overflow overflow-hidden">Полезные контакты</span>
+                        </span>
+                    </label>
+                    <div class="pencil flex flex-shrink-0 mx-2 tooltip cursor-pointer" title="Редактировать">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.5325 5.28188C15.825 4.98938 15.825 4.50188 15.5325 4.22438L13.7775 2.46938C13.5 2.17687 13.0125 2.17687 12.72 2.46938L11.34 3.84188L14.1525 6.65438L15.5325 5.28188ZM2.25 12.9394V15.7519H5.0625L13.3575 7.44938L10.545 4.63688L2.25 12.9394Z"
+                                  fill="#B9BDC7"/>
+                        </svg>
+                    </div>
+                    <div class="delete flex-shrink-0 tooltip cursor-pointer" title="Удалить">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M11.625 3H14.25V4.5H3.75V3H6.375L7.125 2.25H10.875L11.625 3ZM6 15.75C5.175 15.75 4.5 15.075 4.5 14.25V5.25H13.5V14.25C13.5 15.075 12.825 15.75 12 15.75H6Z"
+                                  fill="#B9BDC7"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="my-list-item flex items-center">
+                    <label class="flex check-controls items-center w-full py-2 cursor-pointer">
+                        <input type="checkbox" class="check-controls__checkbox hidden"/>
+                        <span class="check-controls__check-custom flex-shrink-0 inline-flex border border-b9 mr-2"></span>
+                        <span class="inline-flex w-6 h-6 flex-shrink-0 rounded-full items-center justify-center bg-red">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                        d="M13.48 1.6665L1.66663 13.4798L2.51329 14.3332L5.76663 11.0798C7.83996 12.9532 10.54 13.9998 13.3333 13.9998C13.5101 13.9998 13.6797 13.9296 13.8047 13.8046C13.9297 13.6796 14 13.51 14 13.3332V10.9998C14 10.823 13.9297 10.6535 13.8047 10.5284C13.6797 10.4034 13.5101 10.3332 13.3333 10.3332C12.5 10.3332 11.7 10.1998 10.9533 9.95317C10.72 9.87984 10.46 9.93317 10.2733 10.1198L8.80663 11.5865C8.03996 11.1998 7.33329 10.7065 6.70663 10.1398L14.3333 2.51317L13.48 1.6665ZM2.66663 1.99984C2.48981 1.99984 2.32025 2.07008 2.19522 2.1951C2.0702 2.32012 1.99996 2.48969 1.99996 2.6665C1.99996 5.0465 2.75996 7.3665 4.15996 9.29317L5.10663 8.33317C4.85329 7.97984 4.61996 7.59317 4.41329 7.19317L5.87996 5.7265C6.06663 5.53984 6.11996 5.27984 6.04663 5.0465C5.79996 4.29984 5.66663 3.49984 5.66663 2.6665C5.66663 2.48969 5.59639 2.32012 5.47136 2.1951C5.34634 2.07008 5.17677 1.99984 4.99996 1.99984H2.66663Z"
+                                        fill="white"/>
+                            </svg>
+                        </span>
+                        <span class="select-none inline-flex ml-3 min-w-0">
+                            <span class="whitespace-no-wrap w-48 min-w-0 text-overflow overflow-hidden">Не контактировать</span>
+                        </span>
+                    </label>
+                    <div class="pencil flex flex-shrink-0 mx-2 tooltip cursor-pointer" title="Редактировать">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.5325 5.28188C15.825 4.98938 15.825 4.50188 15.5325 4.22438L13.7775 2.46938C13.5 2.17687 13.0125 2.17687 12.72 2.46938L11.34 3.84188L14.1525 6.65438L15.5325 5.28188ZM2.25 12.9394V15.7519H5.0625L13.3575 7.44938L10.545 4.63688L2.25 12.9394Z"
+                                  fill="#B9BDC7"/>
+                        </svg>
+                    </div>
+                    <div class="delete flex-shrink-0 tooltip cursor-pointer" title="Удалить">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M11.625 3H14.25V4.5H3.75V3H6.375L7.125 2.25H10.875L11.625 3ZM6 15.75C5.175 15.75 4.5 15.075 4.5 14.25V5.25H13.5V14.25C13.5 15.075 12.825 15.75 12 15.75H6Z"
+                                  fill="#B9BDC7"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="my-list-item flex items-center">
+                    <label class="flex check-controls items-center w-full py-2 cursor-pointer">
+                        <input type="checkbox" class="check-controls__checkbox hidden"/>
+                        <span class="check-controls__check-custom flex-shrink-0 inline-flex border border-b9 mr-2"></span>
+                        <span class="inline-flex w-6 h-6 flex-shrink-0 rounded-full items-center justify-center bg-black">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M8.00004 1.3335C4.32004 1.3335 1.33337 4.32016 1.33337 8.00016C1.33337 11.6802 4.32004 14.6668 8.00004 14.6668C11.68 14.6668 14.6667 11.6802 14.6667 8.00016C14.6667 4.32016 11.68 1.3335 8.00004 1.3335ZM2.66671 8.00017C2.66671 5.05351 5.05337 2.66684 8.00004 2.66684C9.23337 2.66684 10.3667 3.08684 11.2667 3.79351L3.79337 11.2668C3.08671 10.3668 2.66671 9.23351 2.66671 8.00017ZM4.73337 12.2068C5.63337 12.9134 6.76671 13.3334 8.00004 13.3334C10.9467 13.3334 13.3334 10.9468 13.3334 8.0001C13.3334 6.76677 12.9134 5.63343 12.2067 4.73343L4.73337 12.2068Z"
+                                      fill="white"/>
+                            </svg>
+                        </span>
+                        <span class="select-none inline-flex ml-3 min-w-0">
+                            <span class="whitespace-no-wrap w-48 min-w-0 text-overflow overflow-hidden">Чёрный список</span>
+                        </span>
+                    </label>
+                    <div class="pencil flex flex-shrink-0 mx-2 tooltip cursor-pointer" title="Редактировать">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.5325 5.28188C15.825 4.98938 15.825 4.50188 15.5325 4.22438L13.7775 2.46938C13.5 2.17687 13.0125 2.17687 12.72 2.46938L11.34 3.84188L14.1525 6.65438L15.5325 5.28188ZM2.25 12.9394V15.7519H5.0625L13.3575 7.44938L10.545 4.63688L2.25 12.9394Z"
+                                  fill="#B9BDC7"/>
+                        </svg>
+                    </div>
+                    <div class="delete flex-shrink-0 tooltip cursor-pointer" title="Удалить">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M11.625 3H14.25V4.5H3.75V3H6.375L7.125 2.25H10.875L11.625 3ZM6 15.75C5.175 15.75 4.5 15.075 4.5 14.25V5.25H13.5V14.25C13.5 15.075 12.825 15.75 12 15.75H6Z"
+                                  fill="#B9BDC7"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="flex w-full justify-center mt-6">
+                    <button type="submit" class="button-standart arcticmodal-close bg-white text-blue text-xs shadow-lg focus:outline-none hover:shadow-xl mx-2 px-4">
+                        <span>Добавить список</span>
+                    </button>
+                </div>
+        
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<script src="js/libs.js"></script>
+<script src="js/main.js"></script>
+</body>
+
+</html>

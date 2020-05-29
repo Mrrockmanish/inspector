@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+//= templates/head.html
+
+<body class="relative">
+    <div class="flex flex-nowrap h-screen">
+        //= templates/left-panel.html
+        <div class="center-sector items-start inline-flex flex-wrap flex-grow min-w-0 overflow-hidden">
+            <div class="flex w-full self-start">
+                <div class="top-panel w-full bg-white inline-flex">
+                    <div class="flex h-full w-full flex-stretch items-center">
+                        //= templates/top-panel-inputs.html
+                    </div>
+                </div>
+            </div>
+            <div class="area bg-f2 flex w-full flex-grow">
+                <div class="area__inner inline-flex flex-grow whitespace-no-wrap relative overflow-x-auto">
+                    <!-- основная контентная часть  -->
+                    <div class="last-search overflow-x-auto w-full min-w-0">
+                        <div class="flex py-6 flex-col h-full min-w-0 justify-end overflow-x-auto">
+                            <div class="flex flex-wrap min-w-0 w-full border-t border-c4 pt-6 px-6 overflow-x-auto">
+                                <div class="flex w-full font-medium text-sm mb-4">Последние поисковые запросы</div>
+                                <div class="flex -mx-3 min-w-0 overflow-x-auto pb-6">
+                                    <a href="#" class="last-search__item inline-flex mx-3 px-6 py-3 bg-white flex-shrink-0 hover:opacity-75">
+                                        <div class="flex flex-wrap items-center text-blue text-base font-semibold w-full h-full min-w-0">
+                                            <span class="last-search__text min-w-0 overflow-hidden">
+                                                Щербаков
+                                                Станислав Викторович
+                                            </span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="last-search__item inline-flex mx-3 px-6 py-3 bg-white flex-shrink-0 hover:opacity-75">
+                                        <div class="flex flex-wrap items-center text-blue text-base font-semibold w-full h-full min-w-0">
+                                            <span class="last-search__text min-w-0 overflow-hidden">
+                                                6234096122 (ИНН)
+                                            </span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="last-search__item inline-flex mx-3 px-6 py-3 bg-white flex-shrink-0 hover:opacity-75">
+                                        <div class="flex flex-wrap items-center text-blue text-base font-semibold w-full h-full min-w-0">
+                                            <span class="last-search__text min-w-0 overflow-hidden">
+                                                Южанин
+                                            </span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="last-search__item inline-flex mx-3 px-6 py-3 bg-white flex-shrink-0 hover:opacity-75">
+                                        <div class="flex flex-wrap items-center text-blue text-base font-semibold w-full h-full min-w-0">
+                                            <span class="last-search__text min-w-0 overflow-hidden">
+                                                Вассерман Юрий
+                                            </span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="last-search__item inline-flex mx-3 px-6 py-3 bg-white flex-shrink-0 hover:opacity-75">
+                                        <div class="flex flex-wrap items-center text-blue text-base font-semibold w-full h-full min-w-0">
+                                            <span class="last-search__text min-w-0 overflow-hidden">
+                                                пао сбербанк
+                                            </span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="last-search__item inline-flex mx-3 px-6 py-3 bg-white flex-shrink-0 hover:opacity-75">
+                                        <div class="flex flex-wrap items-center text-blue text-base font-semibold w-full h-full min-w-0">
+                                            <span class="last-search__text min-w-0 overflow-hidden">
+                                                пао Сбербанк
+                                            </span>
+                                        </div>
+                                    </a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    //= templates/scripts.html
+</body>
+
+</html>

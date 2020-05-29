@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="ru">
+//= templates/head.html
+
+<body class="relative">
+<div class="flex flex-nowrap h-screen">
+    //= templates/left-panel.html
+    <div class="center-sector items-start inline-flex flex-wrap flex-grow min-w-0 overflow-hidden">
+        <div class="flex w-full self-start">
+            <div class="top-panel w-full bg-white inline-flex">
+                <div class="flex h-full w-full items-center flex-stretch">
+                    //= templates/top-panel-tabs.html
+                    //= templates/top-panel-exit.html
+                </div>
+            </div>
+        </div>
+        <div class="area bg-f2 flex w-full flex-grow">
+            <div class="area__inner inline-flex flex-grow whitespace-no-wrap relative overflow-auto">
+                <!-- основная контентная часть  -->
+                <!-- кнопки в серой контентной части слева -->
+                <div class="area-left-tools text-blue flex flex-col h-full justify-start absolute z-50">
+                    <div
+                            class="area-left-tools__tool inline-flex flex-shrink-0 items-start rounded-full bg-white w-10 h-10 shadow-sm transition duration-300 border border-blue cursor-pointer tooltip" title="Вернуться в настройки списков">
+                        <div class="flex w-full h-full justify-center items-center">
+                            <div class="inline-flex items-start">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.9 0H17.1C17.6 0 18 0.4 18 0.9V17.1C18 17.5 17.6 18 17.1 18H0.9C0.5 18 0 17.5 0 17.1V0.9C0 0.4 0.5 0 0.9 0ZM12 4H14V6H12V4ZM4 4H10V6H4V4ZM4 8H10V10H4V8ZM10 12H4V14H10V12ZM14 8H12V10H14V8ZM12 12H14V14H12V12ZM16 16H2V2H16V16Z" fill="#00599A"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                            class="area-left-tools__tool inline-flex flex-shrink-0 items-start rounded-full bg-white w-10 h-10 shadow-sm transition duration-300 border border-blue cursor-pointer tooltip mt-4" title="Сохранить">
+                        <div class="flex w-full h-full justify-center items-center">
+                            <div class="inline-flex items-start">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M17 3H5C3.89 3 3 3.9 3 5V19C3 20.1 3.89 21 5 21H19C20.1 21 21 20.1 21 19V7L17 3ZM12 19C10.34 19 9 17.66 9 16C9 14.34 10.34 13 12 13C13.66 13 15 14.34 15 16C15 17.66 13.66 19 12 19ZM5 9H15V5H5V9Z"
+                                          fill="currentColor" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- кнопки в серой контентной части справа -->
+                <div class="area-right-tools text-blue flex flex-col h-full justify-end absolute">
+                    <div
+                            class="area-right-tools__tool inline-flex flex-shrink-0 items-start rounded-full bg-white w-10 h-10 shadow-sm transition duration-300 border-blue border cursor-pointer tooltip" title="таймлайн">
+                        <div class="flex w-full h-full justify-center items-center">
+                            <div class="inline-flex items-start">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M5 3H19C20.1 3 21 3.9 21 5V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V5C3 3.9 3.9 3 5 3ZM19 19H5V5H19V19ZM13 17H11V7H13V17ZM9 17H7V10H9V17ZM15 17H17V13H15V17Z"
+                                          fill="currentColor" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="connections flex-wrap flex-col flex-grow py-10 min-w-0 overflow-x-auto">
+                    <div class="sort text-24021 text-xxs flex justify-between w-full min-w-0 pb-10 pt-5 border-b border-b9 px-5">
+                        <div class="flex items-center">
+                            <span class="font-medium mr-3">Сортировка</span>
+                            <select name="sort" class="bg-transparent outline-none border-b border-b9  py-1 w-32">
+                                <option value="По умолчанию" selected>По умолчанию</option>
+                                <option value="Отключена">Отключена</option>
+                            </select>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="font-medium mr-3">Сортировка</span>
+                            <select name="sort2" class="bg-transparent outline-none border-b border-b9  py-1 w-32">
+                                <option value="По умолчанию" selected>По умолчанию</option>
+                                <option value="Отключена">Отключена</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="flex font-semibold text-base text-b9 pl-5">
+                        Действующие связи
+                    </div>
+                    <div class="flex flex-col">
+                        <div class="connections-row flex flex-grow items-center min-w-0 border-b border-b9 pl-5 py-10">
+                            <div class="flex">
+                                <div class="connections-row__count purple">
+                                    1
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="item item_connections purple inline-flex min-w-0">
+                                    <div class="item__inner flex items-center justify-center w-full h-full px-4">
+                                        <div class="inline-flex items-center justify-center">
+                                            <svg class="item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M12 7H22V21H2V3H12V7ZM4 19H6V17H4V19ZM6 15H4V13H6V15ZM4 11H6V9H4V11ZM6 7H4V5H6V7ZM8 19H10V17H8V19ZM10 15H8V13H10V15ZM8 11H10V9H8V11ZM10 7H8V5H10V7ZM20 19V9H12V11H14V13H12V15H14V17H12V19H20ZM18 11H16V13H18V11ZM16 15H18V17H16V15Z"
+                                                      fill="currentColor" />
+                                            </svg>
+                                        </div>
+                                        <div class="item__text inline-flex min-w-0 mx-2">
+                                            <div class="flex flex-wrap  min-w-0">
+                                                <div class="item__name inline-flex w-full whitespace-no-wrap overflow-hidden text-xxs font-semibold">
+                                                    <span class="text-overflow overflow-hidden tooltip" title="ООО «ПРОМОБОТ» длинное название">ООО «ПРОМОБОТ» длинное название</span>
+                                                </div>
+                                                <div
+                                                        class="inline-flex w-full min-w-0 whitespace-no-wrap overflow-hidden text-xxs font-medium">
+                                                    <span class="item__req text-overflow overflow-hidden">5903113639 / ОГРН 1155958016411</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item__arrow text-blue">
+                                        <svg width="48" height="6" viewBox="0 0 48 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M23.6798 3.00001L23.6798 3.50001L23.6798 3.00001ZM48 3L43 0.113254L43 5.88676L48 3ZM0.000297569 3.5L23.6798 3.50001L23.6798 2.50001L0.000297524 2.5L0.000297569 3.5ZM23.6798 3.50001L43.5 3.5L43.5 2.5L23.6798 2.50001L23.6798 3.50001Z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="item item_connections purple inline-flex min-w-0">
+                                    <div class="item__inner flex items-center justify-center w-full h-full px-4">
+                                        <div class="inline-flex items-center justify-center">
+                                            <svg class="item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M12 7H22V21H2V3H12V7ZM4 19H6V17H4V19ZM6 15H4V13H6V15ZM4 11H6V9H4V11ZM6 7H4V5H6V7ZM8 19H10V17H8V19ZM10 15H8V13H10V15ZM8 11H10V9H8V11ZM10 7H8V5H10V7ZM20 19V9H12V11H14V13H12V15H14V17H12V19H20ZM18 11H16V13H18V11ZM16 15H18V17H16V15Z"
+                                                      fill="currentColor" />
+                                            </svg>
+                                        </div>
+                                        <div class="item__text inline-flex min-w-0 mx-2">
+                                            <div class="flex flex-wrap  min-w-0">
+                                                <div class="item__name inline-flex w-full whitespace-no-wrap overflow-hidden text-xxs font-semibold">
+                                                    <span class="text-overflow overflow-hidden tooltip" title="ООО «ПРОМОБОТ» длинное название">ООО «ПРОМОБОТ» длинное название</span>
+                                                </div>
+                                                <div
+                                                        class="inline-flex w-full min-w-0 whitespace-no-wrap overflow-hidden text-xxs font-medium">
+                                                    <span class="item__req text-overflow overflow-hidden">5903113639 / ОГРН 1155958016411</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="connections-row flex flex-grow items-center min-w-0 border-b border-b9 pl-5 py-10">
+                            <div class="flex">
+                                <div class="connections-row__count green">
+                                    4
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="item item_connections green inline-flex min-w-0">
+                                    <div class="item__inner flex items-center justify-center w-full h-full px-4">
+                                        <div class="inline-flex items-center justify-center">
+                                            <svg class="item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M12 7H22V21H2V3H12V7ZM4 19H6V17H4V19ZM6 15H4V13H6V15ZM4 11H6V9H4V11ZM6 7H4V5H6V7ZM8 19H10V17H8V19ZM10 15H8V13H10V15ZM8 11H10V9H8V11ZM10 7H8V5H10V7ZM20 19V9H12V11H14V13H12V15H14V17H12V19H20ZM18 11H16V13H18V11ZM16 15H18V17H16V15Z"
+                                                      fill="currentColor" />
+                                            </svg>
+                                        </div>
+                                        <div class="item__text inline-flex min-w-0 mx-2">
+                                            <div class="flex flex-wrap  min-w-0">
+                                                <div class="item__name inline-flex w-full whitespace-no-wrap overflow-hidden text-xxs font-semibold">
+                                                    <span class="text-overflow overflow-hidden tooltip" title="ООО «ПРОМОБОТ» длинное название">ООО «ПРОМОБОТ» длинное название</span>
+                                                </div>
+                                                <div
+                                                        class="item__req inline-flex w-full min-w-0 whitespace-no-wrap overflow-hidden text-xxs font-medium">
+                                                    <span class="text-overflow overflow-hidden">5903113639 / ОГРН 1155958016411</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item__arrow text-blue">
+                                        <svg width="48" height="6" viewBox="0 0 48 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M23.6798 3.00001L23.6798 3.50001L23.6798 3.00001ZM48 3L43 0.113254L43 5.88676L48 3ZM0.000297569 3.5L23.6798 3.50001L23.6798 2.50001L0.000297524 2.5L0.000297569 3.5ZM23.6798 3.50001L43.5 3.5L43.5 2.5L23.6798 2.50001L23.6798 3.50001Z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="item item_connections  inline-flex min-w-0">
+                                    <div class="item__inner flex items-center justify-center w-full h-full px-4">
+                                        <div class="inline-flex items-center justify-center">
+                                            <svg class="item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M12 7H22V21H2V3H12V7ZM4 19H6V17H4V19ZM6 15H4V13H6V15ZM4 11H6V9H4V11ZM6 7H4V5H6V7ZM8 19H10V17H8V19ZM10 15H8V13H10V15ZM8 11H10V9H8V11ZM10 7H8V5H10V7ZM20 19V9H12V11H14V13H12V15H14V17H12V19H20ZM18 11H16V13H18V11ZM16 15H18V17H16V15Z"
+                                                      fill="#188B31" />
+                                            </svg>
+                                        </div>
+                                        <div class="item__text inline-flex min-w-0 mx-2">
+                                            <div class="flex flex-wrap  min-w-0">
+                                                <div class="item__name inline-flex w-full whitespace-no-wrap overflow-hidden text-xxs font-semibold">
+                                                    <span class="text-overflow overflow-hidden tooltip" title="ООО «ПРОМОБОТ» длинное название">ООО «ПРОМОБОТ» длинное название</span>
+                                                </div>
+                                                <div
+                                                        class="item__req inline-flex w-full min-w-0 whitespace-no-wrap overflow-hidden text-xxs font-medium">
+                                                    <span class="text-overflow overflow-hidden">5903113639 / ОГРН 1155958016411</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item__arrow text-blue">
+                                        <svg width="48" height="6" viewBox="0 0 48 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M23.6798 3.00001L23.6798 3.50001L23.6798 3.00001ZM48 3L43 0.113254L43 5.88676L48 3ZM0.000297569 3.5L23.6798 3.50001L23.6798 2.50001L0.000297524 2.5L0.000297569 3.5ZM23.6798 3.50001L43.5 3.5L43.5 2.5L23.6798 2.50001L23.6798 3.50001Z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="item item_connections  inline-flex min-w-0" style="transform: translateX(-100%)">
+                                    <div class="item__inner flex items-center justify-center w-full h-full px-4">
+                                        <div class="inline-flex items-center justify-center">
+                                            <svg class="item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M12 7H22V21H2V3H12V7ZM4 19H6V17H4V19ZM6 15H4V13H6V15ZM4 11H6V9H4V11ZM6 7H4V5H6V7ZM8 19H10V17H8V19ZM10 15H8V13H10V15ZM8 11H10V9H8V11ZM10 7H8V5H10V7ZM20 19V9H12V11H14V13H12V15H14V17H12V19H20ZM18 11H16V13H18V11ZM16 15H18V17H16V15Z"
+                                                      fill="#188B31" />
+                                            </svg>
+                                        </div>
+                                        <div class="item__text inline-flex min-w-0 mx-2">
+                                            <div class="flex flex-wrap  min-w-0">
+                                                <div class="item__name inline-flex w-full whitespace-no-wrap overflow-hidden text-xxs font-semibold">
+                                                    <span class="text-overflow overflow-hidden tooltip" title="ООО «ПРОМОБОТ» длинное название">ООО «ПРОМОБОТ» длинное название</span>
+                                                </div>
+                                                <div
+                                                        class="item__req inline-flex w-full min-w-0 whitespace-no-wrap overflow-hidden text-xxs font-medium">
+                                                    <span class="text-overflow overflow-hidden">5903113639 / ОГРН 1155958016411</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item__arrow text-blue">
+                                        <svg width="48" height="6" viewBox="0 0 48 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M23.6798 3.00001L23.6798 3.50001L23.6798 3.00001ZM48 3L43 0.113254L43 5.88676L48 3ZM0.000297569 3.5L23.6798 3.50001L23.6798 2.50001L0.000297524 2.5L0.000297569 3.5ZM23.6798 3.50001L43.5 3.5L43.5 2.5L23.6798 2.50001L23.6798 3.50001Z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="item item_connections  inline-flex min-w-0" style="transform: translateX(-200%)">
+                                    <div class="item__inner flex items-center justify-center w-full h-full px-4">
+                                        <div class="inline-flex items-center justify-center">
+                                            <svg class="item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M12 7H22V21H2V3H12V7ZM4 19H6V17H4V19ZM6 15H4V13H6V15ZM4 11H6V9H4V11ZM6 7H4V5H6V7ZM8 19H10V17H8V19ZM10 15H8V13H10V15ZM8 11H10V9H8V11ZM10 7H8V5H10V7ZM20 19V9H12V11H14V13H12V15H14V17H12V19H20ZM18 11H16V13H18V11ZM16 15H18V17H16V15Z"
+                                                      fill="#188B31" />
+                                            </svg>
+                                        </div>
+                                        <div class="item__text inline-flex min-w-0 mx-2">
+                                            <div class="flex flex-wrap  min-w-0">
+                                                <div class="item__name inline-flex w-full whitespace-no-wrap overflow-hidden text-xxs font-semibold">
+                                                    <span class="text-overflow overflow-hidden tooltip" title="ООО «ПРОМОБОТ» длинное название">ООО «ПРОМОБОТ» длинное название</span>
+                                                </div>
+                                                <div
+                                                        class="item__req inline-flex w-full min-w-0 whitespace-no-wrap overflow-hidden text-xxs font-medium">
+                                                    <span class="text-overflow overflow-hidden">5903113639 / ОГРН 1155958016411</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item__arrow text-blue">
+                                        <svg width="48" height="6" viewBox="0 0 48 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M23.6798 3.00001L23.6798 3.50001L23.6798 3.00001ZM48 3L43 0.113254L43 5.88676L48 3ZM0.000297569 3.5L23.6798 3.50001L23.6798 2.50001L0.000297524 2.5L0.000297569 3.5ZM23.6798 3.50001L43.5 3.5L43.5 2.5L23.6798 2.50001L23.6798 3.50001Z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="item item_connections  inline-flex min-w-0" style="transform: translateX(-300%)">
+                                    <div class="item__inner flex items-center justify-center w-full h-full px-4">
+                                        <div class="inline-flex items-center justify-center">
+                                            <svg class="item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M12 7H22V21H2V3H12V7ZM4 19H6V17H4V19ZM6 15H4V13H6V15ZM4 11H6V9H4V11ZM6 7H4V5H6V7ZM8 19H10V17H8V19ZM10 15H8V13H10V15ZM8 11H10V9H8V11ZM10 7H8V5H10V7ZM20 19V9H12V11H14V13H12V15H14V17H12V19H20ZM18 11H16V13H18V11ZM16 15H18V17H16V15Z"
+                                                      fill="#188B31" />
+                                            </svg>
+                                        </div>
+                                        <div class="item__text inline-flex min-w-0 mx-2">
+                                            <div class="flex flex-wrap  min-w-0">
+                                                <div class="item__name inline-flex w-full whitespace-no-wrap overflow-hidden text-xxs font-semibold">
+                                                    <span class="text-overflow overflow-hidden tooltip" title="ООО «ПРОМОБОТ» длинное название">ООО «ПРОМОБОТ» длинное название</span>
+                                                </div>
+                                                <div
+                                                        class="item__req inline-flex w-full min-w-0 whitespace-no-wrap overflow-hidden text-xxs font-medium">
+                                                    <span class="text-overflow overflow-hidden">5903113639 / ОГРН 1155958016411</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item__arrow text-blue">
+                                        <svg width="48" height="6" viewBox="0 0 48 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M23.6798 3.00001L23.6798 3.50001L23.6798 3.00001ZM48 3L43 0.113254L43 5.88676L48 3ZM0.000297569 3.5L23.6798 3.50001L23.6798 2.50001L0.000297524 2.5L0.000297569 3.5ZM23.6798 3.50001L43.5 3.5L43.5 2.5L23.6798 2.50001L23.6798 3.50001Z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="item item_connections green inline-flex min-w-0" style="transform: translateX(-300%)" >
+                                    <div class="item__inner flex items-center justify-center w-full h-full px-4">
+                                        <div class="inline-flex items-center justify-center">
+                                            <svg class="item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M12 7H22V21H2V3H12V7ZM4 19H6V17H4V19ZM6 15H4V13H6V15ZM4 11H6V9H4V11ZM6 7H4V5H6V7ZM8 19H10V17H8V19ZM10 15H8V13H10V15ZM8 11H10V9H8V11ZM10 7H8V5H10V7ZM20 19V9H12V11H14V13H12V15H14V17H12V19H20ZM18 11H16V13H18V11ZM16 15H18V17H16V15Z"
+                                                      fill="currentColor" />
+                                            </svg>
+                                        </div>
+                                        <div class="item__text inline-flex min-w-0 mx-2">
+                                            <div class="flex flex-wrap  min-w-0">
+                                                <div class="item__name inline-flex w-full whitespace-no-wrap overflow-hidden text-xxs font-semibold">
+                                                    <span class="text-overflow overflow-hidden tooltip" title="ООО «ПРОМОБОТ» длинное название">ООО «ПРОМОБОТ» длинное название</span>
+                                                </div>
+                                                <div
+                                                        class="item__req inline-flex w-full min-w-0 whitespace-no-wrap overflow-hidden text-xxs font-medium">
+                                                    <span class="text-overflow overflow-hidden">5903113639 / ОГРН 1155958016411</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="connections-row flex flex-grow items-center min-w-0 border-b border-b9 pl-5 py-10">
+                            <div class="flex">
+                                <div class="connections-row__count selected">
+                                    4
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="item item_connections green inline-flex min-w-0">
+                                    <div class="item__inner flex items-center justify-center w-full h-full px-4">
+                                        <div class="inline-flex items-center justify-center">
+                                            <svg class="item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M12 7H22V21H2V3H12V7ZM4 19H6V17H4V19ZM6 15H4V13H6V15ZM4 11H6V9H4V11ZM6 7H4V5H6V7ZM8 19H10V17H8V19ZM10 15H8V13H10V15ZM8 11H10V9H8V11ZM10 7H8V5H10V7ZM20 19V9H12V11H14V13H12V15H14V17H12V19H20ZM18 11H16V13H18V11ZM16 15H18V17H16V15Z"
+                                                      fill="currentColor" />
+                                            </svg>
+                                        </div>
+                                        <div class="item__text inline-flex min-w-0 mx-2">
+                                            <div class="flex flex-wrap  min-w-0">
+                                                <div class="item__name inline-flex w-full whitespace-no-wrap overflow-hidden text-xxs font-semibold">
+                                                    <span class="text-overflow overflow-hidden tooltip" title="ООО «ПРОМОБОТ» длинное название">ООО «ПРОМОБОТ» длинное название</span>
+                                                </div>
+                                                <div
+                                                        class="item__req inline-flex w-full min-w-0 whitespace-no-wrap overflow-hidden text-xxs font-medium">
+                                                    <span class="text-overflow overflow-hidden">5903113639 / ОГРН 1155958016411</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item__arrow text-blue">
+                                        <svg width="48" height="6" viewBox="0 0 48 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M48 3L43 5.88675L43 0.11325L48 3ZM43.5 3.5L40.5 3.5L40.5 2.5L43.5 2.5L43.5 3.5ZM37.5 3.5L34.5 3.5L34.5 2.5L37.5 2.5L37.5 3.5ZM31.5 3.5L28.5 3.50001L28.5 2.50001L31.5 2.5L31.5 3.5ZM25.5 3.50001L22.5 3.50001L22.5 2.50001L25.5 2.50001L25.5 3.50001ZM19.5 3.50001L16.5 3.50001L16.5 2.50001L19.5 2.50001L19.5 3.50001ZM13.5 3.50001L10.5 3.50001L10.5 2.50001L13.5 2.50001L13.5 3.50001ZM7.5 3.50001L4.5 3.50001L4.5 2.50001L7.5 2.50001L7.5 3.50001ZM1.5 3.50001L1.48259e-07 3.50001L-1.4826e-07 2.50001L1.5 2.50001L1.5 3.50001Z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="item item_connections  inline-flex min-w-0">
+                                    <div class="item__inner flex items-center justify-center w-full h-full px-4">
+                                        <div class="inline-flex items-center justify-center">
+                                            <svg class="item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M12 7H22V21H2V3H12V7ZM4 19H6V17H4V19ZM6 15H4V13H6V15ZM4 11H6V9H4V11ZM6 7H4V5H6V7ZM8 19H10V17H8V19ZM10 15H8V13H10V15ZM8 11H10V9H8V11ZM10 7H8V5H10V7ZM20 19V9H12V11H14V13H12V15H14V17H12V19H20ZM18 11H16V13H18V11ZM16 15H18V17H16V15Z"
+                                                      fill="#188B31" />
+                                            </svg>
+                                        </div>
+                                        <div class="item__text inline-flex min-w-0 mx-2">
+                                            <div class="flex flex-wrap  min-w-0">
+                                                <div class="item__name inline-flex w-full whitespace-no-wrap overflow-hidden text-xxs font-semibold">
+                                                    <span class="text-overflow overflow-hidden tooltip" title="ООО «ПРОМОБОТ» длинное название">ООО «ПРОМОБОТ» длинное название</span>
+                                                </div>
+                                                <div
+                                                        class="item__req inline-flex w-full min-w-0 whitespace-no-wrap overflow-hidden text-xxs font-medium">
+                                                    <span class="text-overflow overflow-hidden">5903113639 / ОГРН 1155958016411</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item__arrow item__arrow_reversed  text-purple">
+                                        <svg width="48" height="6" viewBox="0 0 48 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M48 3L43 5.88675L43 0.11325L48 3ZM43.5 3.5L40.5 3.5L40.5 2.5L43.5 2.5L43.5 3.5ZM37.5 3.5L34.5 3.5L34.5 2.5L37.5 2.5L37.5 3.5ZM31.5 3.5L28.5 3.50001L28.5 2.50001L31.5 2.5L31.5 3.5ZM25.5 3.50001L22.5 3.50001L22.5 2.50001L25.5 2.50001L25.5 3.50001ZM19.5 3.50001L16.5 3.50001L16.5 2.50001L19.5 2.50001L19.5 3.50001ZM13.5 3.50001L10.5 3.50001L10.5 2.50001L13.5 2.50001L13.5 3.50001ZM7.5 3.50001L4.5 3.50001L4.5 2.50001L7.5 2.50001L7.5 3.50001ZM1.5 3.50001L1.48259e-07 3.50001L-1.4826e-07 2.50001L1.5 2.50001L1.5 3.50001Z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="item item_connections  inline-flex min-w-0">
+                                    <div class="item__inner flex items-center justify-center w-full h-full px-4">
+                                        <div class="inline-flex items-center justify-center">
+                                            <svg class="item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M12 7H22V21H2V3H12V7ZM4 19H6V17H4V19ZM6 15H4V13H6V15ZM4 11H6V9H4V11ZM6 7H4V5H6V7ZM8 19H10V17H8V19ZM10 15H8V13H10V15ZM8 11H10V9H8V11ZM10 7H8V5H10V7ZM20 19V9H12V11H14V13H12V15H14V17H12V19H20ZM18 11H16V13H18V11ZM16 15H18V17H16V15Z"
+                                                      fill="#188B31" />
+                                            </svg>
+                                        </div>
+                                        <div class="item__text inline-flex min-w-0 mx-2">
+                                            <div class="flex flex-wrap  min-w-0">
+                                                <div class="item__name inline-flex w-full whitespace-no-wrap overflow-hidden text-xxs font-semibold">
+                                                    <span class="text-overflow overflow-hidden tooltip" title="ООО «ПРОМОБОТ» длинное название">ООО «ПРОМОБОТ» длинное название</span>
+                                                </div>
+                                                <div
+                                                        class="item__req inline-flex w-full min-w-0 whitespace-no-wrap overflow-hidden text-xxs font-medium">
+                                                    <span class="text-overflow overflow-hidden">5903113639 / ОГРН 1155958016411</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item__arrow text-purple">
+                                        <svg width="48" height="6" viewBox="0 0 48 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M48 3L43 5.88675L43 0.11325L48 3ZM43.5 3.5L40.5 3.5L40.5 2.5L43.5 2.5L43.5 3.5ZM37.5 3.5L34.5 3.5L34.5 2.5L37.5 2.5L37.5 3.5ZM31.5 3.5L28.5 3.50001L28.5 2.50001L31.5 2.5L31.5 3.5ZM25.5 3.50001L22.5 3.50001L22.5 2.50001L25.5 2.50001L25.5 3.50001ZM19.5 3.50001L16.5 3.50001L16.5 2.50001L19.5 2.50001L19.5 3.50001ZM13.5 3.50001L10.5 3.50001L10.5 2.50001L13.5 2.50001L13.5 3.50001ZM7.5 3.50001L4.5 3.50001L4.5 2.50001L7.5 2.50001L7.5 3.50001ZM1.5 3.50001L1.48259e-07 3.50001L-1.4826e-07 2.50001L1.5 2.50001L1.5 3.50001Z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="item item_connections  inline-flex min-w-0">
+                                    <div class="item__inner flex items-center justify-center w-full h-full px-4">
+                                        <div class="inline-flex items-center justify-center">
+                                            <svg class="item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M12 7H22V21H2V3H12V7ZM4 19H6V17H4V19ZM6 15H4V13H6V15ZM4 11H6V9H4V11ZM6 7H4V5H6V7ZM8 19H10V17H8V19ZM10 15H8V13H10V15ZM8 11H10V9H8V11ZM10 7H8V5H10V7ZM20 19V9H12V11H14V13H12V15H14V17H12V19H20ZM18 11H16V13H18V11ZM16 15H18V17H16V15Z"
+                                                      fill="#188B31" />
+                                            </svg>
+                                        </div>
+                                        <div class="item__text inline-flex min-w-0 mx-2">
+                                            <div class="flex flex-wrap  min-w-0">
+                                                <div class="item__name inline-flex w-full whitespace-no-wrap overflow-hidden text-xxs font-semibold">
+                                                    <span class="text-overflow overflow-hidden tooltip" title="ООО «ПРОМОБОТ» длинное название">ООО «ПРОМОБОТ» длинное название</span>
+                                                </div>
+                                                <div
+                                                        class="item__req inline-flex w-full min-w-0 whitespace-no-wrap overflow-hidden text-xxs font-medium">
+                                                    <span class="text-overflow overflow-hidden">5903113639 / ОГРН 1155958016411</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item__arrow text-purple">
+                                        <svg width="48" height="6" viewBox="0 0 48 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M23.6798 3.00001L23.6798 3.50001L23.6798 3.00001ZM48 3L43 0.113254L43 5.88676L48 3ZM0.000297569 3.5L23.6798 3.50001L23.6798 2.50001L0.000297524 2.5L0.000297569 3.5ZM23.6798 3.50001L43.5 3.5L43.5 2.5L23.6798 2.50001L23.6798 3.50001Z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="item item_connections  inline-flex min-w-0">
+                                    <div class="item__inner flex items-center justify-center w-full h-full px-4">
+                                        <div class="inline-flex items-center justify-center">
+                                            <svg class="item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M12 7H22V21H2V3H12V7ZM4 19H6V17H4V19ZM6 15H4V13H6V15ZM4 11H6V9H4V11ZM6 7H4V5H6V7ZM8 19H10V17H8V19ZM10 15H8V13H10V15ZM8 11H10V9H8V11ZM10 7H8V5H10V7ZM20 19V9H12V11H14V13H12V15H14V17H12V19H20ZM18 11H16V13H18V11ZM16 15H18V17H16V15Z"
+                                                      fill="#188B31" />
+                                            </svg>
+                                        </div>
+                                        <div class="item__text inline-flex min-w-0 mx-2">
+                                            <div class="flex flex-wrap  min-w-0">
+                                                <div class="item__name inline-flex w-full whitespace-no-wrap overflow-hidden text-xxs font-semibold">
+                                                    <span class="text-overflow overflow-hidden tooltip" title="ООО «ПРОМОБОТ» длинное название">ООО «ПРОМОБОТ» длинное название</span>
+                                                </div>
+                                                <div
+                                                        class="item__req inline-flex w-full min-w-0 whitespace-no-wrap overflow-hidden text-xxs font-medium">
+                                                    <span class="text-overflow overflow-hidden">5903113639 / ОГРН 1155958016411</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item__arrow text-blue">
+                                        <svg width="48" height="6" viewBox="0 0 48 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M23.6798 3.00001L23.6798 3.50001L23.6798 3.00001ZM48 3L43 0.113254L43 5.88676L48 3ZM0.000297569 3.5L23.6798 3.50001L23.6798 2.50001L0.000297524 2.5L0.000297569 3.5ZM23.6798 3.50001L43.5 3.5L43.5 2.5L23.6798 2.50001L23.6798 3.50001Z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="item item_connections  inline-flex min-w-0" >
+                                    <div class="item__inner flex items-center justify-center w-full h-full px-4">
+                                        <div class="inline-flex items-center justify-center">
+                                            <svg class="item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M12 7H22V21H2V3H12V7ZM4 19H6V17H4V19ZM6 15H4V13H6V15ZM4 11H6V9H4V11ZM6 7H4V5H6V7ZM8 19H10V17H8V19ZM10 15H8V13H10V15ZM8 11H10V9H8V11ZM10 7H8V5H10V7ZM20 19V9H12V11H14V13H12V15H14V17H12V19H20ZM18 11H16V13H18V11ZM16 15H18V17H16V15Z"
+                                                      fill="#188B31" />
+                                            </svg>
+                                        </div>
+                                        <div class="item__text inline-flex min-w-0 mx-2">
+                                            <div class="flex flex-wrap  min-w-0">
+                                                <div class="item__name inline-flex w-full whitespace-no-wrap overflow-hidden text-xxs font-semibold">
+                                                    <span class="text-overflow overflow-hidden tooltip" title="ООО «ПРОМОБОТ» длинное название">ООО «ПРОМОБОТ» длинное название</span>
+                                                </div>
+                                                <div
+                                                        class="item__req inline-flex w-full min-w-0 whitespace-no-wrap overflow-hidden text-xxs font-medium">
+                                                    <span class="text-overflow overflow-hidden">5903113639 / ОГРН 1155958016411</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex font-semibold text-base text-b9 pl-5 mt-10">
+                        Недействующие связи
+                    </div>
+                    <div class="flex flex-col">
+                        <div class="connections-row flex flex-grow items-center min-w-0 border-b border-b9 pl-5 py-10">
+                            <div class="flex">
+                                <div class="connections-row__count gray">
+                                    1
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="item item_connections gray inline-flex min-w-0">
+                                    <div class="item__inner flex items-center justify-center w-full h-full px-4">
+                                        <div class="inline-flex items-center justify-center">
+                                            <svg class="item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M12 7H22V21H2V3H12V7ZM4 19H6V17H4V19ZM6 15H4V13H6V15ZM4 11H6V9H4V11ZM6 7H4V5H6V7ZM8 19H10V17H8V19ZM10 15H8V13H10V15ZM8 11H10V9H8V11ZM10 7H8V5H10V7ZM20 19V9H12V11H14V13H12V15H14V17H12V19H20ZM18 11H16V13H18V11ZM16 15H18V17H16V15Z"
+                                                      fill="currentColor" />
+                                            </svg>
+                                        </div>
+                                        <div class="item__text inline-flex min-w-0 mx-2">
+                                            <div class="flex flex-wrap  min-w-0">
+                                                <div class="item__name inline-flex w-full whitespace-no-wrap overflow-hidden text-xxs font-semibold">
+                                                    <span class="text-overflow overflow-hidden tooltip" title="ООО «ПРОМОБОТ» длинное название">ООО «ПРОМОБОТ» длинное название</span>
+                                                </div>
+                                                <div
+                                                        class="inline-flex w-full min-w-0 whitespace-no-wrap overflow-hidden text-xxs font-medium">
+                                                    <span class="item__req text-overflow overflow-hidden">5903113639 / ОГРН 1155958016411</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item__arrow text-blue">
+                                        <svg width="48" height="6" viewBox="0 0 48 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M23.6798 3.00001L23.6798 3.50001L23.6798 3.00001ZM48 3L43 0.113254L43 5.88676L48 3ZM0.000297569 3.5L23.6798 3.50001L23.6798 2.50001L0.000297524 2.5L0.000297569 3.5ZM23.6798 3.50001L43.5 3.5L43.5 2.5L23.6798 2.50001L23.6798 3.50001Z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="item item_connections gray inline-flex min-w-0">
+                                    <div class="item__inner flex items-center justify-center w-full h-full px-4">
+                                        <div class="inline-flex items-center justify-center">
+                                            <svg class="item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M12 7H22V21H2V3H12V7ZM4 19H6V17H4V19ZM6 15H4V13H6V15ZM4 11H6V9H4V11ZM6 7H4V5H6V7ZM8 19H10V17H8V19ZM10 15H8V13H10V15ZM8 11H10V9H8V11ZM10 7H8V5H10V7ZM20 19V9H12V11H14V13H12V15H14V17H12V19H20ZM18 11H16V13H18V11ZM16 15H18V17H16V15Z"
+                                                      fill="currentColor" />
+                                            </svg>
+                                        </div>
+                                        <div class="item__text inline-flex min-w-0 mx-2">
+                                            <div class="flex flex-wrap  min-w-0">
+                                                <div class="item__name inline-flex w-full whitespace-no-wrap overflow-hidden text-xxs font-semibold">
+                                                    <span class="text-overflow overflow-hidden tooltip" title="ООО «ПРОМОБОТ» длинное название">ООО «ПРОМОБОТ» длинное название</span>
+                                                </div>
+                                                <div
+                                                        class="inline-flex w-full min-w-0 whitespace-no-wrap overflow-hidden text-xxs font-medium">
+                                                    <span class="item__req text-overflow overflow-hidden">5903113639 / ОГРН 1155958016411</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="connections-row flex flex-grow items-center min-w-0 border-b border-b9 pl-5 py-10">
+                            <div class="flex">
+                                <div class="connections-row__count gray">
+                                    4
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="item item_connections gray inline-flex min-w-0">
+                                    <div class="item__inner flex items-center justify-center w-full h-full px-4">
+                                        <div class="inline-flex items-center justify-center">
+                                            <svg class="item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M12 7H22V21H2V3H12V7ZM4 19H6V17H4V19ZM6 15H4V13H6V15ZM4 11H6V9H4V11ZM6 7H4V5H6V7ZM8 19H10V17H8V19ZM10 15H8V13H10V15ZM8 11H10V9H8V11ZM10 7H8V5H10V7ZM20 19V9H12V11H14V13H12V15H14V17H12V19H20ZM18 11H16V13H18V11ZM16 15H18V17H16V15Z"
+                                                      fill="currentColor" />
+                                            </svg>
+                                        </div>
+                                        <div class="item__text inline-flex min-w-0 mx-2">
+                                            <div class="flex flex-wrap  min-w-0">
+                                                <div class="item__name inline-flex w-full whitespace-no-wrap overflow-hidden text-xxs font-semibold">
+                                                    <span class="text-overflow overflow-hidden tooltip" title="ООО «ПРОМОБОТ» длинное название">ООО «ПРОМОБОТ» длинное название</span>
+                                                </div>
+                                                <div
+                                                        class="item__req inline-flex w-full min-w-0 whitespace-no-wrap overflow-hidden text-xxs font-medium">
+                                                    <span class="text-overflow overflow-hidden">5903113639 / ОГРН 1155958016411</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item__arrow text-blue">
+                                        <svg width="48" height="6" viewBox="0 0 48 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M23.6798 3.00001L23.6798 3.50001L23.6798 3.00001ZM48 3L43 0.113254L43 5.88676L48 3ZM0.000297569 3.5L23.6798 3.50001L23.6798 2.50001L0.000297524 2.5L0.000297569 3.5ZM23.6798 3.50001L43.5 3.5L43.5 2.5L23.6798 2.50001L23.6798 3.50001Z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="item item_connections   inline-flex min-w-0">
+                                    <div class="item__inner flex items-center justify-center w-full h-full px-4">
+                                        <div class="inline-flex items-center justify-center">
+                                            <svg class="item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M12 7H22V21H2V3H12V7ZM4 19H6V17H4V19ZM6 15H4V13H6V15ZM4 11H6V9H4V11ZM6 7H4V5H6V7ZM8 19H10V17H8V19ZM10 15H8V13H10V15ZM8 11H10V9H8V11ZM10 7H8V5H10V7ZM20 19V9H12V11H14V13H12V15H14V17H12V19H20ZM18 11H16V13H18V11ZM16 15H18V17H16V15Z"
+                                                      fill="#188B31" />
+                                            </svg>
+                                        </div>
+                                        <div class="item__text inline-flex min-w-0 mx-2">
+                                            <div class="flex flex-wrap  min-w-0">
+                                                <div class="item__name inline-flex w-full whitespace-no-wrap overflow-hidden text-xxs font-semibold">
+                                                    <span class="text-overflow overflow-hidden tooltip" title="ООО «ПРОМОБОТ» длинное название">ООО «ПРОМОБОТ» длинное название</span>
+                                                </div>
+                                                <div
+                                                        class="item__req inline-flex w-full min-w-0 whitespace-no-wrap overflow-hidden text-xxs font-medium">
+                                                    <span class="text-overflow overflow-hidden">5903113639 / ОГРН 1155958016411</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item__arrow text-blue">
+                                        <svg width="48" height="6" viewBox="0 0 48 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M23.6798 3.00001L23.6798 3.50001L23.6798 3.00001ZM48 3L43 0.113254L43 5.88676L48 3ZM0.000297569 3.5L23.6798 3.50001L23.6798 2.50001L0.000297524 2.5L0.000297569 3.5ZM23.6798 3.50001L43.5 3.5L43.5 2.5L23.6798 2.50001L23.6798 3.50001Z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="item item_connections  inline-flex min-w-0" style="transform: translateX(-100%)">
+                                    <div class="item__inner flex items-center justify-center w-full h-full px-4">
+                                        <div class="inline-flex items-center justify-center">
+                                            <svg class="item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M12 7H22V21H2V3H12V7ZM4 19H6V17H4V19ZM6 15H4V13H6V15ZM4 11H6V9H4V11ZM6 7H4V5H6V7ZM8 19H10V17H8V19ZM10 15H8V13H10V15ZM8 11H10V9H8V11ZM10 7H8V5H10V7ZM20 19V9H12V11H14V13H12V15H14V17H12V19H20ZM18 11H16V13H18V11ZM16 15H18V17H16V15Z"
+                                                      fill="#188B31" />
+                                            </svg>
+                                        </div>
+                                        <div class="item__text inline-flex min-w-0 mx-2">
+                                            <div class="flex flex-wrap  min-w-0">
+                                                <div class="item__name inline-flex w-full whitespace-no-wrap overflow-hidden text-xxs font-semibold">
+                                                    <span class="text-overflow overflow-hidden tooltip" title="ООО «ПРОМОБОТ» длинное название">ООО «ПРОМОБОТ» длинное название</span>
+                                                </div>
+                                                <div
+                                                        class="item__req inline-flex w-full min-w-0 whitespace-no-wrap overflow-hidden text-xxs font-medium">
+                                                    <span class="text-overflow overflow-hidden">5903113639 / ОГРН 1155958016411</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item__arrow text-blue">
+                                        <svg width="48" height="6" viewBox="0 0 48 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M23.6798 3.00001L23.6798 3.50001L23.6798 3.00001ZM48 3L43 0.113254L43 5.88676L48 3ZM0.000297569 3.5L23.6798 3.50001L23.6798 2.50001L0.000297524 2.5L0.000297569 3.5ZM23.6798 3.50001L43.5 3.5L43.5 2.5L23.6798 2.50001L23.6798 3.50001Z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="item item_connections  inline-flex min-w-0" style="transform: translateX(-200%)">
+                                    <div class="item__inner flex items-center justify-center w-full h-full px-4">
+                                        <div class="inline-flex items-center justify-center">
+                                            <svg class="item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M12 7H22V21H2V3H12V7ZM4 19H6V17H4V19ZM6 15H4V13H6V15ZM4 11H6V9H4V11ZM6 7H4V5H6V7ZM8 19H10V17H8V19ZM10 15H8V13H10V15ZM8 11H10V9H8V11ZM10 7H8V5H10V7ZM20 19V9H12V11H14V13H12V15H14V17H12V19H20ZM18 11H16V13H18V11ZM16 15H18V17H16V15Z"
+                                                      fill="#188B31" />
+                                            </svg>
+                                        </div>
+                                        <div class="item__text inline-flex min-w-0 mx-2">
+                                            <div class="flex flex-wrap  min-w-0">
+                                                <div class="item__name inline-flex w-full whitespace-no-wrap overflow-hidden text-xxs font-semibold">
+                                                    <span class="text-overflow overflow-hidden tooltip" title="ООО «ПРОМОБОТ» длинное название">ООО «ПРОМОБОТ» длинное название</span>
+                                                </div>
+                                                <div
+                                                        class="item__req inline-flex w-full min-w-0 whitespace-no-wrap overflow-hidden text-xxs font-medium">
+                                                    <span class="text-overflow overflow-hidden">5903113639 / ОГРН 1155958016411</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item__arrow text-blue">
+                                        <svg width="48" height="6" viewBox="0 0 48 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M23.6798 3.00001L23.6798 3.50001L23.6798 3.00001ZM48 3L43 0.113254L43 5.88676L48 3ZM0.000297569 3.5L23.6798 3.50001L23.6798 2.50001L0.000297524 2.5L0.000297569 3.5ZM23.6798 3.50001L43.5 3.5L43.5 2.5L23.6798 2.50001L23.6798 3.50001Z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="item item_connections  inline-flex min-w-0" style="transform: translateX(-300%)">
+                                    <div class="item__inner flex items-center justify-center w-full h-full px-4">
+                                        <div class="inline-flex items-center justify-center">
+                                            <svg class="item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M12 7H22V21H2V3H12V7ZM4 19H6V17H4V19ZM6 15H4V13H6V15ZM4 11H6V9H4V11ZM6 7H4V5H6V7ZM8 19H10V17H8V19ZM10 15H8V13H10V15ZM8 11H10V9H8V11ZM10 7H8V5H10V7ZM20 19V9H12V11H14V13H12V15H14V17H12V19H20ZM18 11H16V13H18V11ZM16 15H18V17H16V15Z"
+                                                      fill="#188B31" />
+                                            </svg>
+                                        </div>
+                                        <div class="item__text inline-flex min-w-0 mx-2">
+                                            <div class="flex flex-wrap  min-w-0">
+                                                <div class="item__name inline-flex w-full whitespace-no-wrap overflow-hidden text-xxs font-semibold">
+                                                    <span class="text-overflow overflow-hidden tooltip" title="ООО «ПРОМОБОТ» длинное название">ООО «ПРОМОБОТ» длинное название</span>
+                                                </div>
+                                                <div
+                                                        class="item__req inline-flex w-full min-w-0 whitespace-no-wrap overflow-hidden text-xxs font-medium">
+                                                    <span class="text-overflow overflow-hidden">5903113639 / ОГРН 1155958016411</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item__arrow text-blue">
+                                        <svg width="48" height="6" viewBox="0 0 48 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M23.6798 3.00001L23.6798 3.50001L23.6798 3.00001ZM48 3L43 0.113254L43 5.88676L48 3ZM0.000297569 3.5L23.6798 3.50001L23.6798 2.50001L0.000297524 2.5L0.000297569 3.5ZM23.6798 3.50001L43.5 3.5L43.5 2.5L23.6798 2.50001L23.6798 3.50001Z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="item item_connections gray inline-flex min-w-0" style="transform: translateX(-300%)" >
+                                    <div class="item__inner flex items-center justify-center w-full h-full px-4">
+                                        <div class="inline-flex items-center justify-center">
+                                            <svg class="item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M12 7H22V21H2V3H12V7ZM4 19H6V17H4V19ZM6 15H4V13H6V15ZM4 11H6V9H4V11ZM6 7H4V5H6V7ZM8 19H10V17H8V19ZM10 15H8V13H10V15ZM8 11H10V9H8V11ZM10 7H8V5H10V7ZM20 19V9H12V11H14V13H12V15H14V17H12V19H20ZM18 11H16V13H18V11ZM16 15H18V17H16V15Z"
+                                                      fill="currentColor" />
+                                            </svg>
+                                        </div>
+                                        <div class="item__text inline-flex min-w-0 mx-2">
+                                            <div class="flex flex-wrap  min-w-0">
+                                                <div class="item__name inline-flex w-full whitespace-no-wrap overflow-hidden text-xxs font-semibold">
+                                                    <span class="text-overflow overflow-hidden tooltip" title="ООО «ПРОМОБОТ» длинное название">ООО «ПРОМОБОТ» длинное название</span>
+                                                </div>
+                                                <div
+                                                        class="item__req inline-flex w-full min-w-0 whitespace-no-wrap overflow-hidden text-xxs font-medium">
+                                                    <span class="text-overflow overflow-hidden">5903113639 / ОГРН 1155958016411</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="connections-row flex flex-grow items-center min-w-0 border-b border-b9 pl-5 py-10">
+                            <div class="flex">
+                                <div class="connections-row__count selected">
+                                    4
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="item item_connections gray inline-flex min-w-0">
+                                    <div class="item__inner flex items-center justify-center w-full h-full px-4">
+                                        <div class="inline-flex items-center justify-center">
+                                            <svg class="item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M12 7H22V21H2V3H12V7ZM4 19H6V17H4V19ZM6 15H4V13H6V15ZM4 11H6V9H4V11ZM6 7H4V5H6V7ZM8 19H10V17H8V19ZM10 15H8V13H10V15ZM8 11H10V9H8V11ZM10 7H8V5H10V7ZM20 19V9H12V11H14V13H12V15H14V17H12V19H20ZM18 11H16V13H18V11ZM16 15H18V17H16V15Z"
+                                                      fill="currentColor" />
+                                            </svg>
+                                        </div>
+                                        <div class="item__text inline-flex min-w-0 mx-2">
+                                            <div class="flex flex-wrap  min-w-0">
+                                                <div class="item__name inline-flex w-full whitespace-no-wrap overflow-hidden text-xxs font-semibold">
+                                                    <span class="text-overflow overflow-hidden tooltip" title="ООО «ПРОМОБОТ» длинное название">ООО «ПРОМОБОТ» длинное название</span>
+                                                </div>
+                                                <div
+                                                        class="item__req inline-flex w-full min-w-0 whitespace-no-wrap overflow-hidden text-xxs font-medium">
+                                                    <span class="text-overflow overflow-hidden">5903113639 / ОГРН 1155958016411</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item__arrow text-blue">
+                                        <svg width="48" height="6" viewBox="0 0 48 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M23.6798 3.00001L23.6798 3.50001L23.6798 3.00001ZM48 3L43 0.113254L43 5.88676L48 3ZM0.000297569 3.5L23.6798 3.50001L23.6798 2.50001L0.000297524 2.5L0.000297569 3.5ZM23.6798 3.50001L43.5 3.5L43.5 2.5L23.6798 2.50001L23.6798 3.50001Z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="item item_connections  inline-flex min-w-0">
+                                    <div class="item__inner flex items-center justify-center w-full h-full px-4">
+                                        <div class="inline-flex items-center justify-center">
+                                            <svg class="item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M12 7H22V21H2V3H12V7ZM4 19H6V17H4V19ZM6 15H4V13H6V15ZM4 11H6V9H4V11ZM6 7H4V5H6V7ZM8 19H10V17H8V19ZM10 15H8V13H10V15ZM8 11H10V9H8V11ZM10 7H8V5H10V7ZM20 19V9H12V11H14V13H12V15H14V17H12V19H20ZM18 11H16V13H18V11ZM16 15H18V17H16V15Z"
+                                                      fill="#188B31" />
+                                            </svg>
+                                        </div>
+                                        <div class="item__text inline-flex min-w-0 mx-2">
+                                            <div class="flex flex-wrap  min-w-0">
+                                                <div class="item__name inline-flex w-full whitespace-no-wrap overflow-hidden text-xxs font-semibold">
+                                                    <span class="text-overflow overflow-hidden tooltip" title="ООО «ПРОМОБОТ» длинное название">ООО «ПРОМОБОТ» длинное название</span>
+                                                </div>
+                                                <div
+                                                        class="item__req inline-flex w-full min-w-0 whitespace-no-wrap overflow-hidden text-xxs font-medium">
+                                                    <span class="text-overflow overflow-hidden">5903113639 / ОГРН 1155958016411</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item__arrow text-blue">
+                                        <svg width="48" height="6" viewBox="0 0 48 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M23.6798 3.00001L23.6798 3.50001L23.6798 3.00001ZM48 3L43 0.113254L43 5.88676L48 3ZM0.000297569 3.5L23.6798 3.50001L23.6798 2.50001L0.000297524 2.5L0.000297569 3.5ZM23.6798 3.50001L43.5 3.5L43.5 2.5L23.6798 2.50001L23.6798 3.50001Z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="item item_connections  inline-flex min-w-0">
+                                    <div class="item__inner flex items-center justify-center w-full h-full px-4">
+                                        <div class="inline-flex items-center justify-center">
+                                            <svg class="item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M12 7H22V21H2V3H12V7ZM4 19H6V17H4V19ZM6 15H4V13H6V15ZM4 11H6V9H4V11ZM6 7H4V5H6V7ZM8 19H10V17H8V19ZM10 15H8V13H10V15ZM8 11H10V9H8V11ZM10 7H8V5H10V7ZM20 19V9H12V11H14V13H12V15H14V17H12V19H20ZM18 11H16V13H18V11ZM16 15H18V17H16V15Z"
+                                                      fill="#188B31" />
+                                            </svg>
+                                        </div>
+                                        <div class="item__text inline-flex min-w-0 mx-2">
+                                            <div class="flex flex-wrap  min-w-0">
+                                                <div class="item__name inline-flex w-full whitespace-no-wrap overflow-hidden text-xxs font-semibold">
+                                                    <span class="text-overflow overflow-hidden tooltip" title="ООО «ПРОМОБОТ» длинное название">ООО «ПРОМОБОТ» длинное название</span>
+                                                </div>
+                                                <div
+                                                        class="item__req inline-flex w-full min-w-0 whitespace-no-wrap overflow-hidden text-xxs font-medium">
+                                                    <span class="text-overflow overflow-hidden">5903113639 / ОГРН 1155958016411</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item__arrow text-blue">
+                                        <svg width="48" height="6" viewBox="0 0 48 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M23.6798 3.00001L23.6798 3.50001L23.6798 3.00001ZM48 3L43 0.113254L43 5.88676L48 3ZM0.000297569 3.5L23.6798 3.50001L23.6798 2.50001L0.000297524 2.5L0.000297569 3.5ZM23.6798 3.50001L43.5 3.5L43.5 2.5L23.6798 2.50001L23.6798 3.50001Z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="item item_connections  inline-flex min-w-0">
+                                    <div class="item__inner flex items-center justify-center w-full h-full px-4">
+                                        <div class="inline-flex items-center justify-center">
+                                            <svg class="item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M12 7H22V21H2V3H12V7ZM4 19H6V17H4V19ZM6 15H4V13H6V15ZM4 11H6V9H4V11ZM6 7H4V5H6V7ZM8 19H10V17H8V19ZM10 15H8V13H10V15ZM8 11H10V9H8V11ZM10 7H8V5H10V7ZM20 19V9H12V11H14V13H12V15H14V17H12V19H20ZM18 11H16V13H18V11ZM16 15H18V17H16V15Z"
+                                                      fill="#188B31" />
+                                            </svg>
+                                        </div>
+                                        <div class="item__text inline-flex min-w-0 mx-2">
+                                            <div class="flex flex-wrap  min-w-0">
+                                                <div class="item__name inline-flex w-full whitespace-no-wrap overflow-hidden text-xxs font-semibold">
+                                                    <span class="text-overflow overflow-hidden tooltip" title="ООО «ПРОМОБОТ» длинное название">ООО «ПРОМОБОТ» длинное название</span>
+                                                </div>
+                                                <div
+                                                        class="item__req inline-flex w-full min-w-0 whitespace-no-wrap overflow-hidden text-xxs font-medium">
+                                                    <span class="text-overflow overflow-hidden">5903113639 / ОГРН 1155958016411</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item__arrow text-blue">
+                                        <svg width="48" height="6" viewBox="0 0 48 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M23.6798 3.00001L23.6798 3.50001L23.6798 3.00001ZM48 3L43 0.113254L43 5.88676L48 3ZM0.000297569 3.5L23.6798 3.50001L23.6798 2.50001L0.000297524 2.5L0.000297569 3.5ZM23.6798 3.50001L43.5 3.5L43.5 2.5L23.6798 2.50001L23.6798 3.50001Z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="item item_connections  inline-flex min-w-0">
+                                    <div class="item__inner flex items-center justify-center w-full h-full px-4">
+                                        <div class="inline-flex items-center justify-center">
+                                            <svg class="item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M12 7H22V21H2V3H12V7ZM4 19H6V17H4V19ZM6 15H4V13H6V15ZM4 11H6V9H4V11ZM6 7H4V5H6V7ZM8 19H10V17H8V19ZM10 15H8V13H10V15ZM8 11H10V9H8V11ZM10 7H8V5H10V7ZM20 19V9H12V11H14V13H12V15H14V17H12V19H20ZM18 11H16V13H18V11ZM16 15H18V17H16V15Z"
+                                                      fill="#188B31" />
+                                            </svg>
+                                        </div>
+                                        <div class="item__text inline-flex min-w-0 mx-2">
+                                            <div class="flex flex-wrap  min-w-0">
+                                                <div class="item__name inline-flex w-full whitespace-no-wrap overflow-hidden text-xxs font-semibold">
+                                                    <span class="text-overflow overflow-hidden tooltip" title="ООО «ПРОМОБОТ» длинное название">ООО «ПРОМОБОТ» длинное название</span>
+                                                </div>
+                                                <div
+                                                        class="item__req inline-flex w-full min-w-0 whitespace-no-wrap overflow-hidden text-xxs font-medium">
+                                                    <span class="text-overflow overflow-hidden">5903113639 / ОГРН 1155958016411</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item__arrow text-blue">
+                                        <svg width="48" height="6" viewBox="0 0 48 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M23.6798 3.00001L23.6798 3.50001L23.6798 3.00001ZM48 3L43 0.113254L43 5.88676L48 3ZM0.000297569 3.5L23.6798 3.50001L23.6798 2.50001L0.000297524 2.5L0.000297569 3.5ZM23.6798 3.50001L43.5 3.5L43.5 2.5L23.6798 2.50001L23.6798 3.50001Z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="item item_connections gray inline-flex min-w-0" >
+                                    <div class="item__inner flex items-center justify-center w-full h-full px-4">
+                                        <div class="inline-flex items-center justify-center">
+                                            <svg class="item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M12 7H22V21H2V3H12V7ZM4 19H6V17H4V19ZM6 15H4V13H6V15ZM4 11H6V9H4V11ZM6 7H4V5H6V7ZM8 19H10V17H8V19ZM10 15H8V13H10V15ZM8 11H10V9H8V11ZM10 7H8V5H10V7ZM20 19V9H12V11H14V13H12V15H14V17H12V19H20ZM18 11H16V13H18V11ZM16 15H18V17H16V15Z"
+                                                      fill="currentColor" />
+                                            </svg>
+                                        </div>
+                                        <div class="item__text inline-flex min-w-0 mx-2">
+                                            <div class="flex flex-wrap  min-w-0">
+                                                <div class="item__name inline-flex w-full whitespace-no-wrap overflow-hidden text-xxs font-semibold">
+                                                    <span class="text-overflow overflow-hidden tooltip" title="ООО «ПРОМОБОТ» длинное название">ООО «ПРОМОБОТ» длинное название</span>
+                                                </div>
+                                                <div
+                                                        class="item__req inline-flex w-full min-w-0 whitespace-no-wrap overflow-hidden text-xxs font-medium">
+                                                    <span class="text-overflow overflow-hidden">5903113639 / ОГРН 1155958016411</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lists-block hidden inline-flex bg-white flex-wrap text-24021 content-start items-start text-xxs overflow-auto max-h-full">
+        <!-- здесь рендерим списки -->
+        //= templates/lists-block-tools.html
+    </div>
+</div>
+
+//= templates/scripts.html
+</body>
+
+</html>

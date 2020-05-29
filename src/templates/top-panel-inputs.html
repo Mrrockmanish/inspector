@@ -1,0 +1,41 @@
+<div class="top-panel-inputs inline-flex flex-grow overflow-x-auto">
+  <div class="flex w-full h-full">
+    <div class="top-panel-input inline-flex px-3 flex-shrink-1">
+      <div class="flex items-center w-full border-b border-b9 h-full py-1">
+        <div class="top-panel-input__aim inline-flex items-start flex-shrink-0 mr-3">
+          <img src="img/top-panel/aim.svg" />
+        </div>
+        <div
+          class="top-panel-input__text inline-flex overflow-hidden whitespace-no-wrap font-semibold text-sm flex-shrink-1"
+          style="text-overflow: ellipsis;">
+          <select class="w-full outline-none text-24021 font-semibold cursor-pointer" name="research">
+            <option class="outline-none" value="Произвольное исследование" selected>
+              Произвольное исследование</option>
+            <option class="outline-none" value="Произвольное исследование">
+              Непроизвольное исследование</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <form class="top-panel-input inline-flex px-3 flex-grow">
+      <div class="flex items-center w-full border-b border-b9 h-full py-1 relative">
+        <input type="search" class="w-full outline-none text-24021 font-semibold text-sm cursor-text"
+               placeholder="Поиск" />
+        <div class="top-panel-input__clear inline-flex absolute flex-shrink-0 items-start bg-white flex-shrink-0 cursor-pointer z-20" onclick="this.previousElementSibling.value = ''">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="icon/content/clear_24px" opacity="0.5">
+              <path id="icon/content/clear_24px_2" d="M12.6667 4.27325L11.7267 3.33325L8.00001 7.05992L4.27334 3.33325L3.33334 4.27325L7.06001 7.99992L3.33334 11.7266L4.27334 12.6666L8.00001 8.93992L11.7267 12.6666L12.6667 11.7266L8.94001 7.99992L12.6667 4.27325Z" fill="black" fill-opacity="0.54"></path>
+            </g>
+          </svg>
+        </div>
+        <button type="submit" class="inline-flex items-start flex-shrink-0 focus:outline-none hover:opacity-75">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M14.9649 14.2549H15.7549L20.7449 19.2549L19.2549 20.7449L14.2549 15.7549V14.9649L13.9849 14.6849C12.8449 15.6649 11.3649 16.2549 9.75488 16.2549C6.16488 16.2549 3.25488 13.3449 3.25488 9.75488C3.25488 6.16488 6.16488 3.25488 9.75488 3.25488C13.3449 3.25488 16.2549 6.16488 16.2549 9.75488C16.2549 11.3649 15.6649 12.8449 14.6849 13.9849L14.9649 14.2549ZM5.25488 9.75488C5.25488 12.2449 7.26488 14.2549 9.75488 14.2549C12.2449 14.2549 14.2549 12.2449 14.2549 9.75488C14.2549 7.26488 12.2449 5.25488 9.75488 5.25488C7.26488 5.25488 5.25488 7.26488 5.25488 9.75488Z"
+                  fill="#656565" />
+          </svg>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

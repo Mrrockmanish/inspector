@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ru">
+//= templates/head.html
+
+<body class="relative">
+<div class="flex flex-nowrap h-screen">
+    //= templates/left-panel.html
+    <div class="items-start inline-flex flex-grow min-w-0 overflow-hidden">
+        <div class="upload-panel flex flex-col h-full bg-white px-5 py-4">
+            <form action="" enctype="multipart/form-data" method="post" class="flex flex-wrap">
+                <div class="form-control flex w-full border-b border-b9">
+                    <svg class="flex-shrink-0 mr-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.1 3H3.9C3.4 3 3 3.4 3 3.9V20.1C3 20.5 3.4 21 3.9 21H20.1C20.5 21 21 20.5 21 20.1V3.9C21 3.4 20.5 3 20.1 3ZM9 7H7V9H9V7ZM17 7H11V9H17V7ZM17 11H11V13H17V11ZM11 15H17V17H11V15ZM7 11H9V13H7V11ZM9 15H7V17H9V15ZM5 19H19V5H5V19Z" fill="black" fill-opacity="0.54"/>
+                    </svg>
+                    <select name="" class="font-semibold cursor-pointer flex-grow text-sm text-24021 outline-none">
+                        <option value="Списки">Списки</option>
+                        <option value="Значение 2">Значение 2</option>
+                    </select>
+                </div>
+                <label class="upload-item mt-5 py-1 px-2 inline-flex items-center bg-#F2F2F2 cursor-pointer flex-grow">
+                    <span class="upload-item__file-icon text-b9 inline-flex flex-shrink-0 mr-2">
+                        <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2 0H10L16 6V18C16 19.1 15.1 20 14 20H1.99C0.89 20 0 19.1 0 18L0.01 2C0.01 0.9 0.9 0 2 0ZM2 2V18H14V7H9V2H2Z" fill="currentColor"/>
+                        </svg>
+                    </span>
+                    <input type="file" class="hidden">
+                    <span class="inline-flex">
+                        <span class="upload-item__file-name leading-none whitespace-no-wrap overflow-hidden text-overflow font-semibold text-sm text-24021 min-w-0 mr-2">Загрузить файл</span>
+                    </span>
+                    <svg class="upload-item__download-icon inline-flex flex-shrink-0 ml-auto" width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M14 7.5H10V13.5H4V7.5H0L7 0.5L14 7.5ZM6 5.5V11.5H8V5.5H9.17L7 3.33L4.83 5.5H6ZM14 17.5V15.5H0V17.5H14Z" fill="black" fill-opacity="0.54"/>
+                    </svg>
+                    <svg class="upload-item__clear-icon hidden inline-flex flex-shrink-0 ml-auto" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z" fill="black" fill-opacity="0.54"/>
+                    </svg>
+                </label>
+                <label class="upload-item mt-5 py-1 px-2 inline-flex items-center bg-#F2F2F2 cursor-pointer flex-grow">
+                    <span class="upload-item__file-icon text-b9 inline-flex flex-shrink-0 mr-2">
+                        <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2 0H10L16 6V18C16 19.1 15.1 20 14 20H1.99C0.89 20 0 19.1 0 18L0.01 2C0.01 0.9 0.9 0 2 0ZM2 2V18H14V7H9V2H2Z" fill="currentColor"/>
+                        </svg>
+                    </span>
+                    <input type="file" class="hidden">
+                    <span class="inline-flex">
+                        <span class="upload-item__file-name leading-none whitespace-no-wrap overflow-hidden text-overflow font-semibold text-sm text-24021 min-w-0 mr-2">Загрузить файл</span>
+                    </span>
+                    <svg class="upload-item__download-icon inline-flex flex-shrink-0 ml-auto" width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M14 7.5H10V13.5H4V7.5H0L7 0.5L14 7.5ZM6 5.5V11.5H8V5.5H9.17L7 3.33L4.83 5.5H6ZM14 17.5V15.5H0V17.5H14Z" fill="black" fill-opacity="0.54"/>
+                    </svg>
+                    <svg class="upload-item__clear-icon hidden inline-flex flex-shrink-0 ml-auto" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z" fill="black" fill-opacity="0.54"/>
+                    </svg>
+                </label>
+                <div class="add self-center inline-flex flex-shrink-0 w-10 hover:opacity-75 cursor-pointer tooltip mt-5" title="Добавить">
+                    <div class="flex w-full h-full items-center justify-center">
+                        <div class="inline-flex items-start">
+                            <img src="img/top-panel/plus.svg" alt="добавить">
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="upload-panel__button font-bold mt-5 flex flex-grow bg-e8 text-blue text-xxs w-full h-8 items-center justify-center hover:opacity-75">
+                    <svg class="flex-shrink-0 mr-3" width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 5H14.17L10.59 1.41L12 0L18 6L12 12L10.59 10.59L14.17 7H0V5Z" fill="#00599A"/>
+                    </svg>
+                    <span>Найти связи</span>
+                </button>
+            </form>
+        </div>
+        <div class="bg-f2 h-full flex justify-center flex-grow px-5 pb-5 overflow-auto">
+            <div class="flex max-w-screen-xl mx-auto flex flex-wrap justify-between flex-grow -mx-2">
+                <div class="upload-file flex flex-col px-2 mt-6">
+                    <div class="flex items-start">
+                        <div class="upload-file__file-icon text-b9 inline-flex flex-shrink-0 mr-3">
+                            <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M2 0H10L16 6V18C16 19.1 15.1 20 14 20H1.99C0.89 20 0 19.1 0 18L0.01 2C0.01 0.9 0.9 0 2 0ZM2 2V18H14V7H9V2H2Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="flex flex-col text-24021">
+                            <div class="text-sm font-semibold inline-flex">
+                                <span class="upload-file__file-name text-overflow whitespace-no-wrap overflow-hidden min-w-0">Загрузите файл или добавьте объект вручную</span>
+                            </div>
+                            <div class="font-medium text-xxs mt-1">
+                                Строк в файле: <span class="upload-item__rows-count">6</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex py-5 items-center border-b border-b9 text-b9 leading-3 text-xxs font-medium">
+                        <div class="inline-flex w-10 flex-shrink-0 justify-center items-center">
+                            #
+                        </div>
+                        <div class="inline-flex flex-shrink-0 w-56 pr-2">
+                            Название
+                        </div>
+                        <div class="inline-flex flex-shrink-0 w-20 pr-2">
+                            ИНН
+                        </div>
+                        <div class="inline-flex flex-shrink-0 w-20 pr-2">
+                            ОГРН
+                        </div>
+                        <div class="inline-flex flex-shrink-0 w-20">
+
+                        </div>
+                    </div>
+                    <div class="flex py-5 items-end border-b border-b9 text-b9 leading-3 text-xxs font-medium">
+                        <div class="leading-snug inline-flex upload-file__number w-10 flex-shrink-0 justify-center items-center text-65 font-semibold text-xs">
+                            1
+                        </div>
+                        <div class="upload-file__name inline-flex flex-shrink-0 w-56 text-sm text-blue font-semibold pr-2">
+                            <span class="whitespace-no-wrap text-overflow overflow-hidden min-w-0 tooltip" title="Название длинное длинное название компании">Название длинное длинное название компании</span>
+                        </div>
+                        <div class="inline-flex flex-shrink-0 w-20 font-semibold text-65 pr-2">
+                            5903113639
+                        </div>
+                        <div class="inline-flex  flex-shrink-0 w-20 font-semibold text-65 pr-2">
+                            5903113639
+                        </div>
+                        <div class="upload-file__delete inline-flex flex-shrink-0 w-20 justify-center cursor-pointer hover:opacity-75">
+                            <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.5 0H4.5L3.5 1H0V3H14V1H10.5L9.5 0ZM11 6V16H3V6H11ZM1 4H13V16C13 17.1 12.1 18 11 18H3C1.9 18 1 17.1 1 16V4Z" fill="#B9BDC7"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="flex py-5 items-end border-b border-b9 text-b9 leading-3 text-xxs font-medium">
+                        <div class="leading-snug inline-flex upload-file__number w-10 flex-shrink-0 justify-center items-center text-65 font-semibold text-xs">
+                            1
+                        </div>
+                        <div class="upload-file__name inline-flex flex-shrink-0 w-56 text-sm text-blue font-semibold pr-2">
+                            <span class="whitespace-no-wrap text-overflow overflow-hidden min-w-0 tooltip" title="Название длинное длинное название компании">Название длинное длинное название компании</span>
+                        </div>
+                        <div class="inline-flex flex-shrink-0 w-20 font-semibold text-65 pr-2">
+                            5903113639
+                        </div>
+                        <div class="inline-flex  flex-shrink-0 w-20 font-semibold text-65 pr-2">
+                            5903113639
+                        </div>
+                        <div class="upload-file__delete inline-flex flex-shrink-0 w-20 justify-center cursor-pointer hover:opacity-75">
+                            <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.5 0H4.5L3.5 1H0V3H14V1H10.5L9.5 0ZM11 6V16H3V6H11ZM1 4H13V16C13 17.1 12.1 18 11 18H3C1.9 18 1 17.1 1 16V4Z" fill="#B9BDC7"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="flex py-5 items-end border-b border-b9 text-b9 leading-3 text-xxs font-medium">
+                        <div class="leading-snug inline-flex upload-file__number w-10 flex-shrink-0 justify-center items-center text-65 font-semibold text-xs">
+                            1
+                        </div>
+                        <div class="upload-file__name inline-flex flex-shrink-0 w-56 text-sm text-blue font-semibold pr-2">
+                            <span class="whitespace-no-wrap text-overflow overflow-hidden min-w-0 tooltip" title="Название длинное длинное название компании">Название длинное длинное название компании</span>
+                        </div>
+                        <div class="inline-flex flex-shrink-0 w-20 font-semibold text-65 pr-2">
+                            5903113639
+                        </div>
+                        <div class="inline-flex  flex-shrink-0 w-20 font-semibold text-65 pr-2">
+                            5903113639
+                        </div>
+                        <div class="upload-file__delete inline-flex flex-shrink-0 w-20 justify-center cursor-pointer hover:opacity-75">
+                            <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.5 0H4.5L3.5 1H0V3H14V1H10.5L9.5 0ZM11 6V16H3V6H11ZM1 4H13V16C13 17.1 12.1 18 11 18H3C1.9 18 1 17.1 1 16V4Z" fill="#B9BDC7"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="flex py-5 items-end border-b border-b9 text-b9 leading-3 text-xxs font-medium">
+                        <div class="leading-snug inline-flex upload-file__number w-10 flex-shrink-0 justify-center items-center text-65 font-semibold text-xs">
+                            1
+                        </div>
+                        <div class="upload-file__name inline-flex flex-shrink-0 w-56 text-sm text-blue font-semibold pr-2">
+                            <span class="whitespace-no-wrap text-overflow overflow-hidden min-w-0 tooltip" title="Название длинное длинное название компании">Название длинное длинное название компании</span>
+                        </div>
+                        <div class="inline-flex flex-shrink-0 w-20 font-semibold text-65 pr-2">
+                            5903113639
+                        </div>
+                        <div class="inline-flex  flex-shrink-0 w-20 font-semibold text-65 pr-2">
+                            5903113639
+                        </div>
+                        <div class="upload-file__delete inline-flex flex-shrink-0 w-20 justify-center cursor-pointer hover:opacity-75">
+                            <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.5 0H4.5L3.5 1H0V3H14V1H10.5L9.5 0ZM11 6V16H3V6H11ZM1 4H13V16C13 17.1 12.1 18 11 18H3C1.9 18 1 17.1 1 16V4Z" fill="#B9BDC7"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="upload-file__add hover:opacity-75 flex py-5 items-center cursor-pointer">
+                        <div class="inline-flex w-10 flex-shrink-0 justify-center items-center cursor-pointer">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 13H13V19H11V13H5V11H11V5H13V11H19V13Z" fill="#00599A"/>
+                            </svg>
+                        </div>
+                        <div class="upload-file__name inline-flex flex-shrink-0 w-56 text-sm text-blue font-semibold pr-2">
+                            <span class="whitespace-no-wrap text-overflow overflow-hidden min-w-0">Добавить объект</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="upload-file flex flex-col px-2 mt-6">
+                    <div class="flex items-start">
+                        <div class="upload-file__file-icon text-b9 inline-flex flex-shrink-0 mr-3">
+                            <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M2 0H10L16 6V18C16 19.1 15.1 20 14 20H1.99C0.89 20 0 19.1 0 18L0.01 2C0.01 0.9 0.9 0 2 0ZM2 2V18H14V7H9V2H2Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="flex flex-col text-24021">
+                            <div class="text-sm font-semibold inline-flex">
+                                <span class="upload-file__file-name text-overflow whitespace-no-wrap overflow-hidden min-w-0">Загрузите файл или добавьте объект вручную</span>
+                            </div>
+                            <div class="font-medium text-xxs mt-1">
+                                Строк в файле: <span class="upload-item__rows-count">6</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex py-5 items-center border-b border-b9 text-b9 leading-3 text-xxs font-medium">
+                        <div class="inline-flex w-10 flex-shrink-0 justify-center items-center">
+                            #
+                        </div>
+                        <div class="inline-flex flex-shrink-0 w-56 pr-2">
+                            Название
+                        </div>
+                        <div class="inline-flex flex-shrink-0 w-20 pr-2">
+                            ИНН
+                        </div>
+                        <div class="inline-flex flex-shrink-0 w-20 pr-2">
+                            ОГРН
+                        </div>
+                        <div class="inline-flex flex-shrink-0 w-20">
+
+                        </div>
+                    </div>
+                    <div class="flex py-5 items-end border-b border-b9 text-b9 leading-3 text-xxs font-medium">
+                        <div class="leading-snug inline-flex upload-file__number w-10 flex-shrink-0 justify-center items-center text-65 font-semibold text-xs">
+                            1
+                        </div>
+                        <div class="upload-file__name inline-flex flex-shrink-0 w-56 text-sm text-blue font-semibold pr-2">
+                            <span class="whitespace-no-wrap text-overflow overflow-hidden min-w-0 tooltip" title="Название длинное длинное название компании">Название длинное длинное название компании</span>
+                        </div>
+                        <div class="inline-flex flex-shrink-0 w-20 font-semibold text-65 pr-2">
+                            5903113639
+                        </div>
+                        <div class="inline-flex  flex-shrink-0 w-20 font-semibold text-65 pr-2">
+                            5903113639
+                        </div>
+                        <div class="upload-file__delete inline-flex flex-shrink-0 w-20 justify-center cursor-pointer hover:opacity-75">
+                            <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.5 0H4.5L3.5 1H0V3H14V1H10.5L9.5 0ZM11 6V16H3V6H11ZM1 4H13V16C13 17.1 12.1 18 11 18H3C1.9 18 1 17.1 1 16V4Z" fill="#B9BDC7"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="flex py-5 items-end border-b border-b9 text-b9 leading-3 text-xxs font-medium">
+                        <div class="leading-snug inline-flex upload-file__number w-10 flex-shrink-0 justify-center items-center text-65 font-semibold text-xs">
+                            1
+                        </div>
+                        <div class="upload-file__name inline-flex flex-shrink-0 w-56 text-sm text-blue font-semibold pr-2">
+                            <span class="whitespace-no-wrap text-overflow overflow-hidden min-w-0 tooltip" title="Название длинное длинное название компании">Название длинное длинное название компании</span>
+                        </div>
+                        <div class="inline-flex flex-shrink-0 w-20 font-semibold text-65 pr-2">
+                            5903113639
+                        </div>
+                        <div class="inline-flex  flex-shrink-0 w-20 font-semibold text-65 pr-2">
+                            5903113639
+                        </div>
+                        <div class="upload-file__delete inline-flex flex-shrink-0 w-20 justify-center cursor-pointer hover:opacity-75">
+                            <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.5 0H4.5L3.5 1H0V3H14V1H10.5L9.5 0ZM11 6V16H3V6H11ZM1 4H13V16C13 17.1 12.1 18 11 18H3C1.9 18 1 17.1 1 16V4Z" fill="#B9BDC7"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="flex py-5 items-end border-b border-b9 text-b9 leading-3 text-xxs font-medium">
+                        <div class="leading-snug inline-flex upload-file__number w-10 flex-shrink-0 justify-center items-center text-65 font-semibold text-xs">
+                            1
+                        </div>
+                        <div class="upload-file__name inline-flex flex-shrink-0 w-56 text-sm text-blue font-semibold pr-2">
+                            <span class="whitespace-no-wrap text-overflow overflow-hidden min-w-0 tooltip" title="Название длинное длинное название компании">Название длинное длинное название компании</span>
+                        </div>
+                        <div class="inline-flex flex-shrink-0 w-20 font-semibold text-65 pr-2">
+                            5903113639
+                        </div>
+                        <div class="inline-flex  flex-shrink-0 w-20 font-semibold text-65 pr-2">
+                            5903113639
+                        </div>
+                        <div class="upload-file__delete inline-flex flex-shrink-0 w-20 justify-center cursor-pointer hover:opacity-75">
+                            <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.5 0H4.5L3.5 1H0V3H14V1H10.5L9.5 0ZM11 6V16H3V6H11ZM1 4H13V16C13 17.1 12.1 18 11 18H3C1.9 18 1 17.1 1 16V4Z" fill="#B9BDC7"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="flex py-5 items-end border-b border-b9 text-b9 leading-3 text-xxs font-medium">
+                        <div class="leading-snug inline-flex upload-file__number w-10 flex-shrink-0 justify-center items-center text-65 font-semibold text-xs">
+                            1
+                        </div>
+                        <div class="upload-file__name inline-flex flex-shrink-0 w-56 text-sm text-purple font-semibold pr-2">
+                            <span class="whitespace-no-wrap text-overflow overflow-hidden min-w-0 tooltip" title="Название длинное длинное название компании">Название длинное длинное название компании</span>
+                        </div>
+                        <div class="inline-flex flex-shrink-0 w-20 font-semibold text-65 pr-2">
+                            5903113639
+                        </div>
+                        <div class="inline-flex  flex-shrink-0 w-20 font-semibold text-65 pr-2">
+                            5903113639
+                        </div>
+                        <div class="upload-file__delete inline-flex flex-shrink-0 w-20 justify-center cursor-pointer hover:opacity-75">
+                            <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.5 0H4.5L3.5 1H0V3H14V1H10.5L9.5 0ZM11 6V16H3V6H11ZM1 4H13V16C13 17.1 12.1 18 11 18H3C1.9 18 1 17.1 1 16V4Z" fill="#B9BDC7"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="upload-file__add hover:opacity-75 flex py-5 items-center cursor-pointer">
+                        <div class="inline-flex w-10 flex-shrink-0 justify-center items-center cursor-pointer">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 13H13V19H11V13H5V11H11V5H13V11H19V13Z" fill="#00599A"/>
+                            </svg>
+                        </div>
+                        <div class="upload-file__name inline-flex flex-shrink-0 w-56 text-sm text-blue font-semibold pr-2">
+                            Добавить объект
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+//= templates/scripts.html
+</body>
+
+</html>

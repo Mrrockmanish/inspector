@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ru">
+//= templates/head.html
+
+<body class="relative">
+    //= templates/example-modal.html
+    <div class="flex flex-nowrap h-screen">
+        //= templates/left-panel.html
+        <div class="center-sector items-start inline-flex flex-wrap flex-grow min-w-0 overflow-hidden">
+            <div class="flex w-full self-start">
+                <div class="top-panel w-full bg-white inline-flex">
+                    <div class="flex h-full w-full items-center flex-stretch">
+                        //= templates/top-panel-tabs.html
+                        //= templates/top-panel-exit.html
+                    </div>
+                </div>
+            </div>
+            <div class="area bg-f2 flex w-full flex-grow">
+                <div class="area__inner inline-flex flex-grow whitespace-no-wrap relative overflow-auto">
+                    <!-- основная контентная часть  -->
+                    //= templates/area-left-tools.html
+                    //= templates/area-right-tools.html
+                    <div class="mx-auto flex-wrap my-20 min-w-0 overflow-x-auto">
+                        <div class="flex items-center min-w-0">
+                            <!-- обычный цифры активны -->
+                            <div class="item inline-flex min-w-0">
+                                <div class="item__inner flex items-center justify-center w-full h-full px-4">
+                                    <div class="inline-flex items-center justify-center">
+                                        <svg class="item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M12 7H22V21H2V3H12V7ZM4 19H6V17H4V19ZM6 15H4V13H6V15ZM4 11H6V9H4V11ZM6 7H4V5H6V7ZM8 19H10V17H8V19ZM10 15H8V13H10V15ZM8 11H10V9H8V11ZM10 7H8V5H10V7ZM20 19V9H12V11H14V13H12V15H14V17H12V19H20ZM18 11H16V13H18V11ZM16 15H18V17H16V15Z"
+                                                fill="#188B31" />
+                                        </svg>
+                                    </div>
+                                    <div class="item__text inline-flex min-w-0 mx-2">
+                                        <div class="flex flex-wrap min-w-0">
+                                            <div
+                                                class="item__name inline-flex w-full whitespace-no-wrap overflow-hidden text-xxs font-semibold">
+                                                ООО «ПРОМОБОТ»
+                                            </div>
+                                            <div
+                                                class="item__req inline-flex w-full min-w-0 whitespace-no-wrap overflow-hidden text-xxs font-medium">
+                                                5903113639 / ОГРН 1155958016411
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item__digits inline-flex min-w-0 overflow-hidden">
+                                        <div class="flex w-full justify-between">
+                                            <div class="item__digit inline-flex w-5 h-5 min-w-0 bg-purple text-white">
+                                                <span>2</span>
+                                            </div>
+                                            <div class="item__digit inline-flex w-5 h-5 min-w-0 bg-blue text-white">
+                                                <span>4</span>
+                                            </div>
+                                            <div
+                                                class="item__digit inline-flex w-5 h-5 min-w-0 bg-light-blue text-white">
+                                                <span>2</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- обычный цифры не активны -->
+                            <div class="item inline-flex min-w-0">
+                                <div class="item__inner flex items-center justify-center w-full h-full px-4">
+                                    <div class="inline-flex items-center justify-center">
+                                        <svg class="item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M12 7H22V21H2V3H12V7ZM4 19H6V17H4V19ZM6 15H4V13H6V15ZM4 11H6V9H4V11ZM6 7H4V5H6V7ZM8 19H10V17H8V19ZM10 15H8V13H10V15ZM8 11H10V9H8V11ZM10 7H8V5H10V7ZM20 19V9H12V11H14V13H12V15H14V17H12V19H20ZM18 11H16V13H18V11ZM16 15H18V17H16V15Z"
+                                                fill="#188B31" />
+                                        </svg>
+                                    </div>
+                                    <div class="item__text inline-flex min-w-0 mx-2">
+                                        <div class="flex flex-wrap min-w-0">
+                                            <div
+                                                class="item__name inline-flex w-full whitespace-no-wrap overflow-hidden text-xxs font-semibold">
+                                                ООО «ПРОМОБОТ»
+                                            </div>
+                                            <div
+                                                class="item__req inline-flex w-full min-w-0 whitespace-no-wrap overflow-hidden text-xxs font-medium">
+                                                5903113639 / ОГРН 1155958016411
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item__digits inline-flex min-w-0 overflow-hidden">
+                                        <div class="flex w-full justify-between">
+                                            <div class="item__digit inline-flex w-5 h-5 min-w-0 bg-e8 text-9ea">
+                                                <span>2</span>
+                                            </div>
+                                            <div class="item__digit inline-flex w-5 h-5 min-w-0 bg-e8 text-9ea">
+                                                <span>4</span>
+                                            </div>
+                                            <div class="item__digit inline-flex w-5 h-5 min-w-0 bg-e8 text-9ea">
+                                                <span>2</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- мини цифры не активны -->
+                            <div class="item item_mini inline-flex min-w-0">
+                                <div class="item__inner flex items-center justify-center w-full h-full px-4">
+                                    <div class="inline-flex items-center justify-center">
+                                        <svg class="item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M12 7H22V21H2V3H12V7ZM4 19H6V17H4V19ZM6 15H4V13H6V15ZM4 11H6V9H4V11ZM6 7H4V5H6V7ZM8 19H10V17H8V19ZM10 15H8V13H10V15ZM8 11H10V9H8V11ZM10 7H8V5H10V7ZM20 19V9H12V11H14V13H12V15H14V17H12V19H20ZM18 11H16V13H18V11ZM16 15H18V17H16V15Z"
+                                                fill="#188B31" />
+                                        </svg>
+                                    </div>
+                                    <div class="item__text inline-flex min-w-0 mx-2">
+                                        <div class="flex flex-wrap min-w-0">
+                                            <div
+                                                class="item__name inline-flex w-full whitespace-no-wrap overflow-hidden text-xxs font-semibold">
+                                                ООО «ПРОМОБОТ»
+                                            </div>
+                                            <div
+                                                class="item__req inline-flex w-full min-w-0 whitespace-no-wrap overflow-hidden text-xxs font-medium">
+                                                5903113639 / ОГРН 1155958016411
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item__digits inline-flex min-w-0 overflow-hidden">
+                                        <div class="flex w-full justify-between">
+                                            <div class="item__digit inline-flex w-5 h-5 min-w-0 bg-e8 text-9ea">
+                                                <span>2</span>
+                                            </div>
+                                            <div class="item__digit inline-flex w-5 h-5 min-w-0 bg-e8 text-9ea">
+                                                <span>4</span>
+                                            </div>
+                                            <div class="item__digit inline-flex w-5 h-5 min-w-0 bg-e8 text-9ea">
+                                                <span>2</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center min-w-0 overflow-hidden mt-20">
+                            <!-- выделенный цифры активны -->
+                            <div class="item item_selected inline-flex min-w-0">
+                                <div class="item__inner flex items-center justify-center w-full h-full px-4">
+                                    <div class="inline-flex items-center justify-center">
+                                        <svg class="item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M12 7H22V21H2V3H12V7ZM4 19H6V17H4V19ZM6 15H4V13H6V15ZM4 11H6V9H4V11ZM6 7H4V5H6V7ZM8 19H10V17H8V19ZM10 15H8V13H10V15ZM8 11H10V9H8V11ZM10 7H8V5H10V7ZM20 19V9H12V11H14V13H12V15H14V17H12V19H20ZM18 11H16V13H18V11ZM16 15H18V17H16V15Z"
+                                                fill="#188B31" />
+                                        </svg>
+                                    </div>
+                                    <div class="item__text inline-flex min-w-0 mx-2">
+                                        <div class="flex flex-wrap min-w-0">
+                                            <div
+                                                class="item__name inline-flex w-full whitespace-no-wrap overflow-hidden text-xxs font-semibold">
+                                                ООО «ПРОМОБОТ»
+                                            </div>
+                                            <div
+                                                class="item__req inline-flex w-full min-w-0 whitespace-no-wrap overflow-hidden text-xxs font-medium">
+                                                5903113639 / ОГРН 1155958016411
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item__digits inline-flex min-w-0 overflow-hidden">
+                                        <div class="flex w-full justify-between">
+                                            <div class="item__digit inline-flex w-5 h-5 min-w-0 bg-purple text-white">
+                                                <span>2</span>
+                                            </div>
+                                            <div class="item__digit inline-flex w-5 h-5 min-w-0 bg-blue text-white">
+                                                <span>4</span>
+                                            </div>
+                                            <div
+                                                class="item__digit inline-flex w-5 h-5 min-w-0 bg-light-blue text-white">
+                                                <span>2</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- выделенный цифры не активны -->
+                            <div class="item item_selected inline-flex min-w-0">
+                                <div class="item__inner flex items-center justify-center w-full h-full px-4">
+                                    <div class="inline-flex items-center justify-center">
+                                        <svg class="item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M12 7H22V21H2V3H12V7ZM4 19H6V17H4V19ZM6 15H4V13H6V15ZM4 11H6V9H4V11ZM6 7H4V5H6V7ZM8 19H10V17H8V19ZM10 15H8V13H10V15ZM8 11H10V9H8V11ZM10 7H8V5H10V7ZM20 19V9H12V11H14V13H12V15H14V17H12V19H20ZM18 11H16V13H18V11ZM16 15H18V17H16V15Z"
+                                                fill="#188B31" />
+                                        </svg>
+                                    </div>
+                                    <div class="item__text inline-flex min-w-0 mx-2">
+                                        <div class="flex flex-wrap min-w-0">
+                                            <div
+                                                class="item__name inline-flex w-full whitespace-no-wrap overflow-hidden text-xxs font-semibold">
+                                                ООО «ПРОМОБОТ»
+                                            </div>
+                                            <div
+                                                class="item__req inline-flex w-full min-w-0 whitespace-no-wrap overflow-hidden text-xxs font-medium">
+                                                5903113639 / ОГРН 1155958016411
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item__digits inline-flex min-w-0 overflow-hidden">
+                                        <div class="flex w-full justify-between">
+                                            <div class="item__digit inline-flex w-5 h-5 min-w-0 bg-e8 text-9ea">
+                                                <span>2</span>
+                                            </div>
+                                            <div class="item__digit inline-flex w-5 h-5 min-w-0 bg-e8 text-9ea">
+                                                <span>4</span>
+                                            </div>
+                                            <div class="item__digit inline-flex w-5 h-5 min-w-0 bg-e8 text-9ea">
+                                                <span>2</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- мини выделенный цифры не активны -->
+                            <div class="item item_selected item_mini inline-flex min-w-0">
+                                <div class="item__inner flex items-center justify-center w-full h-full px-4">
+                                    <div class="inline-flex items-center justify-center">
+                                        <svg class="item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M12 7H22V21H2V3H12V7ZM4 19H6V17H4V19ZM6 15H4V13H6V15ZM4 11H6V9H4V11ZM6 7H4V5H6V7ZM8 19H10V17H8V19ZM10 15H8V13H10V15ZM8 11H10V9H8V11ZM10 7H8V5H10V7ZM20 19V9H12V11H14V13H12V15H14V17H12V19H20ZM18 11H16V13H18V11ZM16 15H18V17H16V15Z"
+                                                fill="#188B31" />
+                                        </svg>
+                                    </div>
+                                    <div class="item__text inline-flex min-w-0 mx-2">
+                                        <div class="flex flex-wrap min-w-0">
+                                            <div
+                                                class="item__name inline-flex w-full whitespace-no-wrap overflow-hidden text-xxs font-semibold">
+                                                ООО «ПРОМОБОТ»
+                                            </div>
+                                            <div
+                                                class="item__req inline-flex w-full min-w-0 whitespace-no-wrap overflow-hidden text-xxs font-medium">
+                                                5903113639 / ОГРН 1155958016411
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item__digits inline-flex min-w-0 overflow-hidden">
+                                        <div class="flex w-full justify-between">
+                                            <div class="item__digit inline-flex w-5 h-5 min-w-0 bg-e8 text-9ea">
+                                                <span>2</span>
+                                            </div>
+                                            <div class="item__digit inline-flex w-5 h-5 min-w-0 bg-e8 text-9ea">
+                                                <span>4</span>
+                                            </div>
+                                            <div class="item__digit inline-flex w-5 h-5 min-w-0 bg-e8 text-9ea">
+                                                <span>2</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lists-block hidden inline-flex bg-white flex-wrap text-24021 content-start items-start text-xxs overflow-auto max-h-full">
+            <!-- здесь рендерим списки -->
+            //= templates/lists-block-tools.html
+        </div>
+    </div>
+
+    //= templates/scripts.html
+</body>
+
+</html>

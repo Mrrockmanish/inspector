@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+//= templates/head.html
+
+<body class="relative">
+    <div class="flex flex-nowrap h-screen">
+        //= templates/left-panel.html
+        <div class="center-sector items-start inline-flex flex-wrap flex-grow min-w-0 overflow-hidden">
+            <div class="flex w-full self-start">
+                <div class="top-panel w-full bg-white inline-flex">
+                    <div class="flex h-full w-full flex-stretch items-center">
+                        //= templates/top-panel-inputs.html
+                    </div>
+                </div>
+            </div>
+            <div class="area bg-f2 flex w-full flex-grow">
+                <div class="area__inner inline-flex flex-grow whitespace-no-wrap relative overflow-auto">
+                    <!-- основная контентная часть  -->
+                    <div class="area__container px-6 py-8 mx-auto relative overflow-auto">
+                        //= templates/area-pagination.html
+                        <div class="results flex-wrap content-start flex w-full text-xxs text-24021 font-medium">
+                            //= templates/results-active-filters.html
+                            //= templates/one-result-with-add.html
+                            //= templates/one-result-with-add.html
+                            //= templates/one-result-with-add.html
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div  class="lists-block inline-flex bg-white flex-wrap text-24021 content-start items-start text-xxs overflow-auto max-h-full">
+            //= templates/search-settings.html
+        </div>
+    </div>
+
+    //= templates/scripts.html
+</body>
+
+</html>

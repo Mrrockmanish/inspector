@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+//= templates/head.html
+
+<body class="relative">
+<div class="flex flex-nowrap h-screen">
+    //= templates/left-panel.html
+    <div class="center-sector items-start inline-flex flex-wrap flex-grow min-w-0 overflow-hidden">
+        <div class="flex w-full self-start">
+            <div class="top-panel top-panel_big w-full bg-white inline-flex">
+                <div class="flex h-full w-full flex-stretch items-center">
+                    <div class="top-panel-titles flex mx-auto text-4xl font-bold px-6 overflow-hidden">
+                        <span class="text-overflow whitespace-no-wrap overflow-hidden min-w-0">Мои списки</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="area area_under-big-panel bg-f2 flex w-full flex-grow">
+            <div class="area__inner inline-flex flex-grow whitespace-no-wrap relative overflow-auto">
+                <div class="signal text-white whitespace-normal">
+                    Компания ООО «ХАЙТЕК-1» добавлена в черный список
+                </div>
+                <!-- основная контентная часть  -->
+                <div class="area__container px-6 py-8 mx-auto relative overflow-auto">
+                    //= templates/area-pagination.html
+                    <form class="top-panel-input inline-flex px-3 w-full flex-grow">
+                        <div class="flex items-center w-full border-b border-b9 h-full py-1 relative">
+                            <input type="search" class="w-full outline-none text-24021 font-semibold text-sm cursor-text bg-transparent"
+                                   placeholder="Поиск" />
+                            <div class="top-panel-input__clear inline-flex absolute flex-shrink-0 items-start bg-f2 flex-shrink-0 cursor-pointer z-20" onclick="this.previousElementSibling.value = ''">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/content/clear_24px" opacity="0.5">
+                                        <path id="icon/content/clear_24px_2" d="M12.6667 4.27325L11.7267 3.33325L8.00001 7.05992L4.27334 3.33325L3.33334 4.27325L7.06001 7.99992L3.33334 11.7266L4.27334 12.6666L8.00001 8.93992L11.7267 12.6666L12.6667 11.7266L8.94001 7.99992L12.6667 4.27325Z" fill="black" fill-opacity="0.54"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <button type="submit" class="inline-flex items-start flex-shrink-0 focus:outline-none hover:opacity-75">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M14.9649 14.2549H15.7549L20.7449 19.2549L19.2549 20.7449L14.2549 15.7549V14.9649L13.9849 14.6849C12.8449 15.6649 11.3649 16.2549 9.75488 16.2549C6.16488 16.2549 3.25488 13.3449 3.25488 9.75488C3.25488 6.16488 6.16488 3.25488 9.75488 3.25488C13.3449 3.25488 16.2549 6.16488 16.2549 9.75488C16.2549 11.3649 15.6649 12.8449 14.6849 13.9849L14.9649 14.2549ZM5.25488 9.75488C5.25488 12.2449 7.26488 14.2549 9.75488 14.2549C12.2449 14.2549 14.2549 12.2449 14.2549 9.75488C14.2549 7.26488 12.2449 5.25488 9.75488 5.25488C7.26488 5.25488 5.25488 7.26488 5.25488 9.75488Z"
+                                          fill="#656565" />
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                    <div class="results flex-wrap content-start flex w-full text-xxs text-24021 font-medium">
+                        //= templates/results-active-filters.html
+                        //= templates/one-result-with-status.html
+                        //= templates/one-result-with-status.html
+                        //= templates/one-result-with-status.html
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div  class="lists-block inline-flex bg-white flex-wrap text-24021 content-start items-start text-xxs overflow-auto max-h-full">
+        //= templates/lists-search-settings.html
+    </div>
+</div>
+
+//= templates/scripts.html
+</body>
+
+</html>

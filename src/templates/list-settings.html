@@ -1,0 +1,343 @@
+<div class="flex w-full items-center text-b9 text-xs font-medium px-6 h-16">
+    <span>Настройки</span>
+</div>
+<div class="filter-drop flex flex-wrap w-full border-t border-ed py-5 px-6">
+    <div class="filter-drop__title inline-flex flex-wrap w-full font-medium cursor-pointer">
+        <div class="flex w-full items-center">
+            <div class="inline-flex mr-3">
+                Фильтры
+            </div>
+            <div class="filter-drop__selected-count inline-flex">
+                (1 из 6)
+            </div>
+            <svg class="filter-drop__dropdown inline-flex ml-auto" width="10" height="6" viewBox="0 0 10 6" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 5.5L5 0.5L0 5.5L10 5.5Z" fill="black" fill-opacity="0.54"/>
+            </svg>
+        </div>
+    </div>
+    <div class="filter-drop__content inline-flex flex-wrap w-full mt-4">
+        <label class="flex check-controls items-center w-full py-2 cursor-pointer">
+            <input type="checkbox" class="check-controls__checkbox hidden" checked/>
+            <span class="check-controls__check-custom flex-shrink-0 inline-flex border border-b9 mr-2"></span>
+            <span class="select-none inline-flex">Только действующие связи</span>
+        </label>
+        <label class="flex check-controls items-center w-full py-2 cursor-pointer">
+            <input type="checkbox" class="check-controls__checkbox hidden"/>
+            <span class="check-controls__check-custom flex-shrink-0 inline-flex border border-b9 mr-2"></span>
+            <span class="select-none inline-flex">Только действующие организации</span>
+        </label>
+        <label class="flex check-controls items-center w-full py-2 cursor-pointer">
+            <input type="checkbox" class="check-controls__checkbox hidden"/>
+            <span class="check-controls__check-custom flex-shrink-0 inline-flex border border-b9 mr-2"></span>
+            <span class="select-none inline-flex">Только физические лица</span>
+        </label>
+        <label class="flex check-controls items-center w-full py-2 cursor-pointer">
+            <input type="checkbox" class="check-controls__checkbox hidden"/>
+            <span class="check-controls__check-custom flex-shrink-0 inline-flex border border-b9 mr-2"></span>
+            <span class="select-none inline-flex">Только организации</span>
+        </label>
+        <label class="flex check-controls items-center w-full py-2 cursor-pointer">
+            <input type="checkbox" class="check-controls__checkbox hidden"/>
+            <span class="check-controls__check-custom flex-shrink-0 inline-flex border border-b9 mr-2"></span>
+            <span class="select-none inline-flex">Только владельцы</span>
+        </label>
+        <label class="flex check-controls items-center w-full py-2 cursor-pointer">
+            <input type="checkbox" class="check-controls__checkbox hidden"/>
+            <span class="check-controls__check-custom flex-shrink-0 inline-flex border border-b9 mr-2"></span>
+            <span class="select-none inline-flex">Только руководители</span>
+        </label>
+    </div>
+</div>
+<div class="filter-drop flex flex-wrap w-full border-t border-ed py-5 px-6">
+    <div class="filter-drop__title inline-flex flex-wrap w-full font-medium cursor-pointer">
+        <div class="flex w-full items-center">
+            <div class="inline-flex mr-3">
+                Группировать объекты
+            </div>
+            <div class="filter-drop__selected-count inline-flex">
+                (0 из 4)
+            </div>
+            <svg class="filter-drop__dropdown inline-flex ml-auto" width="10" height="6" viewBox="0 0 10 6" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 5.5L5 0.5L0 5.5L10 5.5Z" fill="black" fill-opacity="0.54"/>
+            </svg>
+        </div>
+    </div>
+    <div class="filter-drop__content inline-flex flex-wrap w-full mt-4">
+        <label class="flex check-controls items-center w-full py-2 cursor-pointer">
+            <input type="checkbox" class="check-controls__checkbox hidden" checked/>
+            <span class="check-controls__check-custom flex-shrink-0 inline-flex border border-b9 mr-2"></span>
+            <span class="select-none inline-flex">По типам связей</span>
+        </label>
+        <label class="flex check-controls items-center w-full py-2 cursor-pointer">
+            <input type="checkbox" class="check-controls__checkbox hidden"/>
+            <span class="check-controls__check-custom flex-shrink-0 inline-flex border border-b9 mr-2"></span>
+            <span class="select-none inline-flex">По типам объектов</span>
+        </label>
+        <label class="flex check-controls items-center w-full py-2 cursor-pointer">
+            <input type="checkbox" class="check-controls__checkbox hidden"/>
+            <span class="check-controls__check-custom flex-shrink-0 inline-flex border border-b9 mr-2"></span>
+            <span class="select-none inline-flex">По ОКВЭД</span>
+        </label>
+        <label class="flex check-controls items-center w-full py-2 cursor-pointer">
+            <input type="checkbox" class="check-controls__checkbox hidden"/>
+            <span class="check-controls__check-custom flex-shrink-0 inline-flex border border-b9 mr-2"></span>
+            <span class="select-none inline-flex">По регионам</span>
+        </label>
+    </div>
+</div>
+<div class="filter-drop flex flex-wrap w-full border-t border-ed py-5 px-6">
+    <div class="filter-drop__title inline-flex flex-wrap w-full font-medium cursor-pointer">
+        <div class="flex w-full items-center justify-between">
+            <div class="inline-flex">
+                Доля владения в %
+            </div>
+            <svg class="filter-drop__dropdown inline-flex" width="10" height="6" viewBox="0 0 10 6" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 5.5L5 0.5L0 5.5L10 5.5Z" fill="black" fill-opacity="0.54"/>
+            </svg>
+        </div>
+    </div>
+    <div class="filter-drop__content inline-flex flex-wrap w-full mt-4">
+        <div class="flex w-full -mx-1">
+            <div class="inline-flex w-1/2 px-1">
+                <select class="w-full border-b border-c4 py-1 px-0 cursor-pointer focus:outline-none"
+                        name="more-o-less">
+                    <option value="Больше">Больше</option>
+                    <option value="Меньше">Меньше</option>
+                </select>
+            </div>
+            <div class="inline-flex w-1/2 px-1">
+                <input type="number" min="1" max="99"
+                       class="w-full border-b border-c4 py-1 px-0 cursor-pointer focus:outline-none">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="filter-drop flex flex-wrap w-full border-t border-ed py-5 px-6">
+    <div class="filter-drop__title inline-flex flex-wrap w-full font-medium cursor-pointer">
+        <div class="flex w-full items-center justify-between">
+            <div class="inline-flex">
+                Уровни связи
+            </div>
+            <svg class="filter-drop__dropdown inline-flex" width="10" height="6" viewBox="0 0 10 6" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 5.5L5 0.5L0 5.5L10 5.5Z" fill="black" fill-opacity="0.54"/>
+            </svg>
+        </div>
+    </div>
+    <div class="filter-drop__content inline-flex flex-wrap w-full mt-4">
+        <div class="flex w-full -mx-1">
+            <div class="inline-flex w-full px-1">
+                <input value="3" type="number" min="1" max="10"
+                       class="w-full border-b border-c4 py-1 px-0 cursor-pointer focus:outline-none">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="filter-drop flex flex-wrap w-full border-t border-ed py-5 px-6">
+    <div class="filter-drop__title inline-flex flex-wrap w-full font-medium cursor-pointer">
+        <div class="flex w-full items-center">
+            <div class="inline-flex mr-3">
+                ОКВЭД
+            </div>
+            <div class="filter-drop__selected-count inline-flex">
+                (0 из 4)
+            </div>
+            <svg class="filter-drop__dropdown inline-flex ml-auto" width="10" height="6" viewBox="0 0 10 6" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 5.5L5 0.5L0 5.5L10 5.5Z" fill="black" fill-opacity="0.54"/>
+            </svg>
+        </div>
+    </div>
+    <div class="filter-drop__content inline-flex flex-wrap w-full mt-4">
+        <label class="flex check-controls items-center w-full py-2 cursor-pointer">
+            <span class="inline-flex w-1/2">
+                <input type="checkbox" class="check-controls__checkbox hidden" checked/>
+                <span class="check-controls__check-custom flex-shrink-0 inline-flex border border-b9 mr-2"></span>
+                <span class="select-none inline-flex font-bold min-w-0">
+                    <span class="text-overflow whitespace-no-wrap overflow-hidden">
+                        64.99
+                    </span>
+                </span>
+            </span>
+            <span class="inline-flex justify-end items-center text-green font-medium w-1/2 pl-1">
+                <span class="mr-3">
+                    (33.33%)
+                </span>
+                <span class="inline-flex w-12 min-w-0 overflow-hidden h-1">
+                    <span class="block bg-green h-1" style="width: 33.33%"></span>
+                </span>
+            </span>
+        </label>
+        <label class="flex check-controls items-center w-full py-2 cursor-pointer">
+            <span class="inline-flex w-1/2">
+                <input type="checkbox" class="check-controls__checkbox hidden" checked/>
+                <span class="check-controls__check-custom flex-shrink-0 inline-flex border border-b9 mr-2"></span>
+                <span class="select-none inline-flex font-bold min-w-0">
+                    <span class="text-overflow whitespace-no-wrap overflow-hidden">
+                        62.01
+                    </span>
+                </span>
+            </span>
+            <span class="inline-flex justify-end items-center text-green font-medium w-1/2 pl-1">
+                <span class="mr-3">
+                    (33.33%)
+                </span>
+                <span class="inline-flex w-12 min-w-0 overflow-hidden h-1">
+                    <span class="block bg-green h-1" style="width: 33.33%"></span>
+                </span>
+            </span>
+        </label>
+        <label class="flex check-controls items-center w-full py-2 cursor-pointer">
+            <span class="inline-flex w-1/2">
+                <input type="checkbox" class="check-controls__checkbox hidden" checked/>
+                <span class="check-controls__check-custom flex-shrink-0 inline-flex border border-b9 mr-2"></span>
+                <span class="select-none inline-flex font-bold min-w-0">
+                    <span class="text-overflow whitespace-no-wrap overflow-hidden">
+                        70.10.1
+                    </span>
+                </span>
+            </span>
+            <span class="inline-flex justify-end items-center text-red font-medium w-1/2 pl-1">
+                <span class="mr-3">
+                    (16.67%)
+                </span>
+                <span class="inline-flex w-12 min-w-0 overflow-hidden h-1">
+                    <span class="block bg-red h-1" style="width: 16.67%"></span>
+                </span>
+            </span>
+        </label>
+        <label class="flex check-controls items-center w-full py-2 cursor-pointer">
+            <span class="inline-flex w-1/2">
+                <input type="checkbox" class="check-controls__checkbox hidden" checked/>
+                <span class="check-controls__check-custom flex-shrink-0 inline-flex border border-b9 mr-2"></span>
+                <span class="select-none inline-flex font-bold min-w-0">
+                    <span class="text-overflow whitespace-no-wrap overflow-hidden">
+                        72.19
+                    </span>
+                </span>
+            </span>
+            <span class="inline-flex justify-end items-center text-red font-medium w-1/2 pl-1">
+                <span class="mr-3">
+                    (16.67%)
+                </span>
+                <span class="inline-flex w-12 min-w-0 overflow-hidden h-1">
+                    <span class="block bg-red h-1" style="width: 16.67%"></span>
+                </span>
+            </span>
+        </label>
+    </div>
+</div>
+<div class="filter-drop flex flex-wrap w-full border-t border-ed py-5 px-6">
+    <div class="filter-drop__title inline-flex flex-wrap w-full font-medium cursor-pointer">
+        <div class="flex w-full items-center">
+            <div class="inline-flex mr-3">
+                Регионы
+            </div>
+            <div class="filter-drop__selected-count inline-flex">
+                (0 из 4)
+            </div>
+            <svg class="filter-drop__dropdown inline-flex ml-auto" width="10" height="6" viewBox="0 0 10 6" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 5.5L5 0.5L0 5.5L10 5.5Z" fill="black" fill-opacity="0.54"/>
+            </svg>
+        </div>
+    </div>
+    <div class="filter-drop__content inline-flex flex-wrap w-full mt-4">
+        <label class="flex check-controls items-center w-full py-2 cursor-pointer">
+            <span class="inline-flex w-1/2">
+                <input type="checkbox" class="check-controls__checkbox hidden" checked/>
+                <span class="check-controls__check-custom flex-shrink-0 inline-flex border border-b9 mr-2"></span>
+                <span class="select-none inline-flex font-bold min-w-0 ">
+                    <span class="text-overflow whitespace-no-wrap overflow-hidden">
+                        Пермский край
+                    </span>
+                </span>
+            </span>
+            <span class="inline-flex justify-end items-center text-green font-medium w-1/2 pl-1">
+                <span class="mr-3">
+                    (50%)
+                </span>
+                <span class="inline-flex w-12 min-w-0 overflow-hidden h-1">
+                    <span class="block bg-green h-1" style="width: 50%"></span>
+                </span>
+            </span>
+        </label>
+        <label class="flex check-controls items-center w-full py-2 cursor-pointer">
+            <span class="inline-flex w-1/2">
+                <input type="checkbox" class="check-controls__checkbox hidden" checked/>
+                <span class="check-controls__check-custom flex-shrink-0 inline-flex border border-b9 mr-2"></span>
+                <span class="select-none inline-flex font-bold min-w-0 ">
+                    <span class="text-overflow whitespace-no-wrap overflow-hidden">г. Москва</span>
+                </span>
+            </span>
+            <span class="inline-flex justify-end items-center text-green font-medium w-1/2 pl-1">
+                <span class="mr-3">
+                    (90%)
+                </span>
+                <span class="inline-flex w-12 min-w-0 overflow-hidden h-1">
+                    <span class="block bg-green h-1" style="width: 90%"></span>
+                </span>
+            </span>
+        </label>
+        <label class="flex check-controls items-center w-full py-2 cursor-pointer">
+            <span class="inline-flex w-1/2">
+                <input type="checkbox" class="check-controls__checkbox hidden" checked/>
+                <span class="check-controls__check-custom flex-shrink-0 inline-flex border border-b9 mr-2"></span>
+                <span class="select-none inline-flex font-bold min-w-0">
+                    <span class="text-overflow whitespace-no-wrap overflow-hidden">
+                        Московская область
+                    </span>
+                </span>
+            </span>
+            <span class="inline-flex justify-end items-center text-red font-medium w-1/2 pl-1">
+                <span class="mr-3">
+                    (16.67%)
+                </span>
+                <span class="inline-flex w-12 min-w-0 overflow-hidden h-1">
+                    <span class="block bg-red h-1" style="width: 16.67%"></span>
+                </span>
+            </span>
+        </label>
+        <label class="flex check-controls items-center w-full py-2 cursor-pointer">
+            <span class="inline-flex w-1/2">
+                <input type="checkbox" class="check-controls__checkbox hidden" checked/>
+                <span class="check-controls__check-custom flex-shrink-0 inline-flex border border-b9 mr-2"></span>
+                <span class="select-none inline-flex font-bold min-w-0">
+                    <span class="text-overflow whitespace-no-wrap overflow-hidden">
+                        г. Санкт-Петербург
+                    </span>
+                </span>
+            </span>
+            <span class="inline-flex justify-end items-center text-red font-medium w-1/2 pl-1">
+                <span class="mr-3">
+                    (33.33%)
+                </span>
+                <span class="inline-flex w-12 min-w-0 overflow-hidden h-1">
+                    <span class="block bg-red h-1" style="width: 33.33%"></span>
+                </span>
+            </span>
+        </label>
+    </div>
+</div>
+<div class="filter-drop flex flex-wrap w-full border-t border-ed py-5 px-6">
+    <div class="filter-drop__title inline-flex flex-wrap w-full font-medium cursor-pointer">
+        <div class="flex w-full items-center">
+            <div class="inline-flex mr-3">
+                Мои списки
+            </div>
+            <div class="filter-drop__selected-count inline-flex">
+                (0 из 4)
+            </div>
+            <svg class="filter-drop__dropdown inline-flex ml-auto" width="10" height="6" viewBox="0 0 10 6" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 5.5L5 0.5L0 5.5L10 5.5Z" fill="black" fill-opacity="0.54"/>
+            </svg>
+        </div>
+    </div>
+    <div class="filter-drop__content inline-flex flex-wrap w-full mt-4">
+        //= check-list-items.html
+    </div>
+</div>

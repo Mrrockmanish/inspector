@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+//= templates/head.html
+
+<body class="relative">
+<div class="flex flex-nowrap h-screen">
+    //= templates/left-panel.html
+    <div class="center-sector items-start inline-flex flex-wrap flex-grow min-w-0 overflow-hidden">
+        <div class="flex w-full self-start">
+            <div class="top-panel w-full bg-white inline-flex">
+                <div class="flex h-full w-full items-center flex-stretch">
+                    //= templates/top-panel-tabs.html
+                    //= templates/top-panel-exit.html
+                </div>
+            </div>
+        </div>
+        <div class="area bg-f2 flex w-full flex-grow">
+            <div class="area__inner inline-flex flex-grow whitespace-no-wrap relative overflow-auto">
+                <!-- основная контентная часть  -->
+                //= templates/area-left-tools.html
+                //= templates/area-right-tools.html
+            </div>
+        </div>
+    </div>
+    <div class="lists-block hidden inline-flex bg-white flex-wrap text-24021 content-start items-start text-xxs">
+        <!-- здесь рендерим списки -->
+        //= templates/lists-block-tools.html
+        <div class="lists-block__inner-wrap flex flex-wrap overflow-auto w-full max-h-full">
+            //= templates/list-way-choice.html
+        </div>
+    </div>
+</div>
+
+//= templates/scripts.html
+</body>
+
+</html>

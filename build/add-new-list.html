@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">  
+    <link rel="stylesheet" href="css/libs.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Новый проект</title>
+</head>
+
+<body>
+<!-- функция для вызова $('#exampleModal').arcticmodal(); -->
+<div style="display: none;">
+    <div class="box-modal" id="add-new-list">
+        <div class="box-modal_close arcticmodal-close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="icon/content/clear_24px">
+                    <path id="icon/content/clear_24px_2"
+                          d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"
+                          fill="#B9BDC7"/>
+                </g>
+            </svg>
+        </div>
+        <div class="flex flex-wrap">
+            <div class="inline-flex w-full border-b border-ed px-6 py-6">
+                <div class="text-base font-bold">Добавить новый список</div>
+            </div>
+            <div class="inline-flex w-full">
+                <form class="flex flex-wrap p-6">
+                    <div class="form-controls w-full">
+                        <label for="research-name" class="font-bold text-xs">
+                            Название списка
+                        </label>
+                        <input type="text" id="research-name"
+                               class="w-full border-b border-b9 text-xs font-normal focus:outline-none py-1 mt-2"
+                               placeholder="Придумайте название">
+                    </div>
+                    <div class="flex flex-grow -mx-5">
+                        <div class="form-controls w-1/2 border-r border-#E0E0E0 mt-6 px-5 pb-5">
+                            <div class="flex w-full font-bold text-xs">
+                                Выберите цвет
+                            </div>
+                            <div class="flex justify-between -mx-2">
+                                <div class="flex flex-wrap flex-grow px-1 justify-between">
+                                    <label class="list-icon-color inline-flex cursor-pointer mt-5 mx-1">
+                                        <input class="hidden" type="radio" name="list-icon-color" value="#2F80ED">
+                                        <span class="list-icon-color__inner bg-#2F80ED"></span>
+                                    </label>
+                                    <label class="list-icon-color inline-flex cursor-pointer mt-5 mx-1">
+                                        <input class="hidden" type="radio" name="list-icon-color" value="#EB5757">
+                                        <span class="list-icon-color__inner bg-#EB5757"></span>
+                                    </label>
+                                    <label class="list-icon-color inline-flex cursor-pointer mt-5 mx-1">
+                                        <input class="hidden" type="radio" name="list-icon-color" value="#9B51E0">
+                                        <span class="list-icon-color__inner bg-#9B51E0"></span>
+                                    </label>
+                                    <label class="list-icon-color inline-flex cursor-pointer mt-5 mx-1">
+                                        <input class="hidden" type="radio" name="list-icon-color" value="#219653">
+                                        <span class="list-icon-color__inner bg-#219653"></span>
+                                    </label>
+                                    <label class="list-icon-color inline-flex cursor-pointer mt-5 mx-1">
+                                        <input class="hidden" type="radio" name="list-icon-color" value="#BDBDBD">
+                                        <span class="list-icon-color__inner bg-#BDBDBD"></span>
+                                    </label>
+                                    <label class="list-icon-color inline-flex cursor-pointer mt-5 mx-1">
+                                        <input class="hidden" type="radio" name="list-icon-color" value="#333333">
+                                        <span class="list-icon-color__inner bg-#333333"></span>
+                                    </label>
+                                    <label class="list-icon-color inline-flex cursor-pointer mt-5 mx-1">
+                                        <input class="hidden" type="radio" name="list-icon-color" value="#2D9CDB">
+                                        <span class="list-icon-color__inner bg-#2D9CDB"></span>
+                                    </label>
+                                    <label class="list-icon-color inline-flex cursor-pointer mt-5 mx-1">
+                                        <input class="hidden" type="radio" name="list-icon-color" value="#F2994A">
+                                        <span class="list-icon-color__inner bg-#F2994A"></span>
+                                    </label>
+                                    <label class="list-icon-color inline-flex cursor-pointer mt-5 mx-1">
+                                        <input class="hidden" type="radio" name="list-icon-color" value="#BB6BD9">
+                                        <span class="list-icon-color__inner bg-#BB6BD9"></span>
+                                    </label>
+                                    <label class="list-icon-color inline-flex cursor-pointer mt-5 mx-1">
+                                        <input class="hidden" type="radio" name="list-icon-color" value="#27AE60">
+                                        <span class="list-icon-color__inner bg-#27AE60"></span>
+                                    </label>
+                                    <label class="list-icon-color inline-flex cursor-pointer mt-5 mx-1">
+                                        <input class="hidden" type="radio" name="list-icon-color" value="#E0E0E0">
+                                        <span class="list-icon-color__inner bg-#E0E0E0"></span>
+                                    </label>
+                                    <label class="list-icon-color inline-flex cursor-pointer mt-5 mx-1">
+                                        <input class="hidden" type="radio" name="list-icon-color" value="#4F4F4F">
+                                        <span class="list-icon-color__inner bg-#4F4F4F"></span>
+                                    </label>
+                                    <label class="list-icon-color inline-flex cursor-pointer mt-5 mx-1">
+                                        <input class="hidden" type="radio" name="list-icon-color" value="#56CCF2">
+                                        <span class="list-icon-color__inner bg-#56CCF2"></span>
+                                    </label>
+                                    <label class="list-icon-color inline-flex cursor-pointer mt-5 mx-1">
+                                        <input class="hidden" type="radio" name="list-icon-color" value="#F2C94C">
+                                        <span class="list-icon-color__inner bg-#F2C94C"></span>
+                                    </label>
+                                    <label class="list-icon-color inline-flex cursor-pointer mt-5 mx-1">
+                                        <input class="hidden" type="radio" name="list-icon-color" value="#D8BAE3">
+                                        <span class="list-icon-color__inner bg-#D8BAE3"></span>
+                                    </label>
+                                    <label class="list-icon-color inline-flex cursor-pointer mt-5 mx-1">
+                                        <input class="hidden" type="radio" name="list-icon-color" value="#6FCF97">
+                                        <span class="list-icon-color__inner bg-#6FCF97"></span>
+                                    </label>
+                                    <label class="list-icon-color inline-flex cursor-pointer mt-5 mx-1">
+                                        <input class="hidden" type="radio" name="list-icon-color" value="#F2F2F2">
+                                        <span class="list-icon-color__inner bg-#F2F2F2"></span>
+                                    </label>
+                                    <label class="list-icon-color inline-flex cursor-pointer mt-5 mx-1">
+                                        <input class="hidden" type="radio" name="list-icon-color" value="#828282">
+                                        <span class="list-icon-color__inner bg-#828282"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-controls text-65 w-1/2 mt-6 px-5 pb-5">
+                            <div class="flex w-full font-bold text-xs">
+                                Выберите пиктограмму
+                            </div>
+                            <div class="flex flex-wrap justify-between -mx-2">
+                                <div class="flex flex-wrap flex-grow px-1 justify-between">
+                                    <label class="list-icon inline-flex cursor-pointer mt-5 mx-1">
+                                        <input class="hidden" type="radio" name="list-icon" value="">
+                                        <span class="list-icon__icon flex items-center justify-center">
+                                            <svg width="18" height="12" viewBox="0 0 18 12" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0 0H18V12H0V0ZM9 3C9.79565 3 10.5587 3.31607 11.1213 3.87868C11.6839 4.44129 12 5.20435 12 6C12 6.79565 11.6839 7.55871 11.1213 8.12132C10.5587 8.68393 9.79565 9 9 9C8.20435 9 7.44129 8.68393 6.87868 8.12132C6.31607 7.55871 6 6.79565 6 6C6 5.20435 6.31607 4.44129 6.87868 3.87868C7.44129 3.31607 8.20435 3 9 3ZM4 2C4 2.53043 3.78929 3.03914 3.41421 3.41421C3.03914 3.78929 2.53043 4 2 4V8C2.53043 8 3.03914 8.21071 3.41421 8.58579C3.78929 8.96086 4 9.46957 4 10H14C14 9.46957 14.2107 8.96086 14.5858 8.58579C14.9609 8.21071 15.4696 8 16 8V4C15.4696 4 14.9609 3.78929 14.5858 3.41421C14.2107 3.03914 14 2.53043 14 2H4Z"
+                                                          fill="currentColor"/>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                    <label class="list-icon inline-flex cursor-pointer mt-5 mx-1">
+                                        <input class="hidden" type="radio" name="list-icon" value="">
+                                        <span class="list-icon__icon flex items-center justify-center">
+                                            <svg width="24" height="24" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.98004 13.2535C7.28671 13.5068 6.52004 13.1468 6.26671 12.4602C6.00004 11.7668 6.36671 11.0002 7.06004 10.7535C7.75337 10.5002 8.52004 10.8535 8.77337 11.5402C9.02671 12.2335 8.66671 13.0002 7.98004 13.2535ZM6.60004 9.50016C5.22004 10.0002 4.50671 11.5335 5.00004 12.9202C5.52004 14.3002 7.05337 15.0002 8.44004 14.5002C9.82004 14.0002 10.5267 12.4668 10.0267 11.0868C9.52004 9.70016 7.98004 9.00016 6.60004 9.50016ZM10.6267 3.0535L6.24671 4.66683L7.16671 7.16016L11.5467 5.5535L10.6267 3.0535ZM13.5467 9.08016L10.36 10.2468C10.4734 10.4402 10.5667 10.6402 10.6467 10.8535C10.7267 11.0668 10.78 11.2868 10.8134 11.5002L14 10.3335L13.5467 9.08016ZM13.0267 5.72016L7.39337 7.78683L7.72004 8.66683C8.55337 8.72683 9.33337 9.0935 9.92671 9.70016L13.9467 8.22683L13.0267 5.72016ZM1.33337 1.3335V2.66683H3.39337L5.77337 9.16683C5.96004 9.04683 6.16004 8.9535 6.37337 8.8735C6.58671 8.7935 6.80671 8.74016 7.02004 8.70683L4.33337 1.3335"
+                                                  fill="currentColor"/>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                    <label class="list-icon inline-flex cursor-pointer mt-5 mx-1">
+                                        <input class="hidden" type="radio" name="list-icon" value="">
+                                        <span class="list-icon__icon flex items-center justify-center">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M18 18.5C17.6022 18.5 17.2206 18.342 16.9393 18.0607C16.658 17.7794 16.5 17.3978 16.5 17C16.5 16.6022 16.658 16.2206 16.9393 15.9393C17.2206 15.658 17.6022 15.5 18 15.5C18.3978 15.5 18.7794 15.658 19.0607 15.9393C19.342 16.2206 19.5 16.6022 19.5 17C19.5 17.3978 19.342 17.7794 19.0607 18.0607C18.7794 18.342 18.3978 18.5 18 18.5ZM19.5 9.5L21.46 12H17V9.5H19.5ZM6 18.5C5.60218 18.5 5.22064 18.342 4.93934 18.0607C4.65804 17.7794 4.5 17.3978 4.5 17C4.5 16.6022 4.65804 16.2206 4.93934 15.9393C5.22064 15.658 5.60218 15.5 6 15.5C6.39782 15.5 6.77936 15.658 7.06066 15.9393C7.34196 16.2206 7.5 16.6022 7.5 17C7.5 17.3978 7.34196 17.7794 7.06066 18.0607C6.77936 18.342 6.39782 18.5 6 18.5ZM20 8H17V4H3C1.89 4 1 4.89 1 6V17H3C3 17.7956 3.31607 18.5587 3.87868 19.1213C4.44129 19.6839 5.20435 20 6 20C6.79565 20 7.55871 19.6839 8.12132 19.1213C8.68393 18.5587 9 17.7956 9 17H15C15 17.7956 15.3161 18.5587 15.8787 19.1213C16.4413 19.6839 17.2044 20 18 20C18.7956 20 19.5587 19.6839 20.1213 19.1213C20.6839 18.5587 21 17.7956 21 17H23V12L20 8Z"
+                                                      fill="currentColor"/>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                    <label class="list-icon inline-flex cursor-pointer mt-5 mx-1">
+                                        <input class="hidden" type="radio" name="list-icon" value="">
+                                        <span class="list-icon__icon flex items-center justify-center">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 22C10.6868 22 9.38642 21.7413 8.17317 21.2388C6.95991 20.7362 5.85752 19.9997 4.92893 19.0711C3.05357 17.1957 2 14.6522 2 12C2 9.34784 3.05357 6.8043 4.92893 4.92893C6.8043 3.05357 9.34784 2 12 2C13.3132 2 14.6136 2.25866 15.8268 2.7612C17.0401 3.26375 18.1425 4.00035 19.0711 4.92893C19.9997 5.85752 20.7362 6.95991 21.2388 8.17317C21.7413 9.38642 22 10.6868 22 12C22 14.6522 20.9464 17.1957 19.0711 19.0711C17.1957 20.9464 14.6522 22 12 22ZM12 7L7 12H10V16H14V12H17L12 7Z"
+                                                      fill="currentColor"/>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                    <label class="list-icon inline-flex cursor-pointer mt-5 mx-1">
+                                        <input class="hidden" type="radio" name="list-icon" value="">
+                                        <span class="list-icon__icon flex items-center justify-center">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 2C13.3132 2 14.6136 2.25866 15.8268 2.7612C17.0401 3.26375 18.1425 4.00035 19.0711 4.92893C20.9464 6.8043 22 9.34784 22 12C22 14.6522 20.9464 17.1957 19.0711 19.0711C17.1957 20.9464 14.6522 22 12 22C10.6868 22 9.38642 21.7413 8.17317 21.2388C6.95991 20.7362 5.85752 19.9997 4.92893 19.0711C4.00035 18.1425 3.26375 17.0401 2.7612 15.8268C2.25866 14.6136 2 13.3132 2 12C2 9.34783 3.05357 6.80429 4.92893 4.92893C6.8043 3.05357 9.34784 2 12 2ZM12 17L17 12L14 12L14 8L10 8L10 12L7 12L12 17Z"
+                                                      fill="currentColor"/>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                    <label class="list-icon inline-flex cursor-pointer mt-5 mx-1">
+                                        <input class="hidden" type="radio" name="list-icon" value="">
+                                        <span class="list-icon__icon flex items-center justify-center">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M18 18.5C17.6022 18.5 17.2206 18.342 16.9393 18.0607C16.658 17.7794 16.5 17.3978 16.5 17C16.5 16.6022 16.658 16.2206 16.9393 15.9393C17.2206 15.658 17.6022 15.5 18 15.5C18.3978 15.5 18.7794 15.658 19.0607 15.9393C19.342 16.2206 19.5 16.6022 19.5 17C19.5 17.3978 19.342 17.7794 19.0607 18.0607C18.7794 18.342 18.3978 18.5 18 18.5ZM19.5 9.5L21.46 12H17V9.5H19.5ZM6 18.5C5.60218 18.5 5.22064 18.342 4.93934 18.0607C4.65804 17.7794 4.5 17.3978 4.5 17C4.5 16.6022 4.65804 16.2206 4.93934 15.9393C5.22064 15.658 5.60218 15.5 6 15.5C6.39782 15.5 6.77936 15.658 7.06066 15.9393C7.34196 16.2206 7.5 16.6022 7.5 17C7.5 17.3978 7.34196 17.7794 7.06066 18.0607C6.77936 18.342 6.39782 18.5 6 18.5ZM20 8H17V4H3C1.89 4 1 4.89 1 6V17H3C3 17.7956 3.31607 18.5587 3.87868 19.1213C4.44129 19.6839 5.20435 20 6 20C6.79565 20 7.55871 19.6839 8.12132 19.1213C8.68393 18.5587 9 17.7956 9 17H15C15 17.7956 15.3161 18.5587 15.8787 19.1213C16.4413 19.6839 17.2044 20 18 20C18.7956 20 19.5587 19.6839 20.1213 19.1213C20.6839 18.5587 21 17.7956 21 17H23V12L20 8Z"
+                                                      fill="currentColor"/>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                    <label class="list-icon inline-flex cursor-pointer mt-5 mx-1">
+                                        <input class="hidden" type="radio" name="list-icon" value="">
+                                        <span class="list-icon__icon flex items-center justify-center">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5 11L6.5 6.5H17.5L19 11H5ZM17.5 16C17.1022 16 16.7206 15.842 16.4393 15.5607C16.158 15.2794 16 14.8978 16 14.5C16 14.1022 16.158 13.7206 16.4393 13.4393C16.7206 13.158 17.1022 13 17.5 13C17.8978 13 18.2794 13.158 18.5607 13.4393C18.842 13.7206 19 14.1022 19 14.5C19 14.8978 18.842 15.2794 18.5607 15.5607C18.2794 15.842 17.8978 16 17.5 16ZM6.5 16C6.10218 16 5.72064 15.842 5.43934 15.5607C5.15804 15.2794 5 14.8978 5 14.5C5 14.1022 5.15804 13.7206 5.43934 13.4393C5.72064 13.158 6.10218 13 6.5 13C6.89782 13 7.27936 13.158 7.56066 13.4393C7.84196 13.7206 8 14.1022 8 14.5C8 14.8978 7.84196 15.2794 7.56066 15.5607C7.27936 15.842 6.89782 16 6.5 16ZM18.92 6C18.72 5.42 18.16 5 17.5 5H6.5C5.84 5 5.28 5.42 5.08 6L3 12V20C3 20.2652 3.10536 20.5196 3.29289 20.7071C3.48043 20.8946 3.73478 21 4 21H5C5.26522 21 5.51957 20.8946 5.70711 20.7071C5.89464 20.5196 6 20.2652 6 20V19H18V20C18 20.2652 18.1054 20.5196 18.2929 20.7071C18.4804 20.8946 18.7348 21 19 21H20C20.2652 21 20.5196 20.8946 20.7071 20.7071C20.8946 20.5196 21 20.2652 21 20V12L18.92 6Z"
+                                                      fill="currentColor"/>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                    <label class="list-icon inline-flex cursor-pointer mt-5 mx-1">
+                                        <input class="hidden" type="radio" name="list-icon" value="">
+                                        <span class="list-icon__icon flex items-center justify-center">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.82 16.43 14.93C17.55 15.3 18.75 15.5 20 15.5C20.2652 15.5 20.5196 15.6054 20.7071 15.7929C20.8946 15.9804 21 16.2348 21 16.5V20C21 20.2652 20.8946 20.5196 20.7071 20.7071C20.5196 20.8946 20.2652 21 20 21C15.4913 21 11.1673 19.2089 7.97918 16.0208C4.79107 12.8327 3 8.50868 3 4C3 3.44 3.45 3 4 3H7.5C7.76522 3 8.01957 3.10536 8.20711 3.29289C8.39464 3.48043 8.5 3.73478 8.5 4C8.5 5.24 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.58L6.62 10.79ZM17 12V10H19V12H17ZM17 8V2H19V8H17Z"
+                                                      fill="currentColor"/>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                    <label class="list-icon inline-flex cursor-pointer mt-5 mx-1">
+                                        <input class="hidden" type="radio" name="list-icon" value="">
+                                        <span class="list-icon__icon flex items-center justify-center">
+                                            <svg width="24" height="24" viewBox="0 0 16 16" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.48 1.6665L1.66663 13.4798L2.51329 14.3332L5.76663 11.0798C7.83996 12.9532 10.54 13.9998 13.3333 13.9998C13.5101 13.9998 13.6797 13.9296 13.8047 13.8046C13.9297 13.6796 14 13.51 14 13.3332V10.9998C14 10.823 13.9297 10.6535 13.8047 10.5284C13.6797 10.4034 13.5101 10.3332 13.3333 10.3332C12.5 10.3332 11.7 10.1998 10.9533 9.95317C10.72 9.87984 10.46 9.93317 10.2733 10.1198L8.80663 11.5865C8.03996 11.1998 7.33329 10.7065 6.70663 10.1398L14.3333 2.51317L13.48 1.6665ZM2.66663 1.99984C2.48981 1.99984 2.32025 2.07008 2.19522 2.1951C2.0702 2.32012 1.99996 2.48969 1.99996 2.6665C1.99996 5.0465 2.75996 7.3665 4.15996 9.29317L5.10663 8.33317C4.85329 7.97984 4.61996 7.59317 4.41329 7.19317L5.87996 5.7265C6.06663 5.53984 6.11996 5.27984 6.04663 5.0465C5.79996 4.29984 5.66663 3.49984 5.66663 2.6665C5.66663 2.48969 5.59639 2.32012 5.47136 2.1951C5.34634 2.07008 5.17677 1.99984 4.99996 1.99984H2.66663Z"
+                                                      fill="currentColor"/>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                    <label class="list-icon inline-flex cursor-pointer mt-5 mx-1">
+                                        <input class="hidden" type="radio" name="list-icon" value="">
+                                        <span class="list-icon__icon flex items-center justify-center">
+                                            <svg width="24" height="24" viewBox="0 0 16 16" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M7.99996 2.6665C6.52663 2.6665 5.33329 3.85984 5.33329 5.33317C5.33329 6.8065 6.52663 7.99984 7.99996 7.99984C9.47329 7.99984 10.6666 6.8065 10.6666 5.33317C10.6666 3.85984 9.47329 2.6665 7.99996 2.6665ZM9.33329 5.33317C9.33329 4.59984 8.73329 3.99984 7.99996 3.99984C7.26663 3.99984 6.66663 4.59984 6.66663 5.33317C6.66663 6.0665 7.26663 6.6665 7.99996 6.6665C8.73329 6.6665 9.33329 6.0665 9.33329 5.33317ZM12 11.9998C11.8666 11.5265 9.79996 10.6665 7.99996 10.6665C6.20663 10.6665 4.15329 11.5198 3.99996 11.9998H12ZM2.66663 11.9998C2.66663 10.2265 6.21996 9.33317 7.99996 9.33317C9.77996 9.33317 13.3333 10.2265 13.3333 11.9998V13.3332H2.66663V11.9998Z"
+                                                      fill="currentColor"/>
+                                                </svg>
+                                        </span>
+                                    </label>
+                                    <label class="list-icon inline-flex cursor-pointer mt-5 mx-1">
+                                        <input class="hidden" type="radio" name="list-icon" value="">
+                                        <span class="list-icon__icon flex items-center justify-center">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 2C8 2 4 2.5 4 6V15.5C4 16.4283 4.36875 17.3185 5.02513 17.9749C5.6815 18.6313 6.57174 19 7.5 19L6 20.5V21H8.23L10.23 19H14L16 21H18V20.5L16.5 19C17.4283 19 18.3185 18.6313 18.9749 17.9749C19.6313 17.3185 20 16.4283 20 15.5V6C20 2.5 16.42 2 12 2ZM7.5 17C7.10218 17 6.72064 16.842 6.43934 16.5607C6.15804 16.2794 6 15.8978 6 15.5C6 15.1022 6.15804 14.7206 6.43934 14.4393C6.72064 14.158 7.10218 14 7.5 14C7.89782 14 8.27936 14.158 8.56066 14.4393C8.84196 14.7206 9 15.1022 9 15.5C9 15.8978 8.84196 16.2794 8.56066 16.5607C8.27936 16.842 7.89782 17 7.5 17ZM11 10H6V6H11V10ZM13 10V6H18V10H13ZM16.5 17C16.1022 17 15.7206 16.842 15.4393 16.5607C15.158 16.2794 15 15.8978 15 15.5C15 15.1022 15.158 14.7206 15.4393 14.4393C15.7206 14.158 16.1022 14 16.5 14C16.8978 14 17.2794 14.158 17.5607 14.4393C17.842 14.7206 18 15.1022 18 15.5C18 15.8978 17.842 16.2794 17.5607 16.5607C17.2794 16.842 16.8978 17 16.5 17Z"
+                                                      fill="currentColor"/>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                    <label class="list-icon inline-flex cursor-pointer mt-5 mx-1">
+                                        <input class="hidden" type="radio" name="list-icon" value="">
+                                        <span class="list-icon__icon flex items-center justify-center">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M11.5 1L2 6V8H21V6L11.5 1ZM16 10V17H19V10H16ZM2 22H21V19H2V22ZM10 10V17H13V10H10ZM4 10V17H7V10H4Z"
+                                                      fill="currentColor"/>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                    <label class="list-icon inline-flex cursor-pointer mt-5 mx-1">
+                                        <input class="hidden" type="radio" name="list-icon" value="">
+                                        <span class="list-icon__icon flex items-center justify-center">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 3L1 9L12 15L21 10.09V17H23V9L12 3ZM5 13.18V17.18L12 21L19 17.18V13.18L12 17L5 13.18Z"
+                                                      fill="currentColor"/>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                    <label class="list-icon inline-flex cursor-pointer mt-5 mx-1">
+                                        <input class="hidden" type="radio" name="list-icon" value="">
+                                        <span class="list-icon__icon flex items-center justify-center">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M2 3H22C23.05 3 24 3.95 24 5V19C24 20.05 23.05 21 22 21H2C0.95 21 0 20.05 0 19V5C0 3.95 0.95 3 2 3ZM14 6V7H22V6H14ZM14 8V9H21.5H22V8H14ZM14 10V11H21V10H14ZM8 13.91C6 13.91 2 15 2 17V18H14V17C14 15 10 13.91 8 13.91ZM8 6C7.20435 6 6.44129 6.31607 5.87868 6.87868C5.31607 7.44129 5 8.20435 5 9C5 9.79565 5.31607 10.5587 5.87868 11.1213C6.44129 11.6839 7.20435 12 8 12C8.79565 12 9.55871 11.6839 10.1213 11.1213C10.6839 10.5587 11 9.79565 11 9C11 8.20435 10.6839 7.44129 10.1213 6.87868C9.55871 6.31607 8.79565 6 8 6Z"
+                                                      fill="currentColor"/>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                    <label class="list-icon inline-flex cursor-pointer mt-5 mx-1">
+                                        <input class="hidden" type="radio" name="list-icon" value="">
+                                        <span class="list-icon__icon flex items-center justify-center">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M18 22C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V4C20 2.89 19.1 2 18 2H12V9L9.5 7.5L7 9V2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18Z"
+                                                      fill="currentColor"/>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                    <label class="list-icon inline-flex cursor-pointer mt-5 mx-1">
+                                        <input class="hidden" type="radio" name="list-icon" value="">
+                                        <span class="list-icon__icon flex items-center justify-center">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M20 4C20 3.46957 19.7893 2.96086 19.4142 2.58579C19.0391 2.21071 18.5304 2 18 2H10L4 8V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C19.11 22 20 21.1 20 20V4ZM9 19H7V17H9V19ZM17 19H15V17H17V19ZM9 15H7V11H9V15ZM13 19H11V15H13V19ZM13 13H11V11H13V13ZM17 15H15V11H17V15Z"
+                                                      fill="currentColor"/>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                    <label class="list-icon inline-flex cursor-pointer mt-5 mx-1">
+                                        <input class="hidden" type="radio" name="list-icon" value="">
+                                        <span class="list-icon__icon flex items-center justify-center">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M20 21H4V10H6V19H18V10H20V21ZM3 3H21V9H3V3ZM5 5V7H19V5H5ZM10.5 17V14H8L12 10L16 14H13.5V17"
+                                                      fill="currentColor"/>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                    <label class="list-icon inline-flex cursor-pointer mt-5 mx-1">
+                                        <input class="hidden" type="radio" name="list-icon" value="">
+                                        <span class="list-icon__icon flex items-center justify-center">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M10 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V6H20C20.5304 6 21.0391 6.21071 21.4142 6.58579C21.7893 6.96086 22 7.46957 22 8V19C22 19.5304 21.7893 20.0391 21.4142 20.4142C21.0391 20.7893 20.5304 21 20 21H4C2.89 21 2 20.1 2 19V8C2 6.89 2.89 6 4 6H8V4C8 2.89 8.89 2 10 2ZM14 6V4H10V6H14Z"
+                                                      fill="currentColor"/>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex w-full justify-center items-center mt-6 -mx-2 py-1">
+                        <button type="submit"
+                                class="button-standart bg-blue text-white text-xs focus:outline-none hover:opacity-75 mx-2">
+                            <span>Сохранить</span>
+                        </button>
+                        <button type="submit"
+                                class="button-standart arcticmodal-close bg-white text-blue text-xs shadow-lg focus:outline-none hover:shadow-xl mx-2">
+                            <span>Отмена</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/libs.js"></script>
+<script src="js/main.js"></script>
+</body>
+
+</html>

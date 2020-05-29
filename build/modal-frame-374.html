@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">  
+    <link rel="stylesheet" href="css/libs.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Новый проект</title>
+</head>
+
+<body>
+<!-- функция для вызова $('#exampleModal').arcticmodal(); -->
+<div style="display: none;">
+    <div class="box-modal search-add" id="search-add">
+        <div class="box-modal_close arcticmodal-close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="icon/content/clear_24px">
+                    <path id="icon/content/clear_24px_2"
+                          d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"
+                          fill="#B9BDC7"/>
+                </g>
+            </svg>
+        </div>
+        <div class="flex flex-wrap">
+            <div class="inline-flex w-full border-b border-ed px-6 py-6">
+                <div class="text-base font-bold">ООО «ПРОМОБОТ»</div>
+            </div>
+            <div class="inline-flex w-full">
+                <form class="flex w-full flex-wrap pb-8">
+                    <div class="flex flex-wrap w-full p-6">
+                        <div class="search-add__item flex w-full">
+                            <div class="req req_search-add">
+                                ИНН
+                            </div>
+                            <div class="search-add__item-right font-semibold text-xxs text-24021">
+                                5903113639
+                            </div>
+                        </div>
+                        <div class="search-add__item flex w-full">
+                            <div class="req req_search-add">
+                                ОГРН
+                            </div>
+                            <div class="search-add__item-right font-semibold text-xxs text-24021">
+                                1155958016411
+                            </div>
+                    </div>
+                        <div class="search-add__item flex w-full">
+                            <div class="req req_search-add">
+                                Адрес
+                            </div>
+                            <div class="search-add__item-right font-semibold text-xxs text-24021">
+                                614087, КРАЙ ПЕРМСКИЙ, ГОРОД ПЕРМЬ, УЛИЦА РАБОЧАЯ, ДОМ 7, ПОМЕЩЕНИЕ 1, 5-7
+                            </div>
+                        </div>
+                        <div class="search-add__item flex w-full">
+                            <div class="req req_search-add">
+                                ОКВЭД
+                            </div>
+                            <div class="search-add__item-right font-semibold text-xxs text-24021">
+                                62.01
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-controls w-full border-t border-ed pt-6 px-6">
+                        <label for="research-name" class="font-bold text-xs">
+                            Выбор глубины
+                        </label>
+                        <select name="deep"  class="w-full border-b border-b9 text-xs font-normal focus:outline-none py-1 mt-2">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                    <div class="flex w-full px-6 text-xxs text-24021 mt-3">
+                        <label class="flex check-controls items-center w-full py-2 cursor-pointer">
+                            <input type="checkbox" class="check-controls__checkbox hidden">
+                            <span class="check-controls__check-custom inline-flex border border-b9 mr-2"></span>
+                            <span class="select-none inline-flex">Учитывать историю изменений</span>
+                        </label>
+                    </div>
+                    <div class="flex w-full justify-center items-center mt-6 -mx-2 py-1">
+                        <button type="submit"
+                                class="button-standart bg-blue text-white text-xs focus:outline-none hover:opacity-75 mx-2">
+                            <span>Добавить</span>
+                        </button>
+                        <button class="button-standart arcticmodal-close bg-white text-blue text-xs shadow-lg focus:outline-none hover:shadow-xl mx-2">
+                            <span>Отмена</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/libs.js"></script>
+<script src="js/main.js"></script>
+</body>
+
+</html>

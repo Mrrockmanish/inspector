@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+//= templates/head.html
+
+<body class="relative">
+    <div class="flex flex-nowrap h-screen">
+        //= templates/left-panel.html
+        <div class="center-sector items-start inline-flex flex-wrap flex-grow min-w-0 overflow-hidden">
+            <div class="flex w-full self-start">
+                <div class="top-panel top-panel_big w-full bg-white inline-flex">
+                    <div class="flex h-full w-full flex-stretch items-center">
+                        <div class="top-panel-titles flex mx-auto text-4xl font-bold px-6 overflow-hidden">
+                            <span class="text-overflow whitespace-no-wrap overflow-hidden min-w-0">Бизнес-справка</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="area area_under-big-panel bg-f2 flex w-full flex-grow">
+                <div class="area__inner inline-flex flex-grow whitespace-no-wrap relative overflow-auto">
+                    <!-- основная контентная часть  -->
+                    <div class="area__container px-6 py-8 mx-auto relative overflow-auto">
+                        //= templates/area-pagination.html
+                        <form class="top-panel-input inline-flex px-3 w-full flex-grow">
+                            <div class="flex items-center w-full border-b border-b9 h-full py-1 relative">
+                                <input type="search" class="w-full outline-none text-24021 font-semibold text-sm cursor-text bg-transparent"
+                                       placeholder="Поиск" />
+                                <div class="top-panel-input__clear inline-flex absolute flex-shrink-0 items-start bg-f2 flex-shrink-0 cursor-pointer z-20" onclick="this.previousElementSibling.value = ''">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g id="icon/content/clear_24px" opacity="0.5">
+                                            <path id="icon/content/clear_24px_2" d="M12.6667 4.27325L11.7267 3.33325L8.00001 7.05992L4.27334 3.33325L3.33334 4.27325L7.06001 7.99992L3.33334 11.7266L4.27334 12.6666L8.00001 8.93992L11.7267 12.6666L12.6667 11.7266L8.94001 7.99992L12.6667 4.27325Z" fill="black" fill-opacity="0.54"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <button type="submit" class="inline-flex items-start flex-shrink-0 focus:outline-none hover:opacity-75">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M14.9649 14.2549H15.7549L20.7449 19.2549L19.2549 20.7449L14.2549 15.7549V14.9649L13.9849 14.6849C12.8449 15.6649 11.3649 16.2549 9.75488 16.2549C6.16488 16.2549 3.25488 13.3449 3.25488 9.75488C3.25488 6.16488 6.16488 3.25488 9.75488 3.25488C13.3449 3.25488 16.2549 6.16488 16.2549 9.75488C16.2549 11.3649 15.6649 12.8449 14.6849 13.9849L14.9649 14.2549ZM5.25488 9.75488C5.25488 12.2449 7.26488 14.2549 9.75488 14.2549C12.2449 14.2549 14.2549 12.2449 14.2549 9.75488C14.2549 7.26488 12.2449 5.25488 9.75488 5.25488C7.26488 5.25488 5.25488 7.26488 5.25488 9.75488Z"
+                                              fill="#656565" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </form>
+                        <div class="flex items-end py-6 px-4 text-xxs text-b9 leading-3">
+                            <div class="inline-flex items-end font-semibold text-xs w-4 mr-8">
+                                #
+                            </div>
+                            <div class="inline-flex items-end pr-4 min-w-0">
+                                <div class="min-w-0 w-64">
+                                    Название
+                                </div>
+                            </div>
+                            <div class="inline-flex pr-4">
+                                <div class="flex items-end min-w-0 w-48">
+                                    <select name="status" id="status" class="bg-transparent outline-none">
+                                        <option value="Статус">Статус</option>
+                                        <option value="действующие">Действующие</option>
+                                        <option value="недействующие">Недействующие</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="inline-flex items-end w-24 leading-3 pr-4">
+                                ИНН
+                            </div>
+                            <div class="inline-flex items-end w-24 leading-3 pr-4">
+                                ОГРН
+                            </div>
+                            <div class="inline-flex items-end w-40 leading-3 min-w-0 pr-4">
+                                <div class="min-w-0 w-48 text-overflow overflow-hidden">Регион</div>
+                            </div>
+                            <div class="inline-flex items-end w-16 leading-3 pr-4">
+                                ОКВЭД
+                            </div>
+                            <div class="inline-flex w-10 ">
+                            </div>
+                        </div>
+                        <div class="flex items-end py-6 px-4 text-xxs text-65 leading-3 border-t border-b9">
+                            <div class="inline-flex items-end font-semibold text-65 text-xs w-4 mr-8">
+                                1
+                            </div>
+                            <div class="inline-flex pr-4 min-w-0">
+                                <div class="flex flex-wrap min-w-0">
+                                    <a href="#"
+                                       class="one-result__name inline-flex items-end w-full font-semibold text-sm text-blue leading-none hover:underline hover:opacity-75 min-w-0">
+                                        <span
+                                                class="tooltip min-w-0 w-64 whitespace-no-wrap  text-overflow overflow-hidden"
+                                                title="ООО «ПРОМОБОТ»">
+                                            ООО «ПРОМОБОТ»
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="inline-flex pr-4">
+                                <div class="flex items-center min-w-0 w-48">
+                                    <svg class="inline-flex flex-shrink-0 mr-2" width="16" height="16"
+                                         viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M8.00004 4.66667H14.6667V14H1.33337V2H8.00004V4.66667ZM2.66671 12.6667H4.00004V11.3333H2.66671V12.6667ZM4.00004 10H2.66671V8.66667H4.00004V10ZM2.66671 7.33333H4.00004V6H2.66671V7.33333ZM4.00004 4.66667H2.66671V3.33333H4.00004V4.66667ZM5.33337 12.6667H6.66671V11.3333H5.33337V12.6667ZM6.66671 10H5.33337V8.66667H6.66671V10ZM5.33337 7.33333H6.66671V6H5.33337V7.33333ZM6.66671 4.66667H5.33337V3.33333H6.66671V4.66667ZM8.00004 12.6667H13.3334V6H8.00004V7.33333H9.33337V8.66667H8.00004V10H9.33337V11.3333H8.00004V12.6667ZM12 7.33333H10.6667V8.66667H12V7.33333ZM10.6667 10H12V11.3333H10.6667V10Z"
+                                              fill="#B9BDC7" />
+                                    </svg>
+                                    <div class="whitespace-no-wrap text-overflow overflow-hidden min-w-0">
+                                        Недействующая организация
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inline-flex items-end w-24 pr-4">
+                                5903113639
+                            </div>
+                            <div class="inline-flex items-end w-24 pr-4">
+                                1155958016411
+                            </div>
+                            <div class="inline-flex items-end w-40 min-w-0 pr-4">
+                                <div class="min-w-0 w-48 text-overflow overflow-hidden">Свердловская область</div>
+                            </div>
+                            <div class="inline-flex items-end w-16 pr-4">
+                                62.01
+                            </div>
+                            <div class="inline-flex items-end justify-center w-10">
+                                <a href="#" download class="flex items-end hover:opacity-75 tooltip"
+                                   title="Скачать бизнес-справку">
+                                    <svg class="inline-flex" width="24" height="24" viewBox="0 0 24 20" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M19.35 10.04C18.67 6.59 15.64 4 12 4C9.11 4 6.6 5.64 5.35 8.04C2.34 8.36 0 10.91 0 14C0 17.31 2.69 20 6 20H19C21.76 20 24 17.76 24 15C24 12.36 21.95 10.22 19.35 10.04ZM19 18H6C3.79 18 2 16.21 2 14C2 11.95 3.53 10.24 5.56 10.03L6.63 9.92L7.13 8.97C8.08 7.14 9.94 6 12 6C14.62 6 16.88 7.86 17.39 10.43L17.69 11.93L19.22 12.04C20.78 12.14 22 13.45 22 15C22 16.65 20.65 18 19 18ZM10.55 10H13.45V13H16L12 17L8 13H10.55V10Z"
+                                              fill="#00599A" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex items-end py-6 px-4 text-xxs text-65 leading-3 border-t border-b9">
+                            <div class="inline-flex items-end font-semibold text-65 text-xs w-4 mr-8">
+                                1
+                            </div>
+                            <div class="inline-flex pr-4 min-w-0">
+                                <div class="flex flex-wrap min-w-0">
+                                    <a href="#"
+                                       class="one-result__name inline-flex items-end w-full font-semibold text-sm text-blue leading-none hover:underline hover:opacity-75 min-w-0">
+                                        <span
+                                                class="tooltip min-w-0 w-64 whitespace-no-wrap  text-overflow overflow-hidden"
+                                                title="Исследовать объект">
+                                            Щербаков Станислав Викторович
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="inline-flex pr-4">
+                                <div class="flex items-center min-w-0 w-48">
+                                    <svg class="inline-flex flex-shrink-0 mr-2" width="16" height="16"
+                                         viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M8.00004 4.66667H14.6667V14H1.33337V2H8.00004V4.66667ZM2.66671 12.6667H4.00004V11.3333H2.66671V12.6667ZM4.00004 10H2.66671V8.66667H4.00004V10ZM2.66671 7.33333H4.00004V6H2.66671V7.33333ZM4.00004 4.66667H2.66671V3.33333H4.00004V4.66667ZM5.33337 12.6667H6.66671V11.3333H5.33337V12.6667ZM6.66671 10H5.33337V8.66667H6.66671V10ZM5.33337 7.33333H6.66671V6H5.33337V7.33333ZM6.66671 4.66667H5.33337V3.33333H6.66671V4.66667ZM8.00004 12.6667H13.3334V6H8.00004V7.33333H9.33337V8.66667H8.00004V10H9.33337V11.3333H8.00004V12.6667ZM12 7.33333H10.6667V8.66667H12V7.33333ZM10.6667 10H12V11.3333H10.6667V10Z"
+                                              fill="#B9BDC7" />
+                                    </svg>
+                                    <div class="whitespace-no-wrap text-overflow overflow-hidden min-w-0">
+                                        Действующая организация
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inline-flex items-end w-24 pr-4">
+                                5903113639
+                            </div>
+                            <div class="inline-flex items-end w-24 pr-4">
+                                1155958016411
+                            </div>
+                            <div class="inline-flex items-end w-40 min-w-0 pr-4">
+                                <div class="min-w-0 w-48 text-overflow overflow-hidden">Свердловская область</div>
+                            </div>
+                            <div class="inline-flex items-end w-16 pr-4">
+                                62.01
+                            </div>
+                            <div class="inline-flex items-end justify-center w-10 leading-3">
+                                <a href="#" download class="flex items-end hover:opacity-75 tooltip"
+                                   title="Скачать бизнес-справку">
+                                    <svg class="inline-flex" width="24" height="24" viewBox="0 0 24 20" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M19.35 10.04C18.67 6.59 15.64 4 12 4C9.11 4 6.6 5.64 5.35 8.04C2.34 8.36 0 10.91 0 14C0 17.31 2.69 20 6 20H19C21.76 20 24 17.76 24 15C24 12.36 21.95 10.22 19.35 10.04ZM19 18H6C3.79 18 2 16.21 2 14C2 11.95 3.53 10.24 5.56 10.03L6.63 9.92L7.13 8.97C8.08 7.14 9.94 6 12 6C14.62 6 16.88 7.86 17.39 10.43L17.69 11.93L19.22 12.04C20.78 12.14 22 13.45 22 15C22 16.65 20.65 18 19 18ZM10.55 10H13.45V13H16L12 17L8 13H10.55V10Z"
+                                              fill="#00599A" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex items-end py-6 px-4 text-xxs text-65 leading-3 border-t border-b9">
+                            <div class="inline-flex items-end font-semibold text-65 text-xs w-4 mr-8">
+                                1
+                            </div>
+                            <div class="inline-flex pr-4 min-w-0">
+                                <div class="flex flex-wrap min-w-0">
+                                    <a href="#"
+                                       class="one-result__name inline-flex items-end w-full font-semibold text-sm text-blue leading-none hover:underline hover:opacity-75 min-w-0">
+                                        <span
+                                                class="tooltip min-w-0 w-64 whitespace-no-wrap  text-overflow overflow-hidden"
+                                                title="Исследовать объект">
+                                            Вассерман Юрий Петрович
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="inline-flex pr-4">
+                                <div class="flex items-center min-w-0 w-48">
+                                    <svg class="inline-flex flex-shrink-0 mr-2" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M7.99996 2.6665C6.52663 2.6665 5.33329 3.85984 5.33329 5.33317C5.33329 6.8065 6.52663 7.99984 7.99996 7.99984C9.47329 7.99984 10.6666 6.8065 10.6666 5.33317C10.6666 3.85984 9.47329 2.6665 7.99996 2.6665ZM9.33329 5.33317C9.33329 4.59984 8.73329 3.99984 7.99996 3.99984C7.26663 3.99984 6.66663 4.59984 6.66663 5.33317C6.66663 6.0665 7.26663 6.6665 7.99996 6.6665C8.73329 6.6665 9.33329 6.0665 9.33329 5.33317ZM12 11.9998C11.8666 11.5265 9.79996 10.6665 7.99996 10.6665C6.20663 10.6665 4.15329 11.5198 3.99996 11.9998H12ZM2.66663 11.9998C2.66663 10.2265 6.21996 9.33317 7.99996 9.33317C9.77996 9.33317 13.3333 10.2265 13.3333 11.9998V13.3332H2.66663V11.9998Z"
+                                              fill="#B9BDC7" />
+                                    </svg>
+                                    <div class="whitespace-no-wrap text-overflow overflow-hidden  min-w-0 w-48">
+                                        Действуий ИП
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inline-flex items-end w-24 pr-4">
+                                5903113639
+                            </div>
+                            <div class="inline-flex items-end w-24 pr-4">
+                                1155958016411
+                            </div>
+                            <div class="inline-flex items-end w-40 min-w-0 pr-4">
+                                <div class="min-w-0 w-48 text-overflow overflow-hidden">Свердловская область</div>
+                            </div>
+                            <div class="inline-flex items-end w-16 pr-4">
+                                62.01
+                            </div>
+                            <div class="inline-flex items-end justify-center w-10 leading-3">
+                                <a href="#" download class="flex items-end hover:opacity-75 tooltip"
+                                   title="Скачать бизнес-справку">
+                                    <svg class="inline-flex" width="24" height="24" viewBox="0 0 24 20" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M19.35 10.04C18.67 6.59 15.64 4 12 4C9.11 4 6.6 5.64 5.35 8.04C2.34 8.36 0 10.91 0 14C0 17.31 2.69 20 6 20H19C21.76 20 24 17.76 24 15C24 12.36 21.95 10.22 19.35 10.04ZM19 18H6C3.79 18 2 16.21 2 14C2 11.95 3.53 10.24 5.56 10.03L6.63 9.92L7.13 8.97C8.08 7.14 9.94 6 12 6C14.62 6 16.88 7.86 17.39 10.43L17.69 11.93L19.22 12.04C20.78 12.14 22 13.45 22 15C22 16.65 20.65 18 19 18ZM10.55 10H13.45V13H16L12 17L8 13H10.55V10Z"
+                                              fill="#00599A" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    //= templates/scripts.html
+</body>
+
+</html>

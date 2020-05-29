@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">  
+    <link rel="stylesheet" href="css/libs.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Новый проект</title>
+</head>
+<style>
+    @-webkit-keyframes autofill {
+        to {
+            color: #FFFFFF ;
+            background: transparent;
+        }
+    }
+
+    input:-webkit-autofill {
+        -webkit-animation-name: autofill;
+        -webkit-animation-fill-mode: both;
+    }
+</style>
+<body class="entry bg-no-repeat bg-cover">
+    <div class="flex w-full h-screen items-center justify-center">
+        <div class="inline-flex entry__form-box text-white">
+            <div class="flex flex-wrap">
+                <div class="inline-flex w-full">
+                    <img src="img/insrectrj-white.svg" alt="Inspectr">
+                </div>
+                <div class="inline-flex w-full mt-12">
+                    <form action="" class="entry-form flex flex-wrap w-full h-full">
+                        <div class="inline-flex w-full">
+                            <input type="text" autocomplete="off"
+                                class="w-full border-b border-white bg-transparent placeholder-e8 text-sm outline-none py-3"
+                                placeholder="Логин">
+                        </div>
+                        <div class="inline-flex w-full">
+                            <input type="password" autocomplete="off"
+                                class="w-full border-b border-white bg-transparent placeholder-e8 mt-8 text-sm outline-none py-3"
+                                placeholder="Пароль">
+                        </div>
+                        <button type="submit" class="hover:opacity-75 bg-e005 outline-none h-10 px-4 mx-auto mt-10">
+                            <span class="flex w-full h-full items-center justify-center">
+                                <svg class="inline-flex flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3 11H17.17L13.59 7.41L15 6L21 12L15 18L13.59 16.59L17.17 13H3V11Z"
+                                        fill="white" />
+                                </svg>
+                                <div class="inline-flex text-sm font-semibold ml-2">
+                                    Войти
+                                </div>
+                            </span>
+                        </button>
+                        <div class="inline-flex w-full mt-10">
+                            <div class="entry-form__error flex mx-auto px-3 py-1 items-center justify-center">
+                                <span class="text-xxs text-e5">Неверные логин или пароль</span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/libs.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
