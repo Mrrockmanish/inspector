@@ -10927,12 +10927,21 @@ a {
 }
 
 .preloader__img {
-  width: 6.75rem;
-  height: 6.75rem;
+  width: 8.75rem;
+  height: 8.75rem;
   left: 50%;
   top: 50%;
-  margin-left: -3.375rem;
-  margin-top: -6.75rem;
+  margin-left: -4.375rem;
+  margin-top: -8.75rem;
+  border-width: 0.5rem;
+}
+
+.preloader__rotate {
+  width: 8.75rem;
+  height: 8.75rem;
+  top: -0.5rem;
+  left: -0.5rem;
+  border-width: 0.5rem;
   -webkit-animation-name: loader-rotate;
           animation-name: loader-rotate;
   -webkit-animation-duration: 1s;
@@ -10941,6 +10950,23 @@ a {
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: ease;
           animation-timing-function: ease;
+}
+
+.preloader__rotate-inner::after {
+  content: '  ';
+  position: absolute;
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #F2F2F2;
+  top: -0.625rem;
+  left: 50%;
+  margin-left: -0.75rem;
+}
+
+.preloader__inner {
+  width: 90%;
+  height: 90%;
 }
 
 .lists-block .preloader__img {

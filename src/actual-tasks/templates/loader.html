@@ -1,12 +1,14 @@
 <div class="preloader absolute w-full h-full opacity-75 bg-f2">
     <div class="relative w-full h-full">
-        <svg class="preloader__img absolute" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-                d="M84.5488 35.7303C88.4823 42.5434 90.0578 50.464 89.031 58.2637C88.0041 66.0634 84.4323 73.3064 78.8695 78.8692C73.3066 84.432 66.0637 88.0039 58.264 89.0307C50.4642 90.0576 42.5436 88.4821 35.7306 84.5486C28.9176 80.615 23.5928 74.5434 20.5822 67.2752C17.5717 60.007 17.0435 51.9485 19.0796 44.3495C21.1157 36.7506 25.6024 30.0358 31.8437 25.2467C38.0851 20.4575 45.7323 17.8616 53.5993 17.8616"
-                stroke="#449FE2" stroke-width="7" />
-            <path
-                d="M77.7858 39.6356C80.8597 44.9599 82.091 51.1497 81.2885 57.245C80.486 63.3403 77.6947 69.0006 73.3475 73.3478C69.0003 77.695 63.34 80.4863 57.2447 81.2888C51.1494 82.0913 44.9596 80.86 39.6353 77.7861C34.3111 74.7121 30.1499 69.9672 27.7972 64.2873C25.4445 58.6073 25.0317 52.3098 26.6229 46.3714C28.2141 40.4329 31.7204 35.1855 36.5978 31.4429C41.4753 27.7002 47.4514 25.6716 53.5994 25.6716"
-                stroke="#449FE2" stroke-width="3" />
-        </svg>
+        <div class="preloader__img flex justify-center items-center absolute rounded-full border border-blue relative">
+            <div class="preloader__rotate rounded-full border border-transparent absolute">
+                <div class="preloader__rotate-inner rounded-full relative w-full h-full"></div>
+            </div>
+            <div class="preloader__inner flex justify-center items-center border border-blue rounded-full">
+                <div class="preloader__percent text-blue text-2xl flex">
+                    0%
+                </div>
+            </div>
+        </div>
     </div>
 </div>

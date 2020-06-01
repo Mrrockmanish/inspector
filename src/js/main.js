@@ -61,18 +61,18 @@ $(document).ready(function () {
 
   // пример модального окна
 
-  $('#exampleModal').arcticmodal();
+  //$('#exampleModal').arcticmodal();
 
   // добавить новый список
-  $('#add-new-list').arcticmodal();
+  //$('#add-new-list').arcticmodal();
   // выбрать список
-  $('#choice-list').arcticmodal();
+  //$('#choice-list').arcticmodal();
   // добавить найденное с поиске
-  $('#search-add').arcticmodal();
+  //$('#search-add').arcticmodal();
   //добавление компании
-  $('#add-object').arcticmodal();
+  //$('#add-object').arcticmodal();
   //удалить объект
-  $('#deleteObject').arcticmodal();
+  //$('#deleteObject').arcticmodal();
 
 
   // подсказки
@@ -150,22 +150,15 @@ $(document).ready(function () {
       // скрываем поля и удибраем класс show
       infoDots.next('.info-fields').fadeOut().removeClass('show');
     }
-
-
-
-
-
-
-
-
-
-
-
   });
 
-
-
-
+  const preloader = (timeout, currentPercent, end) => {
+    const addPercent = () => {
+      $('.preloader__percent').text(`${currentPercent}%`);
+    };
+    setInterval(() => { if(currentPercent <= end) { addPercent(); currentPercent++; } }, timeout);
+  };
+  preloader(300, 1, 99);
 
 
 });
