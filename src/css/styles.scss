@@ -258,16 +258,11 @@ a {
 }
 
 .area-left-tools {
-  height: calc(100% - 17px);
-  left: 0;
-  top: 0;
+  height: auto;
+  left: 1.5rem;
+  top: s(52);
   align-items: start;
-  width: 5.5rem;
-  padding-top: 1rem;
-  padding-left: .5rem;
-  padding-bottom: 1rem;
-  //background: #F2F2F2;
-  background-image: linear-gradient(to right, rgb(242, 242, 242), rgb(242, 242, 242), rgba(242, 242, 242, .9) 50%, rgba(242, 242, 242, .5), rgba(242, 242, 242, .3), rgba(242, 242, 242, .1), transparent);
+  width: s(40);
 
   &__tool {
     &:active {
@@ -1071,3 +1066,8 @@ input[type='search']::-ms-clear {
 .timeline {
   height: s(150);
 }
+
+.information-dots {
+  margin-right: - s(16);
+}
+
