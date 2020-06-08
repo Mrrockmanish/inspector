@@ -28,7 +28,7 @@ const rimraf = require('gulp-rimraf'); // плагин для удаления �
 // No real reason to minify into the dev build but it gets the files there without adding gulp-copy as another dep
 
 function minifyHtml() {
-  return gulp.src('src/*.html')
+  return gulp.src('src/actual-tasks/*.html')
     .pipe(plumber()) // отслеживание ошибок
     .pipe(rigger()) // импорт вложений
     // .pipe(htmlmin({ collapseWhitespace: true }))

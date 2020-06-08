@@ -342,22 +342,27 @@ a {
 
   &_connections {
     width: s(247);
-    margin-right: s(48);
+    //margin-right: s(48);
     position: relative;
     overflow: visible;
-    box-shadow: 0 16px 24px rgba(115, 115, 115, 0.2);
+    //box-shadow: 0 16px 24px rgba(115, 115, 115, 0.2);
+    border: 1px solid #f2f2f2;
 
-    .item__arrow {
-      display: block;
-      position: absolute;
-      right: 0;
-      bottom: 50%;
-      transform: translate(100%, 50%);
-
-      &_reversed {
-        transform: translate(100%, 50%) rotate(180deg);
-      }
+    &:hover {
+      z-index: 99;
     }
+
+    //.item__arrow {
+    //  display: block;
+    //  position: absolute;
+    //  right: 0;
+    //  bottom: 50%;
+    //  transform: translate(100%, 50%);
+    //
+    //  &_reversed {
+    //    transform: translate(100%, 50%) rotate(180deg);
+    //  }
+    //}
   }
 
 
@@ -466,6 +471,28 @@ a {
 
   }
 
+  &__arrow-box {
+    .arrow {
+      width: 100%;
+      border-width: s(1);
+      position: relative;
+
+      .arrow__end {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: s(10);
+        margin-top: - s(4);
+        border: transparent solid s(4);
+        border-left: solid s(8);
+        border-left-color: inherit;
+
+        &_reversed {
+          transform: rotateY(180deg);
+        }
+      }
+    }
+  }
 }
 
 .list-tree {
@@ -879,8 +906,14 @@ input[type='search']::-ms-clear {
 
 .connections {
   padding-left: s(75);
-
+  padding-right: s(75);
 }
+
+.connections-row__items > .item_connections + .item__arrow-box {
+  max-width: 3rem;
+  min-width: 3rem;
+}
+
 
 .connections-row {
   .item_connections:last-child {
@@ -910,12 +943,42 @@ input[type='search']::-ms-clear {
       background-color: #188B31;
     }
 
-    &.gray{
+    &.gray {
       background-color: #656565;
     }
 
     &.selected {
       background-color: #B9BDC7;
+    }
+  }
+
+  .item__arrow-box {
+    width: 3rem;
+  }
+
+  &.condensed {
+    min-width: s(1145);
+
+    .items-center-wrap {
+      .item__arrow-box {
+        width: 3rem;
+      }
+    }
+
+    .items-center-wrap {
+      .item_connections:not(:first-of-type) {
+        margin-left: -15.43rem;
+      }
+
+      .item__arrow-box {
+        width: auto;
+      }
+
+      .item__arrow-box:last-of-type {
+        flex-shrink: 0;
+        max-width: 3rem;
+        min-width: 3rem;
+      }
     }
   }
 }
