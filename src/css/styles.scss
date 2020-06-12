@@ -156,6 +156,18 @@ a {
     &.active {
       color: #C4C4C4;
       pointer-events: none;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: '';
+        height: s(12);
+        width: s(1);
+        border: s(1) solid #ededed;
+        left: 50%;
+        margin-left: - s(.5);
+        bottom: - s(15);
+      }
     }
   }
 }
@@ -867,6 +879,8 @@ input[type='search']::-ms-clear {
 }
 
 .upload-file {
+  min-width: s(490);
+
   &__name {
     line-height: 1.1;
   }
@@ -1131,6 +1145,7 @@ input[type='search']::-ms-clear {
 }
 
 .tables {
+  font-size: s(12);
   &__header {
     color: #B9BDC7;
     border-bottom: s(1) solid #B9BDC7;
@@ -1152,6 +1167,9 @@ input[type='search']::-ms-clear {
   &__cell {
     display: flex;
     flex-wrap: wrap;
+    flex-shrink: 0;
+
+
     &_w {
       &_40px {
         width: s(40);
@@ -1159,11 +1177,26 @@ input[type='search']::-ms-clear {
       &_56px {
         width: s(56);
       }
+      &_68px {
+        width: s(68);
+      }
+      &_71px {
+        width: s(71);
+      }
       &_80px {
         width: s(80);
       }
+      &_90px {
+        width: s(90);
+      }
+      &_100px {
+        width: s(100);
+      }
       &_130px {
         width: s(130);
+      }
+      &_190px {
+        width: s(190);
       }
       &_210px {
         width: s(210);
@@ -1174,6 +1207,9 @@ input[type='search']::-ms-clear {
     }
     &_w_27per {
       width: 27%;
+    }
+    &_w_40per {
+      width: 40%;
     }
   }
 
