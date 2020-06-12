@@ -261,7 +261,7 @@ a {
   &__container {
     max-width: s(1120);
     width: s(1120);
-    min-width: s(1120);
+    min-width: s(1044);
   }
 
   &_under-big-panel {
@@ -1157,6 +1157,7 @@ input[type='search']::-ms-clear {
 
 .tables {
   font-size: s(12);
+
   &__header {
     color: #B9BDC7;
     border-bottom: s(1) solid #B9BDC7;
@@ -1215,6 +1216,9 @@ input[type='search']::-ms-clear {
       &_215px {
         width: s(215);
       }
+    }
+    &_w_23per {
+      width: 23%;
     }
     &_w_27per {
       width: 27%;
