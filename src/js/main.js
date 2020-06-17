@@ -124,33 +124,34 @@ $(document).ready(function () {
 
   // раскрытие полей при клике на точки в информации об объекте
 
+
+
+
   $('.information-dots').on('click', function () {
-    let infofields = $('.information-dots').next('.info-fields');
+    const infoDots = $('.information-dots');
+    const infofields = $('.information-dots').find('.info-fields');
 
     if (!infofields.hasClass('show')) {
       infofields.fadeIn().addClass('show');
     } else infofields.fadeOut().removeClass('show');
 
+    // скрываем поля при клике на область документа
+    $(document).mouseup(function (e) {
+      if (
+          // если у полей есть класс show
+          infofields.hasClass('show')
+          // и клик был не по полю с названием объекта
+          && !infoDots.is(e.target)
+          // и его дочерним элементам
+          && infoDots.has(e.target).length === 0 ) {
+        // скрываем поля и удибраем класс show
+        infoDots.find('.info-fields').fadeOut().removeClass('show');
+      }
+    });
   });
 
 
-  // скрываем поля при клике на область документа
-  $(document).mouseup(function (e) {
-    let infoDots = $('.information-dots');
-    let infofields = $('.information-dots').next('.info-fields');
-    let objectInfoName = $('.object-info__name');
 
-    if (
-        // если у полей есть класс show
-        infofields.hasClass('show')
-        // и клик был не по полю с названием объекта
-        && !objectInfoName.is(e.target)
-        // и его дочерним элементам
-        && objectInfoName.has(e.target).length === 0 ) {
-      // скрываем поля и удибраем класс show
-      infoDots.next('.info-fields').fadeOut().removeClass('show');
-    }
-  });
 
   const preloader = (timeout, currentPercent, end) => {
     const addPercent = () => {
