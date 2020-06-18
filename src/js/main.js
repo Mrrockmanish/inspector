@@ -151,8 +151,6 @@ $(document).ready(function () {
   });
 
 
-
-
   const preloader = (timeout, currentPercent, end) => {
     const addPercent = () => {
       $('.preloader__percent').text(`${currentPercent}%`);

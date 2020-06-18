@@ -4,39 +4,41 @@
 <div class="object-info flex flex-wrap w-full py-5 px-5 bg-65 text-white">
     <div class="object-info__name flex w-full items-start relative">
         <span class="font-bold text-base">Общество с ограниченной ответственностью «ПРОМОБОТ Иван Иванович и его компания»</span>
-        <span class="information-dots cursor-pointer ml-auto flex-shrink-0">
-            <svg width="35" height="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g id="icon/navigation/more_vert_24px">
-                    <path id="icon/navigation/more_vert_24px_2" fill-rule="evenodd" clip-rule="evenodd"
-                        d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM10 18C10 16.9 10.9 16 12 16C13.1 16 14 16.9 14 18C14 19.1 13.1 20 12 20C10.9 20 10 19.1 10 18Z"
-                        fill="white" />
-                </g>
-            </svg>
-        </span>
-        <div class="info-fields hidden absolute">
-            <ul class="flex flex-col text-24021">
-                <li class="info-fields__item inline-flex items-center">
-                    Развернуть все связи
-                </li>
-                <li class="info-fields__item inline-flex items-center">
-                    Выделить связанные объекты
-                </li>
-                <li class="info-fields__item inline-flex items-center">
-                    Добавить в чёрный список
-                </li>
-                <li class="info-fields__item inline-flex items-center">
-                    Поиск в Яндексе
-                </li>
-                <li class="info-fields__item inline-flex items-center">
-                    Бизнес-справка
-                </li>
-                <li class="info-fields__item inline-flex items-center">
-                    Исследовать в новой вкладке
-                </li>
-                <li class="info-fields__item inline-flex items-center">
-                    Удалить
-                </li>
-            </ul>
+        <div class="information-dots cursor-pointer ml-auto flex-shrink-0">
+            <div class="relative">
+                <svg width="35" height="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="icon/navigation/more_vert_24px">
+                        <path id="icon/navigation/more_vert_24px_2" fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM10 18C10 16.9 10.9 16 12 16C13.1 16 14 16.9 14 18C14 19.1 13.1 20 12 20C10.9 20 10 19.1 10 18Z"
+                            fill="white" />
+                    </g>
+                </svg>
+                <div class="info-fields hidden absolute">
+                    <ul class="flex flex-col text-24021">
+                        <li class="info-fields__item inline-flex items-center">
+                            Развернуть все связи
+                        </li>
+                        <li class="info-fields__item inline-flex items-center">
+                            Выделить связанные объекты
+                        </li>
+                        <li class="info-fields__item inline-flex items-center">
+                            Добавить в чёрный список
+                        </li>
+                        <li class="info-fields__item inline-flex items-center">
+                            Поиск в Яндексе
+                        </li>
+                        <li class="info-fields__item inline-flex items-center">
+                            Бизнес-справка
+                        </li>
+                        <li class="info-fields__item inline-flex items-center">
+                            Исследовать в новой вкладке
+                        </li>
+                        <li class="info-fields__item inline-flex items-center">
+                            Удалить
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
     <div class="flex w-full items-center mt-1">
@@ -63,7 +65,17 @@
 </div>
 <div class="flex flex-wrap w-full px-5  overflow-auto">
     <div class="inline-flex flex-wrap w-full">
-        //= list-search-input.html
+        <form class="list-search inline-flex w-full border-b border-c4 my-5 relative">
+            <input type="search" class="py-1 inline-flex flex-grow cursor-text focus:outline-none"
+                   placeholder="Поиск" />
+            <div class="list-search__clear inline-flex absolute right-0 flex-shrink-0 items-start hover:opacity-75 bg-white flex-shrink-0 cursor-pointer z-20" onclick="this.previousElementSibling.value = ''">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="icon/content/clear_24px" opacity="0.5">
+                        <path id="icon/content/clear_24px_2" d="M12.6667 4.27325L11.7267 3.33325L8.00001 7.05992L4.27334 3.33325L3.33334 4.27325L7.06001 7.99992L3.33334 11.7266L4.27334 12.6666L8.00001 8.93992L11.7267 12.6666L12.6667 11.7266L8.94001 7.99992L12.6667 4.27325Z" fill="black" fill-opacity="0.54"></path>
+                    </g>
+                </svg>
+            </div>
+        </form>
     </div>
 </div>
 <div class="flex flex-wrap w-full border-t border-ed py-5 px-5">

@@ -700,9 +700,9 @@ a {
 
 .switch {
   display: inline-block;
-  height: s(24);
+  height: 1rem;
   position: relative;
-  width: s(48);
+  width: 2rem;
 }
 
 .switch input {
@@ -722,13 +722,13 @@ a {
 
 .slider:before {
   background-color: #fff;
-  bottom: s(4);
+  bottom: s(2);
   content: "";
-  height: 1rem;
-  left: s(4);
+  height: s(12);
+  left: s(2);
   position: absolute;
   transition: .4s;
-  width: 1rem;
+  width: s(12);
 }
 
 input:checked + .slider {
@@ -736,7 +736,7 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-  transform: translateX(s(26));
+  transform: translateX(s(16));
 }
 
 .slider.round {
