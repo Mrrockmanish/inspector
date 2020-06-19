@@ -261,7 +261,8 @@ a {
   &__container {
     max-width: s(1120);
     width: s(1120);
-    min-width: s(1044);
+    //min-width: s(1044);
+    min-width: s(900);
   }
 
   &_under-big-panel {
@@ -893,6 +894,7 @@ input[type='search']::-ms-clear {
 .upload-file {
   min-width: s(490);
 
+
   &__name {
     line-height: 1.1;
   }
@@ -1184,6 +1186,9 @@ input[type='search']::-ms-clear {
 
 
     &_w {
+      &_30px {
+        width: s(30);
+      }
       &_40px {
         width: s(40);
       }

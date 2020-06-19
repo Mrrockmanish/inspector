@@ -42,7 +42,7 @@ function css() {
   const plugins = [
     tailwindcss(),
     autoprefixer({ overrideBrowserslist: ['last 4 version'] }),
-    cssnano(),
+    // cssnano(),
     // purgecss({
     //   content: ['build/*.html'],
     //   defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
