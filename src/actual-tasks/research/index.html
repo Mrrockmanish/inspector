@@ -659,11 +659,11 @@
                             </li>
                         </ul>
 
-                        <div class="flex items-center -mx-4">
+                        <div class="flex items-start -mx-4">
                             <div class="top-panel-input inline-flex pl-4 w-1/2 flex-grow">
                                 <form @submit.prevent="" class="flex items-center w-full border-b border-b9 h-full py-1 relative">
                                     <input @input="get_saved_search()" v-model="saved.input" type="text" class="w-full outline-none text-24021 font-semibold text-sm cursor-text bg-transparent"
-                                           placeholder="Поиск"/>
+                                           placeholder='Поиск по "Сохранённым"'/>
                                     <div v-show="saved.input != ''" class="top-panel-input__clear inline-flex absolute flex-shrink-0 items-start bg-f2 flex-shrink-0 cursor-pointer z-20" @click="saved.input = ''; get_saved_search()">
                                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <g id="icon/content/clear_24px" opacity="0.5">
@@ -681,33 +681,32 @@
                                     </button>
                                 </form>
                             </div>
-                            <div class="inline-flex px-4 text-xxs text-24021 w-1/2">
-                                <div class="flex items-center flex-wrap -mx-3 flex-shrink-0">
+                            <div class="inline-flex justify-end px-4 text-xxs text-24021 w-1/2">
+                                <div class="flex flex-col items-end flex-wrap -mx-3 flex-shrink-0">
                                     <label class="flex check-controls items-center py-2 px-3 cursor-pointer">
+                                        <span class="select-none inline-flex justify-end w-40 mr-2">Произвольное исследование</span>
                                         <input v-model="saved.filters['0']" type="checkbox" class="check-controls__checkbox hidden"/>
                                         <span
-                                                class="check-controls__check-custom inline-flex border border-b9 mr-2"></span>
-                                        <span class="select-none inline-flex">Произвольное исследование</span>
+                                                class="check-controls__check-custom inline-flex border border-b9"></span>
                                     </label>
                                     <label class="flex check-controls items-center py-2 px-3 cursor-pointer">
+                                        <span class="select-none inline-flex justify-end w-40 mr-2">Связи</span>
                                         <input v-model="saved.filters['1']" type="checkbox" class="check-controls__checkbox hidden"/>
                                         <span
-                                                class="check-controls__check-custom inline-flex border border-b9 mr-2"></span>
-                                        <span class="select-none inline-flex">Связи</span>
+                                                class="check-controls__check-custom inline-flex border border-b9"></span>
                                     </label>
                                     <label class="flex check-controls items-center py-2 px-3 cursor-pointer">
+                                        <span class="select-none inline-flex justify-end w-40 mr-2">Списки</span>
                                         <input v-model="saved.filters['2']" type="checkbox" class="check-controls__checkbox hidden"/>
                                         <span
-                                                class="check-controls__check-custom inline-flex border border-b9 mr-2"></span>
-                                        <span class="select-none inline-flex">Списки</span>
+                                                class="check-controls__check-custom inline-flex border border-b9"></span>
                                     </label>
-                                    <div class="flex items-center px-3 py-2">
-                                        <label class="switch mr-2">
-                                            <input v-model="saved.favorite" type="checkbox"/>
-                                            <div class="slider round"></div>
-                                        </label>
-                                        <span>Только избранные</span>
-                                    </div>
+                                    <label class="flex check-controls items-center py-2 px-2 h-8 cursor-pointer">
+                                        <span class="select-none inline-flex justify-end inline-flex w-40 mr-1">Избранные</span>
+                                        <input v-model="saved.favorite" type="checkbox" class="check-controls__checkbox hidden"/>
+                                        <!--                                            <div class="slider round"></div>-->
+                                        <span class="check-controls__check-favorite inline-flex"></span>
+                                    </label>
                                 </div>
                             </div>
                         </div>
@@ -719,10 +718,12 @@
                                     <div class="tables__cell tables__cell_w_40px inline-flex items-end font-semibold text-xs px-4">
                                         #
                                     </div>
-                                    <div class="tables__cell tables__cell_w_130px inline-flex items-end w-24 px-4">
+                                    <div class="tables__cell tables__cell_w_90px inline-flex items-end w-24 px-4">
                                         Дата
                                     </div>
-                                    <div class="tables__cell tables__cell_w_56px inline-flex items-end flex-shrink-0 px-4">
+                                    <div class="tables__cell tables__cell_w_56px inline-flex items-end flex-shrink-0 relative px-4">
+                                        <svg style="top: -5px" class="absolute" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="icon/toggle/star_outline_24px"><g id="icon/toggle/star_outline_24px_2"><mask id="path-2-inside-1" fill="white"><path
+                                                d="M22 9.74L14.81 9.12L12 2.5L9.19 9.13L2 9.74L7.46 14.47L5.82 21.5L12 17.77L18.18 21.5L16.55 14.47L22 9.74Z"></path></mask> <path d="M22 9.74L22.9832 10.8728L25.6596 8.55L22.1289 8.24555L22 9.74ZM14.81 9.12L13.4292 9.70609L13.7819 10.5369L14.6811 10.6145L14.81 9.12ZM12 2.5L13.3808 1.91391L11.999 -1.34144L10.6189 1.91466L12 2.5ZM9.19 9.13L9.3168 10.6246L10.2181 10.5482L10.5711 9.71534L9.19 9.13ZM2 9.74L1.8732 8.24537L-1.66925 8.54591L1.01784 10.8737L2 9.74ZM7.46 14.47L8.92078 14.8108L9.12647 13.9291L8.44216 13.3363L7.46 14.47ZM5.82 21.5L4.35922 21.1592L3.5516 24.6212L6.5951 22.7842L5.82 21.5ZM12 17.77L12.7751 16.4858L12 16.018L11.2249 16.4858L12 17.77ZM18.18 21.5L17.4049 22.7842L20.4427 24.6177L19.6412 21.1612L18.18 21.5ZM16.55 14.47L15.5668 13.3372L14.8848 13.9291L15.0888 14.8088L16.55 14.47ZM22.1289 8.24555L14.9389 7.62555L14.6811 10.6145L21.8711 11.2345L22.1289 8.24555ZM16.1908 8.53391L13.3808 1.91391L10.6192 3.08609L13.4292 9.70609L16.1908 8.53391ZM10.6189 1.91466L7.80892 8.54466L10.5711 9.71534L13.3811 3.08534L10.6189 1.91466ZM9.0632 7.63537L1.8732 8.24537L2.1268 11.2346L9.3168 10.6246L9.0632 7.63537ZM1.01784 10.8737L6.47784 15.6037L8.44216 13.3363L2.98216 8.60626L1.01784 10.8737ZM5.99922 14.1292L4.35922 21.1592L7.28078 21.8408L8.92078 14.8108L5.99922 14.1292ZM6.5951 22.7842L12.7751 19.0542L11.2249 16.4858L5.0449 20.2158L6.5951 22.7842ZM11.2249 19.0542L17.4049 22.7842L18.9551 20.2158L12.7751 16.4858L11.2249 19.0542ZM19.6412 21.1612L18.0112 14.1312L15.0888 14.8088L16.7188 21.8388L19.6412 21.1612ZM17.5332 15.6028L22.9832 10.8728L21.0168 8.60715L15.5668 13.3372L17.5332 15.6028Z" fill="#B9BDC7" mask="url(#path-2-inside-1)"></path></g></g></svg>
                                     </div>
                                     <div class="tables__cell tables__cell_w_27per max-w-full flex-grow inline-flex items-end flex-shrink-0 px-4">
                                         Название
@@ -742,15 +743,16 @@
                                         Теги
                                     </div>
                                     <div class="tables__cell tables__cell_w_80px inline-flex items-end flex-shrink-0 px-4">
+                                        Ред.
                                     </div>
                                 </div>
                             </div>
                             <div class="tables__row flex items-end py-6 px-4 text-xxs leading-3" v-for="(item,index) in computed_saved_items">
                                 <div class="flex items-center flex-grow -mx-4">
-                                    <div class="tables__cell tables__cell_w_40px inline-flex items-end font-semibold text-xs px-4">
+                                    <div class="tables__cell tables__cell_w_40px inline-flex items-end font-semibold text-65 text-xs px-4">
                                         {{index+1}}
                                     </div>
-                                    <div class="tables__cell tables__cell_w_130px inline-flex items-end w-24 px-4">
+                                    <div class="tables__cell tables__cell_w_90px inline-flex items-end font-semibold w-24 px-4">
                                         {{convert_date(item.lastUpdateDate)}}
                                     </div>
                                     <div @click="api_update_favorite(item)" class="tables__cell cursor-pointer tables__cell_w_56px inline-flex items-end flex-shrink-0 px-4">
@@ -856,7 +858,7 @@
                     <div class="area__container px-6 py-8 mx-auto relative overflow-auto">
                         <div class="top-panel-input inline-flex w-full flex-grow">
                             <div class="flex items-center w-full border-b border-b9 h-full py-1 relative">
-                                <input v-model="reports.query" type="text" class="w-full outline-none text-24021 font-semibold text-sm cursor-text bg-transparent" placeholder="Поиск">
+                                <input v-model="reports.query" type="text" class="w-full outline-none text-24021 font-semibold text-sm cursor-text bg-transparent" placeholder='Поиск по бизнес-справкам'>
                                 <div v-show="reports.query != ''" class="top-panel-input__clear inline-flex absolute flex-shrink-0 items-start bg-f2 flex-shrink-0 cursor-pointer z-20" @click="reports.query=''">
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g id="icon/content/clear_24px" opacity="0.5">
@@ -875,7 +877,7 @@
                             </div>
                         </div>
 
-                        <div class="tables mt-6 leading-3">
+                        <div class="tables mt-10 leading-3">
                             <div class="tables__header flex items-end py-2 mt-5 px-4 text-xxs leading-3">
                                 <div class="flex items-end flex-grow -mx-4">
                                     <div class="tables__cell tables__cell_w_40px px-4">
@@ -1279,7 +1281,7 @@
 
         <div v-show="state_panel.opened == true" class="lists-block inline-flex bg-white flex-wrap text-24021 content-start items-start text-xxs">
             <!-- здесь рендерим списки -->
-            <div class="lists-block-tools flex w-full flex-shrink-0  bg-white absolute left-0 top-0 z-20">
+            <div class="lists-block-tools flex w-full flex-shrink-0  bg-white absolute border border-ed left-0 top-0 z-20">
                 <div class="flex w-full h-full px-4 items-center justify-left">
                     <div v-show="state_panel.tabs.tree" @click="state_panel.current_tab = 'tree'" v-bind:class="{active: state_panel.current_tab == 'tree' }"
                          class="lists-block-tools__tool inline-flex flex-shrink-0 items-start hover:opacity-75 cursor-pointer mx-2 tooltip" title="дерево связей">
@@ -1332,7 +1334,7 @@
             </div>
 
             <div v-if="state_panel.current_tab == 'tree'" class="lists-block__inner-wrap flex flex-wrap overflow-auto w-full max-h-full">
-                <div class="flex w-full items-center text-b9 text-xs font-medium px-6 h-16">
+                <div class="flex w-full items-center text-b9 text-xs font-medium px-6" style="height: 3.5rem;">
                     <span>Дерово связей</span>
                 </div>
                 <div class="flex flex-wrap w-full px-6 border-t border-ed overflow-auto">
@@ -1554,7 +1556,7 @@
                 </div>
             </div>
             <div v-if="state_panel.current_tab == 'settings'" class="lists-block__inner-wrap flex flex-wrap overflow-auto w-full max-h-full">
-                <div class="flex w-full items-center text-b9 text-xs font-medium px-6 h-16">
+                <div class="flex w-full items-center text-b9 text-xs font-medium px-6" style="height: 3.5rem">
                     <span>Настройки</span>
                 </div>
                 <div class="filter-drop flex flex-wrap w-full border-t border-ed py-5 px-6">
@@ -2010,7 +2012,7 @@
                 </div>
             </div>
             <div v-if="state_panel.current_tab == 'legend'" class="lists-block__inner-wrap flex flex-wrap overflow-auto w-full max-h-full">
-                <div class="flex w-full items-center text-b9 text-xs font-medium px-6 h-16">
+                <div class="flex w-full items-center text-b9 text-xs font-medium px-6" style="height: 3.5rem">
                     <span>Легенда</span>
                 </div>
                 <div class="flex flex-wrap w-full border-t border-ed py-5 px-6">
@@ -2241,7 +2243,7 @@
                 </div>
             </div>
             <div v-if="state_panel.current_tab == 'path'" class="lists-block__inner-wrap flex flex-wrap overflow-auto w-full max-h-full">
-                <div class="flex w-full items-center text-b9 text-xs font-medium px-6 h-16">
+                <div class="flex w-full items-center text-b9 text-xs font-medium px-6" style="height: 3.5rem">
                     <span>Маршрут</span>
                 </div>
                 <div class="flex flex-wrap w-full px-6 border-t border-ed overflow-auto">
@@ -2450,7 +2452,7 @@
                 </div>
             </div>
             <div v-if="state_panel.current_tab == 'info'" class="lists-block__inner-wrap flex flex-wrap overflow-auto w-full max-h-full">
-                <div class="flex w-full items-center text-b9 text-xs font-medium px-6 h-16">
+                <div class="flex w-full items-center text-b9 text-xs font-medium px-6" style="height: 3.5rem;">
                     <span>Информация об объекте</span>
                 </div>
                 <div v-if="!state_panel.active_node" class="object-info flex flex-wrap w-full py-5 px-6 bg-65 text-white">
@@ -2482,11 +2484,11 @@
                                         <li class="hidden info-fields__item inline-flex items-center">
                                             Добавить в чёрный список
                                         </li>
-                                        <li @click="ya_search(state_panel.active_node)" class="info-fields__item inline-flex items-center">
-                                            Поиск в Яндексе
-                                        </li>
                                         <li v-if="state_panel.active_node && state_panel.active_node.data.ogrn" @click="show_kf_modal(state_panel.active_node)" class=" info-fields__item inline-flex items-center">
                                             Бизнес-справка
+                                        </li>
+                                        <li @click="ya_search(state_panel.active_node)" class="info-fields__item inline-flex items-center">
+                                            Поиск в <span class="font-semibold"><span class="text-red">&nbsp;Я</span>ндексе</span>
                                         </li>
                                         <li class="hidden info-fields__item inline-flex items-center">
                                             Исследовать в новой вкладке (связи)
@@ -2512,47 +2514,47 @@
                     </div>
                     <div class="flex flex-wrap tracking-wide w-full mt-3">
                         <div v-if="state_panel.active_node.data.inn" class="flex w-full mt-3">
-                            <div class="inline-flex flex-shrink-0 font-medium opacity-75 w-20">
+                            <div class="inline-flex flex-shrink-0 font-medium opacity-75 w-12">
                                 ИНН
                             </div>
                             <div class="inline-flex font-bold">
                                 {{state_panel.active_node.data.inn}}
                             </div>
                         </div>
-                        <div v-if="state_panel.active_node.data.regNumber" class="flex w-full mt-3">
-                            <div class="inline-flex flex-shrink-0 font-medium opacity-75 w-20">
+                        <div v-if="state_panel.active_node.data.regNumber" class="flex w-full mt-1">
+                            <div class="inline-flex flex-shrink-0 font-medium opacity-75 w-12">
                                 Рег. №
                             </div>
                             <div class="inline-flex font-bold">
                                 {{state_panel.active_node.data.regNumber}}
                             </div>
                         </div>
-                        <div v-if="state_panel.active_node.data.ogrn" class="flex w-full mt-3">
-                            <div class="inline-flex flex-shrink-0 font-medium opacity-75 w-20">
+                        <div v-if="state_panel.active_node.data.ogrn" class="flex w-full mt-1">
+                            <div class="inline-flex flex-shrink-0 font-medium opacity-75 w-12">
                                 ОГРН
                             </div>
                             <div class="inline-flex font-bold">
                                 {{state_panel.active_node.data.ogrn}}
                             </div>
                         </div>
-                        <div v-if="state_panel.active_node.data.ogrnip" class="flex w-full mt-3">
-                            <div class="inline-flex flex-shrink-0 font-medium opacity-75 w-20">
+                        <div v-if="state_panel.active_node.data.ogrnip" class="flex w-full mt-1">
+                            <div class="inline-flex flex-shrink-0 font-medium opacity-75 w-12">
                                 ОГРНИП
                             </div>
                             <div class="inline-flex font-bold">
                                 {{state_panel.active_node.data.ogrnip}}
                             </div>
                         </div>
-                        <div v-if="state_panel.active_node.data.address" class="flex w-full mt-3">
-                            <div class="inline-flex flex-shrink-0 font-medium opacity-75 w-20">
+                        <div v-if="state_panel.active_node.data.address" class="flex w-full mt-1">
+                            <div class="inline-flex flex-shrink-0 font-medium opacity-75 w-12">
                                 Адрес
                             </div>
                             <div class="inline-flex font-bold">
                                 {{state_panel.active_node.data.address}}
                             </div>
                         </div>
-                        <div v-if="state_panel.active_node.data.activity" class="flex w-full mt-3">
-                            <div class="inline-flex flex-shrink-0 font-medium opacity-75 w-20">
+                        <div v-if="state_panel.active_node.data.activity" class="flex w-full mt-1">
+                            <div class="inline-flex flex-shrink-0 font-medium opacity-75 w-12">
                                 ОКВЭД
                             </div>
                             <div class="inline-flex font-bold">
@@ -3832,7 +3834,7 @@
 
             <div class="items-start inline-flex flex-wrap flex-grow min-w-0 overflow-hidden">
                 <div class="mw70 mx-auto flex w-full self-start">
-                    <div class="top_panel w-full  inline-flex">
+                    <div class="top_panel w-full flex-wrap inline-flex">
                         <div class="flex h-full w-full flex-stretch items-center mx-auto">
                             <div class=" inline-flex flex-grow overflow-x-auto">
                                 <div class="flex w-full h-full">
@@ -3857,91 +3859,86 @@
                                             </button>
                                         </div>
                                     </form>
-
                                 </div>
-
                             </div>
-
                         </div>
-                    </div>
-                </div>
-                <div class="search_height flex w-full flex-grow">
-                    <div class="inline-flex flex-grow whitespace-no-wrap relative overflow-auto">
-                        <div class="mw70 px-6 pb-8 mx-auto relative overflow-auto w-full">
-                            <div v-show="search.result.nodes" class="results flex-wrap content-start flex w-full text-xxs text-24021 font-medium">
-
-                                <div v-if="show_selected_filters && get_show_filters() " class="results__top inline-flex w-full text-xxs text-24021 font-medium  pb-4">
-                                    <div class="flex w-full items-center justify-between -mx-4">
-                                        <div class="inline-flex py-1 mx-4">
-                                            <span style="white-space: pre;">Найдено: </span><span class="results__count">{{search.result.total}}</span>
+                        <div v-if="show_selected_filters && get_show_filters() " class="results__top inline-flex w-full text-xxs text-24021 font-medium px-6 bg-white z-10 pb-4">
+                            <div class="flex w-full items-start justify-between -mx-4">
+                                <div class="inline-flex py-1 mx-4">
+                                    <span style="white-space: pre;">Найдено: </span><span class="results__count">{{search.result.total}}</span>
+                                </div>
+                                <div class="results__active-filters inline-flex mx-4">
+                                    <div class="flex items-start -mx-2">
+                                        <div class="inline-flex flex-shrink-0 text-b9 py-1 mx-2">
+                                            Действующие фильтры:
                                         </div>
-                                        <div class="results__active-filters inline-flex mx-4">
-                                            <div class="flex items-center -mx-2">
-                                                <div class="inline-flex flex-shrink-0 text-b9 py-1 mx-2">
-                                                    Действующие фильтры:
+                                        <div class="results__filters min-w-0 inline-flex mx-2">
+                                            <div class="flex flex-wrap justify-end -mx-2">
+
+                                                <div v-if="item.selected" v-for="item in search.filters.types.items" class="results__active-filter inline-flex my-1 h-6 px-3 border leading-3 border-light-blue items-center justify-center mx-2">
+                                                    <div class="flex items-center">
+                                                        <div class="inline-flex mr-1">
+                                                            {{item.name}}
+                                                        </div>
+                                                        <div @click="item.selected = false; process_types();" class="inline-flex flex-shrink-0 items-start hover:opacity-75 flex-shrink-0 cursor-pointer">
+                                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <g id="icon/content/clear_24px" opacity="0.5">
+                                                                    <path id="icon/content/clear_24px_2"
+                                                                          d="M12.6667 4.27325L11.7267 3.33325L8.00001 7.05992L4.27334 3.33325L3.33334 4.27325L7.06001 7.99992L3.33334 11.7266L4.27334 12.6666L8.00001 8.93992L11.7267 12.6666L12.6667 11.7266L8.94001 7.99992L12.6667 4.27325Z"
+                                                                          fill="black" fill-opacity="0.54"></path>
+                                                                </g>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="results__filters min-w-0 inline-flex mx-2">
-                                                    <div class="flex flex-wrap -mx-2">
 
-                                                        <div v-if="item.selected" v-for="item in search.filters.types.items" class="results__active-filter inline-flex my-1 h-6 px-3 border leading-3 border-light-blue items-center justify-center mx-2">
-                                                            <div class="flex items-center">
-                                                                <div class="inline-flex mr-1">
-                                                                    {{item.name}}
-                                                                </div>
-                                                                <div @click="item.selected = false; process_types();" class="inline-flex flex-shrink-0 items-start hover:opacity-75 flex-shrink-0 cursor-pointer">
-                                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                        <g id="icon/content/clear_24px" opacity="0.5">
-                                                                            <path id="icon/content/clear_24px_2"
-                                                                                  d="M12.6667 4.27325L11.7267 3.33325L8.00001 7.05992L4.27334 3.33325L3.33334 4.27325L7.06001 7.99992L3.33334 11.7266L4.27334 12.6666L8.00001 8.93992L11.7267 12.6666L12.6667 11.7266L8.94001 7.99992L12.6667 4.27325Z"
-                                                                                  fill="black" fill-opacity="0.54"></path>
-                                                                        </g>
-                                                                    </svg>
-                                                                </div>
-                                                            </div>
+                                                <div v-if="item.active" v-for="item in search.filters.regions.items" class="results__active-filter inline-flex my-1 h-6 px-3 border leading-3 border-light-blue items-center justify-center mx-2">
+                                                    <div class="flex items-center">
+                                                        <div class="inline-flex mr-1">
+                                                            {{item.name}}
                                                         </div>
-
-                                                        <div v-if="item.active" v-for="item in search.filters.regions.items" class="results__active-filter inline-flex my-1 h-6 px-3 border leading-3 border-light-blue items-center justify-center mx-2">
-                                                            <div class="flex items-center">
-                                                                <div class="inline-flex mr-1">
-                                                                    {{item.name}}
-                                                                </div>
-                                                                <div @click="process_region(item)" class="inline-flex flex-shrink-0 items-start hover:opacity-75 flex-shrink-0 cursor-pointer">
-                                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                        <g id="icon/content/clear_24px" opacity="0.5">
-                                                                            <path id="icon/content/clear_24px_2"
-                                                                                  d="M12.6667 4.27325L11.7267 3.33325L8.00001 7.05992L4.27334 3.33325L3.33334 4.27325L7.06001 7.99992L3.33334 11.7266L4.27334 12.6666L8.00001 8.93992L11.7267 12.6666L12.6667 11.7266L8.94001 7.99992L12.6667 4.27325Z"
-                                                                                  fill="black" fill-opacity="0.54"></path>
-                                                                        </g>
-                                                                    </svg>
-                                                                </div>
-                                                            </div>
+                                                        <div @click="process_region(item)" class="inline-flex flex-shrink-0 items-start hover:opacity-75 flex-shrink-0 cursor-pointer">
+                                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <g id="icon/content/clear_24px" opacity="0.5">
+                                                                    <path id="icon/content/clear_24px_2"
+                                                                          d="M12.6667 4.27325L11.7267 3.33325L8.00001 7.05992L4.27334 3.33325L3.33334 4.27325L7.06001 7.99992L3.33334 11.7266L4.27334 12.6666L8.00001 8.93992L11.7267 12.6666L12.6667 11.7266L8.94001 7.99992L12.6667 4.27325Z"
+                                                                          fill="black" fill-opacity="0.54"></path>
+                                                                </g>
+                                                            </svg>
                                                         </div>
+                                                    </div>
+                                                </div>
 
-                                                        <div v-if="search.active == true" class="results__active-filter inline-flex my-1 h-6 px-3 border leading-3 border-light-blue items-center justify-center mx-2">
-                                                            <div class="flex items-center">
-                                                                <div class="inline-flex mr-1">
-                                                                    Только действующие
-                                                                </div>
-                                                                <div @click="process_active(false)" class="inline-flex flex-shrink-0 items-start hover:opacity-75 flex-shrink-0 cursor-pointer">
-                                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                        <g id="icon/content/clear_24px" opacity="0.5">
-                                                                            <path id="icon/content/clear_24px_2"
-                                                                                  d="M12.6667 4.27325L11.7267 3.33325L8.00001 7.05992L4.27334 3.33325L3.33334 4.27325L7.06001 7.99992L3.33334 11.7266L4.27334 12.6666L8.00001 8.93992L11.7267 12.6666L12.6667 11.7266L8.94001 7.99992L12.6667 4.27325Z"
-                                                                                  fill="black" fill-opacity="0.54"></path>
-                                                                        </g>
-                                                                    </svg>
-                                                                </div>
-                                                            </div>
+                                                <div v-if="search.active == true" class="results__active-filter inline-flex my-1 h-6 px-3 border leading-3 border-light-blue items-center justify-center mx-2">
+                                                    <div class="flex items-center">
+                                                        <div class="inline-flex mr-1">
+                                                            Только действующие
                                                         </div>
-
+                                                        <div @click="process_active(false)" class="inline-flex flex-shrink-0 items-start hover:opacity-75 flex-shrink-0 cursor-pointer">
+                                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <g id="icon/content/clear_24px" opacity="0.5">
+                                                                    <path id="icon/content/clear_24px_2"
+                                                                          d="M12.6667 4.27325L11.7267 3.33325L8.00001 7.05992L4.27334 3.33325L3.33334 4.27325L7.06001 7.99992L3.33334 11.7266L4.27334 12.6666L8.00001 8.93992L11.7267 12.6666L12.6667 11.7266L8.94001 7.99992L12.6667 4.27325Z"
+                                                                          fill="black" fill-opacity="0.54"></path>
+                                                                </g>
+                                                            </svg>
+                                                        </div>
                                                     </div>
                                                 </div>
 
                                             </div>
                                         </div>
+
                                     </div>
                                 </div>
-
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="search_height flex w-full flex-grow mt-20">
+                    <div class="inline-flex flex-grow whitespace-no-wrap relative overflow-auto">
+                        <div class="mw70 px-6 pb-8 mx-auto relative overflow-auto w-full">
+                            <div v-show="search.result.nodes" class="results flex-wrap content-start flex w-full text-xxs text-24021 font-medium">
                                 <search_list_comp class="results_padding results flex-wrap content-start flex w-full text-xxs text-24021 font-medium" v-on:get_id_from_search="$emit('get_id_from_search', $event)" v-bind:page="search.page" v-bind:nodes="search.result.nodes"></search_list_comp>
 
 
@@ -4314,7 +4311,7 @@
                                         ОГРН
                                     </div>
                                     <div class="tables__cell tables__cell_w_56px inline-flex flex-shrink-0 px-4">
-                                        <!---->
+                                        Ред.
                                     </div>
                                 </div>
                             </div>
@@ -4322,7 +4319,7 @@
                                 <div class="flex items-center flex-grow -mx-4">
                                     <div class="tables__cell tables__cell_w_40per upload-file__name  max-w-full flex flex-grow text-sm  items-end flex-shrink-0 px-4">
                                         <span v-bind:title="lists.item1.title"
-                                              class="tooltip w-20 flex-grow whitespace-normal font-semibold text-sm text-blue leading-none hover:opacity-75 hover:underline">
+                                              class="tooltip w-20 flex-grow whitespace-normal font-semibold text-sm text-65 leading-none">
                                             {{lists.item1.title}}
                                         </span>
                                     </div>
@@ -4373,7 +4370,7 @@
                                         ОГРН
                                     </div>
                                     <div class="tables__cell tables__cell_w_56px inline-flex flex-shrink-0 px-4">
-                                        <!---->
+                                        Ред.
                                     </div>
                                 </div>
                             </div>
@@ -4381,7 +4378,7 @@
                                 <div class="flex items-center flex-grow -mx-4">
                                     <div class="tables__cell tables__cell_w_40per upload-file__name  max-w-full flex flex-grow text-sm  items-end flex-shrink-0 px-4">
                                         <span v-bind:title="lists.item2.title"
-                                              class="tooltip w-20 flex-grow whitespace-normal font-semibold text-sm text-blue leading-none hover:opacity-75 hover:underline">
+                                              class="tooltip w-20 flex-grow whitespace-normal font-semibold text-sm text-65 leading-none">
                                             {{lists.item2.title}}
                                         </span>
                                     </div>
@@ -4529,6 +4526,7 @@
                                         ОГРН
                                     </div>
                                     <div class="tables__cell tables__cell_w_56px inline-flex flex-shrink-0 px-2">
+                                        Ред.
                                     </div>
                                 </div>
                             </div>
@@ -4573,6 +4571,7 @@
                                         ОГРН
                                     </div>
                                     <div class="tables__cell tables__cell_w_56px inline-flex flex-shrink-0 px-2">
+                                        Ред.
                                     </div>
                                 </div>
                             </div>

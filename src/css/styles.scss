@@ -165,7 +165,7 @@ a {
         width: s(1);
         border: s(1) solid #ededed;
         left: 50%;
-        margin-left: - s(.5);
+        margin-left: - s(1);
         bottom: - s(15);
       }
     }
@@ -542,12 +542,26 @@ a {
     border-width: s(1.5);
     transition: .3s;
   }
+
+  &__check-favorite {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../img/star_outline_24px_outlined.svg);
+  }
+
 }
 
 .check-controls__checkbox:checked + .check-controls__check-custom {
   background-color: #00599A;
   border-color: transparent;
   background-image: url(../img/check-custom.png);
+}
+
+.check-controls__checkbox:checked + .check-controls__check-favorite {
+  background-image: url(../img/star_outline_24px_outlined-yellow.svg);
 }
 
 .regions-show {
@@ -1306,4 +1320,9 @@ input[type='search']::-ms-clear {
     top: s(7);
     cursor: pointer;
   }
+}
+
+.app-version {
+  right: s(30);
+  top: s(30);
 }

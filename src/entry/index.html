@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/libs.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/add.css">
+
+    <title>InSpectr Вход</title>
+</head>
+
+<body class="entry bg-no-repeat bg-cover">
+<div id="app" class="flex w-full h-screen items-center justify-center relative">
+    <span class="app-version absolute text-xs text-white"> v. 1.2.1.</span>
+    <div class="inline-flex entry__form-box text-white">
+        <div class="flex flex-wrap">
+            <div class="inline-flex w-full">
+                <img src="img/insrectrj-white.svg" alt="Inspectr">
+            </div>
+            <div class="inline-flex flex-col w-full mt-12">
+                <form @submit="auth" action="" class="entry-form flex flex-wrap w-full h-full">
+                    <div class="inline-flex w-full">
+                        <input @input="auth_error = false" v-model="login" type="text" autocomplete="off"
+                               class="w-full border-b border-white bg-transparent placeholder-e8 text-sm outline-none py-3"
+                               placeholder="Логин">
+                    </div>
+                    <div class="inline-flex w-full">
+                        <input @input="auth_error = false" v-model="password" type="password" autocomplete="off"
+                               class="w-full border-b border-white bg-transparent placeholder-e8 mt-8 text-sm outline-none py-3"
+                               placeholder="Пароль">
+                    </div>
+                    <button type="submit" class="hover:opacity-75 bg-e005 outline-none h-10 px-4 mx-auto mt-10">
+                            <span class="flex w-full h-full items-center justify-center">
+                                <svg class="inline-flex flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3 11H17.17L13.59 7.41L15 6L21 12L15 18L13.59 16.59L17.17 13H3V11Z"
+                                          fill="white" />
+                                </svg>
+                                <div class="inline-flex text-sm font-semibold ml-2">
+                                    Войти
+                                </div>
+                            </span>
+                    </button>
+                    <div v-bind:class="{hidden_opacity: auth_error == false}" class="inline-flex w-full mt-10">
+                        <div class="entry-form__error flex mx-auto px-3 py-1 items-center justify-center">
+                            <span class="text-xxs text-e5">Неверные логин или пароль</span>
+                        </div>
+                    </div>
+                </form>
+                <div class="text-center text-white text-xs">
+                    Рекомендуемый браузер Google Chrome<br>
+                    <a href="https://www.google.ru/intl/ru/chrome/" target="_blank" class="underline hover:opacity-75">Установить Google Chrome</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/libs.js"></script>
+<script src="js/vue.js"></script>
+<script>
+
+  let token_refresh_offset = 60 * 1000;
+  let token_refresh_interval = 1000;
+  let logout_timeout = 15 * 60 * 1000;
+
+  document.addEventListener("DOMContentLoaded", function() {
+    app = new Vue({
+      el: '#app',
+      data: {
+        auth_error: false,
+        login: '',
+        password:'',
+      },
+      mounted:function(){
+        let app = this;
+        if(localStorage.getItem('token')){
+          if(new Date().getTime() <= parseInt(localStorage.getItem('token_expire'))){
+            location.href = '/research';
+          }
+        }
+      },
+      methods: {
+        auth: function (e) {
+          e.preventDefault();
+          let scope = this;
+
+          if(scope.login == '' || scope.password == ''){
+            scope.auth_error = true;
+            return;
+          }
+
+          let data = "client_id=graph.api.public&grant_type=password&username="+ this.login +"&password=" + this.password;
+          let xhr = new XMLHttpRequest();
+          xhr.open("POST", "https://auth.dtb.group/connect/token");
+          xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+          xhr.send(data);
+          xhr.addEventListener("readystatechange", function () {
+            if (this.readyState === 4) {
+              let response = JSON.parse(this.responseText);
+
+              if(response.error){
+                scope.auth_error = true;
+                return;
+              }
+
+              if (response.access_token) {
+                scope.auth_error = '';
+                localStorage.setItem('token', response.access_token);
+                localStorage.setItem('token_expire', new Date().getTime() + parseInt(response.expires_in) * 1000);
+                localStorage.setItem('ref_token', response.refresh_token);
+                location.href = '/research';
+              }
+
+            }
+          });
+
+        }
+      }
+    })
+  });
+
+</script>
+</body>
+
+</html>

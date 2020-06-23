@@ -10487,7 +10487,7 @@ a {
   width: 0.0625rem;
   border: 0.0625rem solid #ededed;
   left: 50%;
-  margin-left: -0.03125rem;
+  margin-left: -0.0625rem;
   bottom: -0.9375rem;
 }
 
@@ -10866,10 +10866,23 @@ a {
   transition: .3s;
 }
 
+.check-controls__check-favorite {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(../img/star_outline_24px_outlined.svg);
+}
+
 .check-controls__checkbox:checked + .check-controls__check-custom {
   background-color: #00599A;
   border-color: transparent;
   background-image: url(../img/check-custom.png);
+}
+
+.check-controls__checkbox:checked + .check-controls__check-favorite {
+  background-image: url(../img/star_outline_24px_outlined-yellow.svg);
 }
 
 .regions-show {
@@ -11703,6 +11716,11 @@ input[type='search']::-ms-clear {
   right: 0;
   top: 0.4375rem;
   cursor: pointer;
+}
+
+.app-version {
+  right: 1.875rem;
+  top: 1.875rem;
 }
 
 @media (min-width: 576px) {
