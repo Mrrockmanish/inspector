@@ -273,7 +273,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div v-show="research_type != null" @click="state_panel.opened = !state_panel.opened" v-bind:class="{close: !state_panel.opened}" class="top-panel-exit  text-b9 inline-flex ml-auto hover:opacity-75 cursor-pointer tooltip" title="настройки">
+                        <div v-show="research_type != null && state_panel.visible" @click="state_panel.opened = !state_panel.opened" v-bind:class="{close: !state_panel.opened}" class="top-panel-exit  text-b9 inline-flex ml-auto hover:opacity-75 cursor-pointer tooltip" title="настройки">
                             <div class="flex w-full h-full justify-center items-center px-2">
                                 <div class="inline-flex items-start flex-shrink-0">
                                     <svg v-bind:class="{'text-blue': !state_panel.opened}" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -4330,8 +4330,8 @@
                                         <span v-if="lists.item1.data.ogrn">{{lists.item1.data.ogrn}}</span>
                                     </div>
                                     <div @click="remove_item_from_list('1')" class="tables__cell tables__cell_w_56px inline-flex justify-center flex-shrink-0 px-4">
-                                        <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.5 0H4.5L3.5 1H0V3H14V1H10.5L9.5 0ZM11 6V16H3V6H11ZM1 4H13V16C13 17.1 12.1 18 11 18H3C1.9 18 1 17.1 1 16V4Z" fill="#B9BDC7"/>
+                                        <svg width="12" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.5 0H4.5L3.5 1H0V3H14V1H10.5L9.5 0ZM11 6V16H3V6H11ZM1 4H13V16C13 17.1 12.1 18 11 18H3C1.9 18 1 17.1 1 16V4Z" fill="#c4c4c4"/>
                                         </svg>
                                     </div>
                                 </div>
@@ -4389,8 +4389,8 @@
                                         <span v-if="lists.item2.data.ogrn">{{lists.item2.data.ogrn}}</span>
                                     </div>
                                     <div @click="remove_item_from_list('2')" class="tables__cell tables__cell_w_56px inline-flex justify-center flex-shrink-0 px-4">
-                                        <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.5 0H4.5L3.5 1H0V3H14V1H10.5L9.5 0ZM11 6V16H3V6H11ZM1 4H13V16C13 17.1 12.1 18 11 18H3C1.9 18 1 17.1 1 16V4Z" fill="#B9BDC7"/>
+                                        <svg width="12" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.5 0H4.5L3.5 1H0V3H14V1H10.5L9.5 0ZM11 6V16H3V6H11ZM1 4H13V16C13 17.1 12.1 18 11 18H3C1.9 18 1 17.1 1 16V4Z" fill="#c4c4c4"/>
                                         </svg>
                                     </div>
                                 </div>
@@ -4548,8 +4548,8 @@
                                         <span v-if="item.data.ogrn">{{item.data.ogrn}}</span>
                                     </div>
                                     <div @click="remove_item_from_list('1', index)" class="tables__cell tables__cell_w_56px inline-flex justify-center cursor-pointer flex-shrink-0 px-2">
-                                        <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.5 0H4.5L3.5 1H0V3H14V1H10.5L9.5 0ZM11 6V16H3V6H11ZM1 4H13V16C13 17.1 12.1 18 11 18H3C1.9 18 1 17.1 1 16V4Z" fill="#B9BDC7"></path>
+                                        <svg width="12" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.5 0H4.5L3.5 1H0V3H14V1H10.5L9.5 0ZM11 6V16H3V6H11ZM1 4H13V16C13 17.1 12.1 18 11 18H3C1.9 18 1 17.1 1 16V4Z" fill="#c4c4c4"></path>
                                         </svg>
                                     </div>
                                 </div>
@@ -4593,8 +4593,8 @@
                                         <span v-if="item.data.ogrn">{{item.data.ogrn}}</span>
                                     </div>
                                     <div @click="remove_item_from_list('2', index)" class="tables__cell tables__cell_w_56px inline-flex cursor-pointer justify-center flex-shrink-0 px-2">
-                                        <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.5 0H4.5L3.5 1H0V3H14V1H10.5L9.5 0ZM11 6V16H3V6H11ZM1 4H13V16C13 17.1 12.1 18 11 18H3C1.9 18 1 17.1 1 16V4Z" fill="#B9BDC7"></path>
+                                        <svg width="12" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.5 0H4.5L3.5 1H0V3H14V1H10.5L9.5 0ZM11 6V16H3V6H11ZM1 4H13V16C13 17.1 12.1 18 11 18H3C1.9 18 1 17.1 1 16V4Z" fill="#c4c4c4"></path>
                                         </svg>
                                     </div>
                                 </div>
@@ -4614,7 +4614,74 @@
 
     <div id="cl_vis_component">
         <div class="center-sector items-start inline-flex flex-wrap flex-grow min-w-0 overflow-hidden">
-            <div class="h-full bg-f2 flex w-full flex-grow">
+            <div class="connections-fixed-head bg-f2 w-full">
+                <div class="w-full flex flex-col px-5">
+                    <div v-if="show_search" class="sort text-24021 text-xxs flex justify-between w-full min-w-0 mt-8">
+                        <div class="flex relative items-center border-b border-b9">
+                            <input v-model="search1" type="text" placeholder="Поиск" class="search_input h-full w-full outline-none text-24021 text-sm cursor-text">
+                            <div @click="search1 = ''" class="vis_search_clear inline-flex absolute flex-shrink-0 items-start flex-shrink-0 cursor-pointer z-20">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/content/clear_24px" opacity="0.5">
+                                        <path id="icon/content/clear_24px_2" d="M12.6667 4.27325L11.7267 3.33325L8.00001 7.05992L4.27334 3.33325L3.33334 4.27325L7.06001 7.99992L3.33334 11.7266L4.27334 12.6666L8.00001 8.93992L11.7267 12.6666L12.6667 11.7266L8.94001 7.99992L12.6667 4.27325Z"
+                                              fill="black" fill-opacity="0.54"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="flex relative items-center border-b border-b9">
+                            <input v-model="search2" type="text" placeholder="Поиск" class="search_input h-full w-full outline-none text-24021 text-sm cursor-text">
+                            <div @click="search2 = ''" class="vis_search_clear inline-flex absolute flex-shrink-0 items-start flex-shrink-0 cursor-pointer z-20">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/content/clear_24px" opacity="0.5">
+                                        <path id="icon/content/clear_24px_2" d="M12.6667 4.27325L11.7267 3.33325L8.00001 7.05992L4.27334 3.33325L3.33334 4.27325L7.06001 7.99992L3.33334 11.7266L4.27334 12.6666L8.00001 8.93992L11.7267 12.6666L12.6667 11.7266L8.94001 7.99992L12.6667 4.27325Z"
+                                              fill="black" fill-opacity="0.54"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-end flex-grow mt-4">
+                        <div class="flex text-xxs text-b9 font-medium mr-4">
+                            Применённые фильры:
+                        </div>
+                        <div class="flex -mx-2">
+                            <div class="connections-active-filter flex items-center justify-center px-4 mx-2">
+                                <div class="flex mr-2">
+                                    Только действующие связи
+                                </div>
+                                <div class="flex flex-shrink-0">
+                                    <svg class="cursor-pointer hover:opacity-75" width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g id="icon/content/clear_24px">
+                                            <path id="icon/content/clear_24px_2" d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" fill="#B9BDC7"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="connections-active-filter flex items-center justify-center px-4 mx-2">
+                                <div class="flex mr-2">
+                                    Только недействующие связи
+                                </div>
+                                <div class="flex flex-shrink-0">
+                                    <svg class="cursor-pointer hover:opacity-75" width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g id="icon/content/clear_24px">
+                                            <path id="icon/content/clear_24px_2" d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" fill="#B9BDC7"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center font-semibold text-base text-b9 mt-4">
+                        <div class="header-connections-text mr-5">
+                            Действующие связи: {{computed_rows.active.length}}
+                        </div>
+                        <div class="flex flex-grow items-center h-5">
+                            <div class="flex-grow border-b border-b9"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="h-full bg-f2 flex w-full flex-grow" style="height: calc(100% - 8.75rem);">
                 <div class="area__inner inline-flex flex-grow whitespace-no-wrap relative overflow-auto">
                     <!-- основная контентная часть  -->
                     <!-- кнопки в серой контентной части слева -->
@@ -4677,38 +4744,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="connections flex-wrap flex-col flex-grow py-10 min-w-0 overflow-x-auto">
+                    <div class="connections flex-wrap flex-col flex-grow pb-10 min-w-0 overflow-x-auto">
 
-                        <div v-if="show_search" class="sort text-24021 text-xxs flex justify-between w-full min-w-0 pb-10 pt-5 px-5">
-                            <div class="flex relative items-center border-b border-b9">
-                                <input v-model="search1" type="text" placeholder="Поиск" class="search_input h-full w-full outline-none text-24021 text-sm cursor-text">
-                                <div @click="search1 = ''" class="vis_search_clear inline-flex absolute flex-shrink-0 items-start flex-shrink-0 cursor-pointer z-20">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g id="icon/content/clear_24px" opacity="0.5">
-                                            <path id="icon/content/clear_24px_2" d="M12.6667 4.27325L11.7267 3.33325L8.00001 7.05992L4.27334 3.33325L3.33334 4.27325L7.06001 7.99992L3.33334 11.7266L4.27334 12.6666L8.00001 8.93992L11.7267 12.6666L12.6667 11.7266L8.94001 7.99992L12.6667 4.27325Z"
-                                                  fill="black" fill-opacity="0.54"></path>
-                                        </g>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="flex relative items-center border-b border-b9">
-                                <input v-model="search2" type="text" placeholder="Поиск" class="search_input h-full w-full outline-none text-24021 text-sm cursor-text">
-                                <div @click="search2 = ''" class="vis_search_clear inline-flex absolute flex-shrink-0 items-start flex-shrink-0 cursor-pointer z-20">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g id="icon/content/clear_24px" opacity="0.5">
-                                            <path id="icon/content/clear_24px_2" d="M12.6667 4.27325L11.7267 3.33325L8.00001 7.05992L4.27334 3.33325L3.33334 4.27325L7.06001 7.99992L3.33334 11.7266L4.27334 12.6666L8.00001 8.93992L11.7267 12.6666L12.6667 11.7266L8.94001 7.99992L12.6667 4.27325Z"
-                                                  fill="black" fill-opacity="0.54"></path>
-                                        </g>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="flex font-semibold text-base pl-5" style="color: #bbb;">
-                            <!--Действующие связи: {{get_count(1)}}-->
-                            Действующие связи: {{computed_rows.active.length}}
-                        </div>
-                        <div class="flex flex-col border-b border-b9 pb-8">
+                        <div class="flex flex-col">
                             <!--<div v-if="row.active" class="connections-row flex flex-grow items-center min-w-0  pl-5 py-10" v-for="(row, index) in items">-->
                             <div class="connections-row flex flex-grow items-center min-w-0  pl-5 py-10" v-for="(row, index) in computed_rows.active">
                                 <div class="flex">
@@ -4783,15 +4821,17 @@
                                                 </svg>
                                             </div>
                                         </div>
-
-
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="flex font-semibold text-base pl-5 mt-10  pt-8" style="color: #bbb;">
-                            <!--Недействующие связи: {{get_count()}}-->
-                            Недействующие связи: {{computed_rows.inactive.length}}
+                        <div class="flex items-center font-semibold text-base text-b9 pl-5 mt-10">
+                            <div class="dead-connections mr-5">
+                                Недействующие связи: {{computed_rows.inactive.length}}
+                            </div>
+                            <div class="flex flex-grow items-center h-5">
+                                <div class="flex-grow border-b border-b9"></div>
+                            </div>
                         </div>
                         <div class="flex flex-col">
                             <!--<div v-if="!row.active" class="connections-row flex flex-grow items-center min-w-0 pl-5 py-10" v-for="(row, index) in items">-->

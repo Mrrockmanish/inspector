@@ -250,6 +250,12 @@ a {
   min-width: s(900);
 }
 
+.connections-fixed-head {
+  height: s(140);
+  padding-left: 4.6875rem;
+  padding-right: 4.6875rem;
+}
+
 .area {
   height: calc(100% - 3.5rem);
   min-width: s(900);
@@ -267,6 +273,10 @@ a {
 
   &_under-big-panel {
     height: calc(100% - 7.5rem);
+  }
+
+  &_connections {
+    height: calc(100% - 12.25rem);
   }
 }
 
@@ -1325,4 +1335,12 @@ input[type='search']::-ms-clear {
 .app-version {
   right: s(30);
   top: s(30);
+}
+
+.connections-active-filter {
+  background: rgba(196, 196, 196, 0.21);
+  border-radius: s(23);
+  height: s(28);
+  font-size: s(10);
+  line-height: 1.3;
 }

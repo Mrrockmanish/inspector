@@ -124,9 +124,6 @@ $(document).ready(function () {
 
   // раскрытие полей при клике на точки в информации об объекте
 
-
-
-
   $('.information-dots').on('click', function () {
     const infoDots = $('.information-dots');
     const infofields = $('.information-dots').find('.info-fields');
@@ -150,14 +147,23 @@ $(document).ready(function () {
     });
   });
 
+  const connectionsChangeHeaders = () => {
+    const headerText = $('.header-connections-text');
+    const deadConnections = $('.dead-connections');
+    const headerTextDistance = headerText.offset().top;
 
-  const preloader = (timeout, currentPercent, end) => {
-    const addPercent = () => {
-      $('.preloader__percent').text(`${currentPercent}%`);
-    };
-    setInterval(() => { if(currentPercent <= end) { addPercent(); currentPercent++; } }, timeout);
+    $('.connections').on('scroll', function () {
+      if (deadConnections.offset().top < headerTextDistance) {
+        headerText.text('Недействующие связи');
+      } else {
+        headerText.text('Действующие связи');
+      }
+    });
   };
-  preloader(300, 1, 99);
+  connectionsChangeHeaders();
+
+
+
 
 
 });

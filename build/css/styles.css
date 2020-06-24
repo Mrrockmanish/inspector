@@ -10570,6 +10570,12 @@ a {
   min-width: 56.25rem;
 }
 
+.connections-fixed-head {
+  height: 8.75rem;
+  padding-left: 4.6875rem;
+  padding-right: 4.6875rem;
+}
+
 .area {
   height: calc(100% - 3.5rem);
   min-width: 56.25rem;
@@ -10587,6 +10593,10 @@ a {
 
 .area_under-big-panel {
   height: calc(100% - 7.5rem);
+}
+
+.area_connections {
+  height: calc(100% - 12.25rem);
 }
 
 .area-left-tools {
@@ -11721,6 +11731,14 @@ input[type='search']::-ms-clear {
 .app-version {
   right: 1.875rem;
   top: 1.875rem;
+}
+
+.connections-active-filter {
+  background: rgba(196, 196, 196, 0.21);
+  border-radius: 1.4375rem;
+  height: 1.75rem;
+  font-size: 0.625rem;
+  line-height: 1.3;
 }
 
 @media (min-width: 576px) {
