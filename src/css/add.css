@@ -253,8 +253,6 @@ input:-webkit-autofill {
 }
 
 .select_list{
-    background: #ffffff;
-    top:32px;
     z-index: 500;
 }
 
@@ -549,4 +547,8 @@ input:-webkit-autofill {
     -webkit-animation-timing-function: ease;
     animation-timing-function: ease;
     border-width: 0;
+}
+
+.area-left-tools {
+    top: 1.25rem;
 }

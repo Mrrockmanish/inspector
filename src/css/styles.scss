@@ -147,7 +147,7 @@ a {
 }
 
 .lists-block-tools {
-  height: s(56);
+  height: 3.55rem;
 
   &__tool {
     color: #00599A;
@@ -173,6 +173,7 @@ a {
 }
 
 .lists-block {
+  border-left: s(1) solid #ededed;
   &__regions {
     align-content: start;
   }
@@ -195,6 +196,9 @@ a {
 
 .top-panel-tab {
   min-width: s(95);
+  box-sizing: border-box;
+  position: relative;
+  transition: .1s;
 
   &__text {
     width: 12.75rem;
@@ -208,6 +212,46 @@ a {
   &__close {
     min-width: s(15);
   }
+}
+
+.top-panel-tab:not(.bg-f2) {
+  &:hover {
+    background-color: #E0E0E0;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: s(1);
+    height: s(26);
+    display: block;
+    background-color: #E0E0E0;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.top-panel-tab:first-child {
+  &::after {
+    display: none;
+  }
+}
+
+.top-panel-tab {
+  &:hover {
+    &::after {
+      display: none!important;
+    }
+  }
+}
+
+.top-panel-tab:hover + .top-panel-tab::after {
+  display: none!important;
+}
+
+.top-panel-tab.bg-f2 + .top-panel-tab::after {
+  display: none!important;
 }
 
 .top-panel-inputs {
@@ -251,9 +295,9 @@ a {
 }
 
 .connections-fixed-head {
-  height: s(140);
+  height: 8.8rem;
   padding-left: 4.6875rem;
-  padding-right: 4.6875rem;
+  padding-right: 5.2rem;
 }
 
 .area {
@@ -1343,4 +1387,30 @@ input[type='search']::-ms-clear {
   height: s(28);
   font-size: s(10);
   line-height: 1.3;
+}
+
+.input-radio {
+  &_custom {
+    border: s(1.5) solid #B9BDC7;
+    box-sizing: border-box;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+}
+
+.input-radio:checked + .input-radio_custom {
+  border: s(4) solid #00599A;
+}
+
+
+.select_list {
+  background: #f0f0f0;
+  max-height: s(350);
+  overflow-y: scroll;
+  
+  > div {
+    background: #ffffff;
+  }
 }

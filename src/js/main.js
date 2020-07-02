@@ -154,9 +154,9 @@ $(document).ready(function () {
 
     $('.connections').on('scroll', function () {
       if (deadConnections.offset().top < headerTextDistance) {
-        headerText.text('Недействующие связи');
+        headerText.text($('#vis_inactive_heading'));
       } else {
-        headerText.text('Действующие связи');
+        headerText.text($('#vis_active_heading'));
       }
     });
   };

@@ -11800,6 +11800,11 @@ input[type='search']::-ms-clear {
   border: 0.25rem solid #00599A;
 }
 
+.entry-form input:-webkit-autofill {
+  -webkit-box-shadow: inset 0 0 20px 24px #215188;
+          box-shadow: inset 0 0 20px 24px #215188;
+}
+
 .select_list {
   background: #f0f0f0;
   max-height: 21.875rem;
