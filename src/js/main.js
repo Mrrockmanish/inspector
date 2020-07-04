@@ -147,20 +147,49 @@ $(document).ready(function () {
     });
   });
 
-  const connectionsChangeHeaders = () => {
-    const headerText = $('.header-connections-text');
-    const deadConnections = $('.dead-connections');
-    const headerTextDistance = headerText.offset().top;
+  // const connectionsChangeHeaders = () => {
+  //   const headerText = $('.header-connections-text');
+  //   const deadConnections = $('.dead-connections');
+  //   const headerTextDistance = headerText.offset().top;
+  //
+  //   $('.connections').on('scroll', function () {
+  //     if (deadConnections.offset().top < headerTextDistance) {
+  //       headerText.text($('#vis_inactive_heading'));
+  //     } else {
+  //       headerText.text($('#vis_active_heading'));
+  //     }
+  //   });
+  // };
+  // connectionsChangeHeaders();
 
-    $('.connections').on('scroll', function () {
-      if (deadConnections.offset().top < headerTextDistance) {
-        headerText.text($('#vis_inactive_heading'));
-      } else {
-        headerText.text($('#vis_active_heading'));
-      }
-    });
-  };
-  connectionsChangeHeaders();
+  $('.connections-circle').each(function(index){
+    const circle = $(this);
+
+    const additionDistance = 32;
+    const circleLeftDistanceLeft = circle.offset().left;
+    const circleLeftDistanceTop = circle.offset().top;
+
+    const prevSquare = circle.parent().prev().prev();
+    const prevSquareLeftDistance = prevSquare.offset().left;
+    const prevSquareTopDistance = prevSquare.offset().top;
+
+    const nextSquare = circle.parent().next().next();
+    const nextSquareLeftDistance = nextSquare.offset().left;
+    const nextSquareTopDistance =  nextSquare.offset().top;
+
+    const arrowLeftWidth = circleLeftDistanceLeft - prevSquareLeftDistance - prevSquare.outerWidth() + additionDistance;
+    const arrowTopLeftHeight = circleLeftDistanceTop - prevSquareTopDistance;
+
+    const arrowRightWidth = nextSquareLeftDistance - circleLeftDistanceLeft - circle.outerWidth() + additionDistance;
+    const arrowTopRightHeight = circleLeftDistanceTop - nextSquareTopDistance;
+
+    circle.find('.circle-arrow-left').css({'width': arrowLeftWidth});
+    circle.find('.circle-arrow-left__vertical').css({'height': arrowTopLeftHeight});
+
+    circle.find('.circle-arrow-right').css({'width': arrowRightWidth});
+    circle.find('.circle-arrow-right__vertical').css({'height': arrowTopRightHeight});
+  });
+
 
 
 
