@@ -147,21 +147,23 @@ $(document).ready(function () {
     });
   });
 
-  // const connectionsChangeHeaders = () => {
-  //   const headerText = $('.header-connections-text');
-  //   const deadConnections = $('.dead-connections');
-  //   const headerTextDistance = headerText.offset().top;
-  //
-  //   $('.connections').on('scroll', function () {
-  //     if (deadConnections.offset().top < headerTextDistance) {
-  //       headerText.text($('#vis_inactive_heading'));
-  //     } else {
-  //       headerText.text($('#vis_active_heading'));
-  //     }
-  //   });
-  // };
-  // connectionsChangeHeaders();
+  // подмена заголовков фиксированной шапки при скролле
+  const connectionsChangeHeaders = () => {
+    const headerText = $('.header-connections-text');
+    const deadConnections = $('.dead-connections');
+    const headerTextDistance = headerText.offset().top;
 
+    $('.connections').on('scroll', function () {
+      if (deadConnections.offset().top < headerTextDistance && $('[data-filter="all"]').prop('checked')) {
+        headerText.text('Недействующие связи');
+      } else if (deadConnections.offset().top > headerTextDistance && $('[data-filter="all"]').prop('checked')) {
+        headerText.text('Действующие связи');
+      }
+    });
+  };
+  connectionsChangeHeaders();
+
+  // расчет длины и рисование стрелок между объектами связей
   $('.connections-circle').each(function(index){
     const circle = $(this);
 
@@ -190,8 +192,76 @@ $(document).ready(function () {
     circle.find('.circle-arrow-right__vertical').css({'height': arrowTopRightHeight});
   });
 
+  const switchConnectionsFilters = () => {
+    $('.lists-block__connections-filters').on('change', '[data-filter]', function () {
+
+      const connections = $('.connections');
+      const headerText = $('.header-connections-text'); // заголовок шапки
+      const deadConnectionsRow = $('[data-row="dead-connections-row"]'); // заголовок неактивных связей
+      const activeFilterText = $('.connections-active-filter__text'); // текст внутри фильра
+      const activeFilterWrap = $('.connections-active-filter-wrap'); // обёртка фильров
+
+      if ( $('[data-filter="actives"]').prop('checked') ) { // радиокнопка показа только действующих
+        // меняем заголовок в фиксированной шапке
+        headerText.text('Действующие связи');
+        // меняем текст в применённых фильтрах
+        activeFilterText.text('Только действующие');
+        // убираем прозрачность у обёртки фильтров
+        activeFilterWrap.removeClass('opacity-0');
+        //скрываем неактивные связи
+        connections.find('[data-row="notactives"]').hide();
+        // показываем активные связи
+        connections.find('[data-row="actives"]').fadeIn();
+        // скрываем заголовок неактивных связей
+        deadConnectionsRow.hide();
 
 
+      } else if ( $('[data-filter="notactives"]').prop('checked') ) { // радиокнопка показа только не действующих
+        // скрываем активные связи
+        connections.find('[data-row="actives"]').hide();
+        // скрываем заголовок неактивных связей
+        deadConnectionsRow.hide();
+        // меняем заголовок в фиксированной шапке
+        headerText.text('Недействующие связи');
+        // меняем текст в применённых фильтрах
+        activeFilterText.text('Только недействующие');
+        // убираем прозрачность у обёртки фильтров
+        activeFilterWrap.removeClass('opacity-0');
+        // скрываем неактивные связи
+        connections.find('[data-row="notactives"]').fadeIn();
+      }
+      else {
+        // меняем текст в применённых фильтрах
+        activeFilterText.text('Все');
+        // меняем заголовок в фиксированной шапке
+        headerText.text('Действующие связи');
+        connections.find('[data-row="actives"]').fadeIn();
+        connections.find('[data-row="notactives"]').fadeIn();
+        deadConnectionsRow.fadeIn();
+        // добавляем прозрачность обёртке фильтров
+        activeFilterWrap.addClass('opacity-0');
+      }
+      // нажатие на крестик в фильтре
+      const connectionsShowClear = () => {
+        $('.connections-active-filter__remove').on('click', function () {
+          // меняем текст в применённых фильтрах
+          activeFilterText.text('Все');
+          // меняем заголовок в фиксированной шапке
+          headerText.text('Действующие связи');
+          connections.find('[data-row="actives"]').fadeIn();
+          connections.find('[data-row="notactives"]').fadeIn();
+          deadConnectionsRow.fadeIn();
+          // добавляем прозрачность обёртке фильтров
+          activeFilterWrap.addClass('opacity-0');
+          // включаем радиокнопку
+          $('[data-filter="all"]').prop('checked', true);
+        });
+      };
+      connectionsShowClear();
+
+    });
+  };
+  switchConnectionsFilters();
 
 
 

@@ -162,10 +162,9 @@ a {
         position: absolute;
         content: '';
         height: s(12);
-        width: s(1);
-        border: s(1) solid #ededed;
+        border: s(.5) solid #ededed;
         left: 50%;
-        margin-left: - s(1);
+        margin-left: - s(.5);
         bottom: - s(15);
       }
     }
@@ -295,7 +294,7 @@ a {
 }
 
 .connections-fixed-head {
-  height: 8.8rem;
+  height: 9.8rem;
   padding-left: 4.6875rem;
   padding-right: 5.2rem;
 }

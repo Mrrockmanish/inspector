@@ -10484,10 +10484,9 @@ a {
   position: absolute;
   content: '';
   height: 0.75rem;
-  width: 0.0625rem;
-  border: 0.0625rem solid #ededed;
+  border: 0.03125rem solid #ededed;
   left: 50%;
-  margin-left: -0.0625rem;
+  margin-left: -0.03125rem;
   bottom: -0.9375rem;
 }
 
@@ -10615,7 +10614,7 @@ a {
 }
 
 .connections-fixed-head {
-  height: 8.8rem;
+  height: 9.8rem;
   padding-left: 4.6875rem;
   padding-right: 5.2rem;
 }
