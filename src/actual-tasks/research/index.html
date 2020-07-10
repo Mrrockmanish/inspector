@@ -571,7 +571,7 @@
             <div class="area area_under-big-panel bg-f2 flex w-full flex-grow">
                 <div class="area__inner inline-flex flex-grow whitespace-no-wrap relative overflow-auto">
                     <!-- основная контентная часть  -->
-                    <div class="area__container px-6 py-8 mx-auto relative overflow-auto">
+                    <div class="area__container px-6 py-8 mx-auto relative">
 
                         <ul class="hidden area-pagination z-20 flex justify-start fixed shadow-md bg-white text-b9 text-xxs font-semibold h-10 px-2">
                             <li>
@@ -3882,19 +3882,16 @@
                             </div>
                         </div>
                         <div v-if="show_selected_filters && get_show_filters() " class="results__top inline-flex w-full text-xxs text-24021 font-medium px-6 bg-white z-10 pb-4">
-                            <div class="flex w-full items-start justify-between -mx-4">
+                            <div class="flex flex-grow w-full items-start justify-between -mx-4">
                                 <div class="inline-flex py-1 mx-4">
                                     <span style="white-space: pre;">Найдено: </span><span class="results__count">{{search.result.total}}</span>
                                 </div>
                                 <div class="results__active-filters inline-flex mx-4">
                                     <div class="flex items-start -mx-2">
-                                        <div class="inline-flex flex-shrink-0 text-b9 py-1 mx-2">
-                                            Действующие фильтры:
-                                        </div>
                                         <div class="results__filters min-w-0 inline-flex mx-2">
-                                            <div class="flex flex-wrap justify-end -mx-2">
+                                            <div class="flex flex-wrap justify-end -mx-1">
 
-                                                <div v-if="item.selected" v-for="item in search.filters.types.items" class="results__active-filter inline-flex my-1 h-6 px-3 border leading-3 border-light-blue items-center justify-center mx-2">
+                                                <div v-if="item.selected" v-for="item in search.filters.types.items" class="results__active-filter inline-flex my-1 h-6 px-3 border leading-3 border-light-blue items-center justify-center mx-1">
                                                     <div class="flex items-center">
                                                         <div class="inline-flex mr-1">
                                                             {{item.name}}
@@ -3911,7 +3908,7 @@
                                                     </div>
                                                 </div>
 
-                                                <div v-if="item.active" v-for="item in search.filters.regions.items" class="results__active-filter inline-flex my-1 h-6 px-3 border leading-3 border-light-blue items-center justify-center mx-2">
+                                                <div v-if="item.active" v-for="item in search.filters.regions.items" class="results__active-filter inline-flex my-1 h-6 px-3 border leading-3 border-light-blue items-center justify-center mx-1">
                                                     <div class="flex items-center">
                                                         <div class="inline-flex mr-1">
                                                             {{item.name}}
@@ -3928,7 +3925,7 @@
                                                     </div>
                                                 </div>
 
-                                                <div v-if="search.active == true" class="results__active-filter inline-flex my-1 h-6 px-3 border leading-3 border-light-blue items-center justify-center mx-2">
+                                                <div v-if="search.active == true" class="results__active-filter inline-flex my-1 h-6 px-3 border leading-3 border-light-blue items-center justify-center mx-1">
                                                     <div class="flex items-center">
                                                         <div class="inline-flex mr-1">
                                                             Только действующие
@@ -3954,7 +3951,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="search_height flex w-full flex-grow mt-20">
+                <div class="search_height flex w-full flex-grow mt-20" style="height: 73vh">
                     <div class="inline-flex flex-grow whitespace-no-wrap relative overflow-auto">
                         <div class="mw70 px-6 pb-8 mx-auto relative overflow-auto w-full">
                             <div v-show="search.result.nodes" class="results flex-wrap content-start flex w-full text-xxs text-24021 font-medium">
@@ -4018,7 +4015,7 @@
                                 </svg>
                             </div>
                         </form>
-                        <div class="lists-block__regions w-full flex flex-wrap overflow-auto">
+                        <div class="lists-block__regions w-full flex flex-wrap overflow-auto" style="height: 42vh">
                             <div>
                                 <label v-show="item.code.indexOf(search.filters.regions.query) > -1 || item.name.toLowerCase().indexOf(search.filters.regions.query.toLowerCase()) > -1" v-for="(item, index) in search.filters.regions.items"
                                        class="flex check-controls items-center w-full py-2 cursor-pointer">
@@ -4516,7 +4513,7 @@
                                     </div>
                                 </div>
 
-                                <div v-bind:style="lists.list2.items.length" @click="clear_list('2')" class="upload-file__delete hat_delete   cursor-pointer hover:opacity-75">
+                                <div v-show="lists.list2.items.length" @click="clear_list('2')" class="upload-file__delete hat_delete   cursor-pointer hover:opacity-75">
                                     <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M9.5 0H4.5L3.5 1H0V3H14V1H10.5L9.5 0ZM11 6V16H3V6H11ZM1 4H13V16C13 17.1 12.1 18 11 18H3C1.9 18 1 17.1 1 16V4Z" fill="#B9BDC7"></path>
                                     </svg>
@@ -4742,7 +4739,7 @@
                     </div>
                 </div>
             </div>
-            <div class="h-full bg-f2 flex w-full flex-grow" style="height: calc(100% - 8.75rem);">
+            <div class="h-full bg-f2 flex w-full flex-grow" style="height: calc(100% - 9.8rem);">
                 <div class="area__inner inline-flex flex-grow whitespace-no-wrap relative overflow-auto">
                     <!-- основная контентная часть  -->
 

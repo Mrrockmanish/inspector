@@ -61,18 +61,18 @@ $(document).ready(function () {
 
   // пример модального окна
 
-  //$('#exampleModal').arcticmodal();
+  $('#exampleModal').arcticmodal();
 
-  // добавить новый список
-  //$('#add-new-list').arcticmodal();
-  // выбрать список
-  //$('#choice-list').arcticmodal();
-  // добавить найденное с поиске
-  //$('#search-add').arcticmodal();
+  //добавить новый список
+  $('#add-new-list').arcticmodal();
+  //выбрать список
+  $('#choice-list').arcticmodal();
+  //добавить найденное с поиске
+  $('#search-add').arcticmodal();
   //добавление компании
-  //$('#add-object').arcticmodal();
+  $('#add-object').arcticmodal();
   //удалить объект
-  //$('#deleteObject').arcticmodal();
+  $('#deleteObject').arcticmodal();
 
 
   // подсказки
