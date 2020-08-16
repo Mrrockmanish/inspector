@@ -1,0 +1,104 @@
+<div style="display: none;">
+    <div class="box-modal graph-modal" id="graphModal">
+        <div class="box-modal_close arcticmodal-close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="icon/content/clear_24px">
+                    <path id="icon/content/clear_24px_2"
+                          d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"
+                          fill="#B9BDC7"/>
+                </g>
+            </svg>
+        </div>
+        <div class="flex flex-col h-full">
+            <div class="graph-modal__head bg-white px-6 py-6">
+                <div class="text-base font-bold">Просмотр графа связей</div>
+            </div>
+            <div class="graph-modal__area bg-#F2F2F2 relative flex-grow">
+                <!-- кнопки в серой контентной части слева -->
+                <div class="area-left-tools area-left-tools_top_24px text-blue flex flex-col justify-start absolute">
+                    <div
+                            class="area-left-tools__tool inline-flex flex-shrink-0 items-start rounded-full bg-white w-10 h-10 shadow-sm transition duration-300 border border-blue cursor-pointer tooltip" title="Распечатать">
+                        <div class="flex w-full h-full justify-center items-center">
+                            <div class="inline-flex items-start">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7 8V4H17V8" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+                                    <path d="M6.6 17H3V10C3 8.89543 3.89543 8 5 8H19C20.1046 8 21 8.89543 21 10V17H17.4" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+                                    <path d="M17 13H7V20H17V13Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                            class="area-left-tools__tool inline-flex flex-shrink-0 items-start rounded-full bg-white w-10 h-10 shadow-sm transition duration-300 border border-blue cursor-pointer tooltip mt-5" title="Экспорт">
+                        <div class="flex w-full h-full justify-center items-center">
+                            <div class="inline-flex items-start">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M15.59 10.09L13 12.67V3H11V12.67L8.41 10.09L7 11.5L12 16.5L17 11.5L15.59 10.09ZM19 19V12H21V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V12H5V19H19Z"
+                                          fill="currentColor"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                            class="area-left-tools__tool inline-flex flex-shrink-0 items-start rounded-full bg-white w-10 h-10 shadow-sm transition duration-300 border border-blue cursor-pointer tooltip mt-5" title="Маршрут">
+                        <div class="flex w-full h-full justify-center items-center">
+                            <div class="inline-flex items-start">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/maps/my_location_24px">
+                                        <path id="icon/maps/my_location_24px_2" fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M20.94 11C20.48 6.83 17.17 3.52 13 3.06V1H11V3.06C6.83 3.52 3.52 6.83 3.06 11H1V13H3.06C3.52 17.17 6.83 20.48 11 20.94V23H13V20.94C17.17 20.48 20.48 17.17 20.94 13H23V11H20.94ZM12 8C9.79 8 8 9.79 8 12C8 14.21 9.79 16 12 16C14.21 16 16 14.21 16 12C16 9.79 14.21 8 12 8ZM5 12C5 15.87 8.13 19 12 19C15.87 19 19 15.87 19 12C19 8.13 15.87 5 12 5C8.13 5 5 8.13 5 12Z"
+                                              fill="currentColor"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                            class="area-left-tools__tool inline-flex flex-shrink-0 items-start rounded-full bg-white w-10 h-10 shadow-sm transition duration-300 border border-blue cursor-pointer tooltip mt-5" title="Связи">
+                        <div class="flex w-full h-full justify-center items-center">
+                            <div class="inline-flex items-start">
+                                <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M14.89 13.04C14.42 13.56 14.12 14.24 14.12 15C14.12 16.61 15.43 17.92 17.04 17.92C18.65 17.92 19.96 16.61 19.96 15C19.96 13.39 18.65 12.08 17.04 12.08C16.82 12.08 16.6 12.11 16.39 12.16L12.23 5.04C12.73 4.5 13.04 3.79 13.04 3C13.04 1.34 11.7 0 10.04 0C8.38004 0 7.04004 1.34 7.04004 3C7.04004 3.79 7.35004 4.5 7.85004 5.04L3.74004 12.09C3.51004 12.04 3.28004 12 3.04004 12C1.38004 12 0.0400391 13.34 0.0400391 15C0.0400391 16.66 1.38004 18 3.04004 18C4.70004 18 6.04004 16.66 6.04004 15C6.04004 14.21 5.73004 13.5 5.23004 12.96L9.34004 5.91C9.57004 5.96 9.80004 6 10.04 6C10.28 6 10.51 5.96 10.74 5.91L14.89 13.04ZM3.04004 16C2.49004 16 2.04004 15.55 2.04004 15C2.04004 14.45 2.49004 14 3.04004 14C3.59004 14 4.04004 14.45 4.04004 15C4.04004 15.55 3.59004 16 3.04004 16ZM11.04 3C11.04 2.45 10.59 2 10.04 2C9.49004 2 9.04004 2.45 9.04004 3C9.04004 3.55 9.49004 4 10.04 4C10.59 4 11.04 3.55 11.04 3ZM17.06 14C17.61 14 18.06 14.45 18.06 15C18.06 15.55 17.61 16 17.06 16C16.51 16 16.06 15.55 16.06 15C16.06 14.45 16.51 14 17.06 14Z"
+                                          fill="currentColor"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- кнопки в серой контентной части справа -->
+                <div class="area-right-tools area-right-tools_h_auto area-right-tools_bottom_24px text-blue justify-between absolute">
+                    <div class="flex flex-col relative">
+                        <div class="zoom-tool inline-flex w-10 shadow-sm overflow-hidden border-blue border cursor-pointer">
+                            <div class="flex flex-col">
+                                <div class="zoom-tool__plus inline-flex w-10 h-10 bg-white transition duration-300">
+                                    <div class="flex w-full h-full justify-center items-center">
+                                        <div class="inline-flex items-start">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M19 13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+                                                      fill="currentColor"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="zoom-tool__minus inline-flex w-10 h-10 bg-white transition duration-300">
+                                    <div class="flex w-full h-full justify-center items-center">
+                                        <div class="inline-flex items-start">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M19 13H5V11H19V13Z" fill="currentColor"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

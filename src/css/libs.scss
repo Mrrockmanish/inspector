@@ -54,6 +54,19 @@ $root-font-size: 16;
     width: s(330);
 }
 
+#graphModal {
+    width: 1140px;
+    height: 100%;
+
+    @media (min-width: 1400px) {
+        width: 1340px;
+    }
+
+    @media (min-width: 1600px) {
+        width: s(1456);
+    }
+}
+
 #search-add, #deleteObject {
     width: s(336);
 }

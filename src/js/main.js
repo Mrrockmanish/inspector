@@ -74,6 +74,8 @@ $(document).ready(function () {
   //удалить объект
   $('#deleteObject').arcticmodal();
 
+  $('#graphModal').arcticmodal();
+
 
   // подсказки
 
