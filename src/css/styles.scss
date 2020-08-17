@@ -1001,6 +1001,7 @@ input[type='search']::-ms-clear {
   }
 
   &__count {
+    cursor: pointer;
     border-radius: 50%;
     width: s(24);
     height: s(24);
