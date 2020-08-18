@@ -30,7 +30,7 @@
                 <!-- кнопки в серой контентной части слева -->
                 <div class="area-left-tools area-left-tools_top_24px text-blue flex flex-col justify-start absolute">
                     <div
-                            class="area-left-tools__tool inline-flex flex-shrink-0 items-start rounded-full bg-white w-10 h-10 transition duration-300 hover:shadow-xl shadow-lg cursor-pointer tooltip mt-5" title="Отменить">
+                            class="area-left-tools__tool inline-flex flex-shrink-0 items-start rounded-full bg-white w-10 h-10 transition duration-300 hover:shadow-xl shadow-lg cursor-pointer tooltip" title="Отменить">
                         <div class="flex w-full h-full justify-center items-center">
                             <div class="inline-flex items-start">
                                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -45,18 +45,6 @@
                         </div>
                     </div>
                     <div
-                            class="area-left-tools__tool inline-flex flex-shrink-0 items-start rounded-full bg-white w-10 h-10 transition duration-300 hover:shadow-xl shadow-lg cursor-pointer tooltip mt-5" title="Распечатать">
-                        <div class="flex w-full h-full justify-center items-center">
-                            <div class="inline-flex items-start">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7 8V4H17V8" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
-                                    <path d="M6.6 17H3V10C3 8.89543 3.89543 8 5 8H19C20.1046 8 21 8.89543 21 10V17H17.4" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
-                                    <path d="M17 13H7V20H17V13Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                    <div
                             class="area-left-tools__tool inline-flex flex-shrink-0 items-start rounded-full bg-white w-10 h-10 transition duration-300 hover:shadow-xl shadow-lg cursor-pointer tooltip mt-5" title="Экспорт">
                         <div class="flex w-full h-full justify-center items-center">
                             <div class="inline-flex items-start">
@@ -65,6 +53,18 @@
                                     <path fill-rule="evenodd" clip-rule="evenodd"
                                           d="M15.59 10.09L13 12.67V3H11V12.67L8.41 10.09L7 11.5L12 16.5L17 11.5L15.59 10.09ZM19 19V12H21V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V12H5V19H19Z"
                                           fill="currentColor"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                            class="area-left-tools__tool inline-flex flex-shrink-0 items-start rounded-full bg-white w-10 h-10 transition duration-300 hover:shadow-xl shadow-lg cursor-pointer tooltip mt-5" title="Печать">
+                        <div class="flex w-full h-full justify-center items-center">
+                            <div class="inline-flex items-start">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7 8V4H17V8" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+                                    <path d="M6.6 17H3V10C3 8.89543 3.89543 8 5 8H19C20.1046 8 21 8.89543 21 10V17H17.4" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+                                    <path d="M17 13H7V20H17V13Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
                                 </svg>
                             </div>
                         </div>
@@ -339,12 +339,22 @@
                     </div>
                     <div class="top-panel-exit close text-b9 inline-flex ml-auto hover:opacity-75 cursor-pointer tooltip" title="настройки">
                         <div class="flex w-full h-full justify-center items-center px-2">
-                            <div class="inline-flex items-start flex-shrink-0">
-                                <svg class="text-blue" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M21 3H3C1.9 3 1 3.9 1 5V19C1 20.1 1.9 21 3 21H21C22.1 21 23 20.1 23 19V5C23 3.9 22.1 3 21 3ZM21 19H3V5H21V19ZM16 6H20V18H16V6ZM9 7L14 12L9 17V13H5V11H9V7Z"
-                                        fill="currentColor" />
+                            <div class="flex items-center justify-center flex-shrink-0 rounded-full shadow-lg hover:shadow-xl bg-white w-10 h-10">
+                                <svg class="text-blue" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                     width="18px" height="18px" viewBox="0 0 612 612" style="enable-background:new 0 0 612 612;" xml:space="preserve">
+                                    <g>
+                                        <g id="_x36__30_">
+                                            <g>
+                                                <path fill="currentColor" d="M331.685,425.378c-7.478,7.479-7.478,19.584,0,27.043c7.479,7.478,19.584,7.478,27.043,0l131.943-131.962
+                                                    c3.979-3.979,5.681-9.276,5.412-14.479c0.269-5.221-1.434-10.499-5.412-14.477L358.728,159.56
+                                                    c-7.459-7.478-19.584-7.478-27.043,0c-7.478,7.478-7.478,19.584,0,27.042l100.272,100.272H19.125C8.568,286.875,0,295.443,0,306
+                                                    c0,10.557,8.568,19.125,19.125,19.125h412.832L331.685,425.378z M535.5,38.25H153c-42.247,0-76.5,34.253-76.5,76.5v76.5h38.25
+                                                    v-76.5c0-21.114,17.117-38.25,38.25-38.25h382.5c21.133,0,38.25,17.136,38.25,38.25v382.5c0,21.114-17.117,38.25-38.25,38.25H153
+                                                    c-21.133,0-38.25-17.117-38.25-38.25v-76.5H76.5v76.5c0,42.247,34.253,76.5,76.5,76.5h382.5c42.247,0,76.5-34.253,76.5-76.5
+                                                    v-382.5C612,72.503,577.747,38.25,535.5,38.25z"/>
+                                            </g>
+                                        </g>
+                                    </g>
                                 </svg>
                             </div>
                         </div>

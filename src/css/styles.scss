@@ -184,9 +184,12 @@ a {
 .top-panel-exit {
   max-width: s(40);
   min-width: s(40);
+  position: absolute;
+  top: .5rem;
+  transform: translateX(-130%) rotateY(0);
 
   &.close {
-    transform: rotate(180deg);
+    transform: translateX(-50%) rotateY(180deg);
   }
 }
 
@@ -196,6 +199,8 @@ a {
 }
 
 .top-panel-tab {
+  position: relative;
+  z-index: 1;
   min-width: s(95);
   box-sizing: border-box;
   position: relative;
@@ -298,7 +303,7 @@ a {
 .connections-fixed-head {
   height: 9.8rem;
   padding-left: 4.6875rem;
-  padding-right: 5.2rem;
+  padding-right: 4.6875rem;
 }
 
 .area {
@@ -1495,5 +1500,24 @@ input[type='search']::-ms-clear {
 .graph-modal {
   &__head {
     box-shadow: 0 10px 15px rgba(115, 115, 115, 0.05);
+  }
+}
+
+.add {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: .0625rem;
+    height: 1.625rem;
+    display: block;
+    background-color: #e0e0e0;
+    left: - s(10);
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 0;
   }
 }
