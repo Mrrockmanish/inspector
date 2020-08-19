@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ru">
+//= templates/head.html
+
+<body class="relative">
+<div class="flex flex-nowrap h-screen">
+    //= templates/left-panel.html
+    <div class="my-list flex flex-col justify-start content-start flex-grow min-w-0">
+        <div class="my-list__head flex flex-col justify-between items-start pl-12 pr-4 pt-6 pb-4">
+            <div class="top-panel-titles flex text-4xl font-bold overflow-hidden">
+                <span class="text-overflow whitespace-no-wrap overflow-hidden min-w-0">Мои списки</span>
+            </div>
+            <div class="flex mt-12">
+                <div class="flex items-center cursor-pointer hover:opacity-75 mr-12">
+                    <div class="inline-flex mr-2">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM11 7V11H7V13H11V17H13V13H17V11H13V7H11ZM4 12C4 16.41 7.59 20 12 20C16.41 20 20 16.41 20 12C20 7.59 16.41 4 12 4C7.59 4 4 7.59 4 12Z" fill="#00599A"></path>
+                        </svg>
+                    </div>
+                    <div class="text-sm text-blue font-semibold">
+                        Добавить список
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="my-list__body bg-f2 pl-12 pr-4 pt-8 pb-5">
+            <div class="my-list__table-container">
+                <form class="flex items-center border-b border-#D5D5D5 cursor-pointer pb-1">
+                    <div class="flex items-start flex-shrink-0 focus:outline-none mr-2">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M14.9649 14.2549H15.7549L20.7449 19.2549L19.2549 20.7449L14.2549 15.7549V14.9649L13.9849 14.6849C12.8449 15.6649 11.3649 16.2549 9.75488 16.2549C6.16488 16.2549 3.25488 13.3449 3.25488 9.75488C3.25488 6.16488 6.16488 3.25488 9.75488 3.25488C13.3449 3.25488 16.2549 6.16488 16.2549 9.75488C16.2549 11.3649 15.6649 12.8449 14.6849 13.9849L14.9649 14.2549ZM5.25488 9.75488C5.25488 12.2449 7.26488 14.2549 9.75488 14.2549C12.2449 14.2549 14.2549 12.2449 14.2549 9.75488C14.2549 7.26488 12.2449 5.25488 9.75488 5.25488C7.26488 5.25488 5.25488 7.26488 5.25488 9.75488Z"
+                                  fill="#DADADA"/>
+                        </svg>
+                    </div>
+                    <input type="text" placeholder="Поиск по разделу «Мои списки»" class="flex flex-grow bg-f2 placeholder-#D5D5D5 font-medium text-sm">
+                </form>
+                <div class="tables text-b9 leading-3 mt-10">
+                    <div class="flex items-end pb-6 px-5 text-xxs border-b border-#D5D5D5 leading-3">
+                        <div class="flex items-end flex-grow -mx-2">
+                            <div class="tables__cell mx-2">
+                                #
+                            </div>
+                            <div class="tables__cell tables__cell_w_36px mx-2">
+                                <!---->
+                            </div>
+                            <div class="tables__cell justify-center w-full flex-grow mx-2" style="flex-shrink: 1">
+                                Название
+                            </div>
+                            <div class="tables__cell tables__cell_w_163px justify-center flex-grow mx-2">
+                                Количество объектов в списке
+                            </div>
+                            <div class="tables__cell tables__cell_w_50px justify-center flex-grow mx-2">
+                                Ред.
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="my-lists__footer bg-f2 flex-grow pl-12 pr-4 pb-5 overflow-scroll">
+            <div class="my-list__table-container">
+                <div class="tables text-65 text-xs">
+                    <div class="flex px-5 py-4 border-b border-#D5D5D5 leading-3">
+                        <div class="flex items-center flex-grow -mx-2">
+                            <div class="tables__cell font-semibold mx-2">
+                                1
+                            </div>
+                            <div class="tables__cell tables__cell_w_36px mx-2">
+                                <div class="flex items-center justify-center bg-green rounded-full" style="width: 2.25rem; height: 2.25rem">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2C8 2 4 2.5 4 6V15.5C4 16.4283 4.36875 17.3185 5.02513 17.9749C5.6815 18.6313 6.57174 19 7.5 19L6 20.5V21H8.23L10.23 19H14L16 21H18V20.5L16.5 19C17.4283 19 18.3185 18.6313 18.9749 17.9749C19.6313 17.3185 20 16.4283 20 15.5V6C20 2.5 16.42 2 12 2ZM7.5 17C7.10218 17 6.72064 16.842 6.43934 16.5607C6.15804 16.2794 6 15.8978 6 15.5C6 15.1022 6.15804 14.7206 6.43934 14.4393C6.72064 14.158 7.10218 14 7.5 14C7.89782 14 8.27936 14.158 8.56066 14.4393C8.84196 14.7206 9 15.1022 9 15.5C9 15.8978 8.84196 16.2794 8.56066 16.5607C8.27936 16.842 7.89782 17 7.5 17ZM11 10H6V6H11V10ZM13 10V6H18V10H13ZM16.5 17C16.1022 17 15.7206 16.842 15.4393 16.5607C15.158 16.2794 15 15.8978 15 15.5C15 15.1022 15.158 14.7206 15.4393 14.4393C15.7206 14.158 16.1022 14 16.5 14C16.8978 14 17.2794 14.158 17.5607 14.4393C17.842 14.7206 18 15.1022 18 15.5C18 15.8978 17.842 16.2794 17.5607 16.5607C17.2794 16.842 16.8978 17 16.5 17Z"
+                                              fill="white"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="tables__cell w-full flex-grow mx-2" style="flex-shrink: 1">
+                                <a href="#" title="Трамвайное депо №1"
+                                   class="tooltip font-semibold text-sm text-blue leading-tight hover:opacity-75 hover:underline">
+                                    Трамвайное депо №1
+                                </a>
+                            </div>
+                            <div class="tables__cell tables__cell_w_163px justify-center flex-grow mx-2">
+                                6
+                            </div>
+                            <div class="tables__cell tables__cell_w_50px justify-center flex-grow mx-2">
+                                <div class="flex w-full justify-between items-center">
+                                    <span class="tooltip text-b9 hover:text-blue transition duration-300 inline-flex cursor-pointer tooltipstered" title="Редактировать">
+                                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15.5325 5.28188C15.825 4.98938 15.825 4.50188 15.5325 4.22438L13.7775 2.46938C13.5 2.17687 13.0125 2.17687 12.72 2.46938L11.34 3.84188L14.1525 6.65438L15.5325 5.28188ZM2.25 12.9394V15.7519H5.0625L13.3575 7.44938L10.545 4.63688L2.25 12.9394Z"
+                                                  fill="currentColor"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="tooltip text-b9 hover:text-blue transition duration-300 inline-flex cursor-pointer tooltipstered" title="Удалить">
+                                        <svg class="flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M15.5 4H19V6H5V4H8.5L9.5 3H14.5L15.5 4ZM8 21C6.9 21 6 20.1 6 19V7H18V19C18 20.1 17.1 21 16 21H8Z"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex px-5 py-4 border-b border-#D5D5D5 leading-3">
+                        <div class="flex items-center flex-grow -mx-2">
+                            <div class="tables__cell font-semibold mx-2">
+                                1
+                            </div>
+                            <div class="tables__cell tables__cell_w_36px mx-2">
+                                <div class="flex items-center justify-center bg-eb5 rounded-full" style="width: 2.25rem; height: 2.25rem">
+                                    <svg width="24" height="24" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2 4H14V12H2V4ZM8 6C8.53043 6 9.03914 6.21071 9.41421 6.58579C9.78929 6.96086 10 7.46957 10 8C10 8.53043 9.78929 9.03914 9.41421 9.41421C9.03914 9.78929 8.53043 10 8 10C7.46957 10 6.96086 9.78929 6.58579 9.41421C6.21071 9.03914 6 8.53043 6 8C6 7.46957 6.21071 6.96086 6.58579 6.58579C6.96086 6.21071 7.46957 6 8 6ZM4.66667 5.33333C4.66667 5.68696 4.52619 6.02609 4.27614 6.27614C4.02609 6.52619 3.68696 6.66667 3.33333 6.66667V9.33333C3.68696 9.33333 4.02609 9.47381 4.27614 9.72386C4.52619 9.97391 4.66667 10.313 4.66667 10.6667H11.3333C11.3333 10.313 11.4738 9.97391 11.7239 9.72386C11.9739 9.47381 12.313 9.33333 12.6667 9.33333V6.66667C12.313 6.66667 11.9739 6.52619 11.7239 6.27614C11.4738 6.02609 11.3333 5.68696 11.3333 5.33333H4.66667Z"
+                                              fill="white"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="tables__cell w-full flex-grow mx-2" style="flex-shrink: 1">
+                                <a href="#" title="Щербаков Станислав Виктор - АНАЛИЗ АФФИЛИРОВАННОСТИ"
+                                   class="tooltip font-semibold text-sm text-blue leading-tight hover:opacity-75 hover:underline">
+                                    Щербаков Станислав Виктор - АНАЛИЗ АФФИЛИРОВАННОСТИ профилированности
+                                </a>
+                            </div>
+                            <div class="tables__cell tables__cell_w_163px justify-center flex-grow mx-2">
+                                6
+                            </div>
+                            <div class="tables__cell tables__cell_w_50px justify-center flex-grow mx-2">
+                                <div class="flex w-full justify-between items-center">
+                                    <span class="tooltip text-b9 hover:text-blue transition duration-300 inline-flex cursor-pointer tooltipstered" title="Редактировать">
+                                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15.5325 5.28188C15.825 4.98938 15.825 4.50188 15.5325 4.22438L13.7775 2.46938C13.5 2.17687 13.0125 2.17687 12.72 2.46938L11.34 3.84188L14.1525 6.65438L15.5325 5.28188ZM2.25 12.9394V15.7519H5.0625L13.3575 7.44938L10.545 4.63688L2.25 12.9394Z"
+                                                  fill="currentColor"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="tooltip text-b9 hover:text-blue transition duration-300 inline-flex cursor-pointer tooltipstered" title="Удалить">
+                                        <svg class="flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M15.5 4H19V6H5V4H8.5L9.5 3H14.5L15.5 4ZM8 21C6.9 21 6 20.1 6 19V7H18V19C18 20.1 17.1 21 16 21H8Z"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex px-5 py-4 border-b border-#D5D5D5 leading-3">
+                        <div class="flex items-center flex-grow -mx-2">
+                            <div class="tables__cell font-semibold mx-2">
+                                1
+                            </div>
+                            <div class="tables__cell tables__cell_w_36px mx-2">
+                                <div class="flex items-center justify-center bg-blue rounded-full" style="width: 2.25rem; height: 2.25rem">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21 19V20H3V19L5 17V11C5 7.9 7.03 5.17 10 4.29C10 4.19 10 4.1 10 4C10 3.46957 10.2107 2.96086 10.5858 2.58579C10.9609 2.21071 11.4696 2 12 2C12.5304 2 13.0391 2.21071 13.4142 2.58579C13.7893 2.96086 14 3.46957 14 4C14 4.1 14 4.19 14 4.29C16.97 5.17 19 7.9 19 11V17L21 19ZM14 21C14 21.5304 13.7893 22.0391 13.4142 22.4142C13.0391 22.7893 12.5304 23 12 23C11.4696 23 10.9609 22.7893 10.5858 22.4142C10.2107 22.0391 10 21.5304 10 21"
+                                              fill="white"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="tables__cell w-full flex-grow mx-2" style="flex-shrink: 1">
+                                <a href="#" title="Щербаков Станислав Виктор - АНАЛИЗ АФФИЛИРОВАННОСТИ"
+                                   class="tooltip font-semibold text-sm text-blue leading-tight hover:opacity-75 hover:underline">
+                                    Будильники и колокола оптом
+                                </a>
+                            </div>
+                            <div class="tables__cell tables__cell_w_163px justify-center flex-grow mx-2">
+                                6
+                            </div>
+                            <div class="tables__cell tables__cell_w_50px justify-center flex-grow mx-2">
+                                <div class="flex w-full justify-between items-center">
+                                    <span class="tooltip text-b9 hover:text-blue transition duration-300 inline-flex cursor-pointer tooltipstered" title="Редактировать">
+                                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15.5325 5.28188C15.825 4.98938 15.825 4.50188 15.5325 4.22438L13.7775 2.46938C13.5 2.17687 13.0125 2.17687 12.72 2.46938L11.34 3.84188L14.1525 6.65438L15.5325 5.28188ZM2.25 12.9394V15.7519H5.0625L13.3575 7.44938L10.545 4.63688L2.25 12.9394Z"
+                                                  fill="currentColor"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="tooltip text-b9 hover:text-blue transition duration-300 inline-flex cursor-pointer tooltipstered" title="Удалить">
+                                        <svg class="flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M15.5 4H19V6H5V4H8.5L9.5 3H14.5L15.5 4ZM8 21C6.9 21 6 20.1 6 19V7H18V19C18 20.1 17.1 21 16 21H8Z"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex px-5 py-4 border-b border-#D5D5D5 leading-3">
+                        <div class="flex items-center flex-grow -mx-2">
+                            <div class="tables__cell font-semibold mx-2">
+                                1
+                            </div>
+                            <div class="tables__cell tables__cell_w_36px mx-2">
+                                <div class="flex items-center justify-center bg-green rounded-full" style="width: 2.25rem; height: 2.25rem">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2C8 2 4 2.5 4 6V15.5C4 16.4283 4.36875 17.3185 5.02513 17.9749C5.6815 18.6313 6.57174 19 7.5 19L6 20.5V21H8.23L10.23 19H14L16 21H18V20.5L16.5 19C17.4283 19 18.3185 18.6313 18.9749 17.9749C19.6313 17.3185 20 16.4283 20 15.5V6C20 2.5 16.42 2 12 2ZM7.5 17C7.10218 17 6.72064 16.842 6.43934 16.5607C6.15804 16.2794 6 15.8978 6 15.5C6 15.1022 6.15804 14.7206 6.43934 14.4393C6.72064 14.158 7.10218 14 7.5 14C7.89782 14 8.27936 14.158 8.56066 14.4393C8.84196 14.7206 9 15.1022 9 15.5C9 15.8978 8.84196 16.2794 8.56066 16.5607C8.27936 16.842 7.89782 17 7.5 17ZM11 10H6V6H11V10ZM13 10V6H18V10H13ZM16.5 17C16.1022 17 15.7206 16.842 15.4393 16.5607C15.158 16.2794 15 15.8978 15 15.5C15 15.1022 15.158 14.7206 15.4393 14.4393C15.7206 14.158 16.1022 14 16.5 14C16.8978 14 17.2794 14.158 17.5607 14.4393C17.842 14.7206 18 15.1022 18 15.5C18 15.8978 17.842 16.2794 17.5607 16.5607C17.2794 16.842 16.8978 17 16.5 17Z"
+                                              fill="white"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="tables__cell w-full flex-grow mx-2" style="flex-shrink: 1">
+                                <a href="#" title="Трамвайное депо №1"
+                                   class="tooltip font-semibold text-sm text-blue leading-tight hover:opacity-75 hover:underline">
+                                    Трамвайное депо №1
+                                </a>
+                            </div>
+                            <div class="tables__cell tables__cell_w_163px justify-center flex-grow mx-2">
+                                6
+                            </div>
+                            <div class="tables__cell tables__cell_w_50px justify-center flex-grow mx-2">
+                                <div class="flex w-full justify-between items-center">
+                                    <span class="tooltip text-b9 hover:text-blue transition duration-300 inline-flex cursor-pointer tooltipstered" title="Редактировать">
+                                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15.5325 5.28188C15.825 4.98938 15.825 4.50188 15.5325 4.22438L13.7775 2.46938C13.5 2.17687 13.0125 2.17687 12.72 2.46938L11.34 3.84188L14.1525 6.65438L15.5325 5.28188ZM2.25 12.9394V15.7519H5.0625L13.3575 7.44938L10.545 4.63688L2.25 12.9394Z"
+                                                  fill="currentColor"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="tooltip text-b9 hover:text-blue transition duration-300 inline-flex cursor-pointer tooltipstered" title="Удалить">
+                                        <svg class="flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M15.5 4H19V6H5V4H8.5L9.5 3H14.5L15.5 4ZM8 21C6.9 21 6 20.1 6 19V7H18V19C18 20.1 17.1 21 16 21H8Z"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex px-5 py-4 border-b border-#D5D5D5 leading-3">
+                        <div class="flex items-center flex-grow -mx-2">
+                            <div class="tables__cell font-semibold mx-2">
+                                1
+                            </div>
+                            <div class="tables__cell tables__cell_w_36px mx-2">
+                                <div class="flex items-center justify-center bg-eb5 rounded-full" style="width: 2.25rem; height: 2.25rem">
+                                    <svg width="24" height="24" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2 4H14V12H2V4ZM8 6C8.53043 6 9.03914 6.21071 9.41421 6.58579C9.78929 6.96086 10 7.46957 10 8C10 8.53043 9.78929 9.03914 9.41421 9.41421C9.03914 9.78929 8.53043 10 8 10C7.46957 10 6.96086 9.78929 6.58579 9.41421C6.21071 9.03914 6 8.53043 6 8C6 7.46957 6.21071 6.96086 6.58579 6.58579C6.96086 6.21071 7.46957 6 8 6ZM4.66667 5.33333C4.66667 5.68696 4.52619 6.02609 4.27614 6.27614C4.02609 6.52619 3.68696 6.66667 3.33333 6.66667V9.33333C3.68696 9.33333 4.02609 9.47381 4.27614 9.72386C4.52619 9.97391 4.66667 10.313 4.66667 10.6667H11.3333C11.3333 10.313 11.4738 9.97391 11.7239 9.72386C11.9739 9.47381 12.313 9.33333 12.6667 9.33333V6.66667C12.313 6.66667 11.9739 6.52619 11.7239 6.27614C11.4738 6.02609 11.3333 5.68696 11.3333 5.33333H4.66667Z"
+                                              fill="white"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="tables__cell w-full flex-grow mx-2" style="flex-shrink: 1">
+                                <a href="#" title="Щербаков Станислав Виктор - АНАЛИЗ АФФИЛИРОВАННОСТИ"
+                                   class="tooltip font-semibold text-sm text-blue leading-tight hover:opacity-75 hover:underline">
+                                    Щербаков Станислав Виктор - АНАЛИЗ АФФИЛИРОВАННОСТИ профилированности
+                                </a>
+                            </div>
+                            <div class="tables__cell tables__cell_w_163px justify-center flex-grow mx-2">
+                                6
+                            </div>
+                            <div class="tables__cell tables__cell_w_50px justify-center flex-grow mx-2">
+                                <div class="flex w-full justify-between items-center">
+                                    <span class="tooltip text-b9 hover:text-blue transition duration-300 inline-flex cursor-pointer tooltipstered" title="Редактировать">
+                                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15.5325 5.28188C15.825 4.98938 15.825 4.50188 15.5325 4.22438L13.7775 2.46938C13.5 2.17687 13.0125 2.17687 12.72 2.46938L11.34 3.84188L14.1525 6.65438L15.5325 5.28188ZM2.25 12.9394V15.7519H5.0625L13.3575 7.44938L10.545 4.63688L2.25 12.9394Z"
+                                                  fill="currentColor"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="tooltip text-b9 hover:text-blue transition duration-300 inline-flex cursor-pointer tooltipstered" title="Удалить">
+                                        <svg class="flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M15.5 4H19V6H5V4H8.5L9.5 3H14.5L15.5 4ZM8 21C6.9 21 6 20.1 6 19V7H18V19C18 20.1 17.1 21 16 21H8Z"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex px-5 py-4 border-b border-#D5D5D5 leading-3">
+                        <div class="flex items-center flex-grow -mx-2">
+                            <div class="tables__cell font-semibold mx-2">
+                                1
+                            </div>
+                            <div class="tables__cell tables__cell_w_36px mx-2">
+                                <div class="flex items-center justify-center bg-blue rounded-full" style="width: 2.25rem; height: 2.25rem">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21 19V20H3V19L5 17V11C5 7.9 7.03 5.17 10 4.29C10 4.19 10 4.1 10 4C10 3.46957 10.2107 2.96086 10.5858 2.58579C10.9609 2.21071 11.4696 2 12 2C12.5304 2 13.0391 2.21071 13.4142 2.58579C13.7893 2.96086 14 3.46957 14 4C14 4.1 14 4.19 14 4.29C16.97 5.17 19 7.9 19 11V17L21 19ZM14 21C14 21.5304 13.7893 22.0391 13.4142 22.4142C13.0391 22.7893 12.5304 23 12 23C11.4696 23 10.9609 22.7893 10.5858 22.4142C10.2107 22.0391 10 21.5304 10 21"
+                                              fill="white"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="tables__cell w-full flex-grow mx-2" style="flex-shrink: 1">
+                                <a href="#" title="Щербаков Станислав Виктор - АНАЛИЗ АФФИЛИРОВАННОСТИ"
+                                   class="tooltip font-semibold text-sm text-blue leading-tight hover:opacity-75 hover:underline">
+                                    Будильники и колокола оптом
+                                </a>
+                            </div>
+                            <div class="tables__cell tables__cell_w_163px justify-center flex-grow mx-2">
+                                6
+                            </div>
+                            <div class="tables__cell tables__cell_w_50px justify-center flex-grow mx-2">
+                                <div class="flex w-full justify-between items-center">
+                                    <span class="tooltip text-b9 hover:text-blue transition duration-300 inline-flex cursor-pointer tooltipstered" title="Редактировать">
+                                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15.5325 5.28188C15.825 4.98938 15.825 4.50188 15.5325 4.22438L13.7775 2.46938C13.5 2.17687 13.0125 2.17687 12.72 2.46938L11.34 3.84188L14.1525 6.65438L15.5325 5.28188ZM2.25 12.9394V15.7519H5.0625L13.3575 7.44938L10.545 4.63688L2.25 12.9394Z"
+                                                  fill="currentColor"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="tooltip text-b9 hover:text-blue transition duration-300 inline-flex cursor-pointer tooltipstered" title="Удалить">
+                                        <svg class="flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M15.5 4H19V6H5V4H8.5L9.5 3H14.5L15.5 4ZM8 21C6.9 21 6 20.1 6 19V7H18V19C18 20.1 17.1 21 16 21H8Z"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex px-5 py-4 border-b border-#D5D5D5 leading-3">
+                        <div class="flex items-center flex-grow -mx-2">
+                            <div class="tables__cell font-semibold mx-2">
+                                1
+                            </div>
+                            <div class="tables__cell tables__cell_w_36px mx-2">
+                                <div class="flex items-center justify-center bg-green rounded-full" style="width: 2.25rem; height: 2.25rem">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2C8 2 4 2.5 4 6V15.5C4 16.4283 4.36875 17.3185 5.02513 17.9749C5.6815 18.6313 6.57174 19 7.5 19L6 20.5V21H8.23L10.23 19H14L16 21H18V20.5L16.5 19C17.4283 19 18.3185 18.6313 18.9749 17.9749C19.6313 17.3185 20 16.4283 20 15.5V6C20 2.5 16.42 2 12 2ZM7.5 17C7.10218 17 6.72064 16.842 6.43934 16.5607C6.15804 16.2794 6 15.8978 6 15.5C6 15.1022 6.15804 14.7206 6.43934 14.4393C6.72064 14.158 7.10218 14 7.5 14C7.89782 14 8.27936 14.158 8.56066 14.4393C8.84196 14.7206 9 15.1022 9 15.5C9 15.8978 8.84196 16.2794 8.56066 16.5607C8.27936 16.842 7.89782 17 7.5 17ZM11 10H6V6H11V10ZM13 10V6H18V10H13ZM16.5 17C16.1022 17 15.7206 16.842 15.4393 16.5607C15.158 16.2794 15 15.8978 15 15.5C15 15.1022 15.158 14.7206 15.4393 14.4393C15.7206 14.158 16.1022 14 16.5 14C16.8978 14 17.2794 14.158 17.5607 14.4393C17.842 14.7206 18 15.1022 18 15.5C18 15.8978 17.842 16.2794 17.5607 16.5607C17.2794 16.842 16.8978 17 16.5 17Z"
+                                              fill="white"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="tables__cell w-full flex-grow mx-2" style="flex-shrink: 1">
+                                <a href="#" title="Трамвайное депо №1"
+                                   class="tooltip font-semibold text-sm text-blue leading-tight hover:opacity-75 hover:underline">
+                                    Трамвайное депо №1
+                                </a>
+                            </div>
+                            <div class="tables__cell tables__cell_w_163px justify-center flex-grow mx-2">
+                                6
+                            </div>
+                            <div class="tables__cell tables__cell_w_50px justify-center flex-grow mx-2">
+                                <div class="flex w-full justify-between items-center">
+                                    <span class="tooltip text-b9 hover:text-blue transition duration-300 inline-flex cursor-pointer tooltipstered" title="Редактировать">
+                                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15.5325 5.28188C15.825 4.98938 15.825 4.50188 15.5325 4.22438L13.7775 2.46938C13.5 2.17687 13.0125 2.17687 12.72 2.46938L11.34 3.84188L14.1525 6.65438L15.5325 5.28188ZM2.25 12.9394V15.7519H5.0625L13.3575 7.44938L10.545 4.63688L2.25 12.9394Z"
+                                                  fill="currentColor"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="tooltip text-b9 hover:text-blue transition duration-300 inline-flex cursor-pointer tooltipstered" title="Удалить">
+                                        <svg class="flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M15.5 4H19V6H5V4H8.5L9.5 3H14.5L15.5 4ZM8 21C6.9 21 6 20.1 6 19V7H18V19C18 20.1 17.1 21 16 21H8Z"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex px-5 py-4 border-b border-#D5D5D5 leading-3">
+                        <div class="flex items-center flex-grow -mx-2">
+                            <div class="tables__cell font-semibold mx-2">
+                                1
+                            </div>
+                            <div class="tables__cell tables__cell_w_36px mx-2">
+                                <div class="flex items-center justify-center bg-eb5 rounded-full" style="width: 2.25rem; height: 2.25rem">
+                                    <svg width="24" height="24" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2 4H14V12H2V4ZM8 6C8.53043 6 9.03914 6.21071 9.41421 6.58579C9.78929 6.96086 10 7.46957 10 8C10 8.53043 9.78929 9.03914 9.41421 9.41421C9.03914 9.78929 8.53043 10 8 10C7.46957 10 6.96086 9.78929 6.58579 9.41421C6.21071 9.03914 6 8.53043 6 8C6 7.46957 6.21071 6.96086 6.58579 6.58579C6.96086 6.21071 7.46957 6 8 6ZM4.66667 5.33333C4.66667 5.68696 4.52619 6.02609 4.27614 6.27614C4.02609 6.52619 3.68696 6.66667 3.33333 6.66667V9.33333C3.68696 9.33333 4.02609 9.47381 4.27614 9.72386C4.52619 9.97391 4.66667 10.313 4.66667 10.6667H11.3333C11.3333 10.313 11.4738 9.97391 11.7239 9.72386C11.9739 9.47381 12.313 9.33333 12.6667 9.33333V6.66667C12.313 6.66667 11.9739 6.52619 11.7239 6.27614C11.4738 6.02609 11.3333 5.68696 11.3333 5.33333H4.66667Z"
+                                              fill="white"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="tables__cell w-full flex-grow mx-2" style="flex-shrink: 1">
+                                <a href="#" title="Щербаков Станислав Виктор - АНАЛИЗ АФФИЛИРОВАННОСТИ"
+                                   class="tooltip font-semibold text-sm text-blue leading-tight hover:opacity-75 hover:underline">
+                                    Щербаков Станислав Виктор - АНАЛИЗ АФФИЛИРОВАННОСТИ профилированности
+                                </a>
+                            </div>
+                            <div class="tables__cell tables__cell_w_163px justify-center flex-grow mx-2">
+                                6
+                            </div>
+                            <div class="tables__cell tables__cell_w_50px justify-center flex-grow mx-2">
+                                <div class="flex w-full justify-between items-center">
+                                    <span class="tooltip text-b9 hover:text-blue transition duration-300 inline-flex cursor-pointer tooltipstered" title="Редактировать">
+                                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15.5325 5.28188C15.825 4.98938 15.825 4.50188 15.5325 4.22438L13.7775 2.46938C13.5 2.17687 13.0125 2.17687 12.72 2.46938L11.34 3.84188L14.1525 6.65438L15.5325 5.28188ZM2.25 12.9394V15.7519H5.0625L13.3575 7.44938L10.545 4.63688L2.25 12.9394Z"
+                                                  fill="currentColor"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="tooltip text-b9 hover:text-blue transition duration-300 inline-flex cursor-pointer tooltipstered" title="Удалить">
+                                        <svg class="flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M15.5 4H19V6H5V4H8.5L9.5 3H14.5L15.5 4ZM8 21C6.9 21 6 20.1 6 19V7H18V19C18 20.1 17.1 21 16 21H8Z"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex px-5 py-4 border-b border-#D5D5D5 leading-3">
+                        <div class="flex items-center flex-grow -mx-2">
+                            <div class="tables__cell font-semibold mx-2">
+                                1
+                            </div>
+                            <div class="tables__cell tables__cell_w_36px mx-2">
+                                <div class="flex items-center justify-center bg-blue rounded-full" style="width: 2.25rem; height: 2.25rem">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21 19V20H3V19L5 17V11C5 7.9 7.03 5.17 10 4.29C10 4.19 10 4.1 10 4C10 3.46957 10.2107 2.96086 10.5858 2.58579C10.9609 2.21071 11.4696 2 12 2C12.5304 2 13.0391 2.21071 13.4142 2.58579C13.7893 2.96086 14 3.46957 14 4C14 4.1 14 4.19 14 4.29C16.97 5.17 19 7.9 19 11V17L21 19ZM14 21C14 21.5304 13.7893 22.0391 13.4142 22.4142C13.0391 22.7893 12.5304 23 12 23C11.4696 23 10.9609 22.7893 10.5858 22.4142C10.2107 22.0391 10 21.5304 10 21"
+                                              fill="white"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="tables__cell w-full flex-grow mx-2" style="flex-shrink: 1">
+                                <a href="#" title="Щербаков Станислав Виктор - АНАЛИЗ АФФИЛИРОВАННОСТИ"
+                                   class="tooltip font-semibold text-sm text-blue leading-tight hover:opacity-75 hover:underline">
+                                    Будильники и колокола оптом
+                                </a>
+                            </div>
+                            <div class="tables__cell tables__cell_w_163px justify-center flex-grow mx-2">
+                                6
+                            </div>
+                            <div class="tables__cell tables__cell_w_50px justify-center flex-grow mx-2">
+                                <div class="flex w-full justify-between items-center">
+                                    <span class="tooltip text-b9 hover:text-blue transition duration-300 inline-flex cursor-pointer tooltipstered" title="Редактировать">
+                                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15.5325 5.28188C15.825 4.98938 15.825 4.50188 15.5325 4.22438L13.7775 2.46938C13.5 2.17687 13.0125 2.17687 12.72 2.46938L11.34 3.84188L14.1525 6.65438L15.5325 5.28188ZM2.25 12.9394V15.7519H5.0625L13.3575 7.44938L10.545 4.63688L2.25 12.9394Z"
+                                                  fill="currentColor"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="tooltip text-b9 hover:text-blue transition duration-300 inline-flex cursor-pointer tooltipstered" title="Удалить">
+                                        <svg class="flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M15.5 4H19V6H5V4H8.5L9.5 3H14.5L15.5 4ZM8 21C6.9 21 6 20.1 6 19V7H18V19C18 20.1 17.1 21 16 21H8Z"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+//= templates/scripts.html
+</body>
+
+</html>

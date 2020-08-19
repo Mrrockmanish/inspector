@@ -68,6 +68,7 @@ module.exports = {
       '#BDBDBD': '#BDBDBD',
       '#E0E0E0': '#E0E0E0',
       '#F2F2F2': '#F2F2F2',
+      '#D5D5D5': '#D5D5D5',
 
       '#333333': '#333333',
       '#4F4F4F': '#4F4F4F',
