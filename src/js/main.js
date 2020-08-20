@@ -77,6 +77,11 @@ $(document).ready(function () {
   $('#graphModal').arcticmodal();
 
 
+  // вызов модалки добавления списка
+  $('.add-new-list-button').on('click', function (){
+    $('#addNewListModal').arcticmodal();
+  });
+
   // подсказки
 
   $('.tooltip').tooltipster({
@@ -166,33 +171,33 @@ $(document).ready(function () {
   connectionsChangeHeaders();
 
   // расчет длины и рисование стрелок между объектами связей
-  $('.connections-circle').each(function(index){
-    const circle = $(this);
-
-    const additionDistance = 32;
-    const circleLeftDistanceLeft = circle.offset().left;
-    const circleLeftDistanceTop = circle.offset().top;
-
-    const prevSquare = circle.parent().prev().prev();
-    const prevSquareLeftDistance = prevSquare.offset().left;
-    const prevSquareTopDistance = prevSquare.offset().top;
-
-    const nextSquare = circle.parent().next().next();
-    const nextSquareLeftDistance = nextSquare.offset().left;
-    const nextSquareTopDistance =  nextSquare.offset().top;
-
-    const arrowLeftWidth = circleLeftDistanceLeft - prevSquareLeftDistance - prevSquare.outerWidth() + additionDistance;
-    const arrowTopLeftHeight = circleLeftDistanceTop - prevSquareTopDistance;
-
-    const arrowRightWidth = nextSquareLeftDistance - circleLeftDistanceLeft - circle.outerWidth() + additionDistance;
-    const arrowTopRightHeight = circleLeftDistanceTop - nextSquareTopDistance;
-
-    circle.find('.circle-arrow-left').css({'width': arrowLeftWidth});
-    circle.find('.circle-arrow-left__vertical').css({'height': arrowTopLeftHeight});
-
-    circle.find('.circle-arrow-right').css({'width': arrowRightWidth});
-    circle.find('.circle-arrow-right__vertical').css({'height': arrowTopRightHeight});
-  });
+  // $('.connections-circle').each(function(index){
+  //   const circle = $(this);
+  //
+  //   const additionDistance = 32;
+  //   const circleLeftDistanceLeft = circle.offset().left;
+  //   const circleLeftDistanceTop = circle.offset().top;
+  //
+  //   const prevSquare = circle.parent().prev().prev();
+  //   const prevSquareLeftDistance = prevSquare.offset().left;
+  //   const prevSquareTopDistance = prevSquare.offset().top;
+  //
+  //   const nextSquare = circle.parent().next().next();
+  //   const nextSquareLeftDistance = nextSquare.offset().left;
+  //   const nextSquareTopDistance =  nextSquare.offset().top;
+  //
+  //   const arrowLeftWidth = circleLeftDistanceLeft - prevSquareLeftDistance - prevSquare.outerWidth() + additionDistance;
+  //   const arrowTopLeftHeight = circleLeftDistanceTop - prevSquareTopDistance;
+  //
+  //   const arrowRightWidth = nextSquareLeftDistance - circleLeftDistanceLeft - circle.outerWidth() + additionDistance;
+  //   const arrowTopRightHeight = circleLeftDistanceTop - nextSquareTopDistance;
+  //
+  //   circle.find('.circle-arrow-left').css({'width': arrowLeftWidth});
+  //   circle.find('.circle-arrow-left__vertical').css({'height': arrowTopLeftHeight});
+  //
+  //   circle.find('.circle-arrow-right').css({'width': arrowRightWidth});
+  //   circle.find('.circle-arrow-right__vertical').css({'height': arrowTopRightHeight});
+  // });
 
   const switchConnectionsFilters = () => {
     $('.lists-block__connections-filters').on('change', '[data-filter]', function () {
