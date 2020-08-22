@@ -571,7 +571,7 @@
             <div class="flex w-full self-start">
                 <div class="top-panel top-panel_big w-full bg-white inline-flex">
                     <div class="flex h-full w-full flex-stretch items-center">
-                        <div class="top-panel-titles flex mx-auto text-4xl font-bold px-6 overflow-hidden">
+                        <div class="top-panel-titles flex mr-auto text-4xl font-bold px-6 overflow-hidden">
                             <span class="text-overflow whitespace-no-wrap overflow-hidden min-w-0">Сохранённые</span>
                         </div>
                     </div>
@@ -604,7 +604,7 @@
                         <div class="inline-flex justify-end px-4 text-xxs text-24021 w-1/2">
                             <div class="flex flex-col items-end flex-wrap -mx-3 flex-shrink-0">
                                 <label class="flex check-controls items-center py-2 px-3 cursor-pointer">
-                                    <span class="select-none inline-flex justify-end w-40 mr-2">Произвольное исследование</span>
+                                    <span class="select-none inline-flex justify-end w-40 mr-2">Произвольное</span>
                                     <input v-model="saved.filters['0']" type="checkbox" class="check-controls__checkbox hidden"/>
                                     <span
                                             class="check-controls__check-custom inline-flex border border-b9"></span>
@@ -646,7 +646,7 @@
                                 <div class="tables__cell tables__cell_w_27per max-w-full flex-grow inline-flex items-end flex-shrink-0 px-4">
                                     Название
                                 </div>
-                                <div class="tables__cell tables__cell_w_210px tab inline-flex flex-shrink-0 px-4">
+                                <div class="tables__cell tables__cell_w_130px tab inline-flex flex-shrink-0 px-4">
                                     Тип исследования
                                 </div>
                                 <div class="tables__cell tables__cell_w_215px inline-flex items-end leading-3 px-4">
@@ -798,10 +798,10 @@
                                             {{item.name}}
                                         </div>
                                     </div>
-                                    <div class="pointer-events-none tables__cell tables__cell_w_210px tab inline-flex flex-shrink-0 px-4">
+                                    <div class="pointer-events-none tables__cell tables__cell_w_130px tab inline-flex flex-shrink-0 px-4">
                                         <div v-if="item.type == 0" class="inline-flex whitespace-no-wrap text-blue-4 py-1 h-6 px-3 border leading-3 border-light-blue items-center justify-center"
                                              style="border-radius: 12px;">
-                                            Произвольное исследование
+                                            Произвольное
                                         </div>
                                         <div v-if="item.type == 1" class="inline-flex whitespace-no-wrap text-purple py-1 h-6 px-3 border leading-3 border-purple items-center justify-center"
                                              style="border-radius: 12px;">
@@ -866,7 +866,7 @@
             <div class="flex flex-col w-full self-start">
                 <div class="top-panel top-panel_big w-full bg-white inline-flex">
                     <div class="flex h-full w-full flex-stretch items-center">
-                        <div class="top-panel-titles flex mx-auto text-4xl font-bold px-6 overflow-hidden" style="padding-left: 1.25rem; padding-right: 1.75rem">
+                        <div class="top-panel-titles flex mr-auto text-4xl font-bold px-6 overflow-hidden" style="padding-left: 1.25rem; padding-right: 1.75rem">
                             <span class="text-overflow whitespace-no-wrap overflow-hidden min-w-0">Бизнес-справка</span>
                         </div>
                     </div>
@@ -1020,7 +1020,7 @@
             <div class="flex w-full self-start">
                 <div class="top-panel top-panel_big w-full bg-white inline-flex">
                     <div class="flex h-full w-full flex-stretch items-center">
-                        <div class="top-panel-titles flex mx-auto text-4xl font-bold px-6 overflow-hidden">
+                        <div class="top-panel-titles flex mr-auto text-4xl font-bold px-6 overflow-hidden">
                             <span class="text-overflow whitespace-no-wrap overflow-hidden min-w-0">Мои списки</span>
                         </div>
                     </div>
@@ -1394,7 +1394,7 @@
                                                         </div>
                                                         <div class="inline-flex pl-2">
                                                             <span style="margin-left: -23px; opacity:0.5" v-if="modals.add_tab.research_type == -1">Выберите тип исследования</span>
-                                                            <span v-if="modals.add_tab.research_type == 0">Произвольное исследование</span>
+                                                            <span v-if="modals.add_tab.research_type == 0">Произвольное</span>
                                                             <span v-if="modals.add_tab.research_type == 1">Связи</span>
                                                             <span v-if="modals.add_tab.research_type == 2">Списки</span>
                                                         </div>
@@ -1419,7 +1419,7 @@
                                                                 </svg>
                                                             </div>
                                                             <div class="inline-flex pl-2">
-                                                                Произвольное исследование
+                                                                Произвольное
                                                             </div>
                                                         </div>
 
@@ -1722,7 +1722,7 @@
                                                             </svg>
                                                         </div>
                                                         <div class="inline-flex pl-2">
-                                                            <span v-if="modals.edit_saved.type == 0">Произвольное исследование</span>
+                                                            <span v-if="modals.edit_saved.type == 0">Произвольное</span>
                                                             <span v-if="modals.edit_saved.type == 1">Связи</span>
                                                             <span v-if="modals.edit_saved.type == 2">Списки</span>
                                                         </div>
@@ -3032,7 +3032,7 @@
         <div class="flex flex-nowrap w-full">
 
             <div class="center-sector items-start inline-flex flex-wrap flex-grow min-w-0 overflow-hidden">
-                <div  class="connections-fixed-head bg-f2 w-full overflow-scroll">
+                <div  class="connections-fixed-head bg-f2 w-full">
                     <!-- кнопки в серой контентной части слева -->
                     <div class="area-left-tools text-blue flex flex-col h-full justify-start absolute z-50">
                         <div @click="$emit('stop_visualize')"

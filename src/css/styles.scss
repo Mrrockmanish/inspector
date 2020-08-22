@@ -145,6 +145,25 @@ a {
     height: s(120);
   }
 
+  .add {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: .0625rem;
+      height: 1.625rem;
+      display: block;
+      background-color: #e0e0e0;
+      left: - s(10);
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      z-index: 0;
+    }
+  }
+
 }
 
 .lists-block-tools {
@@ -1537,24 +1556,7 @@ input[type='search']::-ms-clear {
   }
 }
 
-.add {
-  position: relative;
 
-  &::after {
-    content: "";
-    position: absolute;
-    width: .0625rem;
-    height: 1.625rem;
-    display: block;
-    background-color: #e0e0e0;
-    left: - s(10);
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    z-index: 0;
-  }
-}
 
 .my-list {
   &__table-container {
