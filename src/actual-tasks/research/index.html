@@ -1872,6 +1872,29 @@
         <div class="arcticmodal-overlay" style="z-index:999; background-color: rgb(0, 0, 0); opacity: 0.6;"></div>
     </div>
 
+    <div v-show="modals.kf.show == true">
+        <div class="arcticmodal-container" style="">
+            <table class="arcticmodal-container_i">
+                <tr>
+                    <td class="arcticmodal-container_i2">
+                        <div class="box-modal kf_modal">
+                            <div @click="modals.kf.show = false" class="box-modal_close arcticmodal-close">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/content/clear_24px">
+                                        <path id="icon/content/clear_24px_2" d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" fill="#B9BDC7"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="flex flex-wrap" id="pdf_block" >
+
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="arcticmodal-overlay" style="z-index:999; background-color: rgb(0, 0, 0); opacity: 0.6;"></div>
+    </div>
 
     <div v-show="modals.not_found.show == true">
         <div class="arcticmodal-container" style="">
@@ -3154,8 +3177,16 @@
                                 <!--<div v-if="row.active" class="connections-row flex flex-grow items-center min-w-0  pl-5 py-10" v-for="(row, index) in items">-->
                                 <div v-if="rtype != 'lis'" class="connections-row flex flex-grow items-center min-w-0  pl-5 py-10" v-for="(row, index) in computed_rows.active">
                                     <div class="flex">
-                                        <div @click="expand_row($event)" class="connections-row__count green">
+                                        <div @click="expand_row($event)" class="connections-row__count">
                                             {{row.ties.length}}
+                                        </div>
+                                        <div class="connections-row__count cursor-pointer">
+                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0 6.48438V9.99998H4.1016V6.48438H0ZM3.5156 9.41407H0.585899V7.65618H3.5156V9.41407Z" fill="#00599A"/>
+                                                <path d="M5.29301 4.70703V4.10156H4.70701V4.70703H1.75781V5.89844H2.34381V5.29297H7.65621V5.89844H8.24221V4.70703H5.29301Z" fill="#00599A"/>
+                                                <path d="M5.89844 6.48438V9.99998H10V6.48438H5.89844ZM9.41414 9.41407H6.48444V7.65618H9.41414V9.41407Z" fill="#00599A"/>
+                                                <path d="M2.94922 0V3.51562H7.05082V0H2.94922ZM6.46482 2.92969H3.53522V1.17188H6.46482V2.92969Z" fill="#00599A"/>
+                                            </svg>
                                         </div>
                                     </div>
                                     <div class="flex">
@@ -3236,8 +3267,16 @@
 
                                 <div v-if="rtype == 'lis'" class="connections-row condensed flex flex-grow items-center min-w-0  pl-5 py-10" v-for="(row, index) in computed_rows.active">
                                     <div class="flex">
-                                        <div @click="expand_row($event)" class="connections-row__count green">
+                                        <div @click="expand_row($event)" class="connections-row__count">
                                             {{row.ties.length}}
+                                        </div>
+                                        <div class="connections-row__count cursor-pointer">
+                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0 6.48438V9.99998H4.1016V6.48438H0ZM3.5156 9.41407H0.585899V7.65618H3.5156V9.41407Z" fill="#00599A"/>
+                                                <path d="M5.29301 4.70703V4.10156H4.70701V4.70703H1.75781V5.89844H2.34381V5.29297H7.65621V5.89844H8.24221V4.70703H5.29301Z" fill="#00599A"/>
+                                                <path d="M5.89844 6.48438V9.99998H10V6.48438H5.89844ZM9.41414 9.41407H6.48444V7.65618H9.41414V9.41407Z" fill="#00599A"/>
+                                                <path d="M2.94922 0V3.51562H7.05082V0H2.94922ZM6.46482 2.92969H3.53522V1.17188H6.46482V2.92969Z" fill="#00599A"/>
+                                            </svg>
                                         </div>
                                     </div>
                                     <div class="connections-row__items flex justify-between flex-grow">
@@ -3461,8 +3500,16 @@
                                 <!--<div v-if="!row.active" class="connections-row flex flex-grow items-center min-w-0 pl-5 py-10" v-for="(row, index) in items">-->
                                 <div v-if="rtype != 'lis'"  class="connections-row flex flex-grow items-center min-w-0  pl-5 py-10" v-for="(row, index) in computed_rows.inactive">
                                     <div class="flex">
-                                        <div @click="expand_row($event)" class="connections-row__count gray">
+                                        <div @click="expand_row($event)" class="connections-row__count">
                                             {{row.ties.length}}
+                                        </div>
+                                        <div class="connections-row__count cursor-pointer">
+                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0 6.48438V9.99998H4.1016V6.48438H0ZM3.5156 9.41407H0.585899V7.65618H3.5156V9.41407Z" fill="#00599A"/>
+                                                <path d="M5.29301 4.70703V4.10156H4.70701V4.70703H1.75781V5.89844H2.34381V5.29297H7.65621V5.89844H8.24221V4.70703H5.29301Z" fill="#00599A"/>
+                                                <path d="M5.89844 6.48438V9.99998H10V6.48438H5.89844ZM9.41414 9.41407H6.48444V7.65618H9.41414V9.41407Z" fill="#00599A"/>
+                                                <path d="M2.94922 0V3.51562H7.05082V0H2.94922ZM6.46482 2.92969H3.53522V1.17188H6.46482V2.92969Z" fill="#00599A"/>
+                                            </svg>
                                         </div>
                                     </div>
                                     <div class="flex">
@@ -3551,8 +3598,16 @@
 
                                 <div v-if="rtype == 'lis'" class="connections-row condensed flex flex-grow items-center min-w-0 pl-5 py-10" v-for="(row, index) in computed_rows.inactive">
                                     <div class="flex">
-                                        <div @click="expand_row($event)" class="connections-row__count gray">
+                                        <div @click="expand_row($event)" class="connections-row__count">
                                             {{row.ties.length}}
+                                        </div>
+                                        <div class="connections-row__count cursor-pointer">
+                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0 6.48438V9.99998H4.1016V6.48438H0ZM3.5156 9.41407H0.585899V7.65618H3.5156V9.41407Z" fill="#00599A"/>
+                                                <path d="M5.29301 4.70703V4.10156H4.70701V4.70703H1.75781V5.89844H2.34381V5.29297H7.65621V5.89844H8.24221V4.70703H5.29301Z" fill="#00599A"/>
+                                                <path d="M5.89844 6.48438V9.99998H10V6.48438H5.89844ZM9.41414 9.41407H6.48444V7.65618H9.41414V9.41407Z" fill="#00599A"/>
+                                                <path d="M2.94922 0V3.51562H7.05082V0H2.94922ZM6.46482 2.92969H3.53522V1.17188H6.46482V2.92969Z" fill="#00599A"/>
+                                            </svg>
                                         </div>
                                     </div>
                                     <div class="connections-row__items flex justify-between flex-grow">

@@ -3,7 +3,6 @@
 //= templates/head.html
 
 <body class="relative">
-//= templates/addNewListModal.html
 <div class="flex flex-nowrap h-screen">
     //= templates/left-panel.html
     <div class="my-list flex flex-col justify-start content-start flex-grow min-w-0">
@@ -53,8 +52,8 @@
                                   d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM11 7V11H7V13H11V17H13V13H17V11H13V7H11ZM4 12C4 16.41 7.59 20 12 20C16.41 20 20 16.41 20 12C20 7.59 16.41 4 12 4C7.59 4 4 7.59 4 12Z" fill="#00599A"></path>
                         </svg>
                     </div>
-                    <div class="add-new-list-button text-sm text-blue font-semibold">
-                        Добавить список
+                    <div class="text-sm text-blue font-semibold">
+                        Добавить объект
                     </div>
                 </div>
                 <div class="flex items-center cursor-pointer hover:opacity-75">
@@ -69,8 +68,8 @@
                 </div>
             </div>
         </div>
-        <div class="my-list__body bg-f2 pl-12 pr-4 pt-8 pb-5">
-            <div class="my-list__table-container">
+        <div class="my-list__body bg-f2 px-4 pt-8 pb-4">
+            <div class="my-list__table-container mx-auto">
                 <form class="flex items-center border-b border-#D5D5D5 cursor-pointer pb-1">
                     <div class="flex items-start flex-shrink-0 focus:outline-none mr-2">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -79,37 +78,33 @@
                                   fill="#DADADA"/>
                         </svg>
                     </div>
-                    <input type="text" placeholder="Поиск по объектам «Должники»" class="flex flex-grow bg-f2 placeholder-#D5D5D5 font-medium text-sm">
+                    <input type="text" placeholder="Поиск по объектам списка «Должники»" class="flex flex-grow bg-f2 placeholder-#D5D5D5 font-medium text-sm">
                 </form>
-                <div class="tables text-b9 leading-3 mt-10">
-                    <div class="flex items-end pb-6 px-5 text-xxs border-b border-#D5D5D5 leading-3">
+                <div class="tables text-b9 leading-3 mt-6">
+                    <div class="tables__header flex items-end py-6 px-4 text-xxs leading-3">
                         <div class="flex items-end flex-grow -mx-2">
-                            <div class="tables__cell mx-2">
+                            <div class="tables__cell tables__cell_w_30px px-2">
                                 #
                             </div>
-                            <div class="tables__cell w-full flex-grow mx-2" style="flex-shrink: 1">
+                            <div class="tables__cell w-full flex-grow px-2" style="flex-shrink: 1">
                                 Название
                             </div>
-                            <div class="tables__cell tables__cell_w_190px flex-grow mx-2">
-                                <select class="outline-none bg-transparent">
-                                    <option value="Статус" selected>Статус</option>
-                                    <option value="Статус">Действующая организация</option>
-                                    <option value="Статус">Недействующая организация</option>
-                                </select>
+                            <div class="tables__cell tables__cell_w_210px flex-grow px-2">
+                                Статус
                             </div>
-                            <div class="tables__cell tables__cell_w_71px  flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_90px  flex-grow px-2">
                                 ИНН
                             </div>
-                            <div class="tables__cell tables__cell_w_71px flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_90px flex-grow px-2">
                                 ОГРН
                             </div>
-                            <div class="tables__cell tables__cell_w_90px flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_105px flex-grow px-2">
                                 Регион
                             </div>
-                            <div class="tables__cell tables__cell_w_40px flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_56px flex-grow px-2">
                                 ОКВЭД
                             </div>
-                            <div class="tables__cell tables__cell_w_30px flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_50px flex-grow px-2">
                                 Ред.
                             </div>
                         </div>
@@ -117,21 +112,21 @@
                 </div>
             </div>
         </div>
-        <div class="my-lists__footer bg-f2 flex-grow pl-12 pr-4 pb-5 overflow-scroll">
-            <div class="my-list__table-container">
+        <div class="my-lists__footer bg-f2 flex-grow px-4 pb-5 overflow-scroll">
+            <div class="my-list__table-container mx-auto">
                 <div class="tables text-65">
-                    <div class="flex items-center px-5 py-4 border-b border-#D5D5D5 text-xxs font-semibold leading-3">
+                    <div class="tables__row flex items-center px-4 py-4 text-xxs font-semibold leading-3">
                         <div class="flex items-center flex-grow -mx-2">
-                            <div class="tables__cell text-xs  mx-2">
+                            <div class="tables__cell tables__cell_w_30px justify-center text-xs px-2">
                                 1
                             </div>
-                            <div class="tables__cell w-full flex-grow mx-2" style="flex-shrink: 1">
+                            <div class="tables__cell w-full flex-grow px-2" style="flex-shrink: 1">
                                 <a href="#" title="Трамвайное депо №1"
                                    class="tooltip font-semibold text-sm text-blue leading-tight hover:opacity-75 hover:underline">
                                     Трамвайное депо №1
                                 </a>
                             </div>
-                            <div class="tables__cell tables__cell_w_190px font-medium flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_210px justify-center font-medium flex-grow px-2">
                                 <div class="flex items-center">
                                     <div class="mr-2 mb-1">
                                         <svg class="text-b9" width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -143,19 +138,19 @@
                                     <div>Недействующая организация</div>
                                 </div>
                             </div>
-                            <div class="tables__cell tables__cell_w_71px  flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_90px justify-center  flex-grow px-2">
                                 5903113639
                             </div>
-                            <div class="tables__cell tables__cell_w_74px flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_90px flex-grow px-2">
                                 1155958016411
                             </div>
-                            <div class="tables__cell tables__cell_w_90px flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_105px flex-grow px-2">
                                 Пермский край
                             </div>
-                            <div class="tables__cell tables__cell_w_40px flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_56px justify-center flex-grow px-2">
                                 62.01
                             </div>
-                            <div class="tables__cell tables__cell_w_30px justify-center flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_50px justify-center flex-grow px-2">
                                 <span class="tooltip text-b9 hover:text-blue transition duration-300 inline-flex cursor-pointer tooltipstered mb-1" title="Удалить">
                                     <svg class="flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M15.5 4H19V6H5V4H8.5L9.5 3H14.5L15.5 4ZM8 21C6.9 21 6 20.1 6 19V7H18V19C18 20.1 17.1 21 16 21H8Z"></path>
@@ -164,21 +159,21 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex items-center px-5 py-4 border-b border-#D5D5D5 text-xxs font-semibold leading-3">
+                    <div class="tables__row flex items-center px-4 py-4 text-xxs font-semibold leading-3">
                         <div class="flex items-center flex-grow -mx-2">
-                            <div class="tables__cell text-xs  mx-2">
+                            <div class="tables__cell tables__cell_w_30px justify-center text-xs px-2">
                                 1
                             </div>
-                            <div class="tables__cell w-full flex-grow mx-2" style="flex-shrink: 1">
+                            <div class="tables__cell w-full flex-grow px-2" style="flex-shrink: 1">
                                 <a href="#" title="Трамвайное депо №1"
                                    class="tooltip font-semibold text-sm text-blue leading-tight hover:opacity-75 hover:underline">
-                                    Будильники и колокола оптом с достакой на дом
+                                    Трамвайное депо анализ афилированности профилированности №1
                                 </a>
                             </div>
-                            <div class="tables__cell tables__cell_w_190px font-medium flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_210px justify-center font-medium flex-grow px-2">
                                 <div class="flex items-center">
                                     <div class="mr-2 mb-1">
-                                        <svg class="text-b9" width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg class="text-green" width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" clip-rule="evenodd"
                                                   d="M12 7H22V21H2V3H12V7ZM4 19H6V17H4V19ZM6 15H4V13H6V15ZM4 11H6V9H4V11ZM6 7H4V5H6V7ZM8 19H10V17H8V19ZM10 15H8V13H10V15ZM8 11H10V9H8V11ZM10 7H8V5H10V7ZM20 19V9H12V11H14V13H12V15H14V17H12V19H20ZM18 11H16V13H18V11ZM16 15H18V17H16V15Z"
                                                   fill="currentColor"></path>
@@ -187,19 +182,19 @@
                                     <div>Недействующая организация</div>
                                 </div>
                             </div>
-                            <div class="tables__cell tables__cell_w_71px  flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_90px justify-center  flex-grow px-2">
                                 5903113639
                             </div>
-                            <div class="tables__cell tables__cell_w_74px flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_90px flex-grow px-2">
                                 1155958016411
                             </div>
-                            <div class="tables__cell tables__cell_w_90px flex-grow mx-2">
-                                Краснодарский край
+                            <div class="tables__cell tables__cell_w_105px flex-grow px-2">
+                                Пермский край
                             </div>
-                            <div class="tables__cell tables__cell_w_40px flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_56px justify-center flex-grow px-2">
                                 62.01
                             </div>
-                            <div class="tables__cell tables__cell_w_30px justify-center flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_50px justify-center flex-grow px-2">
                                 <span class="tooltip text-b9 hover:text-blue transition duration-300 inline-flex cursor-pointer tooltipstered mb-1" title="Удалить">
                                     <svg class="flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M15.5 4H19V6H5V4H8.5L9.5 3H14.5L15.5 4ZM8 21C6.9 21 6 20.1 6 19V7H18V19C18 20.1 17.1 21 16 21H8Z"></path>
@@ -208,18 +203,18 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex items-center px-5 py-4 border-b border-#D5D5D5 text-xxs font-semibold leading-3">
+                    <div class="tables__row flex items-center px-4 py-4 text-xxs font-semibold leading-3">
                         <div class="flex items-center flex-grow -mx-2">
-                            <div class="tables__cell text-xs  mx-2">
+                            <div class="tables__cell tables__cell_w_30px justify-center text-xs px-2">
                                 1
                             </div>
-                            <div class="tables__cell w-full flex-grow mx-2" style="flex-shrink: 1">
+                            <div class="tables__cell w-full flex-grow px-2" style="flex-shrink: 1">
                                 <a href="#" title="Трамвайное депо №1"
                                    class="tooltip font-semibold text-sm text-blue leading-tight hover:opacity-75 hover:underline">
                                     Трамвайное депо №1
                                 </a>
                             </div>
-                            <div class="tables__cell tables__cell_w_190px font-medium flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_210px justify-center font-medium flex-grow px-2">
                                 <div class="flex items-center">
                                     <div class="mr-2 mb-1">
                                         <svg class="text-b9" width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -231,19 +226,19 @@
                                     <div>Недействующая организация</div>
                                 </div>
                             </div>
-                            <div class="tables__cell tables__cell_w_71px  flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_90px justify-center  flex-grow px-2">
                                 5903113639
                             </div>
-                            <div class="tables__cell tables__cell_w_74px flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_90px flex-grow px-2">
                                 1155958016411
                             </div>
-                            <div class="tables__cell tables__cell_w_90px flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_105px flex-grow px-2">
                                 Пермский край
                             </div>
-                            <div class="tables__cell tables__cell_w_40px flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_56px justify-center flex-grow px-2">
                                 62.01
                             </div>
-                            <div class="tables__cell tables__cell_w_30px justify-center flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_50px justify-center flex-grow px-2">
                                 <span class="tooltip text-b9 hover:text-blue transition duration-300 inline-flex cursor-pointer tooltipstered mb-1" title="Удалить">
                                     <svg class="flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M15.5 4H19V6H5V4H8.5L9.5 3H14.5L15.5 4ZM8 21C6.9 21 6 20.1 6 19V7H18V19C18 20.1 17.1 21 16 21H8Z"></path>
@@ -252,21 +247,21 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex items-center px-5 py-4 border-b border-#D5D5D5 text-xxs font-semibold leading-3">
+                    <div class="tables__row flex items-center px-4 py-4 text-xxs font-semibold leading-3">
                         <div class="flex items-center flex-grow -mx-2">
-                            <div class="tables__cell text-xs  mx-2">
+                            <div class="tables__cell tables__cell_w_30px justify-center text-xs px-2">
                                 1
                             </div>
-                            <div class="tables__cell w-full flex-grow mx-2" style="flex-shrink: 1">
+                            <div class="tables__cell w-full flex-grow px-2" style="flex-shrink: 1">
                                 <a href="#" title="Трамвайное депо №1"
                                    class="tooltip font-semibold text-sm text-blue leading-tight hover:opacity-75 hover:underline">
-                                    Будильники и колокола оптом с достакой на дом
+                                    Трамвайное депо анализ афилированности профилированности №1
                                 </a>
                             </div>
-                            <div class="tables__cell tables__cell_w_190px font-medium flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_210px justify-center font-medium flex-grow px-2">
                                 <div class="flex items-center">
                                     <div class="mr-2 mb-1">
-                                        <svg class="text-b9" width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg class="text-green" width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" clip-rule="evenodd"
                                                   d="M12 7H22V21H2V3H12V7ZM4 19H6V17H4V19ZM6 15H4V13H6V15ZM4 11H6V9H4V11ZM6 7H4V5H6V7ZM8 19H10V17H8V19ZM10 15H8V13H10V15ZM8 11H10V9H8V11ZM10 7H8V5H10V7ZM20 19V9H12V11H14V13H12V15H14V17H12V19H20ZM18 11H16V13H18V11ZM16 15H18V17H16V15Z"
                                                   fill="currentColor"></path>
@@ -275,19 +270,19 @@
                                     <div>Недействующая организация</div>
                                 </div>
                             </div>
-                            <div class="tables__cell tables__cell_w_71px  flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_90px justify-center  flex-grow px-2">
                                 5903113639
                             </div>
-                            <div class="tables__cell tables__cell_w_74px flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_90px flex-grow px-2">
                                 1155958016411
                             </div>
-                            <div class="tables__cell tables__cell_w_90px flex-grow mx-2">
-                                Краснодарский край
+                            <div class="tables__cell tables__cell_w_105px flex-grow px-2">
+                                Пермский край
                             </div>
-                            <div class="tables__cell tables__cell_w_40px flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_56px justify-center flex-grow px-2">
                                 62.01
                             </div>
-                            <div class="tables__cell tables__cell_w_30px justify-center flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_50px justify-center flex-grow px-2">
                                 <span class="tooltip text-b9 hover:text-blue transition duration-300 inline-flex cursor-pointer tooltipstered mb-1" title="Удалить">
                                     <svg class="flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M15.5 4H19V6H5V4H8.5L9.5 3H14.5L15.5 4ZM8 21C6.9 21 6 20.1 6 19V7H18V19C18 20.1 17.1 21 16 21H8Z"></path>
@@ -296,18 +291,18 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex items-center px-5 py-4 border-b border-#D5D5D5 text-xxs font-semibold leading-3">
+                    <div class="tables__row flex items-center px-4 py-4 text-xxs font-semibold leading-3">
                         <div class="flex items-center flex-grow -mx-2">
-                            <div class="tables__cell text-xs  mx-2">
+                            <div class="tables__cell tables__cell_w_30px justify-center text-xs px-2">
                                 1
                             </div>
-                            <div class="tables__cell w-full flex-grow mx-2" style="flex-shrink: 1">
+                            <div class="tables__cell w-full flex-grow px-2" style="flex-shrink: 1">
                                 <a href="#" title="Трамвайное депо №1"
                                    class="tooltip font-semibold text-sm text-blue leading-tight hover:opacity-75 hover:underline">
                                     Трамвайное депо №1
                                 </a>
                             </div>
-                            <div class="tables__cell tables__cell_w_190px font-medium flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_210px justify-center font-medium flex-grow px-2">
                                 <div class="flex items-center">
                                     <div class="mr-2 mb-1">
                                         <svg class="text-b9" width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -319,19 +314,19 @@
                                     <div>Недействующая организация</div>
                                 </div>
                             </div>
-                            <div class="tables__cell tables__cell_w_71px  flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_90px justify-center  flex-grow px-2">
                                 5903113639
                             </div>
-                            <div class="tables__cell tables__cell_w_74px flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_90px flex-grow px-2">
                                 1155958016411
                             </div>
-                            <div class="tables__cell tables__cell_w_90px flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_105px flex-grow px-2">
                                 Пермский край
                             </div>
-                            <div class="tables__cell tables__cell_w_40px flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_56px justify-center flex-grow px-2">
                                 62.01
                             </div>
-                            <div class="tables__cell tables__cell_w_30px justify-center flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_50px justify-center flex-grow px-2">
                                 <span class="tooltip text-b9 hover:text-blue transition duration-300 inline-flex cursor-pointer tooltipstered mb-1" title="Удалить">
                                     <svg class="flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M15.5 4H19V6H5V4H8.5L9.5 3H14.5L15.5 4ZM8 21C6.9 21 6 20.1 6 19V7H18V19C18 20.1 17.1 21 16 21H8Z"></path>
@@ -340,21 +335,21 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex items-center px-5 py-4 border-b border-#D5D5D5 text-xxs font-semibold leading-3">
+                    <div class="tables__row flex items-center px-4 py-4 text-xxs font-semibold leading-3">
                         <div class="flex items-center flex-grow -mx-2">
-                            <div class="tables__cell text-xs  mx-2">
+                            <div class="tables__cell tables__cell_w_30px justify-center text-xs px-2">
                                 1
                             </div>
-                            <div class="tables__cell w-full flex-grow mx-2" style="flex-shrink: 1">
+                            <div class="tables__cell w-full flex-grow px-2" style="flex-shrink: 1">
                                 <a href="#" title="Трамвайное депо №1"
                                    class="tooltip font-semibold text-sm text-blue leading-tight hover:opacity-75 hover:underline">
-                                    Будильники и колокола оптом с достакой на дом
+                                    Трамвайное депо анализ афилированности профилированности №1
                                 </a>
                             </div>
-                            <div class="tables__cell tables__cell_w_190px font-medium flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_210px justify-center font-medium flex-grow px-2">
                                 <div class="flex items-center">
                                     <div class="mr-2 mb-1">
-                                        <svg class="text-b9" width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg class="text-green" width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" clip-rule="evenodd"
                                                   d="M12 7H22V21H2V3H12V7ZM4 19H6V17H4V19ZM6 15H4V13H6V15ZM4 11H6V9H4V11ZM6 7H4V5H6V7ZM8 19H10V17H8V19ZM10 15H8V13H10V15ZM8 11H10V9H8V11ZM10 7H8V5H10V7ZM20 19V9H12V11H14V13H12V15H14V17H12V19H20ZM18 11H16V13H18V11ZM16 15H18V17H16V15Z"
                                                   fill="currentColor"></path>
@@ -363,19 +358,19 @@
                                     <div>Недействующая организация</div>
                                 </div>
                             </div>
-                            <div class="tables__cell tables__cell_w_71px  flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_90px justify-center  flex-grow px-2">
                                 5903113639
                             </div>
-                            <div class="tables__cell tables__cell_w_74px flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_90px flex-grow px-2">
                                 1155958016411
                             </div>
-                            <div class="tables__cell tables__cell_w_90px flex-grow mx-2">
-                                Краснодарский край
+                            <div class="tables__cell tables__cell_w_105px flex-grow px-2">
+                                Пермский край
                             </div>
-                            <div class="tables__cell tables__cell_w_40px flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_56px justify-center flex-grow px-2">
                                 62.01
                             </div>
-                            <div class="tables__cell tables__cell_w_30px justify-center flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_50px justify-center flex-grow px-2">
                                 <span class="tooltip text-b9 hover:text-blue transition duration-300 inline-flex cursor-pointer tooltipstered mb-1" title="Удалить">
                                     <svg class="flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M15.5 4H19V6H5V4H8.5L9.5 3H14.5L15.5 4ZM8 21C6.9 21 6 20.1 6 19V7H18V19C18 20.1 17.1 21 16 21H8Z"></path>
@@ -384,18 +379,18 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex items-center px-5 py-4 border-b border-#D5D5D5 text-xxs font-semibold leading-3">
+                    <div class="tables__row flex items-center px-4 py-4 text-xxs font-semibold leading-3">
                         <div class="flex items-center flex-grow -mx-2">
-                            <div class="tables__cell text-xs  mx-2">
+                            <div class="tables__cell tables__cell_w_30px justify-center text-xs px-2">
                                 1
                             </div>
-                            <div class="tables__cell w-full flex-grow mx-2" style="flex-shrink: 1">
+                            <div class="tables__cell w-full flex-grow px-2" style="flex-shrink: 1">
                                 <a href="#" title="Трамвайное депо №1"
                                    class="tooltip font-semibold text-sm text-blue leading-tight hover:opacity-75 hover:underline">
                                     Трамвайное депо №1
                                 </a>
                             </div>
-                            <div class="tables__cell tables__cell_w_190px font-medium flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_210px justify-center font-medium flex-grow px-2">
                                 <div class="flex items-center">
                                     <div class="mr-2 mb-1">
                                         <svg class="text-b9" width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -407,19 +402,19 @@
                                     <div>Недействующая организация</div>
                                 </div>
                             </div>
-                            <div class="tables__cell tables__cell_w_71px  flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_90px justify-center  flex-grow px-2">
                                 5903113639
                             </div>
-                            <div class="tables__cell tables__cell_w_74px flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_90px flex-grow px-2">
                                 1155958016411
                             </div>
-                            <div class="tables__cell tables__cell_w_90px flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_105px flex-grow px-2">
                                 Пермский край
                             </div>
-                            <div class="tables__cell tables__cell_w_40px flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_56px justify-center flex-grow px-2">
                                 62.01
                             </div>
-                            <div class="tables__cell tables__cell_w_30px justify-center flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_50px justify-center flex-grow px-2">
                                 <span class="tooltip text-b9 hover:text-blue transition duration-300 inline-flex cursor-pointer tooltipstered mb-1" title="Удалить">
                                     <svg class="flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M15.5 4H19V6H5V4H8.5L9.5 3H14.5L15.5 4ZM8 21C6.9 21 6 20.1 6 19V7H18V19C18 20.1 17.1 21 16 21H8Z"></path>
@@ -428,21 +423,21 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex items-center px-5 py-4 border-b border-#D5D5D5 text-xxs font-semibold leading-3">
+                    <div class="tables__row flex items-center px-4 py-4 text-xxs font-semibold leading-3">
                         <div class="flex items-center flex-grow -mx-2">
-                            <div class="tables__cell text-xs  mx-2">
+                            <div class="tables__cell tables__cell_w_30px justify-center text-xs px-2">
                                 1
                             </div>
-                            <div class="tables__cell w-full flex-grow mx-2" style="flex-shrink: 1">
+                            <div class="tables__cell w-full flex-grow px-2" style="flex-shrink: 1">
                                 <a href="#" title="Трамвайное депо №1"
                                    class="tooltip font-semibold text-sm text-blue leading-tight hover:opacity-75 hover:underline">
-                                    Будильники и колокола оптом с достакой на дом
+                                    Трамвайное депо анализ афилированности профилированности №1
                                 </a>
                             </div>
-                            <div class="tables__cell tables__cell_w_190px font-medium flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_210px justify-center font-medium flex-grow px-2">
                                 <div class="flex items-center">
                                     <div class="mr-2 mb-1">
-                                        <svg class="text-b9" width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg class="text-green" width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" clip-rule="evenodd"
                                                   d="M12 7H22V21H2V3H12V7ZM4 19H6V17H4V19ZM6 15H4V13H6V15ZM4 11H6V9H4V11ZM6 7H4V5H6V7ZM8 19H10V17H8V19ZM10 15H8V13H10V15ZM8 11H10V9H8V11ZM10 7H8V5H10V7ZM20 19V9H12V11H14V13H12V15H14V17H12V19H20ZM18 11H16V13H18V11ZM16 15H18V17H16V15Z"
                                                   fill="currentColor"></path>
@@ -451,19 +446,19 @@
                                     <div>Недействующая организация</div>
                                 </div>
                             </div>
-                            <div class="tables__cell tables__cell_w_71px  flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_90px justify-center  flex-grow px-2">
                                 5903113639
                             </div>
-                            <div class="tables__cell tables__cell_w_74px flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_90px flex-grow px-2">
                                 1155958016411
                             </div>
-                            <div class="tables__cell tables__cell_w_90px flex-grow mx-2">
-                                Краснодарский край
+                            <div class="tables__cell tables__cell_w_105px flex-grow px-2">
+                                Пермский край
                             </div>
-                            <div class="tables__cell tables__cell_w_40px flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_56px justify-center flex-grow px-2">
                                 62.01
                             </div>
-                            <div class="tables__cell tables__cell_w_30px justify-center flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_50px justify-center flex-grow px-2">
                                 <span class="tooltip text-b9 hover:text-blue transition duration-300 inline-flex cursor-pointer tooltipstered mb-1" title="Удалить">
                                     <svg class="flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M15.5 4H19V6H5V4H8.5L9.5 3H14.5L15.5 4ZM8 21C6.9 21 6 20.1 6 19V7H18V19C18 20.1 17.1 21 16 21H8Z"></path>
@@ -472,18 +467,18 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex items-center px-5 py-4 border-b border-#D5D5D5 text-xxs font-semibold leading-3">
+                    <div class="tables__row flex items-center px-4 py-4 text-xxs font-semibold leading-3">
                         <div class="flex items-center flex-grow -mx-2">
-                            <div class="tables__cell text-xs  mx-2">
+                            <div class="tables__cell tables__cell_w_30px justify-center text-xs px-2">
                                 1
                             </div>
-                            <div class="tables__cell w-full flex-grow mx-2" style="flex-shrink: 1">
+                            <div class="tables__cell w-full flex-grow px-2" style="flex-shrink: 1">
                                 <a href="#" title="Трамвайное депо №1"
                                    class="tooltip font-semibold text-sm text-blue leading-tight hover:opacity-75 hover:underline">
                                     Трамвайное депо №1
                                 </a>
                             </div>
-                            <div class="tables__cell tables__cell_w_190px font-medium flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_210px justify-center font-medium flex-grow px-2">
                                 <div class="flex items-center">
                                     <div class="mr-2 mb-1">
                                         <svg class="text-b9" width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -495,19 +490,19 @@
                                     <div>Недействующая организация</div>
                                 </div>
                             </div>
-                            <div class="tables__cell tables__cell_w_71px  flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_90px justify-center  flex-grow px-2">
                                 5903113639
                             </div>
-                            <div class="tables__cell tables__cell_w_74px flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_90px flex-grow px-2">
                                 1155958016411
                             </div>
-                            <div class="tables__cell tables__cell_w_90px flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_105px flex-grow px-2">
                                 Пермский край
                             </div>
-                            <div class="tables__cell tables__cell_w_40px flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_56px justify-center flex-grow px-2">
                                 62.01
                             </div>
-                            <div class="tables__cell tables__cell_w_30px justify-center flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_50px justify-center flex-grow px-2">
                                 <span class="tooltip text-b9 hover:text-blue transition duration-300 inline-flex cursor-pointer tooltipstered mb-1" title="Удалить">
                                     <svg class="flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M15.5 4H19V6H5V4H8.5L9.5 3H14.5L15.5 4ZM8 21C6.9 21 6 20.1 6 19V7H18V19C18 20.1 17.1 21 16 21H8Z"></path>
@@ -516,21 +511,21 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex items-center px-5 py-4 border-b border-#D5D5D5 text-xxs font-semibold leading-3">
+                    <div class="tables__row flex items-center px-4 py-4 text-xxs font-semibold leading-3">
                         <div class="flex items-center flex-grow -mx-2">
-                            <div class="tables__cell text-xs  mx-2">
+                            <div class="tables__cell tables__cell_w_30px justify-center text-xs px-2">
                                 1
                             </div>
-                            <div class="tables__cell w-full flex-grow mx-2" style="flex-shrink: 1">
+                            <div class="tables__cell w-full flex-grow px-2" style="flex-shrink: 1">
                                 <a href="#" title="Трамвайное депо №1"
                                    class="tooltip font-semibold text-sm text-blue leading-tight hover:opacity-75 hover:underline">
-                                    Будильники и колокола оптом с достакой на дом
+                                    Трамвайное депо анализ афилированности профилированности №1
                                 </a>
                             </div>
-                            <div class="tables__cell tables__cell_w_190px font-medium flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_210px justify-center font-medium flex-grow px-2">
                                 <div class="flex items-center">
                                     <div class="mr-2 mb-1">
-                                        <svg class="text-b9" width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg class="text-green" width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" clip-rule="evenodd"
                                                   d="M12 7H22V21H2V3H12V7ZM4 19H6V17H4V19ZM6 15H4V13H6V15ZM4 11H6V9H4V11ZM6 7H4V5H6V7ZM8 19H10V17H8V19ZM10 15H8V13H10V15ZM8 11H10V9H8V11ZM10 7H8V5H10V7ZM20 19V9H12V11H14V13H12V15H14V17H12V19H20ZM18 11H16V13H18V11ZM16 15H18V17H16V15Z"
                                                   fill="currentColor"></path>
@@ -539,19 +534,19 @@
                                     <div>Недействующая организация</div>
                                 </div>
                             </div>
-                            <div class="tables__cell tables__cell_w_71px  flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_90px justify-center  flex-grow px-2">
                                 5903113639
                             </div>
-                            <div class="tables__cell tables__cell_w_74px flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_90px flex-grow px-2">
                                 1155958016411
                             </div>
-                            <div class="tables__cell tables__cell_w_90px flex-grow mx-2">
-                                Краснодарский край
+                            <div class="tables__cell tables__cell_w_105px flex-grow px-2">
+                                Пермский край
                             </div>
-                            <div class="tables__cell tables__cell_w_40px flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_56px justify-center flex-grow px-2">
                                 62.01
                             </div>
-                            <div class="tables__cell tables__cell_w_30px justify-center flex-grow mx-2">
+                            <div class="tables__cell tables__cell_w_50px justify-center flex-grow px-2">
                                 <span class="tooltip text-b9 hover:text-blue transition duration-300 inline-flex cursor-pointer tooltipstered mb-1" title="Удалить">
                                     <svg class="flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M15.5 4H19V6H5V4H8.5L9.5 3H14.5L15.5 4ZM8 21C6.9 21 6 20.1 6 19V7H18V19C18 20.1 17.1 21 16 21H8Z"></path>

@@ -76,11 +76,7 @@ $(document).ready(function () {
 
   $('#graphModal').arcticmodal();
 
-
-  // вызов модалки добавления списка
-  $('.add-new-list-button').on('click', function (){
-    $('#addNewListModal').arcticmodal();
-  });
+  $('#addNewListModal').arcticmodal();
 
   // подсказки
 

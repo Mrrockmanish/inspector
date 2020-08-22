@@ -185,7 +185,7 @@ a {
   max-width: s(40);
   min-width: s(40);
   position: absolute;
-  top: .5rem;
+  top: 1.25rem;
   transform: translateX(-130%) rotateY(0);
 
   &.close {
@@ -1052,6 +1052,10 @@ input[type='search']::-ms-clear {
         transform: rotateY(180deg);
       }
 
+      &.border-dashed {
+        opacity: 0.7;
+      }
+
       &::after {
         content: '';
         display: block;
@@ -1200,6 +1204,9 @@ input[type='search']::-ms-clear {
   z-index: 50;
 }
 
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
 
 ::-webkit-scrollbar {
   width: s(5);
@@ -1259,6 +1266,9 @@ input[type='search']::-ms-clear {
 
 
     &_w {
+      &_10px {
+        width: s(10);
+      }
       &_20px {
         width: s(20);
       }
@@ -1273,6 +1283,9 @@ input[type='search']::-ms-clear {
       }
       &_50px {
         width: s(50);
+      }
+      &_52px {
+        width: s(52);
       }
       &_56px {
         width: s(56);
@@ -1295,6 +1308,12 @@ input[type='search']::-ms-clear {
       &_100px {
         width: s(100);
       }
+      &_105px {
+        width: s(105);
+      }
+      &_115px {
+        width: s(115);
+      }
       &_130px {
         width: s(130);
       }
@@ -1303,6 +1322,9 @@ input[type='search']::-ms-clear {
       }
       &_170px {
         width: s(170);
+      }
+      &_180px {
+        width: s(180);
       }
       &_190px {
         width: s(190);
@@ -1536,6 +1558,6 @@ input[type='search']::-ms-clear {
 
 .my-list {
   &__table-container {
-    max-width: s(936);
+    max-width: s(1072);
   }
 }
