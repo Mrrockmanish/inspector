@@ -141,10 +141,6 @@ a {
     height: s(56);
   }
 
-  &_big {
-    height: s(120);
-  }
-
   .add {
     position: relative;
 
@@ -718,6 +714,17 @@ a {
 .preloader {
   z-index: 999;
 
+  &__box {
+    width: s(200);
+    height: s(200);
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
   &__img {
     width: s(140);
     height: s(140);
@@ -759,6 +766,39 @@ a {
     height: 90%;
   }
 
+}
+
+.sk-wave {
+  $rectCount: 5;
+  $animationDuration: 1.2s;
+  $delayRange: 0.4s;
+
+  width: s(100);
+  height: s(100);
+  margin: auto;
+  text-align: center;
+  font-size: 1.5em;
+
+  .sk-rect {
+    background-color: #00599A;
+    height: 100%;
+    width: .5em;
+    display: inline-block;
+    animation: sk-wave-stretch-delay $animationDuration infinite ease-in-out;
+  }
+
+  @for $i from 1 through $rectCount {
+    .sk-rect-#{$i} { animation-delay: - $animationDuration + $delayRange / ($rectCount - 1) * ($i - 1); }
+  }
+}
+
+@keyframes sk-wave-stretch-delay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+  }
+  20% {
+    transform: scaleY(1.0);
+  }
 }
 
 .lists-block .preloader__img {
@@ -1575,3 +1615,4 @@ input[type='search']::-ms-clear {
     }
   }
 }
+

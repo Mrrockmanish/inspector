@@ -56,7 +56,7 @@ $root-font-size: 16;
 
 #graphModal {
     width: 1140px;
-    height: 47rem;
+    height: 39rem;
 
 
     @media (min-width: 1400px) {
@@ -68,7 +68,7 @@ $root-font-size: 16;
     }
 
     @media (min-width: 1800px) {
-        height: 57rem;
+        height: 52rem;
         width: s(1700);
     }
 }

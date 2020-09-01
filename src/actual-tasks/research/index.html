@@ -567,20 +567,20 @@
             </div>
         </div>
 
-        <div v-show="mode == 'saved'" class="center-sector items-start inline-flex flex-wrap flex-grow min-w-0 overflow-hidden">
-            <div class="flex w-full self-start">
-                <div class="top-panel top-panel_big w-full bg-white inline-flex">
+        <div v-show="mode == 'saved'" class="center-sector flex flex-col w-full">
+            <div class="flex w-full self-start overflow-y-scroll">
+                <div class="top-panel top-panel_big w-full bg-white inline-flex area__container mx-auto px-6">
                     <div class="flex h-full w-full flex-stretch items-center">
-                        <div class="top-panel-titles flex mr-auto text-4xl font-bold px-6 overflow-hidden">
+                        <div class="top-panel-titles flex mr-auto text-4xl font-bold overflow-hidden">
                             <span class="text-overflow whitespace-no-wrap overflow-hidden min-w-0">Сохранённые</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="area__inner flex flex-grow bg-f2">
-                <div class="area__container px-6 py-8 mx-auto">
-                    <div class="flex items-start -mx-4">
-                        <div class="top-panel-input inline-flex pl-4 w-1/2 flex-grow">
+            <div class="area__inner flex bg-f2 overflow-y-scroll">
+                <div class="area__container px-6 pt-8 pb-2 mx-auto">
+                    <div class="flex flex-col">
+                        <div class="top-panel-input inline-flex flex-grow">
                             <form @submit.prevent="" class="flex items-center w-full border-b border-b9 h-full py-1 relative">
                                 <input @input="get_saved_search()" v-model="saved.input" type="text" class="w-full outline-none text-24021 font-semibold text-sm cursor-text bg-transparent"
                                        placeholder='Поиск по разделу "Сохранённые"'/>
@@ -601,37 +601,37 @@
                                 </button>
                             </form>
                         </div>
-                        <div class="inline-flex justify-end px-4 text-xxs text-24021 w-1/2">
-                            <div class="flex flex-col items-end flex-wrap -mx-3 flex-shrink-0">
+                        <div class="inline-flex justify-end text-xxs text-24021 mt-4" style="max-width: 32rem">
+                            <div class="flex flex-grow items-end flex-wrap -mx-3 flex-shrink-0">
                                 <label class="flex check-controls items-center py-2 px-3 cursor-pointer">
-                                    <span class="select-none inline-flex justify-end w-40 mr-2">Произвольное</span>
                                     <input v-model="saved.filters['0']" type="checkbox" class="check-controls__checkbox hidden"/>
                                     <span
-                                            class="check-controls__check-custom inline-flex border border-b9"></span>
+                                            class="check-controls__check-custom inline-flex border border-b9 mr-3"></span>
+                                    <span class="select-none inline-flex justify-end mr-2">Произвольное</span>
                                 </label>
                                 <label class="flex check-controls items-center py-2 px-3 cursor-pointer">
-                                    <span class="select-none inline-flex justify-end w-40 mr-2">Связи</span>
                                     <input v-model="saved.filters['1']" type="checkbox" class="check-controls__checkbox hidden"/>
                                     <span
-                                            class="check-controls__check-custom inline-flex border border-b9"></span>
+                                            class="check-controls__check-custom inline-flex border border-b9 mr-3"></span>
+                                    <span class="select-none inline-flex justify-end mr-2">Связи</span>
                                 </label>
                                 <label class="flex check-controls items-center py-2 px-3 cursor-pointer">
-                                    <span class="select-none inline-flex justify-end w-40 mr-2">Списки</span>
                                     <input v-model="saved.filters['2']" type="checkbox" class="check-controls__checkbox hidden"/>
                                     <span
-                                            class="check-controls__check-custom inline-flex border border-b9"></span>
+                                            class="check-controls__check-custom inline-flex border border-b9 mr-3"></span>
+                                    <span class="select-none inline-flex justify-end mr-2">Списки</span>
                                 </label>
                                 <label class="flex check-controls items-center py-2 px-2 h-8 cursor-pointer">
-                                    <span class="select-none inline-flex justify-end inline-flex w-40 mr-1">Избранные</span>
                                     <input v-model="saved.favorite" type="checkbox" class="check-controls__checkbox hidden"/>
                                     <!--                                            <div class="slider round"></div>-->
-                                    <span class="check-controls__check-favorite inline-flex"></span>
+                                    <span class="check-controls__check-favorite inline-flex mr-3"></span>
+                                    <span class="select-none inline-flex justify-end inline-flex mr-1">Избранные</span>
                                 </label>
                             </div>
                         </div>
                     </div>
                     <div class="tables text-xxs">
-                        <div class="tables__header flex items-end py-2 mt-5 px-4 text-xxs leading-3">
+                        <div class="tables__header flex items-end py-2 mt-8 px-4 text-xxs leading-3">
                             <div class="flex flex-grow -mx-4">
                                 <div class="tables__cell tables__cell_w_40px inline-flex items-end font-semibold text-xs px-4">
                                     #
@@ -660,7 +660,7 @@
                     </div>
                 </div>
             </div>
-            <div class="area area_under-big-panel bg-f2 flex w-full flex-grow" style="height: calc(100% - 22.5625rem);">
+            <div class="area area_under-big-panel bg-f2 flex w-full flex-grow" style="height: calc(100% - 18.5625rem);">
                 <div class="area__inner inline-flex flex-grow whitespace-no-wrap relative overflow-auto">
                     <!-- основная контентная часть  -->
                     <div class="area__container px-6 mx-auto relative">
@@ -862,18 +862,18 @@
             </div>
         </div>
 
-        <div v-show="mode == 'reports'" class="center-sector items-start inline-flex flex-wrap flex-grow  min-w-0 overflow-hidden">
-            <div class="flex flex-col w-full self-start">
-                <div class="top-panel top-panel_big w-full bg-white inline-flex">
+        <div v-show="mode == 'reports'" class="center-sector flex flex-col w-full">
+            <div class="flex flex-col w-full self-start overflow-y-scroll">
+                <div class="top-panel area__container mx-auto px-6  w-full bg-white inline-flex">
                     <div class="flex h-full w-full flex-stretch items-center">
-                        <div class="top-panel-titles flex mr-auto text-4xl font-bold px-6 overflow-hidden" style="padding-left: 1.25rem; padding-right: 1.75rem">
+                        <div class="top-panel-titles flex mr-auto text-4xl font-bold overflow-hidden">
                             <span class="text-overflow whitespace-no-wrap overflow-hidden min-w-0">Бизнес-справка</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="area__inner flex flex-grow bg-f2" style="padding-left: 1.25rem; padding-right: 1.75rem">
-                <div class="area__container px-6 py-8 mx-auto">
+            <div class="area__inner flex bg-f2 px-6 overflow-y-scroll">
+                <div class="area__container px-6 pt-8 pb-2 mx-auto">
                     <div class="top-panel-input inline-flex w-full flex-grow">
                         <div class="flex items-center w-full border-b border-b9 h-full py-1 relative">
                             <input v-model="reports.query" type="text" class="w-full outline-none text-24021 font-semibold text-sm cursor-text bg-transparent" placeholder='Поиск по разделу "Бизнес-справка"'>
@@ -924,7 +924,7 @@
                     </div>
                 </div>
             </div>
-            <div class="area area_under-big-panel bg-f2 flex w-full flex-grow flex-wrap overflow-auto" style="height: calc(100% - 18.3125rem)">
+            <div class="area area_under-big-panel bg-f2 flex w-full flex-grow flex-wrap overflow-y-scroll" style="height: calc(100% - 18.3125rem)">
                 <div class="area__inner inline-flex flex-grow whitespace-no-wrap relative">
                     <!-- основная контентная часть  -->
                     <div class="area__container px-6 pb-8 mx-auto relative">
@@ -1018,7 +1018,7 @@
 
         <div v-show="mode == 'userlists'" class="center-sector items-start inline-flex flex-wrap flex-grow min-w-0 overflow-hidden">
             <div class="flex w-full self-start">
-                <div class="top-panel top-panel_big w-full bg-white inline-flex">
+                <div class="top-panel w-full bg-white inline-flex">
                     <div class="flex h-full w-full flex-stretch items-center">
                         <div class="top-panel-titles flex mr-auto text-4xl font-bold px-6 overflow-hidden">
                             <span class="text-overflow whitespace-no-wrap overflow-hidden min-w-0">Мои списки</span>
@@ -4641,7 +4641,7 @@
                             <td class="arcticmodal-container_i2">
 
                                 <div class="box-modal graph-modal" id="graphModal">
-                                    <div @click="modals.graph_modal.show = false" class="box-modal_close arcticmodal-close">
+                                    <div @click="modals.graph_modal.show = false" class="box-modal_close arcticmodal-close" style="top:0.25rem">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <g id="icon/content/clear_24px">
                                                 <path id="icon/content/clear_24px_2"
@@ -4651,7 +4651,7 @@
                                         </svg>
                                     </div>
                                     <div class="flex flex-col h-full">
-                                        <div class="graph-modal__head bg-white px-6 py-6">
+                                        <div class="graph-modal__head bg-white px-6 py-1">
                                             <div class="text-base font-bold">Просмотр графа связей</div>
                                         </div>
                                         <div class="graph-modal__area bg-#F2F2F2 relative flex-grow">
@@ -4659,25 +4659,25 @@
                                             <!-- кнопки в серой контентной части слева -->
                                             <div class="area-left-tools area-left-tools_top_24px text-blue flex flex-col justify-start absolute">
                                                 <div @click="$refs.modal_graph.undo()" 
-                                                        class="area-left-tools__tool inline-flex flex-shrink-0 items-start rounded-full bg-white w-10 h-10 transition duration-300 hover:shadow-xl shadow-lg cursor-pointer tooltip" title="Отменить">
+                                                        class="area-left-tools__tool inline-flex flex-shrink-0 items-start rounded-full bg-white w-8 h-8 transition duration-300 hover:shadow-xl shadow-lg cursor-pointer tooltip" title="Отменить">
                                                     <div class="flex w-full h-full justify-center items-center">
                                                         <div class="inline-flex items-start">
                                                             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                                 width="24px" height="24px" viewBox="0 0 612 612" style="enable-background:new 0 0 612 612;" xml:space="preserve">
-                                    <g>
-                                        <path fill="currentColor" d="M340.502,535.398v51.025C491.258,581.68,612,457.98,612,306.076c0-154.913-125.588-280.5-280.5-280.5
-                                            c-141.933,0-259.258,105.442-277.924,242.25H0l76.5,89.25l76.5-89.25h-47.838C123.395,159.272,217.77,76.576,331.5,76.576
-                                            c126.761,0,229.5,102.739,229.5,229.5C561,429.803,463.08,530.68,340.502,535.398z"/>
-                                    </g>
-                                </svg>
+                                                                 width="18px" height="18px" viewBox="0 0 612 612" style="enable-background:new 0 0 612 612;" xml:space="preserve">
+                                                                <g>
+                                                                    <path fill="currentColor" d="M340.502,535.398v51.025C491.258,581.68,612,457.98,612,306.076c0-154.913-125.588-280.5-280.5-280.5
+                                                                        c-141.933,0-259.258,105.442-277.924,242.25H0l76.5,89.25l76.5-89.25h-47.838C123.395,159.272,217.77,76.576,331.5,76.576
+                                                                        c126.761,0,229.5,102.739,229.5,229.5C561,429.803,463.08,530.68,340.502,535.398z"/>
+                                                                </g>
+                                                            </svg>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div
-                                                        class="area-left-tools__tool inline-flex flex-shrink-0 items-start rounded-full bg-white w-10 h-10 transition duration-300 hover:shadow-xl shadow-lg cursor-pointer tooltip mt-5" title="Экспорт">
+                                                        class="area-left-tools__tool inline-flex flex-shrink-0 items-start rounded-full bg-white w-8 h-8 transition duration-300 hover:shadow-xl shadow-lg cursor-pointer tooltip mt-5" title="Экспорт">
                                                     <div class="flex w-full h-full justify-center items-center">
                                                         <div class="inline-flex items-start">
-                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
                                                                  xmlns="http://www.w3.org/2000/svg">
                                                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                                                       d="M15.59 10.09L13 12.67V3H11V12.67L8.41 10.09L7 11.5L12 16.5L17 11.5L15.59 10.09ZM19 19V12H21V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V12H5V19H19Z"
@@ -4687,10 +4687,10 @@
                                                     </div>
                                                 </div>
                                                 <div
-                                                        class="area-left-tools__tool inline-flex flex-shrink-0 items-start rounded-full bg-white w-10 h-10 transition duration-300 hover:shadow-xl shadow-lg cursor-pointer tooltip mt-5" title="Печать">
+                                                        class="area-left-tools__tool inline-flex flex-shrink-0 items-start rounded-full bg-white w-8 h-8 transition duration-300 hover:shadow-xl shadow-lg cursor-pointer tooltip mt-5" title="Печать">
                                                     <div class="flex w-full h-full justify-center items-center">
                                                         <div class="inline-flex items-start">
-                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                 <path d="M7 8V4H17V8" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
                                                                 <path d="M6.6 17H3V10C3 8.89543 3.89543 8 5 8H19C20.1046 8 21 8.89543 21 10V17H17.4" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
                                                                 <path d="M17 13H7V20H17V13Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
@@ -4699,10 +4699,10 @@
                                                     </div>
                                                 </div>
                                                 <div
-                                                        class="area-left-tools__tool inline-flex flex-shrink-0 items-start rounded-full bg-white w-10 h-10 transition duration-300 hover:shadow-xl shadow-lg cursor-pointer tooltip mt-5" title="Произвольное исследование">
+                                                        class="area-left-tools__tool inline-flex flex-shrink-0 items-start rounded-full bg-white w-8 h-8 transition duration-300 hover:shadow-xl shadow-lg cursor-pointer tooltip mt-5" title="Произвольное исследование">
                                                     <div class="flex w-full h-full justify-center items-center">
                                                         <div class="inline-flex items-start">
-                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                 <g id="icon/maps/my_location_24px">
                                                                     <path id="icon/maps/my_location_24px_2" fill-rule="evenodd" clip-rule="evenodd"
                                                                           d="M20.94 11C20.48 6.83 17.17 3.52 13 3.06V1H11V3.06C6.83 3.52 3.52 6.83 3.06 11H1V13H3.06C3.52 17.17 6.83 20.48 11 20.94V23H13V20.94C17.17 20.48 20.48 17.17 20.94 13H23V11H20.94ZM12 8C9.79 8 8 9.79 8 12C8 14.21 9.79 16 12 16C14.21 16 16 14.21 16 12C16 9.79 14.21 8 12 8ZM5 12C5 15.87 8.13 19 12 19C15.87 19 19 15.87 19 12C19 8.13 15.87 5 12 5C8.13 5 5 8.13 5 12Z"
@@ -4713,10 +4713,10 @@
                                                     </div>
                                                 </div>
                                                 <div
-                                                        class="area-left-tools__tool inline-flex flex-shrink-0 items-start rounded-full bg-white w-10 h-10 transition duration-300 hover:shadow-xl shadow-lg cursor-pointer tooltip mt-5" title="Связи">
+                                                        class="area-left-tools__tool inline-flex flex-shrink-0 items-start rounded-full bg-white w-8 h-8 transition duration-300 hover:shadow-xl shadow-lg cursor-pointer tooltip mt-5" title="Связи">
                                                     <div class="flex w-full h-full justify-center items-center">
                                                         <div class="inline-flex items-start">
-                                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <svg width="18" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                                                       d="M14.89 13.04C14.42 13.56 14.12 14.24 14.12 15C14.12 16.61 15.43 17.92 17.04 17.92C18.65 17.92 19.96 16.61 19.96 15C19.96 13.39 18.65 12.08 17.04 12.08C16.82 12.08 16.6 12.11 16.39 12.16L12.23 5.04C12.73 4.5 13.04 3.79 13.04 3C13.04 1.34 11.7 0 10.04 0C8.38004 0 7.04004 1.34 7.04004 3C7.04004 3.79 7.35004 4.5 7.85004 5.04L3.74004 12.09C3.51004 12.04 3.28004 12 3.04004 12C1.38004 12 0.0400391 13.34 0.0400391 15C0.0400391 16.66 1.38004 18 3.04004 18C4.70004 18 6.04004 16.66 6.04004 15C6.04004 14.21 5.73004 13.5 5.23004 12.96L9.34004 5.91C9.57004 5.96 9.80004 6 10.04 6C10.28 6 10.51 5.96 10.74 5.91L14.89 13.04ZM3.04004 16C2.49004 16 2.04004 15.55 2.04004 15C2.04004 14.45 2.49004 14 3.04004 14C3.59004 14 4.04004 14.45 4.04004 15C4.04004 15.55 3.59004 16 3.04004 16ZM11.04 3C11.04 2.45 10.59 2 10.04 2C9.49004 2 9.04004 2.45 9.04004 3C9.04004 3.55 9.49004 4 10.04 4C10.59 4 11.04 3.55 11.04 3ZM17.06 14C17.61 14 18.06 14.45 18.06 15C18.06 15.55 17.61 16 17.06 16C16.51 16 16.06 15.55 16.06 15C16.06 14.45 16.51 14 17.06 14Z"
                                                                       fill="currentColor"></path>
@@ -4728,12 +4728,12 @@
                                             <!-- кнопки в серой контентной части справа -->
                                             <div class="area-right-tools area-right-tools_h_auto area-right-tools_bottom_24px text-blue justify-between absolute">
                                                 <div class="flex flex-col relative">
-                                                    <div class="zoom-tool inline-flex w-10 shadow-sm overflow-hidden transition duration-300 hover:shadow-xl shadow-lg cursor-pointer">
+                                                    <div class="zoom-tool inline-flex w-8 shadow-sm overflow-hidden transition duration-300 hover:shadow-xl shadow-lg cursor-pointer">
                                                         <div class="flex flex-col">
-                                                            <div @click="$refs.modal_graph.zoomIn()" class="zoom-tool__plus inline-flex w-10 h-10 bg-white transition duration-300">
+                                                            <div @click="$refs.modal_graph.zoomIn()" class="zoom-tool__plus inline-flex w-8 h-8 bg-white transition duration-300">
                                                                 <div class="flex w-full h-full justify-center items-center">
                                                                     <div class="inline-flex items-start">
-                                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
                                                                              xmlns="http://www.w3.org/2000/svg">
                                                                             <path d="M19 13H13V19H11V13H5V11H11V5H13V11H19V13Z"
                                                                                   fill="currentColor"/>
@@ -4741,10 +4741,10 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div @click="$refs.modal_graph.zoomOut()" class="zoom-tool__minus inline-flex w-10 h-10 bg-white transition duration-300">
+                                                            <div @click="$refs.modal_graph.zoomOut()" class="zoom-tool__minus inline-flex w-8 h-8 bg-white transition duration-300">
                                                                 <div class="flex w-full h-full justify-center items-center">
                                                                     <div class="inline-flex items-start">
-                                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
                                                                              xmlns="http://www.w3.org/2000/svg">
                                                                             <path d="M19 13H5V11H19V13Z" fill="currentColor"/>
                                                                         </svg>

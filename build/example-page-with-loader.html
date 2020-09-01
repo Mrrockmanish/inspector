@@ -13,14 +13,16 @@
 <body class="relative">
     <div class="preloader absolute w-full h-full opacity-75 bg-f2">
         <div class="relative w-full h-full">
-            <div class="preloader__img flex justify-center items-center absolute rounded-full border border-blue relative">
-                <div class="preloader__rotate rounded-full border border-transparent absolute">
-                    <div class="preloader__rotate-inner rounded-full relative w-full h-full"></div>
+            <div class="preloader__box flex flex-col justify-center items-center">
+                <div class='sk-wave'>
+                    <div class='sk-rect sk-rect-1'></div>
+                    <div class='sk-rect sk-rect-2'></div>
+                    <div class='sk-rect sk-rect-3'></div>
+                    <div class='sk-rect sk-rect-4'></div>
+                    <div class='sk-rect sk-rect-5'></div>
                 </div>
-                <div class="preloader__inner flex justify-center items-center border border-blue rounded-full">
-                    <div class="preloader__percent text-blue text-2xl flex">
-                        0%
-                    </div>
+                <div class="flex justify-center items-center h-10 px-4 bg-red text-white font-semibold rounded-md text-sm cursor-pointer hover:opacity-75 mt-3">
+                    Отменить запрос
                 </div>
             </div>
         </div>
