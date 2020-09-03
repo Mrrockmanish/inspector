@@ -15,14 +15,18 @@
 <div id="app" v-cloak>
         <div v-show="show_loader == true" class="preloader absolute w-full h-full opacity-75 bg-f2">
             <div class="relative w-full h-full">
-                <svg class="preloader__img absolute" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                            d="M84.5488 35.7303C88.4823 42.5434 90.0578 50.464 89.031 58.2637C88.0041 66.0634 84.4323 73.3064 78.8695 78.8692C73.3066 84.432 66.0637 88.0039 58.264 89.0307C50.4642 90.0576 42.5436 88.4821 35.7306 84.5486C28.9176 80.615 23.5928 74.5434 20.5822 67.2752C17.5717 60.007 17.0435 51.9485 19.0796 44.3495C21.1157 36.7506 25.6024 30.0358 31.8437 25.2467C38.0851 20.4575 45.7323 17.8616 53.5993 17.8616"
-                            stroke="#449FE2" stroke-width="7" />
-                    <path
-                            d="M77.7858 39.6356C80.8597 44.9599 82.091 51.1497 81.2885 57.245C80.486 63.3403 77.6947 69.0006 73.3475 73.3478C69.0003 77.695 63.34 80.4863 57.2447 81.2888C51.1494 82.0913 44.9596 80.86 39.6353 77.7861C34.3111 74.7121 30.1499 69.9672 27.7972 64.2873C25.4445 58.6073 25.0317 52.3098 26.6229 46.3714C28.2141 40.4329 31.7204 35.1855 36.5978 31.4429C41.4753 27.7002 47.4514 25.6716 53.5994 25.6716"
-                            stroke="#449FE2" stroke-width="3" />
-                </svg>
+                <div class="preloader__box flex flex-col justify-center items-center">
+                    <div class='sk-wave'>
+                        <div class='sk-rect sk-rect-1'></div>
+                        <div class='sk-rect sk-rect-2'></div>
+                        <div class='sk-rect sk-rect-3'></div>
+                        <div class='sk-rect sk-rect-4'></div>
+                        <div class='sk-rect sk-rect-5'></div>
+                    </div>
+                    <!--            <div class="flex justify-center items-center h-10 px-4 bg-red text-white font-semibold rounded-md text-sm cursor-pointer hover:opacity-75 mt-3">-->
+                    <!--                Отменить запрос-->
+                    <!--            </div>-->
+                </div>
             </div>
         </div>
 
@@ -127,7 +131,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div v-bind:class="{active: mode == 'userlists'}" class="left-panel__item inline-flex w-full cursor-pointer hover:text-white">
+                        <div v-bind:class="{active: mode == 'userlists'}" class=" left-panel__item inline-flex w-full">
                             <div @click="set_mode('userlists')" class="flex items-center">
                                 <div class="inline-flex p-4 flex-shrink-0 items-start">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -142,8 +146,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="left-panel__item inline-flex w-full cursor-pointer hover:text-white">
-                            <a href="#" class="flex items-center">
+                        <div class="left-panel__item inline-flex w-full">
+                            <div class="flex items-center">
                                 <div class="inline-flex p-4 flex-shrink-0 items-start">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
@@ -156,7 +160,7 @@
                                 <div class="inline-flex text-xs font-medium whitespace-no-wrap">
                                     Контакты
                                 </div>
-                            </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -858,6 +862,17 @@
                             </div>
                         </div>
                     </div>
+                    <div class="go_to_bottom area-right-tools__tool inline-flex flex-shrink-0 items-start rounded-full bg-white w-10 h-10 hover:shadow-xl shadow-lg transition duration-300 cursor-pointer tooltip mt-4" title="Вниз">
+                        <div class="flex w-full h-full justify-center items-center">
+                            <div class="inline-flex items-start" style="transform: rotate(180deg)">
+
+                                <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 1L1 11H15L8 1Z" stroke="#00599A" stroke-width="2" stroke-linejoin="round"/>
+                                </svg>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1004,6 +1019,17 @@
                     <div class="go_to_top area-right-tools__tool inline-flex flex-shrink-0 items-start rounded-full bg-white w-10 h-10 hover:shadow-xl shadow-lg transition duration-300 cursor-pointer tooltip" title="Наверх">
                         <div class="flex w-full h-full justify-center items-center">
                             <div class="inline-flex items-start">
+
+                                <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 1L1 11H15L8 1Z" stroke="#00599A" stroke-width="2" stroke-linejoin="round"/>
+                                </svg>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="go_to_bottom hidden area-right-tools__tool inline-flex flex-shrink-0 items-start rounded-full bg-white w-10 h-10 hover:shadow-xl shadow-lg transition duration-300 cursor-pointer tooltip mt-4" title="Вниз">
+                        <div class="flex w-full h-full justify-center items-center">
+                            <div class="inline-flex items-start" style="transform: rotate(180deg)">
 
                                 <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M8 1L1 11H15L8 1Z" stroke="#00599A" stroke-width="2" stroke-linejoin="round"/>
@@ -2514,13 +2540,13 @@
                                 </div>
                             </div>
 
-                            <div v-if="check_props_replaces(item, 'otherInns')" class="one-result__prop inline-flex flex-grow">
+                            <div v-if="item.data.otherInns && item.data.otherInns.length" class="one-result__prop inline-flex flex-grow">
                                 <div class="flex flex-grow">
                                     <div class="req">
-                                        Старые ИНН
+                                        Другие ИНН
                                     </div>
                                     <div class="flex flex-wrap flex-grow uppercase font-semibold text-search">
-                                        <div v-if="item.data.otherInns && it.indexOf('[[') > -1" class="inline-flex w-full" v-for="(it, ind) in item.data.otherInns">
+                                        <div v-if="item.data.otherInns " class="inline-flex w-full" v-for="(it, ind) in item.data.otherInns">
                                             <div class="" v-html="replace_selection(it)">
 
                                             </div>
@@ -2533,7 +2559,7 @@
                             <div v-if="check_props_replaces(item, 'ogrnips')" class="one-result__prop inline-flex flex-grow">
                                 <div class="flex flex-grow">
                                     <div class="req">
-                                        Старые ОГРНИП
+                                        Другие ОГРНИП
                                     </div>
                                     <div class="flex flex-wrap flex-grow uppercase font-semibold text-search">
                                         <div v-if="item.data.ogrnips && it.indexOf('[[') > -1" class="inline-flex w-full" v-for="(it, ind) in item.data.ogrnips">
@@ -2828,7 +2854,7 @@
 
                             <div v-show="lists.list1.items.length > 0" class="tables__header flex py-2 mt-5 items-center border-b border-b9 text-b9 leading-3 text-xxs font-medium px-2">
                                 <div class="flex flex-grow -mx-4">
-                                    <div class="tables__cell tables__cell_w_40px inline-flex flex-shrink-0 justify-center items-center px-2">
+                                    <div class="tables__cell tables__cell_w_50px inline-flex flex-shrink-0 justify-center items-center px-2">
                                         #
                                     </div>
                                     <div class="tables__cell tables__cell_w_40per max-w-full flex-grow inline-flex flex-shrink-0 px-2">
@@ -2914,7 +2940,7 @@
 
                             <div v-show="lists.list2.items.length > 0" class="tables__header flex py-2 mt-5 items-center border-b border-b9 text-b9 leading-3 text-xxs font-medium px-2">
                                 <div class="flex flex-grow -mx-4">
-                                    <div class="tables__cell tables__cell_w_40px inline-flex flex-shrink-0 justify-center items-center px-2">
+                                    <div class="tables__cell tables__cell_w_50px inline-flex flex-shrink-0 justify-center items-center px-2">
                                         #
                                     </div>
                                     <div class="tables__cell tables__cell_w_40per max-w-full flex-grow inline-flex flex-shrink-0 px-2">
@@ -2944,7 +2970,7 @@
 
                             <div v-bind:class="{ not_found: item.not_found }" class="tables__row flex py-5 items-center border-b border-b9 text-b9 leading-3 text-xxs font-medium px-2" v-for="(item, index) in lists.list1.items">
                                 <div class="flex items-center flex-grow -mx-4">
-                                    <div class="tables__cell tables__cell_w_40px leading-snug flex-shrink-0 justify-center items-center text-65 font-semibold text-xs px-2">
+                                    <div class="tables__cell tables__cell_w_50px leading-snug flex-shrink-0 justify-center items-center text-65 font-semibold text-xs px-2">
                                         {{index+1}}
                                     </div>
                                     <div class="tables__cell tables__cell_w_40per upload-file__name  max-w-full flex flex-grow text-sm  items-end flex-shrink-0 px-2">
@@ -2972,7 +2998,7 @@
 
                             <div v-bind:class="{ not_found: item.not_found }" class="tables__row flex py-5 items-center border-b border-b9 text-b9 leading-3 text-xxs font-medium px-2" v-for="(item, index) in lists.list2.items">
                                 <div class="flex items-center flex-grow -mx-4">
-                                    <div class="tables__cell tables__cell_w_40px leading-snug flex-shrink-0 justify-center items-center text-65 font-semibold text-xs px-2">
+                                    <div class="tables__cell tables__cell_w_50px leading-snug flex-shrink-0 justify-center items-center text-65 font-semibold text-xs px-2">
                                         {{index+1}}
                                     </div>
                                     <div class="tables__cell tables__cell_w_40per upload-file__name  max-w-full flex flex-grow text-sm  items-end flex-shrink-0 px-2">
@@ -3004,6 +3030,17 @@
                         <div class="go_to_top area-right-tools__tool inline-flex flex-shrink-0 items-start rounded-full bg-white w-10 h-10 hover:shadow-xl shadow-lg transition duration-300 cursor-pointer tooltip" title="Наверх">
                             <div class="flex w-full h-full justify-center items-center">
                                 <div class="inline-flex items-start">
+
+                                    <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 1L1 11H15L8 1Z" stroke="#00599A" stroke-width="2" stroke-linejoin="round"/>
+                                    </svg>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="go_to_bottom area-right-tools__tool inline-flex flex-shrink-0 items-start rounded-full bg-white w-10 h-10 hover:shadow-xl shadow-lg transition duration-300 cursor-pointer tooltip mt-4" title="Вниз">
+                            <div class="flex w-full h-full justify-center items-center">
+                                <div class="inline-flex items-start" style="transform: rotate(180deg)">
 
                                     <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M8 1L1 11H15L8 1Z" stroke="#00599A" stroke-width="2" stroke-linejoin="round"/>
@@ -3197,6 +3234,18 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="vis_bottom area-right-tools__tool inline-flex flex-shrink-0 items-start rounded-full bg-white w-10 h-10 hover:shadow-xl shadow-lg transition duration-300 cursor-pointer tooltip mt-4" title="Вниз">
+                                <div class="flex w-full h-full justify-center items-center">
+                                    <div class="inline-flex items-start" style="transform: rotate(180deg)">
+
+                                        <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8 1L1 11H15L8 1Z" stroke="#00599A" stroke-width="2" stroke-linejoin="round"/>
+                                        </svg>
+
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                         <div class="connections flex-wrap flex-col flex-grow pb-10 min-w-0 overflow-scroll">
 
@@ -3848,8 +3897,8 @@
                     </div>
                 </div>
                 <div class="hidden">
-                    <div class="vis_active_heading">Действующие связи: {{computed_rows.active.length}}</div>
-                    <div class="vis_inactive_heading">Недействующие связи: {{computed_rows.inactive.length}}</div>
+                    <div class="vis_active_heading">Действующие: {{computed_rows.active.length}}</div>
+                    <div class="vis_inactive_heading">Недействующие: {{computed_rows.inactive.length}}</div>
                 </div>
             </div>
 
@@ -4151,7 +4200,7 @@
                             <span>Настройки</span>
                         </div>
                         <div class="lists-block__connections-filters flex flex-col w-full px-5 py-5">
-                            <div class="font-medium text-xxs">Статус</div>
+                            <div class="font-medium text-xxs">Фильтры</div>
                             <div class="flex flex-col items-start">
                                 <label class="flex items-center cursor-pointer select-none mt-4">
                                     <input data-filter="all" type="radio" name="connection-status" value="Все" class="input-radio hidden" checked>

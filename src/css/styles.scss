@@ -724,48 +724,6 @@ a {
     top: 0;
     bottom: 0;
   }
-
-  &__img {
-    width: s(140);
-    height: s(140);
-    left: 50%;
-    top: 50%;
-    margin-left: - s(70);
-    margin-top: - s(140);
-    border-width: s(8);
-  }
-
-  &__rotate {
-    width: s(140);
-    height: s(140);
-    top: - s(8);
-    left: - s(8);
-    border-width: s(8);
-    animation-name: loader-rotate;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease;
-  }
-
-  &__rotate-inner {
-    &::after {
-      content: '  ';
-      position: absolute;
-      display: block;
-      width: s(24);
-      height: s(24);
-      background: #F2F2F2;
-      top: - s(10);
-      left: 50%;
-      margin-left: - s(12);
-    }
-  }
-
-  &__inner {
-    width: 90%;
-    height: 90%;
-  }
-
 }
 
 .sk-wave {

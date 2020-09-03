@@ -147,25 +147,27 @@
         </div>
     </div>
     <div class="my-list flex flex-col justify-start content-start flex-grow min-w-0">
-        <div class="my-list__head flex flex-col justify-between items-start pl-12 pr-4 pt-6 pb-4">
-            <div class="top-panel-titles flex text-4xl font-bold overflow-hidden">
-                <span class="text-overflow whitespace-no-wrap overflow-hidden min-w-0">Мои списки</span>
-            </div>
-            <div class="flex mt-12">
-                <div class="flex items-center cursor-pointer hover:opacity-75 mr-12">
-                    <div class="inline-flex mr-2">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                  d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM11 7V11H7V13H11V17H13V13H17V11H13V7H11ZM4 12C4 16.41 7.59 20 12 20C16.41 20 20 16.41 20 12C20 7.59 16.41 4 12 4C7.59 4 4 7.59 4 12Z" fill="#00599A"></path>
-                        </svg>
-                    </div>
-                    <div class="text-sm text-blue font-semibold">
-                        Добавить список
+        <div class="my-list__head flex-shrink-0 px-4 pb-4 overflow-y-scroll">
+            <div class="my-list__table-container flex-grow flex flex-col mx-auto">
+                <div class="top-panel-titles flex text-4xl font-bold overflow-hidden">
+                    <span class="text-overflow whitespace-no-wrap overflow-hidden min-w-0">Мои списки</span>
+                </div>
+                <div class="flex mt-2">
+                    <div class="flex items-center cursor-pointer hover:opacity-75 mr-12">
+                        <div class="inline-flex mr-2">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM11 7V11H7V13H11V17H13V13H17V11H13V7H11ZM4 12C4 16.41 7.59 20 12 20C16.41 20 20 16.41 20 12C20 7.59 16.41 4 12 4C7.59 4 4 7.59 4 12Z" fill="#00599A"></path>
+                            </svg>
+                        </div>
+                        <div class="text-sm text-blue font-semibold">
+                            Добавить список
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="my-list__body bg-f2 px-4 pt-8 pb-4">
+        <div class="my-list__body flex-shrink-0 bg-f2 px-4 pt-8 pb-2 overflow-y-scroll">
             <div class="my-list__table-container mx-auto">
                 <form class="flex items-center border-b border-#D5D5D5 cursor-pointer pb-1">
                     <div class="flex items-start flex-shrink-0 focus:outline-none mr-2">
@@ -201,7 +203,7 @@
                 </div>
             </div>
         </div>
-        <div class="my-lists__footer bg-f2 flex-grow px-4 pb-5 overflow-scroll">
+        <div class="my-lists__footer bg-f2 flex-grow px-4 pb-5 overflow-y-scroll">
             <div class="my-list__table-container mx-auto">
                 <div class="tables text-65 text-xs">
                     <div class="tables__row flex px-4 py-4 leading-3">
