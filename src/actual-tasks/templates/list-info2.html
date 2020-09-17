@@ -1,0 +1,487 @@
+<div class="flex w-full flex-shrink-0 items-center text-b9 text-xs font-medium  px-5" style="height: 3.5rem;">
+    <span>Поиск маршрутов</span>
+</div>
+<div class="flex flex-wrap w-full border-t border-ed px-5">
+    <div class="inline-flex flex-wrap w-full">
+        <form class="list-search inline-flex w-full border-b border-c4 my-5 relative">
+            <input type="search" class="py-1 inline-flex flex-grow cursor-text focus:outline-none"
+                   placeholder="Поиск по объектам"/>
+            <div class="list-search__clear inline-flex absolute right-0 flex-shrink-0 items-start hover:opacity-75 bg-white flex-shrink-0 cursor-pointer z-20" onclick="this.previousElementSibling.value = ''" style="margin-right: 1.1875rem">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="icon/content/clear_24px" opacity="0.5">
+                        <path id="icon/content/clear_24px_2" d="M12.6667 4.27325L11.7267 3.33325L8.00001 7.05992L4.27334 3.33325L3.33334 4.27325L7.06001 7.99992L3.33334 11.7266L4.27334 12.6666L8.00001 8.93992L11.7267 12.6666L12.6667 11.7266L8.94001 7.99992L12.6667 4.27325Z" fill="black"
+                              fill-opacity="0.54"></path>
+                    </g>
+                </svg>
+            </div>
+            <div class="inline-flex items-start flex-shrink-0 focus:outline-none hover:opacity-75 mt-1">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M14.9649 14.2549H15.7549L20.7449 19.2549L19.2549 20.7449L14.2549 15.7549V14.9649L13.9849 14.6849C12.8449 15.6649 11.3649 16.2549 9.75488 16.2549C6.16488 16.2549 3.25488 13.3449 3.25488 9.75488C3.25488 6.16488 6.16488 3.25488 9.75488 3.25488C13.3449 3.25488 16.2549 6.16488 16.2549 9.75488C16.2549 11.3649 15.6649 12.8449 14.6849 13.9849L14.9649 14.2549ZM5.25488 9.75488C5.25488 12.2449 7.26488 14.2549 9.75488 14.2549C12.2449 14.2549 14.2549 12.2449 14.2549 9.75488C14.2549 7.26488 12.2449 5.25488 9.75488 5.25488C7.26488 5.25488 5.25488 7.26488 5.25488 9.75488Z"
+                          fill="black" fill-opacity="0.54"></path>
+                </svg>
+            </div>
+        </form>
+    </div>
+</div>
+<!--<div class="drop-filters  pb-4">-->
+<!--    <div class="filter-drop flex flex-col flex-wrap w-full  ">-->
+
+<!--    </div>-->
+<!--</div>-->
+<div class="filter-drop__content border-t border-ed pb-2 px-5 pt-5 overflow-y-scroll">
+    <div class="flex w-full py-2">
+        <label class="flex items-center cursor-pointer">
+            <input type="checkbox" class="check-controls__checkbox hidden" checked="">
+            <span class="check-controls__check-custom flex-shrink-0 inline-flex border border-b9 mr-3"></span>
+            <svg class="text-b9 flex flex-shrink-0" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M7.99996 2.6665C6.52663 2.6665 5.33329 3.85984 5.33329 5.33317C5.33329 6.8065 6.52663 7.99984 7.99996 7.99984C9.47329 7.99984 10.6666 6.8065 10.6666 5.33317C10.6666 3.85984 9.47329 2.6665 7.99996 2.6665ZM9.33329 5.33317C9.33329 4.59984 8.73329 3.99984 7.99996 3.99984C7.26663 3.99984 6.66663 4.59984 6.66663 5.33317C6.66663 6.0665 7.26663 6.6665 7.99996 6.6665C8.73329 6.6665 9.33329 6.0665 9.33329 5.33317ZM12 11.9998C11.8666 11.5265 9.79996 10.6665 7.99996 10.6665C6.20663 10.6665 4.15329 11.5198 3.99996 11.9998H12ZM2.66663 11.9998C2.66663 10.2265 6.21996 9.33317 7.99996 9.33317C9.77996 9.33317 13.3333 10.2265 13.3333 11.9998V13.3332H2.66663V11.9998Z"
+                      fill="currentColor"/>
+            </svg>
+            <span class="flex ml-3">
+                <span class="flex flex-wrap w-full">
+                    <span class="flex w-full font-semibold min-w-0">
+                        <span class="w-48 min-w-0 whitespace-no-wrap text-overflow overflow-hidden">
+                            Чугунов Максим
+                            Петрович sdf dsfd sdf dff</span>
+                    </span>
+                    <span class="flex w-full text-b9 font-medium min-w-0">
+                        <span class="w-48 min-w-0 whitespace-no-wrap text-overflow overflow-hidden">
+                            ИНН
+                            5903113639
+                        </span>
+                    </span>
+                </span>
+            </span>
+            <span
+                    class="flex whitespace-no-wrap ml-auto text-xxs text-blue font-medium items-center justify-center px-1">
+                20%
+            </span>
+        </label>
+    </div>
+    <div class="flex w-full py-2">
+        <label class="flex items-center cursor-pointer">
+            <input type="checkbox" class="check-controls__checkbox hidden" checked="">
+            <span class="check-controls__check-custom flex-shrink-0 inline-flex border border-b9 mr-3"></span>
+            <svg class="inline-flex flex-shrink-0" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M8.00004 2V4.66667H14.6667V14H1.33337V2H8.00004ZM2.66674 12.6666H4.00007V11.3333H2.66674V12.6666ZM4.00007 10.0001H2.66674V8.66673H4.00007V10.0001ZM2.66674 7.33333H4.00007V6H2.66674V7.33333ZM4.00007 4.6666H2.66674V3.33327H4.00007V4.6666ZM5.33337 12.6666H6.66671V11.3333H5.33337V12.6666ZM6.66671 10.0001H5.33337V8.66673H6.66671V10.0001ZM5.33337 7.33333H6.66671V6H5.33337V7.33333ZM6.66671 4.6666H5.33337V3.33327H6.66671V4.6666ZM8.00001 12.6667H13.3333V6H8.00001V7.33333H9.33334V8.66667H8.00001V10H9.33334V11.3333H8.00001V12.6667ZM12.0001 7.33327H10.6667V8.6666H12.0001V7.33327ZM10.6667 10H12.0001V11.3333H10.6667V10Z"
+                      fill="#188B31"/>
+            </svg>
+            <span class="flex ml-3">
+                <span class="flex flex-wrap w-full">
+                    <span class="flex w-full font-semibold min-w-0">
+                        <span class="w-48 min-w-0 whitespace-no-wrap text-overflow overflow-hidden">
+                            АО «МИР»
+                        </span>
+                    </span>
+                    <span class="flex w-full text-b9 font-medium min-w-0">
+                        <span class="w-48 min-w-0 whitespace-no-wrap text-overflow overflow-hidden">
+                            ИНН 5903113639 /
+                            ОГРН 115595801
+                        </span>
+                    </span>
+                </span>
+            </span>
+            <span
+                    class="flex whitespace-no-wrap ml-auto text-xxs text-blue font-medium items-center justify-center px-1">
+                20%
+            </span>
+        </label>
+    </div>
+    <div class="flex w-full py-2">
+        <label class="flex items-center cursor-pointer">
+            <input type="checkbox" class="check-controls__checkbox hidden" checked="">
+            <span class="check-controls__check-custom flex-shrink-0 inline-flex border border-b9 mr-3"></span>
+            <svg class="text-b9 flex flex-shrink-0" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M7.99996 2.6665C6.52663 2.6665 5.33329 3.85984 5.33329 5.33317C5.33329 6.8065 6.52663 7.99984 7.99996 7.99984C9.47329 7.99984 10.6666 6.8065 10.6666 5.33317C10.6666 3.85984 9.47329 2.6665 7.99996 2.6665ZM9.33329 5.33317C9.33329 4.59984 8.73329 3.99984 7.99996 3.99984C7.26663 3.99984 6.66663 4.59984 6.66663 5.33317C6.66663 6.0665 7.26663 6.6665 7.99996 6.6665C8.73329 6.6665 9.33329 6.0665 9.33329 5.33317ZM12 11.9998C11.8666 11.5265 9.79996 10.6665 7.99996 10.6665C6.20663 10.6665 4.15329 11.5198 3.99996 11.9998H12ZM2.66663 11.9998C2.66663 10.2265 6.21996 9.33317 7.99996 9.33317C9.77996 9.33317 13.3333 10.2265 13.3333 11.9998V13.3332H2.66663V11.9998Z"
+                      fill="currentColor"/>
+            </svg>
+            <span class="flex ml-3">
+                <span class="flex flex-wrap w-full">
+                    <span class="flex w-full font-semibold min-w-0">
+                        <span class="w-48 min-w-0 whitespace-no-wrap text-overflow overflow-hidden">
+                            Чугунов Максим
+                            Петрович sdf dsfd sdf dff</span>
+                    </span>
+                    <span class="flex w-full text-b9 font-medium min-w-0">
+                        <span class="w-48 min-w-0 whitespace-no-wrap text-overflow overflow-hidden">
+                            ИНН
+                            5903113639
+                        </span>
+                    </span>
+                    <span class="flex w-full text-b9 font-medium min-w-0">
+                        <span class="w-48 min-w-0 whitespace-no-wrap text-purple text-overflow overflow-hidden">
+                            Генеральный директор sdfasd asdfadsf adsfasd
+                        </span>
+                    </span>
+                </span>
+            </span>
+            <span
+                    class="flex whitespace-no-wrap ml-auto text-xxs text-blue font-medium items-center justify-center px-1">
+                20%
+            </span>
+        </label>
+    </div>
+    <div class="flex w-full py-2">
+        <label class="flex items-center cursor-pointer">
+            <input type="checkbox" class="check-controls__checkbox hidden" checked="">
+            <span class="check-controls__check-custom flex-shrink-0 inline-flex border border-b9 mr-3"></span>
+            <svg class="text-b9 flex flex-shrink-0" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M7.99996 2.6665C6.52663 2.6665 5.33329 3.85984 5.33329 5.33317C5.33329 6.8065 6.52663 7.99984 7.99996 7.99984C9.47329 7.99984 10.6666 6.8065 10.6666 5.33317C10.6666 3.85984 9.47329 2.6665 7.99996 2.6665ZM9.33329 5.33317C9.33329 4.59984 8.73329 3.99984 7.99996 3.99984C7.26663 3.99984 6.66663 4.59984 6.66663 5.33317C6.66663 6.0665 7.26663 6.6665 7.99996 6.6665C8.73329 6.6665 9.33329 6.0665 9.33329 5.33317ZM12 11.9998C11.8666 11.5265 9.79996 10.6665 7.99996 10.6665C6.20663 10.6665 4.15329 11.5198 3.99996 11.9998H12ZM2.66663 11.9998C2.66663 10.2265 6.21996 9.33317 7.99996 9.33317C9.77996 9.33317 13.3333 10.2265 13.3333 11.9998V13.3332H2.66663V11.9998Z"
+                      fill="currentColor"/>
+            </svg>
+            <span class="flex ml-3">
+                <span class="flex flex-wrap w-full">
+                    <span class="flex w-full font-semibold min-w-0">
+                        <span class="w-48 min-w-0 whitespace-no-wrap text-overflow overflow-hidden">
+                            Чугунов Максим
+                            Петрович sdf dsfd sdf dff</span>
+                    </span>
+                    <span class="flex w-full text-b9 font-medium min-w-0">
+                        <span class="w-48 min-w-0 whitespace-no-wrap text-overflow overflow-hidden">
+                            ИНН
+                            5903113639
+                        </span>
+                    </span>
+                </span>
+            </span>
+            <span
+                    class="flex whitespace-no-wrap ml-auto text-xxs text-blue font-medium items-center justify-center px-1">
+                20%
+            </span>
+        </label>
+    </div>
+    <div class="flex w-full py-2">
+        <label class="flex items-center cursor-pointer">
+            <input type="checkbox" class="check-controls__checkbox hidden" checked="">
+            <span class="check-controls__check-custom flex-shrink-0 inline-flex border border-b9 mr-3"></span>
+            <svg class="inline-flex flex-shrink-0" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M8.00004 2V4.66667H14.6667V14H1.33337V2H8.00004ZM2.66674 12.6666H4.00007V11.3333H2.66674V12.6666ZM4.00007 10.0001H2.66674V8.66673H4.00007V10.0001ZM2.66674 7.33333H4.00007V6H2.66674V7.33333ZM4.00007 4.6666H2.66674V3.33327H4.00007V4.6666ZM5.33337 12.6666H6.66671V11.3333H5.33337V12.6666ZM6.66671 10.0001H5.33337V8.66673H6.66671V10.0001ZM5.33337 7.33333H6.66671V6H5.33337V7.33333ZM6.66671 4.6666H5.33337V3.33327H6.66671V4.6666ZM8.00001 12.6667H13.3333V6H8.00001V7.33333H9.33334V8.66667H8.00001V10H9.33334V11.3333H8.00001V12.6667ZM12.0001 7.33327H10.6667V8.6666H12.0001V7.33327ZM10.6667 10H12.0001V11.3333H10.6667V10Z"
+                      fill="#188B31"/>
+            </svg>
+            <span class="flex ml-3">
+                <span class="flex flex-wrap w-full">
+                    <span class="flex w-full font-semibold min-w-0">
+                        <span class="w-48 min-w-0 whitespace-no-wrap text-overflow overflow-hidden">
+                            АО «МИР»
+                        </span>
+                    </span>
+                    <span class="flex w-full text-b9 font-medium min-w-0">
+                        <span class="w-48 min-w-0 whitespace-no-wrap text-overflow overflow-hidden">
+                            ИНН 5903113639 /
+                            ОГРН 115595801
+                        </span>
+                    </span>
+                </span>
+            </span>
+            <span
+                    class="flex whitespace-no-wrap ml-auto text-xxs text-blue font-medium items-center justify-center px-1">
+                20%
+            </span>
+        </label>
+    </div>
+    <div class="flex w-full py-2">
+        <label class="flex items-center cursor-pointer">
+            <input type="checkbox" class="check-controls__checkbox hidden" checked="">
+            <span class="check-controls__check-custom flex-shrink-0 inline-flex border border-b9 mr-3"></span>
+            <svg class="text-b9 flex flex-shrink-0" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M7.99996 2.6665C6.52663 2.6665 5.33329 3.85984 5.33329 5.33317C5.33329 6.8065 6.52663 7.99984 7.99996 7.99984C9.47329 7.99984 10.6666 6.8065 10.6666 5.33317C10.6666 3.85984 9.47329 2.6665 7.99996 2.6665ZM9.33329 5.33317C9.33329 4.59984 8.73329 3.99984 7.99996 3.99984C7.26663 3.99984 6.66663 4.59984 6.66663 5.33317C6.66663 6.0665 7.26663 6.6665 7.99996 6.6665C8.73329 6.6665 9.33329 6.0665 9.33329 5.33317ZM12 11.9998C11.8666 11.5265 9.79996 10.6665 7.99996 10.6665C6.20663 10.6665 4.15329 11.5198 3.99996 11.9998H12ZM2.66663 11.9998C2.66663 10.2265 6.21996 9.33317 7.99996 9.33317C9.77996 9.33317 13.3333 10.2265 13.3333 11.9998V13.3332H2.66663V11.9998Z"
+                      fill="currentColor"/>
+            </svg>
+            <span class="flex ml-3">
+                <span class="flex flex-wrap w-full">
+                    <span class="flex w-full font-semibold min-w-0">
+                        <span class="w-48 min-w-0 whitespace-no-wrap text-overflow overflow-hidden">
+                            Чугунов Максим
+                            Петрович sdf dsfd sdf dff</span>
+                    </span>
+                    <span class="flex w-full text-b9 font-medium min-w-0">
+                        <span class="w-48 min-w-0 whitespace-no-wrap text-overflow overflow-hidden">
+                            ИНН
+                            5903113639
+                        </span>
+                    </span>
+                </span>
+            </span>
+            <span
+                    class="flex whitespace-no-wrap ml-auto text-xxs text-blue font-medium items-center justify-center px-1">
+                20%
+            </span>
+        </label>
+    </div>
+    <div class="flex w-full py-2">
+        <label class="flex items-center cursor-pointer">
+            <input type="checkbox" class="check-controls__checkbox hidden" checked="">
+            <span class="check-controls__check-custom flex-shrink-0 inline-flex border border-b9 mr-3"></span>
+            <svg class="inline-flex flex-shrink-0" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M8.00004 2V4.66667H14.6667V14H1.33337V2H8.00004ZM2.66674 12.6666H4.00007V11.3333H2.66674V12.6666ZM4.00007 10.0001H2.66674V8.66673H4.00007V10.0001ZM2.66674 7.33333H4.00007V6H2.66674V7.33333ZM4.00007 4.6666H2.66674V3.33327H4.00007V4.6666ZM5.33337 12.6666H6.66671V11.3333H5.33337V12.6666ZM6.66671 10.0001H5.33337V8.66673H6.66671V10.0001ZM5.33337 7.33333H6.66671V6H5.33337V7.33333ZM6.66671 4.6666H5.33337V3.33327H6.66671V4.6666ZM8.00001 12.6667H13.3333V6H8.00001V7.33333H9.33334V8.66667H8.00001V10H9.33334V11.3333H8.00001V12.6667ZM12.0001 7.33327H10.6667V8.6666H12.0001V7.33327ZM10.6667 10H12.0001V11.3333H10.6667V10Z"
+                      fill="#188B31"/>
+            </svg>
+            <span class="flex ml-3">
+                <span class="flex flex-wrap w-full">
+                    <span class="flex w-full font-semibold min-w-0">
+                        <span class="w-48 min-w-0 whitespace-no-wrap text-overflow overflow-hidden">
+                            АО «МИР»
+                        </span>
+                    </span>
+                    <span class="flex w-full text-b9 font-medium min-w-0">
+                        <span class="w-48 min-w-0 whitespace-no-wrap text-overflow overflow-hidden">
+                            ИНН 5903113639 /
+                            ОГРН 115595801
+                        </span>
+                    </span>
+                </span>
+            </span>
+            <span
+                    class="flex whitespace-no-wrap ml-auto text-xxs text-blue font-medium items-center justify-center px-1">
+                20%
+            </span>
+        </label>
+    </div>
+    <div class="flex w-full py-2">
+        <label class="flex items-center cursor-pointer">
+            <input type="checkbox" class="check-controls__checkbox hidden" checked="">
+            <span class="check-controls__check-custom flex-shrink-0 inline-flex border border-b9 mr-3"></span>
+            <svg class="text-b9 flex flex-shrink-0" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M7.99996 2.6665C6.52663 2.6665 5.33329 3.85984 5.33329 5.33317C5.33329 6.8065 6.52663 7.99984 7.99996 7.99984C9.47329 7.99984 10.6666 6.8065 10.6666 5.33317C10.6666 3.85984 9.47329 2.6665 7.99996 2.6665ZM9.33329 5.33317C9.33329 4.59984 8.73329 3.99984 7.99996 3.99984C7.26663 3.99984 6.66663 4.59984 6.66663 5.33317C6.66663 6.0665 7.26663 6.6665 7.99996 6.6665C8.73329 6.6665 9.33329 6.0665 9.33329 5.33317ZM12 11.9998C11.8666 11.5265 9.79996 10.6665 7.99996 10.6665C6.20663 10.6665 4.15329 11.5198 3.99996 11.9998H12ZM2.66663 11.9998C2.66663 10.2265 6.21996 9.33317 7.99996 9.33317C9.77996 9.33317 13.3333 10.2265 13.3333 11.9998V13.3332H2.66663V11.9998Z"
+                      fill="currentColor"/>
+            </svg>
+            <span class="flex ml-3">
+                <span class="flex flex-wrap w-full">
+                    <span class="flex w-full font-semibold min-w-0">
+                        <span class="w-48 min-w-0 whitespace-no-wrap text-overflow overflow-hidden">
+                            Чугунов Максим
+                            Петрович sdf dsfd sdf dff</span>
+                    </span>
+                    <span class="flex w-full text-b9 font-medium min-w-0">
+                        <span class="w-48 min-w-0 whitespace-no-wrap text-overflow overflow-hidden">
+                            ИНН
+                            5903113639
+                        </span>
+                    </span>
+                </span>
+            </span>
+            <span
+                    class="flex whitespace-no-wrap ml-auto text-xxs text-blue font-medium items-center justify-center px-1">
+                20%
+            </span>
+        </label>
+    </div>
+    <div class="flex w-full py-2">
+        <label class="flex items-center cursor-pointer">
+            <input type="checkbox" class="check-controls__checkbox hidden" checked="">
+            <span class="check-controls__check-custom flex-shrink-0 inline-flex border border-b9 mr-3"></span>
+            <svg class="inline-flex flex-shrink-0" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M8.00004 2V4.66667H14.6667V14H1.33337V2H8.00004ZM2.66674 12.6666H4.00007V11.3333H2.66674V12.6666ZM4.00007 10.0001H2.66674V8.66673H4.00007V10.0001ZM2.66674 7.33333H4.00007V6H2.66674V7.33333ZM4.00007 4.6666H2.66674V3.33327H4.00007V4.6666ZM5.33337 12.6666H6.66671V11.3333H5.33337V12.6666ZM6.66671 10.0001H5.33337V8.66673H6.66671V10.0001ZM5.33337 7.33333H6.66671V6H5.33337V7.33333ZM6.66671 4.6666H5.33337V3.33327H6.66671V4.6666ZM8.00001 12.6667H13.3333V6H8.00001V7.33333H9.33334V8.66667H8.00001V10H9.33334V11.3333H8.00001V12.6667ZM12.0001 7.33327H10.6667V8.6666H12.0001V7.33327ZM10.6667 10H12.0001V11.3333H10.6667V10Z"
+                      fill="#188B31"/>
+            </svg>
+            <span class="flex ml-3">
+                <span class="flex flex-wrap w-full">
+                    <span class="flex w-full font-semibold min-w-0">
+                        <span class="w-48 min-w-0 whitespace-no-wrap text-overflow overflow-hidden">
+                            АО «МИР»
+                        </span>
+                    </span>
+                    <span class="flex w-full text-b9 font-medium min-w-0">
+                        <span class="w-48 min-w-0 whitespace-no-wrap text-overflow overflow-hidden">
+                            ИНН 5903113639 /
+                            ОГРН 115595801
+                        </span>
+                    </span>
+                </span>
+            </span>
+            <span
+                    class="flex whitespace-no-wrap ml-auto text-xxs text-blue font-medium items-center justify-center px-1">
+                20%
+            </span>
+        </label>
+    </div>
+    <div class="flex w-full py-2">
+        <label class="flex items-center cursor-pointer">
+            <input type="checkbox" class="check-controls__checkbox hidden" checked="">
+            <span class="check-controls__check-custom flex-shrink-0 inline-flex border border-b9 mr-3"></span>
+            <svg class="text-b9 flex flex-shrink-0" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M7.99996 2.6665C6.52663 2.6665 5.33329 3.85984 5.33329 5.33317C5.33329 6.8065 6.52663 7.99984 7.99996 7.99984C9.47329 7.99984 10.6666 6.8065 10.6666 5.33317C10.6666 3.85984 9.47329 2.6665 7.99996 2.6665ZM9.33329 5.33317C9.33329 4.59984 8.73329 3.99984 7.99996 3.99984C7.26663 3.99984 6.66663 4.59984 6.66663 5.33317C6.66663 6.0665 7.26663 6.6665 7.99996 6.6665C8.73329 6.6665 9.33329 6.0665 9.33329 5.33317ZM12 11.9998C11.8666 11.5265 9.79996 10.6665 7.99996 10.6665C6.20663 10.6665 4.15329 11.5198 3.99996 11.9998H12ZM2.66663 11.9998C2.66663 10.2265 6.21996 9.33317 7.99996 9.33317C9.77996 9.33317 13.3333 10.2265 13.3333 11.9998V13.3332H2.66663V11.9998Z"
+                      fill="currentColor"/>
+            </svg>
+            <span class="flex ml-3">
+                <span class="flex flex-wrap w-full">
+                    <span class="flex w-full font-semibold min-w-0">
+                        <span class="w-48 min-w-0 whitespace-no-wrap text-overflow overflow-hidden">
+                            Чугунов Максим
+                            Петрович sdf dsfd sdf dff</span>
+                    </span>
+                    <span class="flex w-full text-b9 font-medium min-w-0">
+                        <span class="w-48 min-w-0 whitespace-no-wrap text-overflow overflow-hidden">
+                            ИНН
+                            5903113639
+                        </span>
+                    </span>
+                    <span class="flex w-full text-b9 font-medium min-w-0">
+                        <span class="w-48 min-w-0 whitespace-no-wrap text-purple text-overflow overflow-hidden">
+                            Генеральный директор sdfasd asdfadsf adsfasd
+                        </span>
+                    </span>
+                </span>
+            </span>
+            <span
+                    class="flex whitespace-no-wrap ml-auto text-xxs text-blue font-medium items-center justify-center px-1">
+                20%
+            </span>
+        </label>
+    </div>
+    <div class="flex w-full py-2">
+        <label class="flex items-center cursor-pointer">
+            <input type="checkbox" class="check-controls__checkbox hidden" checked="">
+            <span class="check-controls__check-custom flex-shrink-0 inline-flex border border-b9 mr-3"></span>
+            <svg class="text-b9 flex flex-shrink-0" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M7.99996 2.6665C6.52663 2.6665 5.33329 3.85984 5.33329 5.33317C5.33329 6.8065 6.52663 7.99984 7.99996 7.99984C9.47329 7.99984 10.6666 6.8065 10.6666 5.33317C10.6666 3.85984 9.47329 2.6665 7.99996 2.6665ZM9.33329 5.33317C9.33329 4.59984 8.73329 3.99984 7.99996 3.99984C7.26663 3.99984 6.66663 4.59984 6.66663 5.33317C6.66663 6.0665 7.26663 6.6665 7.99996 6.6665C8.73329 6.6665 9.33329 6.0665 9.33329 5.33317ZM12 11.9998C11.8666 11.5265 9.79996 10.6665 7.99996 10.6665C6.20663 10.6665 4.15329 11.5198 3.99996 11.9998H12ZM2.66663 11.9998C2.66663 10.2265 6.21996 9.33317 7.99996 9.33317C9.77996 9.33317 13.3333 10.2265 13.3333 11.9998V13.3332H2.66663V11.9998Z"
+                      fill="currentColor"/>
+            </svg>
+            <span class="flex ml-3">
+                <span class="flex flex-wrap w-full">
+                    <span class="flex w-full font-semibold min-w-0">
+                        <span class="w-48 min-w-0 whitespace-no-wrap text-overflow overflow-hidden">
+                            Чугунов Максим
+                            Петрович sdf dsfd sdf dff</span>
+                    </span>
+                    <span class="flex w-full text-b9 font-medium min-w-0">
+                        <span class="w-48 min-w-0 whitespace-no-wrap text-overflow overflow-hidden">
+                            ИНН
+                            5903113639
+                        </span>
+                    </span>
+                </span>
+            </span>
+            <span
+                    class="flex whitespace-no-wrap ml-auto text-xxs text-blue font-medium items-center justify-center px-1">
+                20%
+            </span>
+        </label>
+    </div>
+    <div class="flex w-full py-2">
+        <label class="flex items-center cursor-pointer">
+            <input type="checkbox" class="check-controls__checkbox hidden" checked="">
+            <span class="check-controls__check-custom flex-shrink-0 inline-flex border border-b9 mr-3"></span>
+            <svg class="inline-flex flex-shrink-0" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M8.00004 2V4.66667H14.6667V14H1.33337V2H8.00004ZM2.66674 12.6666H4.00007V11.3333H2.66674V12.6666ZM4.00007 10.0001H2.66674V8.66673H4.00007V10.0001ZM2.66674 7.33333H4.00007V6H2.66674V7.33333ZM4.00007 4.6666H2.66674V3.33327H4.00007V4.6666ZM5.33337 12.6666H6.66671V11.3333H5.33337V12.6666ZM6.66671 10.0001H5.33337V8.66673H6.66671V10.0001ZM5.33337 7.33333H6.66671V6H5.33337V7.33333ZM6.66671 4.6666H5.33337V3.33327H6.66671V4.6666ZM8.00001 12.6667H13.3333V6H8.00001V7.33333H9.33334V8.66667H8.00001V10H9.33334V11.3333H8.00001V12.6667ZM12.0001 7.33327H10.6667V8.6666H12.0001V7.33327ZM10.6667 10H12.0001V11.3333H10.6667V10Z"
+                      fill="#188B31"/>
+            </svg>
+            <span class="flex ml-3">
+                <span class="flex flex-wrap w-full">
+                    <span class="flex w-full font-semibold min-w-0">
+                        <span class="w-48 min-w-0 whitespace-no-wrap text-overflow overflow-hidden">
+                            АО «МИР»
+                        </span>
+                    </span>
+                    <span class="flex w-full text-b9 font-medium min-w-0">
+                        <span class="w-48 min-w-0 whitespace-no-wrap text-overflow overflow-hidden">
+                            ИНН 5903113639 /
+                            ОГРН 115595801
+                        </span>
+                    </span>
+                </span>
+            </span>
+            <span
+                    class="flex whitespace-no-wrap ml-auto text-xxs text-blue font-medium items-center justify-center px-1">
+                20%
+            </span>
+        </label>
+    </div>
+    <div class="flex w-full py-2">
+        <label class="flex items-center cursor-pointer">
+            <input type="checkbox" class="check-controls__checkbox hidden" checked="">
+            <span class="check-controls__check-custom flex-shrink-0 inline-flex border border-b9 mr-3"></span>
+            <svg class="text-b9 flex flex-shrink-0" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M7.99996 2.6665C6.52663 2.6665 5.33329 3.85984 5.33329 5.33317C5.33329 6.8065 6.52663 7.99984 7.99996 7.99984C9.47329 7.99984 10.6666 6.8065 10.6666 5.33317C10.6666 3.85984 9.47329 2.6665 7.99996 2.6665ZM9.33329 5.33317C9.33329 4.59984 8.73329 3.99984 7.99996 3.99984C7.26663 3.99984 6.66663 4.59984 6.66663 5.33317C6.66663 6.0665 7.26663 6.6665 7.99996 6.6665C8.73329 6.6665 9.33329 6.0665 9.33329 5.33317ZM12 11.9998C11.8666 11.5265 9.79996 10.6665 7.99996 10.6665C6.20663 10.6665 4.15329 11.5198 3.99996 11.9998H12ZM2.66663 11.9998C2.66663 10.2265 6.21996 9.33317 7.99996 9.33317C9.77996 9.33317 13.3333 10.2265 13.3333 11.9998V13.3332H2.66663V11.9998Z"
+                      fill="currentColor"/>
+            </svg>
+            <span class="flex ml-3">
+                <span class="flex flex-wrap w-full">
+                    <span class="flex w-full font-semibold min-w-0">
+                        <span class="w-48 min-w-0 whitespace-no-wrap text-overflow overflow-hidden">
+                            Чугунов Максим
+                            Петрович sdf dsfd sdf dff</span>
+                    </span>
+                    <span class="flex w-full text-b9 font-medium min-w-0">
+                        <span class="w-48 min-w-0 whitespace-no-wrap text-overflow overflow-hidden">
+                            ИНН
+                            5903113639
+                        </span>
+                    </span>
+                </span>
+            </span>
+            <span
+                    class="flex whitespace-no-wrap ml-auto text-xxs text-blue font-medium items-center justify-center px-1">
+                20%
+            </span>
+        </label>
+    </div>
+    <div class="flex w-full py-2">
+        <label class="flex items-center cursor-pointer">
+            <input type="checkbox" class="check-controls__checkbox hidden" checked="">
+            <span class="check-controls__check-custom flex-shrink-0 inline-flex border border-b9 mr-3"></span>
+            <svg class="inline-flex flex-shrink-0" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M8.00004 2V4.66667H14.6667V14H1.33337V2H8.00004ZM2.66674 12.6666H4.00007V11.3333H2.66674V12.6666ZM4.00007 10.0001H2.66674V8.66673H4.00007V10.0001ZM2.66674 7.33333H4.00007V6H2.66674V7.33333ZM4.00007 4.6666H2.66674V3.33327H4.00007V4.6666ZM5.33337 12.6666H6.66671V11.3333H5.33337V12.6666ZM6.66671 10.0001H5.33337V8.66673H6.66671V10.0001ZM5.33337 7.33333H6.66671V6H5.33337V7.33333ZM6.66671 4.6666H5.33337V3.33327H6.66671V4.6666ZM8.00001 12.6667H13.3333V6H8.00001V7.33333H9.33334V8.66667H8.00001V10H9.33334V11.3333H8.00001V12.6667ZM12.0001 7.33327H10.6667V8.6666H12.0001V7.33327ZM10.6667 10H12.0001V11.3333H10.6667V10Z"
+                      fill="#188B31"/>
+            </svg>
+            <span class="flex ml-3">
+                <span class="flex flex-wrap w-full">
+                    <span class="flex w-full font-semibold min-w-0">
+                        <span class="w-48 min-w-0 whitespace-no-wrap text-overflow overflow-hidden">
+                            АО «МИР»
+                        </span>
+                    </span>
+                    <span class="flex w-full text-b9 font-medium min-w-0">
+                        <span class="w-48 min-w-0 whitespace-no-wrap text-overflow overflow-hidden">
+                            ИНН 5903113639 /
+                            ОГРН 115595801
+                        </span>
+                    </span>
+                </span>
+            </span>
+            <span
+                    class="flex whitespace-no-wrap ml-auto text-xxs text-blue font-medium items-center justify-center px-1">
+                20%
+            </span>
+        </label>
+    </div>
+</div>
+<div class="mt-auto relative pb-6 px-5 pt-4">
+    <div class="flex w-full justify-center items-center">
+        <button class="button-standart flex justify-center items-center bg-blue text-white text-xxs font-semibold focus:outline-none hover:opacity-75">
+            <svg class="flex-shrink-0 mr-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 4L14 8H17V15C17 16.1 16.1 17 15 17C13.9 17 13 16.1 13 15V8C13 5.79 11.21 4 9 4C6.79 4 5 5.79 5 8V15H2L6 19L10 15H7V8C7 6.9 7.9 6 9 6C10.1 6 11 6.9 11 8V15C11 17.21 12.79 19 15 19C17.21 19 19 17.21 19 15V8H22L18 4Z" fill="currentColor"></path>
+            </svg>
+            <span>Найти связи</span>
+        </button>
+    </div>
+</div>

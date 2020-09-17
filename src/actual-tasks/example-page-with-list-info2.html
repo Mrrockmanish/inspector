@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+//= templates/head.html
+
+<body class="relative">
+<div class="flex flex-nowrap h-screen">
+    //= templates/left-panel.html
+    <div class="center-sector items-start inline-flex flex-wrap flex-grow min-w-0 overflow-hidden">
+        <div class="flex w-full self-start">
+            <div class="top-panel w-full bg-white inline-flex">
+                <div class="flex h-full w-full items-center flex-stretch">
+                    //= templates/top-panel-tabs.html
+                    //= templates/top-panel-exit.html
+                </div>
+            </div>
+        </div>
+        <div class="area bg-f2 flex w-full flex-grow">
+            <div class="area__inner inline-flex flex-grow whitespace-no-wrap relative overflow-auto">
+                <div class="area__filters text-xxs self-start flex-grow w-full min-w-0 px-5 py-3">
+                    <div class="flex items-center -mx-2">
+                        <div class="inline-flex flex-shrink-0 text-b9 py-1 mx-2">
+                            Действующие фильры:
+                        </div>
+                        <div class="min-w-0 inline-flex mx-2">
+                            <div class="flex flex-wrap -mx-2">
+                                <div class="inline-flex my-1 h-4 px-3 leading-3 items-center justify-center mx-2">
+                                    <div class="flex items-center">
+                                        <div class="inline-flex mr-1">
+                                            <div>
+                                                Организации
+                                            </div>
+                                        </div>
+                                        <div
+                                                class="inline-flex flex-shrink-0 items-start hover:opacity-75 flex-shrink-0 cursor-pointer">
+                                            <svg width="16" height="16" viewBox="0 0 16 16"
+                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g id="icon/content/clear_24px" opacity="0.5">
+                                                    <path id="icon/content/clear_24px_2"
+                                                          d="M12.6667 4.27325L11.7267 3.33325L8.00001 7.05992L4.27334 3.33325L3.33334 4.27325L7.06001 7.99992L3.33334 11.7266L4.27334 12.6666L8.00001 8.93992L11.7267 12.6666L12.6667 11.7266L8.94001 7.99992L12.6667 4.27325Z"
+                                                          fill="black" fill-opacity="0.54" />
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="inline-flex my-1 h-4 px-3 leading-3 items-center justify-center mx-2">
+                                    <div class="flex items-center">
+                                        <div class="inline-flex mr-2">
+                                            <div>
+                                                Индивидуальные предриниматели
+                                            </div>
+                                        </div>
+                                        <div
+                                                class="inline-flex flex-shrink-0 items-start hover:opacity-75 flex-shrink-0 cursor-pointer">
+                                            <svg width="16" height="16" viewBox="0 0 16 16"
+                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g id="icon/content/clear_24px" opacity="0.5">
+                                                    <path id="icon/content/clear_24px_2"
+                                                          d="M12.6667 4.27325L11.7267 3.33325L8.00001 7.05992L4.27334 3.33325L3.33334 4.27325L7.06001 7.99992L3.33334 11.7266L4.27334 12.6666L8.00001 8.93992L11.7267 12.6666L12.6667 11.7266L8.94001 7.99992L12.6667 4.27325Z"
+                                                          fill="black" fill-opacity="0.54" />
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="inline-flex my-1 h-4 px-3 leading-3 items-center justify-center mx-2">
+                                    <div class="flex items-center">
+                                        <div class="inline-flex mr-2">
+                                            <div>
+                                                Действующая
+                                            </div>
+                                        </div>
+                                        <div
+                                                class="inline-flex flex-shrink-0 items-start hover:opacity-75 flex-shrink-0 cursor-pointer">
+                                            <svg width="16" height="16" viewBox="0 0 16 16"
+                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g id="icon/content/clear_24px" opacity="0.5">
+                                                    <path id="icon/content/clear_24px_2"
+                                                          d="M12.6667 4.27325L11.7267 3.33325L8.00001 7.05992L4.27334 3.33325L3.33334 4.27325L7.06001 7.99992L3.33334 11.7266L4.27334 12.6666L8.00001 8.93992L11.7267 12.6666L12.6667 11.7266L8.94001 7.99992L12.6667 4.27325Z"
+                                                          fill="black" fill-opacity="0.54" />
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="inline-flex my-1 h-4 px-3 leading-3 items-center justify-center mx-2">
+                                    <div class="flex items-center">
+                                        <div class="inline-flex mr-2">
+                                            <div>Доля владения <span class="font-semibold text-24021">больше 1%</span></div>
+                                        </div>
+                                        <div
+                                                class="inline-flex flex-shrink-0 items-start hover:opacity-75 flex-shrink-0 cursor-pointer">
+                                            <svg width="16" height="16" viewBox="0 0 16 16"
+                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g id="icon/content/clear_24px" opacity="0.5">
+                                                    <path id="icon/content/clear_24px_2"
+                                                          d="M12.6667 4.27325L11.7267 3.33325L8.00001 7.05992L4.27334 3.33325L3.33334 4.27325L7.06001 7.99992L3.33334 11.7266L4.27334 12.6666L8.00001 8.93992L11.7267 12.6666L12.6667 11.7266L8.94001 7.99992L12.6667 4.27325Z"
+                                                          fill="black" fill-opacity="0.54" />
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="inline-flex my-1 h-4 px-3 leading-3 items-center justify-center mx-2">
+                                    <div class="flex items-center">
+                                        <div class="inline-flex mr-2">
+                                            <div>Уровни связей: <span class="font-semibold text-24021">3</span></div>
+                                        </div>
+                                        <div
+                                                class="inline-flex flex-shrink-0 items-start hover:opacity-75 flex-shrink-0 cursor-pointer">
+                                            <svg width="16" height="16" viewBox="0 0 16 16"
+                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g id="icon/content/clear_24px" opacity="0.5">
+                                                    <path id="icon/content/clear_24px_2"
+                                                          d="M12.6667 4.27325L11.7267 3.33325L8.00001 7.05992L4.27334 3.33325L3.33334 4.27325L7.06001 7.99992L3.33334 11.7266L4.27334 12.6666L8.00001 8.93992L11.7267 12.6666L12.6667 11.7266L8.94001 7.99992L12.6667 4.27325Z"
+                                                          fill="black" fill-opacity="0.54" />
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="inline-flex my-1 h-4 px-3 leading-3 items-center justify-center mx-2">
+                                    <div class="flex items-center">
+                                        <div class="inline-flex mr-2">
+                                            <div>Только действующие связи</div>
+                                        </div>
+                                        <div
+                                                class="inline-flex flex-shrink-0 items-start hover:opacity-75 flex-shrink-0 cursor-pointer">
+                                            <svg width="16" height="16" viewBox="0 0 16 16"
+                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g id="icon/content/clear_24px" opacity="0.5">
+                                                    <path id="icon/content/clear_24px_2"
+                                                          d="M12.6667 4.27325L11.7267 3.33325L8.00001 7.05992L4.27334 3.33325L3.33334 4.27325L7.06001 7.99992L3.33334 11.7266L4.27334 12.6666L8.00001 8.93992L11.7267 12.6666L12.6667 11.7266L8.94001 7.99992L12.6667 4.27325Z"
+                                                          fill="black" fill-opacity="0.54" />
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- основная контентная часть  -->
+                //= templates/area-left-tools.html
+                //= templates/area-right-tools.html
+            </div>
+        </div>
+    </div>
+    <div class="lists-block inline-flex bg-white flex-wrap text-24021 content-start items-start text-xxs">
+        <!-- здесь рендерим списки -->
+        //= templates/lists-block-tools.html
+        <div class="lists-block__inner-wrap flex flex-col h-full overflow-auto w-full max-h-full">
+            //= templates/list-info2.html
+        </div>
+    </div>
+</div>
+
+//= templates/scripts.html
+</body>
+
+</html>

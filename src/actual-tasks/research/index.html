@@ -11,6 +11,8 @@
     <title>InSpectr</title>
 </head>
 
+
+
 <body class="relative">
 <div id="app" v-cloak>
         <div v-show="show_loader == true" class="preloader absolute w-full h-full opacity-75 bg-f2">
@@ -664,8 +666,8 @@
                     </div>
                 </div>
             </div>
-            <div class="area area_under-big-panel bg-f2 flex w-full flex-grow" style="height: calc(100% - 18.5625rem);">
-                <div class="area__inner inline-flex flex-grow whitespace-no-wrap relative overflow-auto">
+            <div class="area  area_under-big-panel bg-f2 flex w-full flex-grow" style="height: calc(100% - 18.5625rem);">
+                <div class="saved_scroll area__inner inline-flex flex-grow whitespace-no-wrap relative overflow-auto">
                     <!-- основная контентная часть  -->
                     <div class="area__container px-6 mx-auto relative">
 
@@ -754,7 +756,7 @@
                             </li>
                         </ul>
 
-                        <div class="tables text-xxs">
+                        <div  class="tables text-xxs">
                             <div class="tables__row flex items-end py-6 px-4 text-xxs leading-3" v-for="(item,index) in computed_saved_items">
                                 <div class="flex items-center flex-grow -mx-4">
                                     <div class="tables__cell tables__cell_w_40px inline-flex items-end font-semibold text-65 text-xs px-4">
@@ -851,7 +853,7 @@
 
             <div class="area-right-tools text-blue justify-between absolute">
                 <div class="flex flex-col relative">
-                    <div class="go_to_top area-right-tools__tool inline-flex flex-shrink-0 items-start rounded-full bg-white w-10 h-10 hover:shadow-xl shadow-lg transition duration-300 cursor-pointer tooltip" title="Наверх">
+                    <div class="go_to_top_saved area-right-tools__tool inline-flex flex-shrink-0 items-start rounded-full bg-white w-10 h-10 hover:shadow-xl shadow-lg transition duration-300 cursor-pointer tooltip" title="Наверх">
                         <div class="flex w-full h-full justify-center items-center">
                             <div class="inline-flex items-start">
 
@@ -862,7 +864,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="go_to_bottom area-right-tools__tool inline-flex flex-shrink-0 items-start rounded-full bg-white w-10 h-10 hover:shadow-xl shadow-lg transition duration-300 cursor-pointer tooltip mt-4" title="Вниз">
+                    <div class="go_to_bottom_saved area-right-tools__tool inline-flex flex-shrink-0 items-start rounded-full bg-white w-10 h-10 hover:shadow-xl shadow-lg transition duration-300 cursor-pointer tooltip mt-4" title="Вниз">
                         <div class="flex w-full h-full justify-center items-center">
                             <div class="inline-flex items-start" style="transform: rotate(180deg)">
 
@@ -939,12 +941,12 @@
                     </div>
                 </div>
             </div>
-            <div class="area area_under-big-panel bg-f2 flex w-full flex-grow flex-wrap overflow-y-scroll" style="height: calc(100% - 18.3125rem)">
-                <div class="area__inner inline-flex flex-grow whitespace-no-wrap relative">
+            <div class="area  area_under-big-panel bg-f2 flex w-full flex-grow " style="height: calc(100% - 18.3125rem)">
+                <div class="reports_scroll area__inner inline-flex flex-grow whitespace-no-wrap relative overflow-auto">
                     <!-- основная контентная часть  -->
                     <div class="area__container px-6 pb-8 mx-auto relative">
                         <div class="tables leading-3">
-                            <div v-for="(item, index) in computed_reports " class="tables__row flex items-end py-6 px-4 text-xxs leading-3">
+                            <div  v-for="(item, index) in computed_reports " class="tables__row flex items-end py-6 px-4 text-xxs leading-3">
                                 <div class="flex items-center flex-grow -mx-4">
                                     <div class="tables__cell tables__cell_w_40px font-semibold text-xs px-4">
                                         {{index+1}}
@@ -1016,7 +1018,7 @@
 
             <div class="area-right-tools text-blue justify-between absolute">
                 <div class="flex flex-col relative">
-                    <div class="go_to_top area-right-tools__tool inline-flex flex-shrink-0 items-start rounded-full bg-white w-10 h-10 hover:shadow-xl shadow-lg transition duration-300 cursor-pointer tooltip" title="Наверх">
+                    <div class="go_to_top_reports area-right-tools__tool inline-flex flex-shrink-0 items-start rounded-full bg-white w-10 h-10 hover:shadow-xl shadow-lg transition duration-300 cursor-pointer tooltip" title="Наверх">
                         <div class="flex w-full h-full justify-center items-center">
                             <div class="inline-flex items-start">
 
@@ -1027,7 +1029,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="go_to_bottom hidden area-right-tools__tool inline-flex flex-shrink-0 items-start rounded-full bg-white w-10 h-10 hover:shadow-xl shadow-lg transition duration-300 cursor-pointer tooltip mt-4" title="Вниз">
+                    <div class="go_to_bottom_reports area-right-tools__tool inline-flex flex-shrink-0 items-start rounded-full bg-white w-10 h-10 hover:shadow-xl shadow-lg transition duration-300 cursor-pointer tooltip mt-4" title="Вниз">
                         <div class="flex w-full h-full justify-center items-center">
                             <div class="inline-flex items-start" style="transform: rotate(180deg)">
 
@@ -2909,7 +2911,7 @@
                         </div>
 
 
-                        <div v-bind:class="{list_empty: !lists.list1.items.length && !lists.list2.items.length}" class="mb-5 upload-file flex-grow flex-col  mt-6">
+                        <div v-bind:class="{list_empty: !lists.list1.items.length && !lists.list2.items.length}" class=" mb-5 upload-file flex-grow flex-col  mt-6">
                             <div class="flex items-start relative">
                                 <div v-bind:class="{not_loaded: !lists.list1.items.length && !lists.list2.items.length}" class="upload_icon upload-file__file-icon text-b9 inline-flex flex-shrink-0 mr-3">
                                     <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2965,7 +2967,7 @@
 
 
 
-                        <div class="mb-5 upload-file flex-grow flex flex-col mt-24">
+                        <div class="scr_area1 mb-5 upload-file flex-grow flex flex-col mt-24">
 
 
                             <div v-bind:class="{ not_found: item.not_found }" class="tables__row flex py-5 items-center border-b border-b9 text-b9 leading-3 text-xxs font-medium px-2" v-for="(item, index) in lists.list1.items">
@@ -2993,7 +2995,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div v-bind:class="{list_empty: !lists.list1.items.length}" class="mb-5 upload-file flex flex-col  flex-grow mt-24">
+                        <div v-bind:class="{list_empty: !lists.list1.items.length}" class="scr_area2 mb-5 upload-file flex flex-col  flex-grow mt-24">
 
 
                             <div v-bind:class="{ not_found: item.not_found }" class="tables__row flex py-5 items-center border-b border-b9 text-b9 leading-3 text-xxs font-medium px-2" v-for="(item, index) in lists.list2.items">
@@ -3256,7 +3258,7 @@
                                         <div @click="expand_row($event)" class="connections-row__count">
                                             {{row.ties.length}}
                                         </div>
-                                        <div @click="modals.graph_modal.show = row" class="connections-row__count cursor-pointer">
+                                        <div @click="modals.graph_modal.show = { nodes: row.nodes, ties: row.ties, isReal: true }" class="connections-row__count cursor-pointer">
                                             <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M0 6.48438V9.99998H4.1016V6.48438H0ZM3.5156 9.41407H0.585899V7.65618H3.5156V9.41407Z" fill="#00599A"/>
                                                 <path d="M5.29301 4.70703V4.10156H4.70701V4.70703H1.75781V5.89844H2.34381V5.29297H7.65621V5.89844H8.24221V4.70703H5.29301Z" fill="#00599A"/>
@@ -3268,7 +3270,7 @@
                                     <div class="flex">
                                         <div @mousedown="mouse_down()" @mouseup="mouse_up()" @click="click_node($event, item)"  v-bind:class="{green: ind == 0 || ind== row.nodes.length - 1, collapsed: get_collapsed(ind, row)}" v-for="(item, ind) in row.nodes"
                                              class="item_connections_mr_48  item item_connections inline-flex min-w-0">
-                                            <div v-bind:title="item.title" class="item__inner flex items-center w-full h-full pl-2 pr-4 tooltip">
+                                            <div v-bind:title="item.title" class="item__inner flex items-center w-full h-full pl-2 pr-4 tooltip toollist">
                                                 <div class="item__icon-wrap rounded-full bg-white flex-shrink-0 inline-flex items-center justify-center">
                                                     <svg v-if="item.type == 0" v-bind:class="get_status_color(item)" class="item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -3326,7 +3328,7 @@
                                                 </div>
                                             </div>
                                             <div class="arrow_block" v-if="row.ties[ind]">
-                                                <div v-bind:title="get_rel_text(rel)" v-if="row.ties[ind]" class="one_arrow tooltip" v-bind:class="{one_arrow_reversed:get_rel_direction(item, rel), 'text-blue': rel.type == 1, 'text-purple': rel.type == 0 }" v-for="(rel, rel_ind) in row.ties[ind].relations">
+                                                <div v-bind:title="get_rel_text(rel)" v-if="row.ties[ind]" class="one_arrow tooltip toollist" v-bind:class="{one_arrow_reversed:get_rel_direction(item, rel), 'text-blue': rel.type == 1, 'text-purple': rel.type == 0 }" v-for="(rel, rel_ind) in row.ties[ind].relations">
                                                     <svg v-if="rel.active == true" width="48" height="6" viewBox="0 0 48 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path d="M23.6798 3.00001L23.6798 3.50001L23.6798 3.00001ZM48 3L43 0.113254L43 5.88676L48 3ZM0.000297569 3.5L23.6798 3.50001L23.6798 2.50001L0.000297524 2.5L0.000297569 3.5ZM23.6798 3.50001L43.5 3.5L43.5 2.5L23.6798 2.50001L23.6798 3.50001Z"
                                                               fill="currentColor"></path>
@@ -3346,7 +3348,7 @@
                                         <div @click="expand_row($event)" class="connections-row__count">
                                             {{row.ties.length}}
                                         </div>
-                                        <div @click="modals.graph_modal.show = row" class="connections-row__count cursor-pointer">
+                                        <div @click="modals.graph_modal.show = { nodes: row.nodes, ties: row.ties, isReal: true }" class="connections-row__count cursor-pointer">
                                             <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M0 6.48438V9.99998H4.1016V6.48438H0ZM3.5156 9.41407H0.585899V7.65618H3.5156V9.41407Z" fill="#00599A"/>
                                                 <path d="M5.29301 4.70703V4.10156H4.70701V4.70703H1.75781V5.89844H2.34381V5.29297H7.65621V5.89844H8.24221V4.70703H5.29301Z" fill="#00599A"/>
@@ -3357,7 +3359,7 @@
                                     </div>
                                     <div class="connections-row__items flex justify-between flex-grow">
                                         <div @mousedown="mouse_down()" @mouseup="mouse_up()" @click="click_node($event, row.nodes[0])" class="item item_connections green inline-flex min-w-0">
-                                            <div v-bind:title="row.nodes[0].title" class="item__inner flex items-center justify-center w-full h-full pl-2 pr-4 tooltip">
+                                            <div v-bind:title="row.nodes[0].title" class="item__inner flex items-center justify-center w-full h-full pl-2 pr-4 tooltip toollist">
                                                 <div class="item__icon-wrap rounded-full bg-white flex-shrink-0 inline-flex items-center justify-center">
                                                     <svg v-if="row.nodes[0].type == 0" v-bind:class="get_status_color(row.nodes[0])" class="item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -3421,11 +3423,11 @@
                                         </div>
                                         <div class="items-center-wrap flex flex-grow items-center justify-center">
                                             <span class="item__arrow-box items-center justify-center flex flex-col flex-grow" v-if="row.ties[0]">
-                                                <span v-bind:class="{arrow_reversed:get_rel_direction(row.nodes[0], rel), 'text-blue': rel.type == 1, 'text-purple': rel.type == 0, 'border-dashed': rel.active == false}" class="arrow my-1 tooltip" v-bind:title="get_rel_text(rel)" v-if="row.ties[0]" v-for="(rel, rel_ind) in row.ties[0].relations"></span>
+                                                <span v-bind:class="{arrow_reversed:get_rel_direction(row.nodes[0], rel), 'text-blue': rel.type == 1, 'text-purple': rel.type == 0, 'border-dashed': rel.active == false}" class="arrow my-1 tooltip toollist" v-bind:title="get_rel_text(rel)" v-if="row.ties[0]" v-for="(rel, rel_ind) in row.ties[0].relations"></span>
                                             </span>
                                             <template v-for="(item, ind) in row.nodes">
                                                 <div @mousedown="mouse_down()" @mouseup="mouse_up()" @click="click_node($event, item)"  v-bind:class="{green: ind == 0 || ind== row.nodes.length - 1, 'item_ml_100': row.nodes.length > 5 && ind > 1 && ind < row.nodes.length - 1}" v-if="ind > 0 && ind < row.nodes.length - 1" class="item item_connections inline-flex min-w-0">
-                                                    <div v-bind:title="item.title" class="item__inner flex items-center justify-center w-full h-full pl-2 pr-4 tooltip">
+                                                    <div v-bind:title="item.title" class="item__inner flex items-center justify-center w-full h-full pl-2 pr-4 tooltip toollist">
                                                         <div class="item__icon-wrap rounded-full bg-white flex-shrink-0 inline-flex items-center justify-center">
                                                             <svg v-if="item.type == 0" v-bind:class="get_status_color(item)" class="item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -3496,7 +3498,7 @@
                                             </span>
                                         </div>
                                         <div @mousedown="mouse_down()" @mouseup="mouse_up()" @click="click_node($event, row.nodes[row.nodes.length - 1])" class="item item_connections green inline-flex min-w-0">
-                                            <div v-bind:title="row.nodes[row.nodes.length - 1].title" class="item__inner flex items-center justify-center w-full h-full pl-2 pr-4 tooltip" >
+                                            <div v-bind:title="row.nodes[row.nodes.length - 1].title" class="item__inner flex items-center justify-center w-full h-full pl-2 pr-4 tooltip toollist" >
                                                 <div class="item__icon-wrap rounded-full bg-white flex-shrink-0 inline-flex items-center justify-center">
                                                     <svg v-if="row.nodes[row.nodes.length - 1].type == 0" v-bind:class="get_status_color(row.nodes[row.nodes.length - 1])" class="item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -3579,7 +3581,7 @@
                                         <div @click="expand_row($event)" class="connections-row__count">
                                             {{row.ties.length}}
                                         </div>
-                                        <div @click="modals.graph_modal.show = row" class="connections-row__count cursor-pointer">
+                                        <div @click="modals.graph_modal.show = { nodes: row.nodes, ties: row.ties, isReal: false }" class="connections-row__count cursor-pointer">
                                             <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M0 6.48438V9.99998H4.1016V6.48438H0ZM3.5156 9.41407H0.585899V7.65618H3.5156V9.41407Z" fill="#00599A"/>
                                                 <path d="M5.29301 4.70703V4.10156H4.70701V4.70703H1.75781V5.89844H2.34381V5.29297H7.65621V5.89844H8.24221V4.70703H5.29301Z" fill="#00599A"/>
@@ -3637,7 +3639,7 @@
                                                         </g>
                                                     </svg>
                                                 </div>
-                                                <div v-bind:title="item.title" class="item__text inline-flex min-w-0 mx-2 tooltip">
+                                                <div v-bind:title="item.title" class="item__text inline-flex min-w-0 mx-2 tooltip toollist">
                                                     <div class="flex flex-wrap  min-w-0">
                                                         <div class="item__name inline-flex w-full whitespace-no-wrap overflow-hidden text-xxs font-semibold">
                                                             <span class="text-overflow overflow-hidden " >{{item.title}}</span>
@@ -3652,7 +3654,7 @@
                                             <div class="arrow_block" v-if="row.ties[ind]">
 
 
-                                                <div v-bind:title="get_rel_text(rel)" v-if="row.ties[ind]" class="one_arrow tooltip" v-bind:class="{one_arrow_reversed:get_rel_direction(item, rel), 'text-blue': rel.type == 1, 'text-purple': rel.type == 0}" v-for="(rel, rel_ind) in row.ties[ind].relations">
+                                                <div v-bind:title="get_rel_text(rel)" v-if="row.ties[ind]" class="one_arrow tooltip toollist" v-bind:class="{one_arrow_reversed:get_rel_direction(item, rel), 'text-blue': rel.type == 1, 'text-purple': rel.type == 0}" v-for="(rel, rel_ind) in row.ties[ind].relations">
                                                     <svg v-if="rel.active == true" width="48" height="6" viewBox="0 0 48 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path d="M23.6798 3.00001L23.6798 3.50001L23.6798 3.00001ZM48 3L43 0.113254L43 5.88676L48 3ZM0.000297569 3.5L23.6798 3.50001L23.6798 2.50001L0.000297524 2.5L0.000297569 3.5ZM23.6798 3.50001L43.5 3.5L43.5 2.5L23.6798 2.50001L23.6798 3.50001Z"
                                                               fill="currentColor"></path>
@@ -3677,7 +3679,7 @@
                                         <div @click="expand_row($event)" class="connections-row__count">
                                             {{row.ties.length}}
                                         </div>
-                                        <div @click="modals.graph_modal.show = row" class="connections-row__count cursor-pointer">
+                                        <div @click="modals.graph_modal.show = { nodes: row.nodes, ties: row.ties, isReal: false }" class="connections-row__count cursor-pointer">
                                             <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M0 6.48438V9.99998H4.1016V6.48438H0ZM3.5156 9.41407H0.585899V7.65618H3.5156V9.41407Z" fill="#00599A"/>
                                                 <path d="M5.29301 4.70703V4.10156H4.70701V4.70703H1.75781V5.89844H2.34381V5.29297H7.65621V5.89844H8.24221V4.70703H5.29301Z" fill="#00599A"/>
@@ -3688,7 +3690,7 @@
                                     </div>
                                     <div class="connections-row__items flex justify-between flex-grow">
                                         <div @mousedown="mouse_down()" @mouseup="mouse_up()" @click="click_node($event, row.nodes[0])" class="item item_connections gray inline-flex min-w-0">
-                                            <div v-bind:title="row.nodes[0].title" class="item__inner flex items-center justify-center w-full h-full pl-2 pr-4 tooltip">
+                                            <div v-bind:title="row.nodes[0].title" class="item__inner flex items-center justify-center w-full h-full pl-2 pr-4 tooltip toollist">
                                                 <div class="item__icon-wrap rounded-full bg-white flex-shrink-0 inline-flex items-center justify-center">
                                                     <svg v-if="row.nodes[0].type == 0" v-bind:class="get_status_color(row.nodes[0])" class="item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -3752,11 +3754,11 @@
                                         </div>
                                         <div class="items-center-wrap flex flex-grow items-center justify-center">
                                             <span class="item__arrow-box items-center justify-center flex flex-col flex-grow" v-if="row.ties[0]">
-                                                <span v-bind:class="{arrow_reversed:get_rel_direction(row.nodes[0], rel), 'text-blue': rel.type == 1, 'text-purple': rel.type == 0, 'border-dashed': rel.active == false}" class="arrow my-1 tooltip" v-bind:title="get_rel_text(rel)" v-if="row.ties[0]" v-for="(rel, rel_ind) in row.ties[0].relations"></span>
+                                                <span v-bind:class="{arrow_reversed:get_rel_direction(row.nodes[0], rel), 'text-blue': rel.type == 1, 'text-purple': rel.type == 0, 'border-dashed': rel.active == false}" class="arrow my-1 tooltip toollist" v-bind:title="get_rel_text(rel)" v-if="row.ties[0]" v-for="(rel, rel_ind) in row.ties[0].relations"></span>
                                             </span>
                                             <template v-for="(item, ind) in row.nodes">
                                                 <div @mousedown="mouse_down()" @mouseup="mouse_up()" @click="click_node($event, item)"  v-bind:class="{green: ind == 0 || ind== row.nodes.length - 1, 'item_ml_100': row.nodes.length > 5 && ind > 1 && ind < row.nodes.length - 1}" v-if="ind > 0 && ind < row.nodes.length - 1" class="item item_connections inline-flex min-w-0">
-                                                    <div v-bind:title="item.title" class="item__inner flex items-center justify-center w-full h-full pl-2 pr-4 tooltip">
+                                                    <div v-bind:title="item.title" class="item__inner flex items-center justify-center w-full h-full pl-2 pr-4 tooltip toollist">
                                                         <div class="item__icon-wrap rounded-full bg-white flex-shrink-0 inline-flex items-center justify-center">
                                                             <svg v-if="item.type == 0" v-bind:class="get_status_color(item)" class="item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -3823,11 +3825,11 @@
                                             </span>
                                             </template>
                                             <span v-if="row.nodes.length > 2" class="item__arrow-box items-center justify-center flex flex-col flex-grow">
-                                                <span v-bind:class="{arrow_reversed:get_rel_direction(row.nodes[row.nodes.length -2], rel), 'text-blue': rel.type == 1, 'text-purple': rel.type == 0, 'border-dashed': rel.active == false}" class="arrow my-1 tooltip" v-bind:title="get_rel_text(rel)" v-if="row.ties[row.nodes.length - 2]" v-for="(rel, rel_ind) in row.ties[row.nodes.length - 2].relations"></span>
+                                                <span v-bind:class="{arrow_reversed:get_rel_direction(row.nodes[row.nodes.length -2], rel), 'text-blue': rel.type == 1, 'text-purple': rel.type == 0, 'border-dashed': rel.active == false}" class="arrow my-1 tooltip toollist" v-bind:title="get_rel_text(rel)" v-if="row.ties[row.nodes.length - 2]" v-for="(rel, rel_ind) in row.ties[row.nodes.length - 2].relations"></span>
                                             </span>
                                         </div>
                                         <div @mousedown="mouse_down()" @mouseup="mouse_up()" @click="click_node($event, row.nodes[row.nodes.length - 1])" class="item item_connections gray inline-flex min-w-0">
-                                            <div v-bind:title="row.nodes[row.nodes.length - 1].title" class="item__inner flex items-center justify-center w-full h-full pl-2 pr-4 tooltip" >
+                                            <div v-bind:title="row.nodes[row.nodes.length - 1].title" class="item__inner flex items-center justify-center w-full h-full pl-2 pr-4 tooltip toollist" >
                                                 <div class="item__icon-wrap rounded-full bg-white flex-shrink-0 inline-flex items-center justify-center">
                                                     <svg v-if="row.nodes[row.nodes.length - 1].type == 0" v-bind:class="get_status_color(row.nodes[row.nodes.length - 1])" class="item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -4705,105 +4707,6 @@
                                         </div>
                                         <div class="graph-modal__area bg-#F2F2F2 relative flex-grow">
                                             <graph-static ref="modal_graph" :data="modals.graph_modal.show" style="position: absolute; left: 0px; top: 0px;"></graph-static>
-                                            <!-- кнопки в серой контентной части слева -->
-                                            <div class="area-left-tools area-left-tools_top_24px text-blue flex flex-col justify-start absolute">
-                                                <div @click="$refs.modal_graph.undo()" 
-                                                        class="area-left-tools__tool inline-flex flex-shrink-0 items-start rounded-full bg-white w-8 h-8 transition duration-300 hover:shadow-xl shadow-lg cursor-pointer tooltip" title="Отменить">
-                                                    <div class="flex w-full h-full justify-center items-center">
-                                                        <div class="inline-flex items-start">
-                                                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                                 width="18px" height="18px" viewBox="0 0 612 612" style="enable-background:new 0 0 612 612;" xml:space="preserve">
-                                                                <g>
-                                                                    <path fill="currentColor" d="M340.502,535.398v51.025C491.258,581.68,612,457.98,612,306.076c0-154.913-125.588-280.5-280.5-280.5
-                                                                        c-141.933,0-259.258,105.442-277.924,242.25H0l76.5,89.25l76.5-89.25h-47.838C123.395,159.272,217.77,76.576,331.5,76.576
-                                                                        c126.761,0,229.5,102.739,229.5,229.5C561,429.803,463.08,530.68,340.502,535.398z"/>
-                                                                </g>
-                                                            </svg>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div
-                                                        class="area-left-tools__tool inline-flex flex-shrink-0 items-start rounded-full bg-white w-8 h-8 transition duration-300 hover:shadow-xl shadow-lg cursor-pointer tooltip mt-5" title="Экспорт">
-                                                    <div class="flex w-full h-full justify-center items-center">
-                                                        <div class="inline-flex items-start">
-                                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                                                 xmlns="http://www.w3.org/2000/svg">
-                                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                                      d="M15.59 10.09L13 12.67V3H11V12.67L8.41 10.09L7 11.5L12 16.5L17 11.5L15.59 10.09ZM19 19V12H21V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V12H5V19H19Z"
-                                                                      fill="currentColor"/>
-                                                            </svg>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div
-                                                        class="area-left-tools__tool inline-flex flex-shrink-0 items-start rounded-full bg-white w-8 h-8 transition duration-300 hover:shadow-xl shadow-lg cursor-pointer tooltip mt-5" title="Печать">
-                                                    <div class="flex w-full h-full justify-center items-center">
-                                                        <div class="inline-flex items-start">
-                                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M7 8V4H17V8" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
-                                                                <path d="M6.6 17H3V10C3 8.89543 3.89543 8 5 8H19C20.1046 8 21 8.89543 21 10V17H17.4" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
-                                                                <path d="M17 13H7V20H17V13Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
-                                                            </svg>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div
-                                                        class="area-left-tools__tool inline-flex flex-shrink-0 items-start rounded-full bg-white w-8 h-8 transition duration-300 hover:shadow-xl shadow-lg cursor-pointer tooltip mt-5" title="Произвольное исследование">
-                                                    <div class="flex w-full h-full justify-center items-center">
-                                                        <div class="inline-flex items-start">
-                                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <g id="icon/maps/my_location_24px">
-                                                                    <path id="icon/maps/my_location_24px_2" fill-rule="evenodd" clip-rule="evenodd"
-                                                                          d="M20.94 11C20.48 6.83 17.17 3.52 13 3.06V1H11V3.06C6.83 3.52 3.52 6.83 3.06 11H1V13H3.06C3.52 17.17 6.83 20.48 11 20.94V23H13V20.94C17.17 20.48 20.48 17.17 20.94 13H23V11H20.94ZM12 8C9.79 8 8 9.79 8 12C8 14.21 9.79 16 12 16C14.21 16 16 14.21 16 12C16 9.79 14.21 8 12 8ZM5 12C5 15.87 8.13 19 12 19C15.87 19 19 15.87 19 12C19 8.13 15.87 5 12 5C8.13 5 5 8.13 5 12Z"
-                                                                          fill="currentColor"></path>
-                                                                </g>
-                                                            </svg>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div
-                                                        class="area-left-tools__tool inline-flex flex-shrink-0 items-start rounded-full bg-white w-8 h-8 transition duration-300 hover:shadow-xl shadow-lg cursor-pointer tooltip mt-5" title="Связи">
-                                                    <div class="flex w-full h-full justify-center items-center">
-                                                        <div class="inline-flex items-start">
-                                                            <svg width="18" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                                      d="M14.89 13.04C14.42 13.56 14.12 14.24 14.12 15C14.12 16.61 15.43 17.92 17.04 17.92C18.65 17.92 19.96 16.61 19.96 15C19.96 13.39 18.65 12.08 17.04 12.08C16.82 12.08 16.6 12.11 16.39 12.16L12.23 5.04C12.73 4.5 13.04 3.79 13.04 3C13.04 1.34 11.7 0 10.04 0C8.38004 0 7.04004 1.34 7.04004 3C7.04004 3.79 7.35004 4.5 7.85004 5.04L3.74004 12.09C3.51004 12.04 3.28004 12 3.04004 12C1.38004 12 0.0400391 13.34 0.0400391 15C0.0400391 16.66 1.38004 18 3.04004 18C4.70004 18 6.04004 16.66 6.04004 15C6.04004 14.21 5.73004 13.5 5.23004 12.96L9.34004 5.91C9.57004 5.96 9.80004 6 10.04 6C10.28 6 10.51 5.96 10.74 5.91L14.89 13.04ZM3.04004 16C2.49004 16 2.04004 15.55 2.04004 15C2.04004 14.45 2.49004 14 3.04004 14C3.59004 14 4.04004 14.45 4.04004 15C4.04004 15.55 3.59004 16 3.04004 16ZM11.04 3C11.04 2.45 10.59 2 10.04 2C9.49004 2 9.04004 2.45 9.04004 3C9.04004 3.55 9.49004 4 10.04 4C10.59 4 11.04 3.55 11.04 3ZM17.06 14C17.61 14 18.06 14.45 18.06 15C18.06 15.55 17.61 16 17.06 16C16.51 16 16.06 15.55 16.06 15C16.06 14.45 16.51 14 17.06 14Z"
-                                                                      fill="currentColor"></path>
-                                                            </svg>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- кнопки в серой контентной части справа -->
-                                            <div class="area-right-tools area-right-tools_h_auto area-right-tools_bottom_24px text-blue justify-between absolute">
-                                                <div class="flex flex-col relative">
-                                                    <div class="zoom-tool inline-flex w-8 shadow-sm overflow-hidden transition duration-300 hover:shadow-xl shadow-lg cursor-pointer">
-                                                        <div class="flex flex-col">
-                                                            <div @click="$refs.modal_graph.zoomIn()" class="zoom-tool__plus inline-flex w-8 h-8 bg-white transition duration-300">
-                                                                <div class="flex w-full h-full justify-center items-center">
-                                                                    <div class="inline-flex items-start">
-                                                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                                                             xmlns="http://www.w3.org/2000/svg">
-                                                                            <path d="M19 13H13V19H11V13H5V11H11V5H13V11H19V13Z"
-                                                                                  fill="currentColor"/>
-                                                                        </svg>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div @click="$refs.modal_graph.zoomOut()" class="zoom-tool__minus inline-flex w-8 h-8 bg-white transition duration-300">
-                                                                <div class="flex w-full h-full justify-center items-center">
-                                                                    <div class="inline-flex items-start">
-                                                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                                                             xmlns="http://www.w3.org/2000/svg">
-                                                                            <path d="M19 13H5V11H19V13Z" fill="currentColor"/>
-                                                                        </svg>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
