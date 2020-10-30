@@ -72,6 +72,14 @@ function cssLibs() {
     .pipe(gulp.dest('build/css/'));
 }
 
+
+function addCss() {
+
+  return gulp.src('src/css/add.css')
+    .pipe(plumber()) // для отслеживания ошибок
+    .pipe(gulp.dest('build/css/'));
+}
+
 // +++++++++++++++//
 // BUILD FOR PROD //
 // +++++++++++++++//
@@ -150,7 +158,7 @@ function reload(done) {
 // сборка
 gulp.task('build',
   gulp.series(delBuild,
-    gulp.parallel(minifyHtml, css, cssLibs, Js, libsJs, fonts, images)
+    gulp.parallel(minifyHtml, css, cssLibs, addCss, Js, libsJs, fonts, images)
   )
 );
 

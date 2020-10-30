@@ -1130,9 +1130,10 @@ input[type='search']::-ms-clear {
     height: 2rem;
     cursor: pointer;
 
-    &:hover {
-      text-decoration: underline;
+    &:hover, &.active {
+      background-color: #e3e8ec;
     }
+    
   }
 
   &__item:not(:last-child) {
